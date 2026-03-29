@@ -1,0 +1,20 @@
+{
+  "name": "sensei-ai-karate",
+  "version": "1.0.0",
+  "description": "Sistema experto de Karate-do con motor de inferencia",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vitest": "^4.1.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}

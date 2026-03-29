@@ -1,0 +1,281 @@
+{
+  "general": {
+    "greeting": "¡Osu! Soy un Sensei de Shindo Jinen Ryu. Estoy aquí para guiarte en tu camino en las artes marciales. ¿Qué duda tienes sobre el Karate-do?",
+    "farewell": "¡Osu! El conocimiento es un viaje sin fin. Continúa tu práctica y tu búsqueda de la perfección. ¡No te rindas jamás!",
+    "error": "¡Osu! Mi conocimiento es vasto, pero necesito más claridad. ¿Puedes ser más específico? Por ejemplo, puedes preguntarme sobre las **técnicas de puño (Te Waza)**, las **patadas (Ashi Waza)** o la **historia del estilo**.",
+    "apology": "Disculpe, Sensei no entendió su pregunta, intente de nuevo."
+  },
+  "faq": {
+    "que_es_karate": "El Karate-do es un arte marcial que nos enseña a defendernos usando nuestro cuerpo como arma de combate. Además, nos enseña disciplina, respeto y superación.",
+    "karate_do_significado": "Karate-do significa el camino de las manos vacías (KARA: Vacío / TE: Mano / DO: Camino), ya que se usa el cuerpo como arma para combatir y defenderse.",
+    "origen": "El karate do moderno proviene de Japón, pero sus orígenes se encuentran en una pequeña isla al oeste llamada Okinawa.",
+    "estilos_principales": "Los estilos principales de Karate-do son Shotokan, Shito Ryu y Goju Ryu. Nuestro estilo, Shindo Jinen Ryu, tiene su base en el Shotokan.",
+    "modalidades": "Las dos modalidades principales son KATA (combate imaginario contra oponentes) y KUMITE (combate de competición).",
+    "kobudo": "Kobudo es un arte marcial que enseña a usar antiguas armas de madera o metal para la defensa personal. Su significado es 'antiguo arte de combate'."
+  },
+  "bodyParts": {
+    "general": {
+      "jyo_dan": "Jyo Dan (yodan) se refiere a la zona del cuerpo del cuello para arriba (la cabeza).",
+      "chu_dan": "Chu Dan (chudan) es la zona del torso, del cuello hasta el cinturón.",
+      "ge_dan": "Ge Dan (gedan) es la zona de las piernas, del cinturón hacia abajo.",
+      "empi": "Empi: Codo",
+      "hiza": "Hiza: Rodilla",
+      "hara": "Hara: Estómago",
+      "atama": "Atama: Cabeza",
+      "mune": "Mune: Pecho",
+      "goshi": "Goshi: Cadera",
+      "ashi": "Ashi: Pie",
+      "te": "Te: Mano",
+      "yubi": "Yubi: Dedo",
+      "kubi": "Kubi: Cuello"
+    },
+    "hand": {
+      "nukite": "Nukite: Punta de los dedos.",
+      "chuto": "Chuto: Borde de la mano (lado del dedo meñique).",
+      "teicho": "Teicho: Talón de la mano (base de la palma).",
+      "keito": "Keito: Borde exterior del pulgar.",
+      "haito": "Haito: Borde interior de la mano (lado del pulgar).",
+      "ken": "Ken: Puño.",
+      "seiken": "Seiken: Parte delantera del puño, nudillo de los dedos medio e índice."
+    },
+    "foot": {
+      "heisoku": "Heisoku: Empeine del pie.",
+      "koshi": "Koshi: Bola del pie.",
+      "kakato": "Kakato: Talón.",
+      "sokuto": "Sokuto: Borde exterior del pie (canto del pie).",
+      "teisoku": "Teisoku: Planta del pie.",
+      "tsumazaki": "Tsumazaki: Dedos del pie."
+    }
+  },
+  "organization": {
+    "organizacion_karate": "Pertenecemos a la Ryobu-kai, que significa 'Búsqueda de la excelencia a través de las artes marciales'.",
+    "estilo_practicado": "Practicamos el estilo Shindo Jinen Ryu, siendo su base el Shotokan. También practicamos los otros estilos principales y Kobudo.",
+    "maestro_venezuela": "Nuestro maestro, el sensei Martin Materano (7mo Dan) dirige la organización en Venezuela y en América.",
+    "maestro_mundial": "El maestro Kiyoshi Yamazaki (8vo Dan) dirige a la Ryobu-kai a nivel mundial.",
+    "fundador_organizacion": "El maestro Yatsuhiro Konishi es el fundador de nuestra organización.",
+    "academia": "Nuestra academia se llama Katashi, que significa 'firmeza'. Fue fundada por el sensei Gregori Pinzón (4to Dan).",
+    "tu_sensei": "Mi sensei es el sensei Angelo Betancourt (2do Dan)."
+  },
+  "dojoKun": [
+    "NUNCA OLVIDAREMOS EL CÓDIGO DE CORTESÍA: Debemos ser amables, educados y respetuosos con todas las personas y animales.",
+    "SIEMPRE VALORAREMOS EL CAMINO DE LA ARMONÍA: Debemos mantener la paz. El karate es el último recurso para controlar una situación.",
+    "NUNCA OLVIDAREMOS LA PERSEVERANCIA NI EL ESPÍRITU DEL KARATE: No debemos rendirnos ante las dificultades, debemos luchar por nuestros sueños y responsabilidades.",
+    "SIEMPRE MEJORAREMOS NUESTRA PERSONALIDAD: Debemos controlar nuestras actitudes y emociones, conociéndolas y entendiéndolas.",
+    "SIEMPRE RESPETAREMOS A TODA LA HUMANIDAD: Veremos a todas las personas como nuestros iguales, siendo armoniosos y tolerantes."
+  ],
+  "vocabulary": {
+    "joi": "Joi: Atención/Listos y preparados.",
+    "seiretsu": "Seiretsu: Formación.",
+    "kiritzu": "Kiritzu: Levantarse.",
+    "seiza": "Seiza: Arrodillarse con la espalda recta.",
+    "mokuso": "Mokuso: Meditación.",
+    "sensei": "Sensei: Literalmente 'el que nació primero'. Es el profesor.",
+    "shidion": "Shidoin: Instructor cinturón negro que aún no tiene el rango de sensei.",
+    "sempai": "Sempai: Asistente o ayudante del Sensei.",
+    "kohai": "Kohai: Monitor o asistente. También es el alumno más avanzado.",
+    "sochinza": "Sochinza: Principiante.",
+    "dojo": "Dojo: Lugar de entrenamiento.",
+    "tatami": "Tatami: Piso.",
+    "karategui": "Karategui: Uniforme de karate.",
+    "obi": "Obi: Cinturón.",
+    "shomen": "Shomen: Lugar de honor en el dojo.",
+    "otagai": "Otagai: Compañero.",
+    "oneigashimasu": "Oneigashimasu: Ponerse a la orden, 'por favor, enséñame'.",
+    "arigato": "Arigato gozai mashita: Muchas gracias por enseñarme.",
+    "shitsurei": "Shitsurei shimasu: Solicitud de permiso para entrar a la clase.",
+    "onaji_waza": "Onaji Waza: Repetir la misma técnica.",
+    "zenchin": "Zenchin: Hacia adelante.",
+    "koshin": "Koshin: Hacia atrás.",
+    "hajime": "Hajime: Comenzar.",
+    "yame": "Yame: Terminar.",
+    "hai": "Hai: Sí.",
+    "ie": "Ie: No.",
+    "oss": "Oss: Saludo/entendido.",
+    "migui": "Migui: Derecha.",
+    "hidari": "Hidari: Izquierda.",
+    "yoko": "Yoko: Lateral.",
+    "ushiro": "Ushiro: Atrás.",
+    "mae": "Mae: Frente.",
+    "age": "Age: Arriba.",
+    "te": "Te: Mano.",
+    "ken": "Ken: Puño.",
+    "seiken": "Seiken: Parte delantera del puño.",
+    "ashi": "Ashi: Pie.",
+    "ashi_kate": "Ashi Kate: Cambio de pie.",
+    "bo": "Bo: Palo.",
+    "embusen": "Embusen: Línea de comienzo y finalización del kata.",
+    "motonoishi": "Motonoishi: Línea de comienzo y finalización para un kumite.",
+    "aruki_kata": "Aruki Kata: Formas de desplazamiento.",
+    "tachi_kata": "Tachi Kata: Posiciones básicas.",
+    "fusegui_waza": "Fusegui Waza: Técnicas de Defensa.",
+    "seme_waza": "Seme Waza: Técnicas de Ataque.",
+    "te_waza": "Te Waza: Técnicas de ataque con las manos.",
+    "ashi_waza": "Ashi Waza: Técnicas de Ataque con los Pies.",
+    "atemi_waza": "Atemi Waza: Técnicas de golpeo a puntos vitales."
+  },
+  "history": {
+    "fundador": "El fundador del Shindo Jinen Ryu es el sensei Yasuhiro Konishi, quien comenzó su entrenamiento en artes marciales a los 6 años en Jujitsu y luego en Kendo. Fue un visionario que facilitó la llegada de otros maestros de karate a Japón.",
+    "primer_dojo": "El primer dojo de la organización fue el Ryobu-kan, fundado por el sensei Konishi en 1923. Significa 'la casa de la excelencia a través de las artes marciales' y fue donde el estilo evolucionó.",
+    "encuentro_con_funakoshi": "El sensei Konishi conoció al maestro Gichin Funakoshi, fundador de Shotokan, y le permitió dar clases de To-Te Jutsu en su dojo. Esto fue crucial para la expansión del karate en Japón.",
+    "cambios_to_te": "Bajo la influencia de Konishi y Funakoshi, el To-Te experimentó tres cambios significativos: la terminología japonesa para facilitar el aprendizaje, la adición de ippon kumite y el cambio del kanji de 'mano china' a 'mano vacía'.",
+    "reconocimiento": "El sensei Konishi fue instrumental en conseguir que el Dai Nippon Butoku-Kai, la institución que regía el budo en Japón, reconociera formalmente el karate como arte marcial en 1935.",
+    "nombre_estilo": "El sensei Konishi nombró a su estilo Shindo Jinen Ryu, que significa 'la vía de Dios o el camino natural a Dios'. Él creía que un entrenamiento natural del cuerpo y una vida moralmente correcta estaban alineados con la vía divina.",
+    "fundacion_estilo": "El estilo Shindo Jinen Ryu fue fundado por el maestro Yasuhiro Konishi en 1933. Su nombre significa 'la vía de Dios o el camino natural a Dios'."
+  },
+  "logica_creativa": {
+    "poema_karate_romance": "Un puño firme y un corazón abierto,\nen cada Kata encuentro tu aliento.\nTu amor es mi Sensei, mi guía constante,\nen el tatami de la vida, un arte elegante.\nCada golpe es un 'te amo' sin dudar,\ncada bloqueo, el deseo de cuidar.\nComo un 'oi zuki', directo y sincero,\nmi amor por ti, un camino verdadero.",
+    "metafora_progreso": "El camino del karateka es como el de un río. A veces fluye suave, a veces se enfrenta a rocas y rápidos. Pero nunca deja de avanzar, erosionando la piedra con paciencia y perseverancia. Cada golpe, cada caída, es una forma de tallar el espíritu y hacerse más fuerte."
+  },
+  "techniquesByRank": {
+    "10 kyu": {
+      "teWaza": ["Oi Zuki", "Gyaku Zuki", "Kizami Zuki", "Morote Zuki"],
+      "fuseguiWaza": ["Gedan Barai", "Jodan Uke", "Chudan Uke"],
+      "ashiWaza": ["Mae Geri"]
+    },
+    "9 kyu": {
+      "teWaza": ["Tate Zuki", "Uraken Uchi"],
+      "fuseguiWaza": ["Soto Uke", "Uchi Uke"],
+      "ashiWaza": ["Yoko Geri Keage"]
+    },
+    "8 kyu": {
+      "teWaza": ["Shuto Uchi", "Empi Uchi"],
+      "fuseguiWaza": ["Shuto Uke"],
+      "ashiWaza": ["Yoko Geri Kekomi"]
+    },
+    "7 kyu": {
+      "teWaza": ["Kagi Zuki", "Mawashi Zuki"],
+      "fuseguiWaza": ["Kake Uke", "Morote Uke"],
+      "ashiWaza": ["Mawashi Geri"]
+    },
+    "6 kyu": {
+      "teWaza": ["Teisho Uchi", "Nukite"],
+      "fuseguiWaza": ["Teisho Uke"],
+      "ashiWaza": ["Ushiro Geri"]
+    },
+    "5 kyu": {
+      "teWaza": ["Haito Uchi", "Otoshi Zuki"],
+      "fuseguiWaza": ["Nagashi Uke", "Haito Uke"],
+      "ashiWaza": ["Hiza Geri"]
+    },
+    "4 kyu": {
+      "teWaza": ["Age Zuki", "Yoko Zuki"],
+      "fuseguiWaza": ["Kakato Uke"],
+      "ashiWaza": ["Ura Mawashi Geri"]
+    },
+    "3 kyu": {
+      "teWaza": ["Ippon Ken", "Hiraken"],
+      "fuseguiWaza": ["Empi Uke"],
+      "ashiWaza": ["Mikazuki Geri", "Fumikomi"]
+    },
+    "2 kyu": {
+      "teWaza": ["Kumade Uchi"],
+      "fuseguiWaza": ["Manji Uke"],
+      "ashiWaza": ["Kakato Geri"]
+    },
+    "1 kyu": {
+      "teWaza": ["Seiken Zuki", "Ren Zuki"],
+      "fuseguiWaza": ["Juji Uke"],
+      "ashiWaza": ["Nidan Geri", "Tobi Geri"]
+    },
+    "1 dan": {
+      "teWaza": ["Sanbon Zuki"],
+      "fuseguiWaza": ["Mawashi Uke"],
+      "ashiWaza": ["Kake Geri"]
+    }
+  },
+  "techniqueDetails": {
+    "Oi Zuki": {
+      "descripcion": "Golpe de puño directo con la mano adelantada. Es el ataque más fundamental en karate.",
+      "uso": "Ataque frontal directo al pecho o abdomen del oponente.",
+      "cinturon": "10° Kyu",
+      "category": "teWaza",
+      "keywords": ["puño", "directo", "adelantado", "frontal", "básico"],
+      "itemSpanishName": "Oi Zuki"
+    },
+    "Gyaku Zuki": {
+      "descripcion": "Golpe de puño con la mano trasera. Genera gran potencia mediante la rotación de cadera.",
+      "uso": "Contraataque potente aprovechando la rotación del cuerpo.",
+      "cinturon": "10° Kyu",
+      "category": "teWaza",
+      "keywords": ["puño", "trasero", "contraataque", "potencia", "rotación"],
+      "itemSpanishName": "Gyaku Zuki"
+    },
+    "Mae Geri": {
+      "descripcion": "Patada frontal directa con la bola del pie. Es la patada más básica y versátil.",
+      "uso": "Ataque frontal al abdomen, pecho o cara del oponente.",
+      "cinturon": "10° Kyu",
+      "category": "ashiWaza",
+      "keywords": ["patada", "frontal", "bola del pie", "básica", "versátil"]
+    },
+    "Gedan Barai": {
+      "descripcion": "Bloqueo descendente con el antebrazo. Defiende la parte baja del cuerpo.",
+      "uso": "Defender patadas bajas o ataques a la ingle.",
+      "cinturon": "10° Kyu",
+      "category": "fuseguiWaza",
+      "keywords": ["bloqueo", "descendente", "antebrazo", "defensa", "bajo"]
+    },
+    "Sanbon Zuki": {
+      "descripcion": "Combinación de tres puñetazos consecutivos: Oi Zuki (Jodan), Gyaku Zuki (Chudan), Gyaku Zuki (Chudan).",
+      "uso": "Técnica avanzada de combinación para kumite y katas.",
+      "cinturon": "1° Dan",
+      "category": "teWaza",
+      "keywords": ["combinación", "tres puñetazos", "consecutivos", "avanzada", "kata"]
+    },
+    "Mawashi Geri": {
+      "descripcion": "Patada circular semicircular con el empeine del pie. Es una de las patadas más efectivas en combate.",
+      "uso": "Ataque circular a la cabeza, torso o piernas del oponente.",
+      "cinturon": "7° Kyu",
+      "category": "ashiWaza",
+      "keywords": ["patada", "circular", "empeine", "combate", "efectiva"]
+    },
+    "Shuto Uchi": {
+      "descripcion": "Golpe con el borde exterior de la mano abierta (lado del dedo meñique).",
+      "uso": "Ataque al cuello, clavícula o costillas del oponente.",
+      "cinturon": "8° Kyu",
+      "category": "teWaza",
+      "keywords": ["mano abierta", "borde", "cuello", "clavícula", "costillas"]
+    },
+    "Jodan Uke": {
+      "descripcion": "Bloqueo ascendente para defender la parte superior del cuerpo.",
+      "uso": "Proteger la cabeza y cara de golpes superiores.",
+      "cinturon": "10° Kyu",
+      "category": "fuseguiWaza",
+      "keywords": ["bloqueo", "ascendente", "cabeza", "cara", "protección"]
+    },
+    "Uraken Uchi": {
+      "descripcion": "Golpe rápido con el dorso del puño en movimiento circular.",
+      "uso": "Ataque sorpresivo a la cara o sienes del oponente.",
+      "cinturon": "9° Kyu",
+      "category": "teWaza",
+      "keywords": ["dorso del puño", "circular", "rápido", "sorpresivo", "cara"]
+    },
+    "Yoko Geri Keage": {
+      "descripcion": "Patada lateral ascendente de chasquido con el borde del pie.",
+      "uso": "Ataque rápido a las costillas o cabeza del oponente.",
+      "cinturon": "9° Kyu",
+      "category": "ashiWaza",
+      "keywords": ["patada", "lateral", "ascendente", "chasquido", "rápida"]
+    },
+    "Kakato Geri": {
+      "descripcion": "Patada descendente con el talón. Requiere gran elevación y potencia.",
+      "uso": "Ataque poderoso a la cabeza o clavícula del oponente.",
+      "cinturon": "2° Kyu",
+      "category": "ashiWaza",
+      "keywords": ["patada", "descendente", "talón", "potente", "elevación"]
+    },
+    "Nukite": {
+      "descripcion": "Ataque con las puntas de los dedos extendidos y juntos.",
+      "uso": "Ataque preciso a puntos vitales como ojos, garganta o plexo solar.",
+      "cinturon": "6° Kyu",
+      "category": "teWaza",
+      "keywords": ["dedos", "puntas", "preciso", "puntos vitales", "ojos"]
+    },
+    "Manji Uke": {
+      "descripcion": "Bloqueo doble cruzado que defiende dos niveles simultáneamente.",
+      "uso": "Defensa avanzada contra ataques múltiples o combinados.",
+      "cinturon": "2° Kyu",
+      "category": "fuseguiWaza",
+      "keywords": ["bloqueo", "doble", "cruzado", "niveles", "avanzada"]
+    }
+  }
+}
