@@ -1,13 +1,40 @@
 {
   "name": "sensei-ai-karate",
   "version": "1.0.0",
-  "description": "Sistema experto de Karate-do con motor de inferencia",
+  "description": "Sistema experto de Karate-do con motor de inferencia y CLI tool",
+  "main": "src/cli.cjs",
+  "bin": {
+    "sensei-ia": "./src/cli.cjs"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
   },
+  "keywords": [
+    "karate",
+    "ai",
+    "expert-system",
+    "nlp",
+    "sensei",
+    "martial-arts",
+    "cli",
+    "typescript"
+  ],
+  "author": "GCG-13 Studio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gcg13-studio/sensei-ai"
+  },
+  "bugs": {
+    "url": "https://github.com/gcg13-studio/sensei-ai/issues"
+  },
+  "homepage": "https://github.com/gcg13-studio/sensei-ai#readme",
   "devDependencies": {
     "@types/node": "^25.5.0",
     "typescript": "^5.2.2",
