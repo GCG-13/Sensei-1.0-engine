@@ -1,14 +1,20 @@
+/**
+ * Project: Sensei IA - Symbolic AI Engine for Karate-do
+ * Author: GCG-13 (Gustavo Alberto Martínez Parra)
+ * Architecture: Deterministic Inference & XAI (Explainable AI)
+ * License: MIT
+ * Repository: https://github.com/GCG-13/Sensei-1.0-engine
+ * 
+ * Sistema Principal Sensei AI
+ * Orquesta todos los componentes del sistema experto
+ */
+
 import type { ChatMessageEvent, DOMHandlerConfig } from '@/types';
 import { NLPProcessor } from '@/core/NLPProcessor';
 import { IntentManager } from '@/core/IntentManager';
 import { InferenceEngine } from '@/core/InferenceEngine';
 import { DOMHandler } from '@/ui/DOMHandler';
 import knowledgeBase from '@/data/knowledge_base.json';
-
-/**
- * Sistema Principal Sensei AI
- * Orquesta todos los componentes del sistema experto
- */
 class SenseiSystem {
   private domHandler!: DOMHandler;
   private intentManager!: IntentManager;

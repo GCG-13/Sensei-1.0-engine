@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 
 /**
+ * Project: Sensei IA - Symbolic AI Engine for Karate-do
+ * Author: GCG-13 (Gustavo Alberto Martínez Parra)
+ * Architecture: Deterministic Inference & XAI (Explainable AI)
+ * License: MIT
+ * Repository: https://github.com/GCG-13/Sensei-1.0-engine
+ * 
  * Sensei AI CLI - Command Line Interface
  * 
  * Herramienta de línea de comandos para interactuar con Sensei AI

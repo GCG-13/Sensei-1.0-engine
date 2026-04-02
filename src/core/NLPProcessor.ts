@@ -1,3 +1,14 @@
+/**
+ * Project: Sensei IA - Symbolic AI Engine for Karate-do
+ * Author: GCG-13 (Gustavo Alberto Martínez Parra)
+ * Architecture: Deterministic Inference & XAI (Explainable AI)
+ * License: MIT
+ * Repository: https://github.com/GCG-13/Sensei-1.0-engine
+ * 
+ * Utilidades de Procesamiento de Lenguaje Natural
+ * Maneja normalización, validación y fuzzy matching
+ */
+
 import type { 
   ExtractedKeywords, 
   NLPProcessResult, 
@@ -5,11 +16,6 @@ import type {
   BeltRank,
   TechniqueCategory 
 } from '@/types';
-
-/**
- * Utilidades de Procesamiento de Lenguaje Natural
- * Maneja normalización, validación y fuzzy matching
- */
 export class NLPProcessor {
   private static readonly STOP_WORDS = [
     'el', 'la', 'los', 'las', 'de', 'en', 'que', 'es', 'un', 'una', 

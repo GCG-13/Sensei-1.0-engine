@@ -1,5 +1,9 @@
 /**
- * Sensei AI - Version Information
+ * Project: Sensei IA - Symbolic AI Engine for Karate-do
+ * Author: GCG-13 (Gustavo Alberto Martínez Parra)
+ * Architecture: Deterministic Inference & XAI (Explainable AI)
+ * License: MIT
+ * Repository: https://github.com/GCG-13/Sensei-1.0-engine
  * 
  * Sistema experto modular para la enseñanza de Karate-do con motor de inferencia lógica
  * y procesamiento de lenguaje natural (NLP) para guiar estudiantes según su rango.

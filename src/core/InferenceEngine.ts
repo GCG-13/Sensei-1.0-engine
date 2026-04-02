@@ -1,3 +1,14 @@
+/**
+ * Project: Sensei IA - Symbolic AI Engine for Karate-do
+ * Author: GCG-13 (Gustavo Alberto Martínez Parra)
+ * Architecture: Deterministic Inference & XAI (Explainable AI)
+ * License: MIT
+ * Repository: https://github.com/GCG-13/Sensei-1.0-engine
+ * 
+ * Motor de Inferencia con Sistema de Puntuación Optimizado
+ * Implementa búsqueda avanzada con scoring y reglas lógicas
+ */
+
 import type { 
   SearchResult, 
   InferenceEngineConfig,
@@ -7,11 +18,6 @@ import type {
   BeltRank
 } from '@/types';
 import { NLPProcessor } from './NLPProcessor';
-
-/**
- * Motor de Inferencia con Sistema de Puntuación Optimizado
- * Implementa búsqueda avanzada con scoring y reglas lógicas
- */
 export class InferenceEngine {
   private knowledgeBase: KnowledgeBase;
   private config: InferenceEngineConfig;
