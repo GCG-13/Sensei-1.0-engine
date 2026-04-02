@@ -87,6 +87,7 @@ Este motor es la base de la marca **Sensei AI**. Las próximas iteraciones inclu
   * [ ] **Voice Synthesis:** Comandos de voz para entrenamiento manos libres.
   * [ ] **Multimedia Integration:** Visualización dinámica de Katas.
 
+📖 Deep Dive: Conoce la lógica arquitectónica detrás del motor en nuestra Documentación Técnica.
 
 **Desarrollado por Gustavo (GCG-13)** *Arquitecto de Software enfocado en Sistemas Expertos y Tecnología Aplicada al Deporte.*
 
