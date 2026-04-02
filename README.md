@@ -383,6 +383,13 @@ MIT License - Ver archivo [LICENSE](LICENSE) para detalles.
 - **🌐 Web**: https://gcg13-studio.github.io/sensei-ai
 - **🐛 Issues**: https://github.com/gcg13-studio/sensei-ai/issues
 
+## 📄 Technical Architecture (Whitepaper)
+
+For an in-depth look at the deterministic logic, XAI implementation, and fuzzy semantic search powering this engine, you can read the official Whitepaper:
+
+* [📖 Read the Whitepaper on Scribd](https://es.scribd.com/document/1021131820/Sensei-1-0-Architecture-Whitepaper-GCG13)
+* [📊 View the Presentation on SlideShare](https://es.slideshare.net/slideshow/sensei-1-0-un-motor-de-inteligencia-artificial-simbolica/286810081)
+
 ---
 
 ## 🎯 **Roadmap Futuro**
