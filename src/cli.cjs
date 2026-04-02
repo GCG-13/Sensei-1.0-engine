@@ -72,6 +72,16 @@ class SenseiCLI {
   }
 
   search(query) {
+    // Guard clauses para robustez
+    if (!query) return null;
+    if (typeof query !== 'string') {
+      try {
+        query = String(query);
+      } catch (e) {
+        return null;
+      }
+    }
+    
     const normalizedQuery = this.normalizeText(query);
     let bestMatch = null;
     let bestScore = 0;
