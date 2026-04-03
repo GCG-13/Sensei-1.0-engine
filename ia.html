@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensei de Karate-do (IA Local)</title>
+    <title>Sensei IA - Asistente Virtual de Karate-do</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,61 +79,16 @@
             border-bottom-left-radius: 0.25rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        .input-area {
-            display: flex;
-            padding: 1.25rem;
-            background: rgba(249, 250, 251, 0.9);
-            border-top: 1px solid rgba(229, 231, 235, 0.5);
-            backdrop-filter: blur(10px);
-        }
-        .input-area input {
-            flex-grow: 1;
-            border: 2px solid rgba(209, 213, 219, 0.5);
-            border-radius: 2rem;
-            padding: 0.875rem 1.5rem;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.9);
-        }
-        .input-area input:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-        .input-area button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.875rem 1.5rem;
-            border-radius: 2rem;
-            margin-left: 0.75rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-        .input-area button:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-        .input-area button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
         .typing-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            padding: 0.875rem 1.25rem;
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            border-radius: 1.25rem;
-            border-bottom-left-radius: 0.25rem;
-            color: white;
+            display: flex;
+            gap: 4px;
+            padding: 1rem;
         }
         .typing-dot {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: white;
+            background: #10b981;
             animation: typing 1.4s infinite;
         }
         .typing-dot:nth-child(2) {
@@ -145,881 +100,280 @@
         @keyframes typing {
             0%, 60%, 100% {
                 transform: translateY(0);
-                opacity: 0.7;
+                opacity: 0.5;
             }
             30% {
                 transform: translateY(-10px);
                 opacity: 1;
             }
         }
+        .input-area {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            gap: 1rem;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 0.875rem 1.25rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .input-area input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .input-area button {
+            padding: 0.875rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .input-area button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.15);
+        }
+        .input-area button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .header {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+        .back-button {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
+        .suggestions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .suggestion-chip {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 1rem;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .suggestion-chip:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
-
+    <a href="karate.html" class="back-button">← Volver</a>
+    
     <div class="chat-container">
-        <header class="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-6 text-center font-bold text-xl rounded-t-2xl shadow-lg">
-            <div class="flex items-center justify-center gap-3">
-                <span class="text-2xl">🥋</span>
-                <span>Sensei de Karate-do (IA Local)</span>
-                <span class="text-2xl">🥋</span>
-            </div>
-            <p class="text-sm text-gray-300 mt-2">Shindo Jinen Ryu - Asistente de Conocimiento</p>
+        <header class="header">
+            <h1>🥋 Sensei IA</h1>
+            <p>Asistente Virtual de Karate-do Shindo Jinen Ryu</p>
         </header>
+        
         <div class="messages" id="messages">
-            <!-- Los mensajes del chat aparecerán aquí -->
+            <!-- Mensaje de bienvenida -->
+            <div class="message-bubble sensei-message">
+                <div>¡Osu! Soy tu Sensei virtual. Estoy aquí para guiarte en el camino del Karate-do.</div>
+                <div style="font-size: 0.875rem; margin-top: 0.5rem; opacity: 0.9;">
+                    Puedes preguntarme sobre técnicas, vocabulario, historia o cualquier aspecto del Karate-do.
+                </div>
+                <div class="suggestions">
+                    <div class="suggestion-chip" onclick="sendSuggestion('¿Qué es Oi Zuki?')">¿Qué es Oi Zuki?</div>
+                    <div class="suggestion-chip" onclick="sendSuggestion('¿Qué significa dojo?')">¿Qué significa dojo?</div>
+                    <div class="suggestion-chip" onclick="sendSuggestion('Técnicas básicas')">Técnicas básicas</div>
+                </div>
+            </div>
         </div>
+        
         <div class="input-area">
             <input type="text" id="userInput" placeholder="Escribe tu pregunta al Sensei..." maxlength="500">
-            <button id="sendBtn">Enviar</button>
+            <button id="sendBtn" onclick="sendMessage()">Enviar</button>
         </div>
     </div>
 
     <script>
-        /**
-         * @typedef {Object} TechniqueDetail
-         * @property {string} descripcion - Descripción detallada de la técnica
-         * @property {string} uso - Uso específico de la técnica
-         * @property {string} cinturon - Nivel de cinturón requerido
-         * @property {string} itemSpanishName - Nombre en español de la técnica
-         */
-
-        /**
-         * @typedef {Object} KnowledgeBase
-         * @property {Object} general - Respuestas generales del sistema
-         * @property {Object} faq - Preguntas frecuentes
-         * @property {Object} bodyParts - Partes del cuerpo y vocabulario
-         * @property {Object.<string, TechniqueDetail>} teWazaDetails - Detalles de técnicas de mano
-         * @property {Object.<string, TechniqueDetail>} fuseguiWazaDetails - Detalles de técnicas de defensa
-         * @property {Object.<string, TechniqueDetail>} ashiWazaDetails - Detalles de técnicas de patada
-         * @property {Object} techniquesByRank - Técnicas por nivel de cinturón
-         */
-
-        // Base de Conocimiento del Sensei
-        const knowledgeBase = {
-            'general': {
-                'greeting': "¡Osu! Soy un Sensei de Shindo Jinen Ryu. Estoy aquí para guiarte en tu camino en las artes marciales. ¿Qué duda tienes sobre el Karate-do?",
-                'farewell': "¡Osu! El conocimiento es un viaje sin fin. Continúa tu práctica y tu búsqueda de la perfección. ¡No te rindas jamás!",
-                'error': "¡Osu! Mi conocimiento es vasto, pero necesito más claridad. ¿Puedes ser más específico? Por ejemplo, puedes preguntarme sobre las **técnicas de puño (Te Waza)**, las **patadas (Ashi Waza)** o la **historia del estilo**.",
-                'apology': "Disculpe, Sensei no entendió su pregunta, intente de nuevo.",
-            },
-            'faq': {
-                'que_es_karate': "El Karate-do es un arte marcial que nos enseña a defendernos usando nuestro cuerpo como arma de combate. Además, nos enseña disciplina, respeto y superación.",
-                'karate_do_significado': "Karate-do significa el camino de las manos vacías (KARA: Vacío / TE: Mano / DO: Camino), ya que se usa el cuerpo como arma para combatir y defenderse.",
-                'origen': "El karate do moderno proviene de Japón, pero sus orígenes se encuentran en una pequeña isla al oeste llamada Okinawa.",
-                'estilos_principales': "Los estilos principales de Karate-do son Shotokan, Shito Ryu y Goju Ryu. Nuestro estilo, Shindo Jinen Ryu, tiene su base en el Shotokan.",
-                'modalidades': "Las dos modalidades principales son KATA (combate imaginario contra oponentes) y KUMITE (combate de competición).",
-                'kobudo': "Kobudo es un arte marcial que enseña a usar antiguas armas de madera o metal para la defensa personal. Su significado es 'antiguo arte de combate'."
-            },
-            'bodyParts': {
-                'general': {
-                    'jyo_dan': "Jyo Dan (yodan) se refiere a la zona del cuerpo del cuello para arriba (la cabeza).",
-                    'chu_dan': "Chu Dan (chudan) es la zona del torso, del cuello hasta el cinturón.",
-                    'ge_dan': "Ge Dan (gedan) es la zona de las piernas, del cinturón hacia abajo.",
-                    'empi': "Empi: Codo",
-                    'hiza': "Hiza: Rodilla",
-                    'hara': "Hara: Estómago",
-                    'atama': "Atama: Cabeza",
-                    'mune': "Mune: Pecho",
-                    'goshi': "Goshi: Cadera",
-                    'ashi': "Ashi: Pie",
-                    'te': "Te: Mano",
-                    'yubi': "Yubi: Dedo",
-                    'kubi': "Kubi: Cuello"
-                },
-                'hand': {
-                    'nukite': "Nukite: Punta de los dedos.",
-                    'chuto': "Chuto: Borde de la mano (lado del dedo meñique).",
-                    'teicho': "Teicho: Talón de la mano (base de la palma).",
-                    'keito': "Keito: Borde exterior del pulgar.",
-                    'haito': "Haito: Borde interior de la mano (lado del pulgar).",
-                    'ken': "Ken: Puño.",
-                    'seiken': "Seiken: Parte delantera del puño, nudillo de los dedos medio e índice."
-                },
-                'foot': {
-                    'heisoku': "Heisoku: Empeine del pie.",
-                    'koshi': "Koshi: Bola del pie.",
-                    'kakato': "Kakato: Talón.",
-                    'sokuto': "Sokuto: Borde exterior del pie (canto del pie).",
-                    'teisoku': "Teisoku: Planta del pie.",
-                    'tsumazaki': "Tsumazaki: Dedos del pie."
-                }
-            },
-            'organization': {
-                'organizacion_karate': "Pertenecemos a la Ryobu-kai, que significa 'Búsqueda de la excelencia a través de las artes marciales'.",
-                'estilo_practicado': "Practicamos el estilo Shindo Jinen Ryu, siendo su base el Shotokan. También practicamos los otros estilos principales y Kobudo.",
-                'maestro_venezuela': "Nuestro maestro, el sensei Martin Materano (7mo Dan) dirige la organización en Venezuela y en América.",
-                'maestro_mundial': "El maestro Kiyoshi Yamazaki (8vo Dan) dirige a la Ryobu-kai a nivel mundial.",
-                'fundador_organizacion': "El maestro Yatsuhiro Konishi es el fundador de nuestra organización.",
-                'academia': "Nuestra academia se llama Katashi, que significa 'firmeza'. Fue fundada por el sensei Gregori Pinzón (4to Dan).",
-                'tu_sensei': "Mi sensei es el sensei Angelo Betancourt (2do Dan)."
-            },
-            'dojoKun': [
-                "NUNCA OLVIDAREMOS EL CÓDIGO DE CORTESÍA: Debemos ser amables, educados y respetuosos con todas las personas y animales.",
-                "SIEMPRE VALORAREMOS EL CAMINO DE LA ARMONÍA: Debemos mantener la paz. El karate es el último recurso para controlar una situación.",
-                "NUNCA OLVIDAREMOS LA PERSEVERANCIA NI EL ESPÍRITU DEL KARATE: No debemos rendirnos ante las dificultades, debemos luchar por nuestros sueños y responsabilidades.",
-                "SIEMPRE MEJORAREMOS NUESTRA PERSONALIDAD: Debemos controlar nuestras actitudes y emociones, conociéndolas y entendiéndolas.",
-                "SIEMPRE RESPETAREMOS A TODA LA HUMANIDAD: Veremos a todas las personas como nuestros iguales, siendo armoniosos y tolerantes."
-            ],
-            'vocabulary': {
-                'joi': "Joi: Atención/Listos y preparados.",
-                'seiretsu': "Seiretsu: Formación.",
-                'kiritzu': "Kiritzu: Levantarse.",
-                'seiza': "Seiza: Arrodillarse con la espalda recta.",
-                'mokuso': "Mokuso: Meditación.",
-                'sensei': "Sensei: Literalmente 'el que nació primero'. Es el profesor.",
-                'shidion': "Shidoin: Instructor cinturón negro que aún no tiene el rango de sensei.",
-                'sempai': "Sempai: Asistente o ayudante del Sensei.",
-                'kohai': "Kohai: Monitor o asistente. También es el alumno más avanzado.",
-                'sochinza': "Sochinza: Principiante.",
-                'dojo': "Dojo: Lugar de entrenamiento.",
-                'tatami': "Tatami: Piso.",
-                'karategui': "Karategui: Uniforme de karate.",
-                'obi': "Obi: Cinturón.",
-                'shomen': "Shomen: Lugar de honor en el dojo.",
-                'otagai': "Otagai: Compañero.",
-                'oneigashimasu': "Oneigashimasu: Ponerse a la orden, 'por favor, enséñame'.",
-                'arigato': "Arigato gozai mashita: Muchas gracias por enseñarme.",
-                'shitsurei': "Shitsurei shimasu: Solicitud de permiso para entrar a la clase.",
-                'onaji_waza': "Onaji Waza: Repetir la misma técnica.",
-                'zenchin': "Zenchin: Hacia adelante.",
-                'koshin': "Koshin: Hacia atrás.",
-                'hajime': "Hajime: Comenzar.",
-                'yame': "Yame: Terminar.",
-                'hai': "Hai: Sí.",
-                'ie': "Ie: No.",
-                'oss': "Oss: Saludo/entendido.",
-                'migui': "Migui: Derecha.",
-                'hidari': "Hidari: Izquierda.",
-                'yoko': "Yoko: Lateral.",
-                'ushiro': "Ushiro: Atrás.",
-                'mae': "Mae: Frente.",
-                'age': "Age: Arriba.",
-                'te': "Te: Mano.",
-                'ken': "Ken: Puño.",
-                'seiken': "Seiken: Parte delantera del puño.",
-                'ashi': "Ashi: Pie.",
-                'ashi_kate': "Ashi Kate: Cambio de pie.",
-                'bo': "Bo: Palo.",
-                'embusen': "Embusen: Línea de comienzo y finalización del kata.",
-                'motonoishi': "Motonoishi: Línea de comienzo y finalización para un kumite.",
-                'aruki_kata': "Aruki Kata: Formas de desplazamiento.",
-                'tachi_kata': "Tachi Kata: Posiciones básicas.",
-                'fusegui_waza': "Fusegui Waza: Técnicas de Defensa.",
-                'seme_waza': "Seme Waza: Técnicas de Ataque.",
-                'te_waza': "Te Waza: Técnicas de ataque con las manos.",
-                'ashi_waza': "Ashi Waza: Técnicas de Ataque con los Pies.",
-                'atemi_waza': "Atemi Waza: Técnicas de golpeo a puntos vitales."
-            },
-            'history': {
-                'fundador': "El fundador del Shindo Jinen Ryu es el sensei Yasuhiro Konishi, quien comenzó su entrenamiento en artes marciales a los 6 años en Jujitsu y luego en Kendo. Fue un visionario que facilitó la llegada de otros maestros de karate a Japón.",
-                'primer_dojo': "El primer dojo de la organización fue el Ryobu-kan, fundado por el sensei Konishi en 1923. Significa 'la casa de la excelencia a través de las artes marciales' y fue donde el estilo evolucionó.",
-                'encuentro_con_funakoshi': "El sensei Konishi conoció al maestro Gichin Funakoshi, fundador de Shotokan, y le permitió dar clases de To-Te Jutsu en su dojo. Esto fue crucial para la expansión del karate en Japón.",
-                'cambios_to_te': "Bajo la influencia de Konishi y Funakoshi, el To-Te experimentó tres cambios significativos: la terminología japonesa para facilitar el aprendizaje, la adición de ippon kumite y el cambio del kanji de 'mano china' a 'mano vacía'.",
-                'reconocimiento': "El sensei Konishi fue instrumental en conseguir que el Dai Nippon Butoku-Kai, la institución que regía el budo en Japón, reconociera formalmente el karate como arte marcial en 1935.",
-                'nombre_estilo': "El sensei Konishi nombró a su estilo Shindo Jinen Ryu, que significa 'la vía de Dios o el camino natural a Dios'. Él creía que un entrenamiento natural del cuerpo y una vida moralmente correcta estaban alineados con la vía divina.",
-                'fundacion_estilo': "El estilo Shindo Jinen Ryu fue fundado por el maestro Yasuhiro Konishi en 1933. Su nombre significa 'la vía de Dios o el camino natural a Dios'."
-            },
-            'teWazaDetails': {
-                'oi_zuki': {
-                    'descripcion': "Una patada directa hacia adelante con la bola del pie (koshi) o el talón. Es una de las patadas más fundamentales y versátiles.",
-                    'uso': "Se utiliza para atacar el abdomen, el pecho o la cara. Puede ser de empuje (kekomi) o de chasquido (keage).",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Oi Zuki"
-                },
-                'gyaku_zuki': {
-                    'descripcion': "Golpe de puño con la mano opuesta al pie que está adelantado. Se caracteriza por su gran potencia, generada por la rotación completa del torso.",
-                    'uso': "Fundamental en kihon y kumite. A menudo se usa como un potente contragolpe o como parte de una combinación de ataque.",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Gyaku Zuki"
-                },
-                'kizami_zuki': {
-                    'descripcion': "Un golpe rápido y directo con la mano delantera, sin un gran movimiento de cadera. Es un ataque corto y sorpresivo.",
-                    'uso': "Rápido y útil en combate para establecer la distancia, sorprender al oponente o como un ataque inicial antes de una combinación más potente.",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Kizami Zuki"
-                },
-                'morote_zuki': {
-                    'descripcion': "Un golpe simultáneo con ambos puños, a menudo dirigido al mismo nivel o a diferentes objetivos.",
-                    'uso': "Una técnica potente para impactar con gran fuerza. Se utiliza para romper la guardia o generar un impacto contundente.",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Morote Zuki"
-                },
-                'tate_zuki': {
-                    'descripcion': "Variante del golpe de puño donde el puño se mantiene en posición vertical (nudillos hacia arriba y abajo) al momento del impacto.",
-                    'uso': "Útil en espacios reducidos o cuando se necesita un impacto más penetrante. Se ve en algunos katas.",
-                    'cinturon': "9° Kyu",
-                    'itemSpanishName': "Tate Zuki"
-                },
-                'uraken_uchi': {
-                    'descripcion': "Un golpe rápido y circular con el dorso del puño, a menudo dirigido a la cara o los costados.",
-                    'uso': "Muy usado en la aplicación de kata (bunkai) y en combate por su rapidez y capacidad de sorprender. Ideal para ataques a corta distancia.",
-                    'cinturon': "9° Kyu",
-                    'itemSpanishName': "Uraken Uchi"
-                },
-                'shuto_uchi': {
-                    'descripcion': "Un golpe ejecutado con el borde exterior de la mano abierta (el lado del dedo meñique), manteniendo los dedos juntos.",
-                    'uso': "Versátil para atacar el cuello, la clavícula, las costillas o como un bloqueo ofensivo.",
-                    'cinturon': "8° Kyu",
-                    'itemSpanishName': "Shuto Uchi"
-                },
-                'empi_uchi': {
-                    'descripcion': "Un golpe potente y devastador ejecutado con el codo. Puede ser hacia adelante, lateral, hacia atrás, ascendente o descendente.",
-                    'uso': "Potente en corta distancia, ideal para situaciones de agarre o cuando el oponente está muy cerca.",
-                    'cinturon': "8° Kyu",
-                    'itemSpanishName': "Empi Uchi"
-                },
-                'kagi_zuki': {
-                    'descripcion': "Un golpe de puño corto y curvo que se ejecuta desde el lateral, con el puño en forma de gancho.",
-                    'uso': "Eficaz en combate para golpear los costados o la mandíbula del oponente desde un ángulo cerrado.",
-                    'cinturon': "7° Kyu",
-                    'itemSpanishName': "Kagi Zuki"
-                },
-                'mawashi_zuki': {
-                    'descripcion': "Un golpe de puño con trayectoria circular, similar a un gancho de boxeo.",
-                    'uso': "Se utiliza para atacar los flancos o la cabeza del oponente con una trayectoria curva, generando gran fuerza rotacional.",
-                    'cinturon': "7° Kyu",
-                    'itemSpanishName': "Mawashi Zuki"
-                },
-                'teisho_uchi': {
-                    'descripcion': "Un golpe ejecutado con la base de la palma de la mano, con los dedos ligeramente flexionados hacia atrás.",
-                    'uso': "Ideal para empujar, desestabilizar o golpear áreas sensibles como la nariz, la barbilla o el plexo solar.",
-                    'cinturon': "6° Kyu",
-                    'itemSpanishName': "Teisho Uchi"
-                },
-                'nukite': {
-                    'descripcion': "Un ataque con las puntas de los dedos extendidos y juntos, como una lanza.",
-                    'uso': "Requiere precisión. Se dirige a puntos blandos y vitales como los ojos, la garganta o el plexo solar. Es una técnica avanzada y delicada.",
-                    'cinturon': "6° Kyu",
-                    'itemSpanishName': "Nukite"
-                },
-                'haito_uchi': {
-                    'descripcion': "Un golpe ejecutado con el borde interior de la mano abierta (el lado del pulgar).",
-                    'uso': "Es una variante de Shuto. Se utiliza para atacar puntos sensibles como la sien, el cuello o la clavícula.",
-                    'cinturon': "5° Kyu",
-                    'itemSpanishName': "Haito Uchi"
-                },
-                'otoshi_zuki': {
-                    'descripcion': "Un puñetazo que se lanza hacia abajo, a menudo con un movimiento de martillo o con el puño cerrado.",
-                    'uso': "Se utiliza para atacar la parte superior de la cabeza, la clavícula o para romper la guardia del oponente.",
-                    'cinturon': "5° Kyu",
-                    'itemSpanishName': "Otoshi Zuki"
-                },
-                'age_zuki': {
-                    'descripcion': "Un puñetazo que se lanza hacia arriba, impactando con el puño cerrado.",
-                    'uso': "Se utiliza para atacar la barbilla o la parte inferior de la nariz, a menudo desde una posición baja.",
-                    'cinturon': "4° Kyu",
-                    'itemSpanishName': "Age Zuki"
-                },
-                'yoko_zuki': {
-                    'descripcion': "Un puñetazo que se ejecuta lateralmente al cuerpo, a menudo desde una posición de Kiba-dachi (posición de jinete).",
-                    'uso': "Es potente y se utiliza para golpear los costados del oponente o para romper su equilibrio.",
-                    'cinturon': "4° Kyu",
-                    'itemSpanishName': "Yoko Zuki"
-                },
-                'ippon_ken': {
-                    'descripcion': "Un golpe de puño donde se sobresale y se utiliza solo el nudillo del dedo índice o medio como punto de impacto.",
-                    'uso': "Técnica avanzada que requiere precisión extrema. Se dirige a puntos de presión o áreas pequeñas y sensibles del cuerpo.",
-                    'cinturon': "3° Kyu",
-                    'itemSpanishName': "Ippon Ken"
-                },
-                'hiraken': {
-                    'descripcion': "Un golpe de puño donde se impacta con los nudillos medios de los dedos, con los dedos ligeramente flexionados.",
-                    'uso': "Requiere precisión. Se utiliza para golpear áreas planas o ligeramente curvas, como la frente o el abdomen.",
-                    'cinturon': "3° Kyu",
-                    'itemSpanishName': "Hiraken"
-                },
-                'kumade_uchi': {
-                    'descripcion': "Un golpe con la palma de la mano abierta y los dedos ligeramente flexionados, como una garra de oso.",
-                    'uso': "Se puede usar para golpear la cara, el abdomen o para agarrar y tirar del oponente.",
-                    'cinturon': "2° Kyu",
-                    'itemSpanishName': "Kumade Uchi"
-                },
-                'seiken_zuki': {
-                    'descripcion': "El golpe de puño más fundamental, utilizando los dos primeros nudillos del puño cerrado.",
-                    'uso': "Base de todos los golpes de puño. Se perfecciona en todos los niveles y es crucial para la potencia y precisión.",
-                    'cinturon': "1° Kyu",
-                    'itemSpanishName': "Seiken Zuki"
-                },
-                'ren_zuki': {
-                    'descripcion': "Combinación de dos o más puñetazos rápidos y fluidos, a menudo Oi Zuki y Gyaku Zuki.",
-                    'uso': "Desarrolla la velocidad y la fluidez en las combinaciones de ataque, esencial para el kumite avanzado.",
-                    'cinturon': "1° Kyu",
-                    'itemSpanishName': "Ren Zuki"
-                },
-                'sanbon_zuki': {
-                    'descripcion': "Combinación estándar de tres puñetazos: Oi Zuki (Jodan), Gyaku Zuki (Chudan), Gyaku Zuki (Chudan).",
-                    'uso': "Una de las primeras combinaciones enseñadas en kihon, fundamental para el desarrollo de la coordinación y la potencia en secuencia.",
-                    'cinturon': "1° Dan",
-                    'itemSpanishName': "Sanbon Zuki"
-                },
-                'age_empi': {
-                    'descripcion': "Golpe de codo ejecutado hacia arriba, a menudo dirigido a la barbilla o la mandíbula del oponente.",
-                    'uso': "Técnica potente a corta distancia, ideal para contragolpes o en situaciones de agarre.",
-                    'cinturon': "2° Dan",
-                    'itemSpanishName': "Age Empi"
-                },
-                'oroshi_empi': {
-                    'descripcion': "Golpe de codo ejecutado hacia abajo, impactando con la punta del codo.",
-                    'uso': "Efectivo para romper la guardia superior del oponente o golpear la clavícula.",
-                    'cinturon': "3° Dan",
-                    'itemSpanishName': "Oroshi Empi"
-                },
-                'hasami_zuki': {
-                    'descripcion': "Un ataque simultáneo con ambos puños en un movimiento de pinza, a menudo a los lados de la cabeza o el cuerpo.",
-                    'uso': "Técnica avanzada que busca impactar múltiples puntos o desequilibrar al oponente.",
-                    'cinturon': "4° Dan",
-                    'itemSpanishName': "Hasami Zuki"
-                },
-                'ryote_zuki': {
-                    'descripcion': "Similar a Morote Zuki, pero los puños pueden ir en diferentes direcciones o a diferentes objetivos simultáneamente.",
-                    'uso': "Requiere gran control y coordinación. Utilizado para ataques complejos o desequilibrios.",
-                    'cinturon': "5° Dan",
-                    'itemSpanishName': "Ryote Zuki"
-                },
-                'kakuto_uchi': {
-                    'descripcion': "Golpe utilizando la parte superior de la muñeca (donde se dobla la mano hacia atrás).",
-                    'uso': "Técnica de puntos de presión (Kyusho) o para golpear áreas sensibles con precisión.",
-                    'cinturon': "6° Dan",
-                    'itemSpanishName': "Kakuto Uchi"
-                }
-            },
-            'teWazaList': [
-                "Oi Zuki (Puñetazo Directo)",
-                "Gyaku Zuki (Puñetazo Inverso)",
-                "Kizami Zuki (Puñetazo Corto)",
-                "Morote Zuki (Golpe Doble)",
-                "Tate Zuki (Puñetazo Vertical)",
-                "Uraken Uchi (Golpe de Revés con el Dorso del Puño)",
-                "Shuto Uchi (Golpe con Mano de Sable)",
-                "Empi Uchi (Golpe de Codo)",
-                "Kagi Zuki (Golpe en Gancho)",
-                "Mawashi Zuki (Golpe Circular)",
-                "Teisho Uchi (Golpe con Palma)",
-                "Nukite (Golpe con Dedo Lanza)",
-                "Haito Uchi (Golpe con Mano Interna)",
-                "Otoshi Zuki (Golpe Descendente)",
-                "Age Zuki (Golpe Ascendente)",
-                "Yoko Zuki (Golpe Lateral)",
-                "Ippon Ken (Puño de Un Nudillo)",
-                "Hiraken (Puño Plano)",
-                "Kumade Uchi (Golpe de Mano de Oso)",
-                "Seiken Zuki (Puñetazo con Nudillos Frontales)",
-                "Ren Zuki (Puñetazos Consecutivos)",
-                "Sanbon Zuki (Triple Puñetazo)",
-                "Age Empi (Golpe de Codo Ascendente)",
-                "Oroshi Empi (Golpe de Codo Descendente)",
-                "Hasami Zuki (Puñetazo de Tijera)",
-                "Ryote Zuki (Puñetazo con Ambas Manos)",
-                "Kakuto Uchi (Golpe con Muñeca)"
-            ],
-            'fuseguiWazaDetails': {
-                'gedan_barai': {
-                    'descripcion': "Bloqueo con el antebrazo hacia abajo y hacia afuera para defender ataques a la parte baja del cuerpo o barrer una pierna.",
-                    'uso': "Fundamental en los entrenamientos y las formas (katas). Se utiliza para desviar patadas bajas o ataques a la ingle.",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Gedan Barai"
-                },
-                'jodan_uke': {
-                    'descripcion': "Bloqueo ascendente para defender ataques a la cabeza o a la parte superior del cuerpo.",
-                    'uso': "Esencial para proteger la cabeza y la cara de golpes superiores en kihon y kumite.",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Jodan Uke"
-                },
-                'chudan_uke': {
-                    'descripcion': "Un término general para bloqueos que defienden el torso. Puede ser Soto Uke o Uchi Uke, dependiendo del contexto.",
-                    'uso': "Se usa para defender ataques directos al abdomen o al pecho.",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Chudan Uke"
-                },
-                'soto_uke': {
-                    'descripcion': "Un bloqueo con el antebrazo que va desde el interior del cuerpo hacia el exterior. Es un bloqueo potente que desvía el ataque hacia afuera.",
-                    'uso': "Ampliamente usado en kihon y katas contra ataques directos al torso.",
-                    'cinturon': "9° Kyu",
-                    'itemSpanishName': "Soto Uke"
-                },
-                'uchi_uke': {
-                    'descripcion': "Bloqueo con el antebrazo que va desde el exterior del cuerpo hacia el interior, desviando el ataque hacia el centro del defensor.",
-                    'uso': "Complementa a Soto Uke y se usa para desviar ataques que vienen desde el exterior del cuerpo.",
-                    'cinturon': "9° Kyu",
-                    'itemSpanishName': "Uchi Uke"
-                },
-                'shuto_uke': {
-                    'descripcion': "Un bloqueo que usa el borde exterior de la mano abierta, a menudo en una posición baja (kokutsu dachi).",
-                    'uso': "Común en katas avanzados. Efectivo para desviar ataques con un movimiento circular.",
-                    'cinturon': "8° Kyu",
-                    'itemSpanishName': "Shuto Uke"
-                },
-                'kake_uke': {
-                    'descripcion': "Un bloqueo que 'engancha' o 'atrapa' la extremidad del oponente con un movimiento circular, buscando controlar el ataque.",
-                    'uso': "Una técnica avanzada para desviar y controlar el ataque.",
-                    'cinturon': "7° Kyu",
-                    'itemSpanishName': "Kake Uke"
-                },
-                'morote_uke': {
-                    'descripcion': "Un bloqueo principal que se refuerza con la otra mano por debajo o detrás del codo.",
-                    'uso': "Aumenta la potencia y estabilidad del bloqueo contra ataques fuertes.",
-                    'cinturon': "7° Kyu",
-                    'itemSpanishName': "Morote Uke"
-                },
-                'teisho_uke': {
-                    'descripcion': "Un bloqueo ejecutado con la base de la palma. Es suave pero firme.",
-                    'uso': "Ideal para empujar o desestabilizar el ataque del oponente.",
-                    'cinturon': "6° Kyu",
-                    'itemSpanishName': "Teisho Uke"
-                },
-                'nagashi_uke': {
-                    'descripcion': "Un bloqueo suave y circular que desvía la fuerza del ataque sin oponer resistencia directa.",
-                    'uso': "Requiere fluidez y sincronización. Se usa para redirigir la energía del oponente.",
-                    'cinturon': "5° Kyu",
-                    'itemSpanishName': "Nagashi Uke"
-                },
-                'haito_uke': {
-                    'descripcion': "Un bloqueo que usa el borde interior de la mano abierta (el lado del pulgar).",
-                    'uso': "Una variante de Shuto Uke para desviar ataques desde un ángulo diferente.",
-                    'cinturon': "5° Kyu",
-                    'itemSpanishName': "Haito Uke"
-                },
-                'kakato_uke': {
-                    'descripcion': "Bloqueo que utiliza la parte inferior del talón del pie.",
-                    'uso': "Principalmente defensivo contra patadas bajas. Requiere equilibrio y control.",
-                    'cinturon': "4° Kyu",
-                    'itemSpanishName': "Kakato Uke"
-                },
-                'empi_uke': {
-                    'descripcion': "Uso del codo para bloquear ataques, especialmente a corta distancia.",
-                    'uso': "Muy potente en espacios cerrados.",
-                    'cinturon': "3° Kyu",
-                    'itemSpanishName': "Empi Uke"
-                },
-                'manji_uke': {
-                    'descripcion': "Un bloqueo doble donde un brazo realiza un bloqueo alto y el otro un bloqueo bajo en direcciones opuestas.",
-                    'uso': "Técnica avanzada que defiende dos niveles al mismo tiempo. Se ve en katas como Kanku Dai y Jion.",
-                    'cinturon': "2° Kyu",
-                    'itemSpanishName': "Manji Uke"
-                },
-                'juji_uke': {
-                    'descripcion': "Bloqueo con ambos antebrazos cruzados, ya sea a nivel superior o inferior.",
-                    'uso': "Se utiliza para bloquear ataques amplios o atrapar una extremidad.",
-                    'cinturon': "1° Kyu",
-                    'itemSpanishName': "Juji Uke"
-                },
-                'mawashi_uke': {
-                    'descripcion': "Un bloqueo circular amplio que utiliza el movimiento del brazo para desviar el ataque.",
-                    'uso': "Movimiento fluido y complejo en katas avanzados para defenderse de múltiples amenazas.",
-                    'cinturon': "1° Dan",
-                    'itemSpanishName': "Mawashi Uke"
-                },
-                'ryote_uke': {
-                    'descripcion': "Un bloqueo que utiliza ambas manos de forma conjunta para una defensa más robusta.",
-                    'uso': "Se usa contra ataques muy potentes o para proteger una zona amplia del cuerpo.",
-                    'cinturon': "2° Dan",
-                    'itemSpanishName': "Ryote Uke"
-                },
-                'kakuto_uke': {
-                    'descripcion': "Bloqueo que usa la parte superior de la muñeca.",
-                    'uso': "Técnica avanzada utilizada para desviar ataques o para atacar puntos de presión específicos.",
-                    'cinturon': "3° Dan",
-                    'itemSpanishName': "Kakuto Uke"
-                },
-                'hasami_uke': {
-                    'descripcion': "Un bloqueo doble donde los brazos se mueven como una tijera para atrapar o desviar un ataque.",
-                    'uso': "Utilizado para atrapar o desviar patadas o puños, buscando desequilibrar.",
-                    'cinturon': "4° Dan",
-                    'itemSpanishName': "Hasami Uke"
-                },
-                'tsukami_uke': {
-                    'descripcion': "Un bloqueo que implica atrapar o agarrar la extremidad del oponente.",
-                    'uso': "Técnica avanzada que combina defensa con control.",
-                    'cinturon': "5° Dan",
-                    'itemSpanishName': "Tsukami Uke"
-                },
-                'sukui_uke': {
-                    'descripcion': "Un bloqueo con la palma de la mano abierta en forma de cuchara.",
-                    'uso': "Se usa para redirigir la fuerza del oponente hacia abajo o hacia un lado para desequilibrarlo.",
-                    'cinturon': "6° Dan",
-                    'itemSpanishName': "Sukui Uke"
-                },
-                'kosa_uke': {
-                    'descripcion': "Bloqueo con los brazos cruzados, similar a Juji Uke, pero enfocado en el desequilibrio del oponente.",
-                    'uso': "Se utiliza para defender ataques fuertes y para enganchar o desequilibrar al oponente.",
-                    'cinturon': "7° Dan",
-                    'itemSpanishName': "Kosa Uke"
-                },
-                'ryosho_uke': {
-                    'descripcion': "Bloqueo con ambas palmas hacia adelante, empujando el ataque.",
-                    'uso': "Utilizado para desviar ataques potentes o para crear distancia.",
-                    'cinturon': "8° Dan",
-                    'itemSpanishName': "Ryosho Uke"
-                },
-                'seiryuto_uke': {
-                    'descripcion': "Bloqueo con la base de la mano, con la muñeca más doblada.",
-                    'uso': "Técnica avanzada para bloquear y golpear al mismo tiempo.",
-                    'cinturon': "9° Dan",
-                    'itemSpanishName': "Seiryuto Uke"
-                },
-                'heisoku_dachi': {
-                    'descripcion': "Aunque es una posición, puede ser el inicio de una defensa sutil donde la movilidad es clave para evadir, más que para bloquear.",
-                    'uso': "No es un bloqueo, sino una posición de control y preparación para un movimiento rápido.",
-                    'cinturon': "10° Dan",
-                    'itemSpanishName': "Heisoku Dachi"
-                },
-                'tai_sabaki': {
-                    'descripcion': "El arte de mover el cuerpo para evadir un ataque en lugar de oponerse a él.",
-                    'uso': "Fundamental en la defensa fluida. Permite evitar el golpe y crear un ángulo favorable para un contragolpe.",
-                    'cinturon': "3° Kyu",
-                    'itemSpanishName': "Tai Sabaki"
-                },
-                'ashi_barai': {
-                    'descripcion': "Técnica que usa el pie para barrer la pierna del oponente, desequilibrándolo.",
-                    'uso': "Efectivo como contragolpe defensivo o para desequilibrar antes de un seguimiento.",
-                    'cinturon': "2° Kyu",
-                    'itemSpanishName': "Ashi Barai"
-                },
-                'nage_waza': {
-                    'descripcion': "Conjunto de técnicas que implican desequilibrar y proyectar al oponente al suelo.",
-                    'uso': "Utilizadas para neutralizar un ataque y controlar al oponente.",
-                    'cinturon': "1° Dan",
-                    'itemSpanishName': "Nage Waza"
-                },
-                'kansetsu_waza': {
-                    'descripcion': "Técnicas que aplican presión o torsión a las articulaciones del oponente.",
-                    'uso': "Defensas avanzadas que buscan el control del oponente sin necesidad de golpearlo.",
-                    'cinturon': "2° Dan",
-                    'itemSpanishName': "Kansetsu Waza"
-                }
-            },
-            'fuseguiWazaList': [
-                "Gedan Barai (Bloqueo bajo)",
-                "Jodan Uke (Bloqueo alto)",
-                "Chudan Uke (Bloqueo medio)",
-                "Soto Uke (Bloqueo exterior)",
-                "Uchi Uke (Bloqueo interior)",
-                "Shuto Uke (Bloqueo con mano de sable)",
-                "Kake Uke (Bloqueo en gancho)",
-                "Morote Uke (Bloqueo reforzado con ambas manos)",
-                "Teisho Uke (Bloqueo con la base de la palma)",
-                "Nagashi Uke (Bloqueo deslizante o de desvío)",
-                "Haito Uke (Bloqueo con borde interno de la mano)",
-                "Kakato Uke (Bloqueo descendente con el talón)",
-                "Empi Uke (Bloqueo con el codo)",
-                "Manji Uke (Bloqueo cruzado doble)",
-                "Juji Uke (Bloqueo en cruz)",
-                "Mawashi Uke (Bloqueo circular)",
-                "Ryote Uke (Bloqueo con ambas manos)",
-                "Kakuto Uke (Bloqueo con muñeca)",
-                "Hasami Uke (Bloqueo en tijera)",
-                "Tsukami Uke (Bloqueo de Agarre/Captura)",
-                "Sukui Uke (Bloqueo de Cuchara/Recogida)",
-                "Kosa Uke (Bloqueo Cruzado)",
-                "Ryosho Uke (Bloqueo con Ambas Palmas)",
-                "Seiryuto Uke (Bloqueo de Mano de Buey)",
-                "Heisoku Dachi (Posición de Pies Juntos)",
-                "Tai Sabaki (Movimiento Corporal / Evasión)",
-                "Ashi Barai (Barrido de Pie)",
-                "Nage Waza (Técnicas de Lanzamiento)",
-                "Kansetsu Waza (Técnicas de Luxación / Control Articular)"
-            ],
-            'ashiWazaDetails': {
-                'mae_geri': {
-                    'descripcion': "Una patada directa hacia adelante con la bola del pie (koshi) o el talón. Es una de las patadas más fundamentales y versátiles.",
-                    'uso': "Se utiliza para atacar el abdomen, el pecho o la cara. Puede ser de empuje (kekomi) o de chasquido (keage).",
-                    'cinturon': "10° Kyu",
-                    'itemSpanishName': "Mae Geri"
-                },
-                'yoko_geri_keage': {
-                    'descripcion': "Patada lateral de chasquido que se eleva, impactando con el borde exterior del pie (sokuto) o el talón.",
-                    'uso': "Efectiva para atacar los costados, la cabeza o como técnica de barrido. Requiere buen equilibrio.",
-                    'cinturon': "9° Kyu",
-                    'itemSpanishName': "Yoko Geri Keage"
-                },
-                'yoko_geri_kekomi': {
-                    'descripcion': "Patada lateral potente de empuje, que impacta con el borde exterior del pie o el talón. Busca penetrar el objetivo.",
-                    'uso': "Ideal para romper la guardia o desequilibrar al oponente, apuntando al abdomen, las costillas o las rodillas.",
-                    'cinturon': "8° Kyu",
-                    'itemSpanishName': "Yoko Geri Kekomi"
-                },
-                'mawashi_geri': {
-                    'descripcion': "Patada semicircular que impacta con el empeine (haisoku) o la bola del pie. Es una de las patadas más utilizadas en el combate (kumite).",
-                    'uso': "Versátil para atacar la cabeza, el torso o las piernas. Requiere rotación de cadera y pivote del pie de apoyo para máxima potencia.",
-                    'cinturon': "7° Kyu",
-                    'itemSpanishName': "Mawashi Geri"
-                },
-                'ushiro_geri': {
-                    'descripcion': "Una patada potente lanzada directamente hacia atrás, impactando con el talón.",
-                    'uso': "Muy efectiva contra oponentes que se acercan por detrás o para sorprender con un giro. Requiere buena conciencia espacial.",
-                    'cinturon': "6° Kyu",
-                    'itemSpanishName': "Ushiro Geri"
-                },
-                'hiza_geri': {
-                    'descripcion': "Un ataque con la rodilla, efectivo a corta distancia.",
-                    'uso': "Útil en el combate cercano para golpear zonas blandas o desequilibrar. A menudo se combina con agarres.",
-                    'cinturon': "5° Kyu",
-                    'itemSpanishName': "Hiza Geri"
-                },
-                'ura_mawashi_geri': {
-                    'descripcion': "Patada circular que se ejecuta con el talón o la planta del pie, girando sobre el pie de apoyo en la dirección opuesta a Mawashi Geri.",
-                    'uso': "Una patada avanzada que busca golpear la sien o la mandíbula. Requiere gran flexibilidad y control.",
-                    'cinturon': "4° Kyu",
-                    'itemSpanishName': "Ura Mawashi Geri"
-                },
-                'mikazuki_geri': {
-                    'descripcion': "Patada circular ascendente con la planta del pie, que describe un arco.",
-                    'uso': "Se usa para golpear la cara o el cuerpo, o para desviar un ataque de puño del oponente. Es fluida y engañosa.",
-                    'cinturon': "3° Kyu",
-                    'itemSpanishName': "Mikazuki Geri"
-                },
-                'fumikomi': {
-                    'descripcion': "Una patada descendente y potente con el talón o la planta del pie, dirigida a la rodilla o el pie del oponente.",
-                    'uso': "Se utiliza para desequilibrar, dañar las articulaciones de la pierna o inmovilizar al oponente.",
-                    'cinturon': "3° Kyu",
-                    'itemSpanishName': "Fumikomi"
-                },
-                'kakato_geri': {
-                    'descripcion': "Patada descendente con el talón, a menudo dirigida a la cabeza o la clavícula. Requiere una gran elevación de la pierna.",
-                    'uso': "Una patada de alto impacto, utilizada para romper la guardia o golpear desde arriba. Es una técnica avanzada y espectacular.",
-                    'cinturon': "2° Kyu",
-                    'itemSpanishName': "Kakato Geri"
-                },
-                'nidan_geri': {
-                    'descripcion': "Una combinación de dos patadas ejecutadas en el aire, generalmente un Mae Geri seguido de otro Mae Geri o Mawashi Geri.",
-                    'uso': "Una técnica acrobática y potente para sorprender al oponente o alcanzarlo a mayor distancia. Requiere explosividad.",
-                    'cinturon': "1° Kyu",
-                    'itemSpanishName': "Nidan Geri"
-                },
-                'tobi_geri': {
-                    'descripcion': "Cualquier patada ejecutada mientras el practicante está en el aire (saltando).",
-                    'uso': "Aumenta el alcance y la potencia, ideal para ataques sorpresa. Requiere un gran control corporal.",
-                    'cinturon': "1° Kyu",
-                    'itemSpanishName': "Tobi Geri"
-                },
-                'kake_geri': {
-                    'descripcion': "Patada que se 'engancha' alrededor del objetivo, a menudo con la planta del pie o el talón.",
-                    'uso': "Se utiliza para golpear la cabeza o el cuello desde un ángulo lateral, o para barrer las piernas del oponente.",
-                    'cinturon': "1° Dan",
-                    'itemSpanishName': "Kake Geri"
-                },
-                'ashi_barai': {
-                    'descripcion': "Técnica que utiliza el pie para barrer la pierna de apoyo del oponente, desequilibrándolo o derribándolo.",
-                    'uso': "Efectivo como contragolpe defensivo después de un ataque, o para desequilibrar antes de un seguimiento. Requiere buen timing y distancia.",
-                    'cinturon': "2° Kyu",
-                    'itemSpanishName': "Ashi Barai"
-                }
-            },
-            'ashiWazaList': [
-                "Mae Geri (Patada Frontal)",
-                "Yoko Geri Keage (Patada Lateral Ascendente)",
-                "Yoko Geri Kekomi (Patada Lateral de Empuje)",
-                "Mawashi Geri (Patada Circular)",
-                "Ushiro Geri (Patada Hacia Atrás)",
-                "Hiza Geri (Rodillazo)",
-                "Ura Mawashi Geri (Patada Circular Invertida)",
-                "Mikazuki Geri (Patada de Luna Creciente)",
-                "Fumikomi (Patada de Estampida/Pisotón)",
-                "Kakato Geri (Patada de Talón Descendente)",
-                "Nidan Geri (Doble Patada de Salto)",
-                "Tobi Geri (Patada de Salto)",
-                "Kake Geri (Patada de Gancho)",
-                "Ashi Barai (Barrido de Pie)"
-            ],
-            'atemiWazaDetails': {
-                'presion_dedos': {
-                    'itemName': "Presión con dedos",
-                    'itemSpanishName': "PC-6 (Pericardio 6)",
-                    'descripcion': "Presión directa sobre el punto nervioso PC-6, ubicado en la muñeca.",
-                    'uso': "Punto de presión: PC-6 (Pericardio 6)\nEfecto potencial: Interrupción del ritmo cardíaco",
-                    'cinturon': "1° Kyu"
-                },
-                'uraken_uchi': {
-                    'itemName': "Uraken Uchi",
-                    'itemSpanishName': "Golpe de puño invertido a la nuca",
-                    'descripcion': "Golpe con el puño invertido dirigido al punto nervioso GB-20 en la nuca.",
-                    'uso': "Punto de presión: GB-20 (Vesícula Biliar 20)\nEfecto potencial: Desmayo / daño cerebral",
-                    'cinturon': "1° Kyu"
-                },
-                'empi_uchi': {
-                    'itemName': "Empi Uchi",
-                    'itemSpanishName': "Golpe de codo a la garganta",
-                    'descripcion': "Impacto con el codo en el punto nervioso CV-22, en el área de la garganta.",
-                    'uso': "Punto de presión: CV-22 (Vaso Concepción)\nEfecto potencial: Asfixia / fractura traqueal",
-                    'cinturon': "1° Kyu"
-                },
-                'tsuki': {
-                    'itemName': "Tsuki",
-                    'itemSpanishName': "Golpe de puño al cuello",
-                    'descripcion': "Estocada directa al punto nervioso LI-18, ubicado en el cuello.",
-                    'uso': "Punto de presión: LI-18 (Intestino Grueso 18)\nEfecto potencial: Parálisis / colapso respiratorio",
-                    'cinturon': "1° Kyu"
-                },
-                'haito_uchi': {
-                    'itemName': "Haito Uchi",
-                    'itemSpanishName': "Golpe de mano abierta a la base del cráneo",
-                    'descripcion': "Impacto con el lado interior de la mano abierta en el punto nervioso BL-10, en la base del cráneo.",
-                    'uso': "Punto de presión: BL-10 (Vejiga 10)\nEfecto potencial: Inconsciencia / daño neurológico",
-                    'cinturon': "1° Kyu"
-                },
-                'shuto_uchi': {
-                    'itemName': "Shuto Uchi",
-                    'itemSpanishName': "Golpe de canto de la mano al cuello",
-                    'descripcion': "Impacto con el canto de la mano en el punto nervioso ST-9, en el cuello.",
-                    'uso': "Punto de presión: ST-9 (Estómago 9)\nEfecto potencial: Pérdida de conciencia / muerte por interrupción de flujo sanguíneo",
-                    'cinturon': "1° Dan"
-                },
-                'nukite': {
-                    'itemName': "Nukite",
-                    'itemSpanishName': "Estocada con dedos al filtrum",
-                    'descripcion': "Golpe de punta de dedos al punto nervioso GV-26, entre la nariz y el labio superior.",
-                    'uso': "Punto de presión: GV-26 (Vaso Gobernador)\nEfecto potencial: Shock neurológico / paro cardíaco",
-                    'cinturon': "1° Dan"
-                },
-                'yokogeri': {
-                    'itemName': "Patada lateral",
-                    'itemSpanishName': "Yokogeri",
-                    'descripcion': "Patada lateral dirigida al punto nervioso SP-6, en la parte baja de la pierna.",
-                    'uso': "Punto de presión: SP-6 (Bazo 6)\nEfecto potencial: Colapso circulatorio / desmayo",
-                    'cinturon': "1° Dan"
-                }
-            },
-            'atemiWaza': {
-                'definicion': "Atemi-Waza se refiere a las técnicas de golpeo o presión a puntos vitales o nerviosos del cuerpo. Requieren una precisión milimétrica y un control total de la energía.",
-                'principios': [
-                    "Área de impacto pequeña = mayor daño localizado.",
-                    "Dirección del golpe = debe seguir el flujo nervioso o vascular.",
-                    "Distancia mínima = el golpe se realiza desde contacto o casi sin recorrido.",
-                    "Contracción muscular = para maximizar la transferencia de energía.",
-                    "Expulsión de ki = se realiza al cerrar la respiración y liberar energía por la garganta."
-                ]
-            },
-            'logica_creativa': {
-                'poema_karate_romance': `
-Un puño firme y un corazón abierto,
-en cada Kata encuentro tu aliento.
-Tu amor es mi Sensei, mi guía constante,
-en el tatami de la vida, un arte elegante.
-Cada golpe es un 'te amo' sin dudar,
-cada bloqueo, el deseo de cuidar.
-Como un 'oi zuki', directo y sincero,
-mi amor por ti, un camino verdadero.
-`,
-                'metafora_progreso': "El camino del karateka es como el de un río. A veces fluye suave, a veces se enfrenta a rocas y rápidos. Pero nunca deja de avanzar, erosionando la piedra con paciencia y perseverancia. Cada golpe, cada caída, es una forma de tallar el espíritu y hacerse más fuerte."
-            },
-            'techniquesByRank': {
-                '10 kyu': {
-                    'teWaza': ['Oi Zuki', 'Gyaku Zuki', 'Kizami Zuki', 'Morote Zuki'],
-                    'fuseguiWaza': ['Gedan Barai', 'Jodan Uke', 'Chudan Uke'],
-                    'ashiWaza': ['Mae Geri']
-                },
-                '9 kyu': {
-                    'teWaza': ['Tate Zuki', 'Uraken Uchi'],
-                    'fuseguiWaza': ['Soto Uke', 'Uchi Uke'],
-                    'ashiWaza': ['Yoko Geri Keage']
-                },
-                '8 kyu': {
-                    'teWaza': ['Shuto Uchi', 'Empi Uchi'],
-                    'fuseguiWaza': ['Shuto Uke'],
-                    'ashiWaza': ['Yoko Geri Kekomi']
-                },
-                '7 kyu': {
-                    'teWaza': ['Kagi Zuki', 'Mawashi Zuki'],
-                    'fuseguiWaza': ['Kake Uke', 'Morote Uke'],
-                    'ashiWaza': ['Mawashi Geri']
-                },
-                '6 kyu': {
-                    'teWaza': ['Teisho Uchi', 'Nukite'],
-                    'fuseguiWaza': ['Teisho Uke'],
-                    'ashiWaza': ['Ushiro Geri']
-                },
-                '5 kyu': {
-                    'teWaza': ['Haito Uchi', 'Otoshi Zuki'],
-                    'fuseguiWaza': ['Nagashi Uke', 'Haito Uke'],
-                    'ashiWaza': ['Hiza Geri']
-                },
-                '4 kyu': {
-                    'teWaza': ['Age Zuki', 'Yoko Zuki'],
-                    'fuseguiWaza': ['Kakato Uke'],
-                    'ashiWaza': ['Ura Mawashi Geri']
-                },
-                '3 kyu': {
-                    'teWaza': ['Ippon Ken', 'Hiraken'],
-                    'fuseguiWaza': ['Empi Uke'],
-                    'ashiWaza': ['Mikazuki Geri', 'Fumikomi']
-                },
-                '2 kyu': {
-                    'teWaza': ['Kumade Uchi'],
-                    'fuseguiWaza': ['Manji Uke'],
-                    'ashiWaza': ['Kakato Geri']
-                },
-                '1 kyu': {
-                    'teWaza': ['Seiken Zuki', 'Ren Zuki'],
-                    'fuseguiWaza': ['Juji Uke'],
-                    'ashiWaza': ['Nidan Geri', 'Tobi Geri']
-                },
-                '1 dan': {
-                    'teWaza': ['Sanbon Zuki'],
-                    'fuseguiWaza': ['Mawashi Uke'],
-                    'ashiWaza': ['Kake Geri']
-                }
-            }
-        };
-
-        /**
-         * Utilidades de Procesamiento de Lenguaje Natural
-         * Maneja normalización, validación y fuzzy matching
-         */
-        class NLPUtils {
-            /**
-             * Normaliza el texto eliminando acentos y convirtiendo a minúsculas
-             * @param {string} text - Texto a normalizar
-             * @returns {string} Texto normalizado
-             */
-            static normalizeText(text) {
-                if (typeof text !== 'string') return '';
-                return text.normalize("NFD")
-                    .replace(/[\u0300-\u036f]/g, "")
-                    .toLowerCase()
-                    .trim();
+        // Sistema de IA simplificado para la PWA
+        class SenseiAI {
+            constructor() {
+                this.knowledgeBase = {
+                    general: {
+                        greeting: "¡Osu! Soy un Sensei de Shindo Jinen Ryu.",
+                        farewell: "¡Osu! El conocimiento es un viaje sin fin.",
+                        error: "¡Osu! Mi conocimiento es vasto, pero necesito más claridad.",
+                        apology: "Disculpe, Sensei no entendió su pregunta, intente de nuevo."
+                    },
+                    techniques: {
+                        "Oi Zuki": {
+                            descripcion: "Golpe de puño directo con la mano adelantada. Es el ataque más fundamental en karate.",
+                            uso: "Ataque frontal directo al pecho o abdomen del oponente.",
+                            cinturon: "10° Kyu",
+                            category: "teWaza"
+                        },
+                        "Gyaku Zuki": {
+                            descripcion: "Golpe de puño con la mano trasera. Genera gran potencia mediante la rotación de cadera.",
+                            uso: "Contraataque potente aprovechando la rotación del cuerpo.",
+                            cinturon: "10° Kyu",
+                            category: "teWaza"
+                        },
+                        "Mae Geri": {
+                            descripcion: "Patada frontal directa con la bola del pie. Es la patada más básica y versátil.",
+                            uso: "Ataque frontal al abdomen, pecho o cara del oponente.",
+                            cinturon: "10° Kyu",
+                            category: "ashiWaza"
+                        },
+                        "Gedan Barai": {
+                            descripcion: "Bloqueo descendente con el antebrazo. Defiende la parte baja del cuerpo.",
+                            uso: "Defensa contra patadas bajas y ataques al abdomen.",
+                            cinturon: "10° Kyu",
+                            category: "fuseguiWaza"
+                        },
+                        "Sanbon Zuki": {
+                            descripcion: "Combinación de tres puñetazos consecutivos: Oi Zuki (Jodan), Gyaku Zuki (Chudan), Gyaku Zuki (Chudan).",
+                            uso: "Técnica avanzada de combinación para kumite y katas.",
+                            cinturon: "1° Dan",
+                            category: "teWaza"
+                        },
+                        "Mawashi Geri": {
+                            descripcion: "Patada circular semicircular con el empeine del pie. Es una de las patadas más efectivas en combate.",
+                            uso: "Ataque circular a la cabeza, torso o piernas del oponente.",
+                            cinturon: "5° Kyu",
+                            category: "ashiWaza"
+                        },
+                        "Uchi Uke": {
+                            descripcion: "Bloqueo interior hacia afuera con el antebrazo. Defiende el torso medio.",
+                            uso: "Desviar golpes directos al centro del cuerpo (chudan).",
+                            cinturon: "9° Kyu",
+                            category: "fuseguiWaza"
+                        },
+                        "Soto Uke": {
+                            descripcion: "Bloqueo exterior hacia adentro con el antebrazo. Defiende ataques laterales.",
+                            uso: "Proteger contra golpes desde los costados hacia el centro.",
+                            cinturon: "9° Kyu",
+                            category: "fuseguiWaza"
+                        },
+                        "Jodan Uke": {
+                            descripcion: "Bloqueo ascendente para defender la parte superior del cuerpo.",
+                            uso: "Proteger la cabeza y cara de golpes superiores.",
+                            cinturon: "10° Kyu",
+                            category: "fuseguiWaza"
+                        },
+                        "Uraken Uchi": {
+                            descripcion: "Golpe rápido con el dorso del puño en movimiento circular.",
+                            uso: "Ataque sorpresivo a la cara o sienes del oponente.",
+                            cinturon: "9° Kyu",
+                            category: "teWaza"
+                        },
+                        "Yoko Geri Keage": {
+                            descripcion: "Patada lateral ascendente de chasquido con el borde del pie.",
+                            uso: "Ataque rápido a las costillas o cabeza del oponente.",
+                            cinturon: "9° Kyu",
+                            category: "ashiWaza"
+                        },
+                        "Kakato Geri": {
+                            descripcion: "Patada descendente con el talón. Requiere gran elevación y potencia.",
+                            uso: "Ataque poderoso a la cabeza o clavícula del oponente.",
+                            cinturon: "2° Kyu",
+                            category: "ashiWaza"
+                        },
+                        "Nukite": {
+                            descripcion: "Ataque con las puntas de los dedos extendidos y juntos.",
+                            uso: "Ataque preciso a puntos vitales como ojos, garganta o plexo solar.",
+                            cinturon: "6° Kyu",
+                            category: "teWaza"
+                        },
+                        "Manji Uke": {
+                            descripcion: "Bloqueo doble cruzado que defiende dos niveles simultáneamente.",
+                            uso: "Defensa avanzada contra ataques múltiples o combinados.",
+                            cinturon: "2° Kyu",
+                            category: "fuseguiWaza"
+                        },
+                        "Shuto Uchi": {
+                            descripcion: "Golpe con el borde exterior de la mano abierta (lado del dedo meñique).",
+                            uso: "Ataque al cuello, clavícula o costillas del oponente.",
+                            cinturon: "8° Kyu",
+                            category: "teWaza"
+                        }
+                    },
+                    vocabulary: {
+                        "dojo": "Lugar de entrenamiento de artes marciales. Literalmente 'lugar del camino'.",
+                        "sensei": "Maestro o instructor. Literalmente 'el que ha nacido antes'.",
+                        "oss": "Expresión de respeto y afirmación en karate. Se usa para saludar, mostrar respeto y confirmar instrucciones.",
+                        "kumite": "Combate o sparring en karate. Práctica de combate con oponente.",
+                        "kata": "Secuencia formal de movimientos que simulan combate contra múltiples oponentes.",
+                        "kihon": "Fundamentos o técnicas básicas del karate.",
+                        "karate": "Mano vacía. Arte marcial de origen okinawense."
+                    },
+                    history: {
+                        "shindo jinen ryu": "Estilo fundado por Yasuhiro Konishi en 1933. Combina elementos de Shotokan y otras artes marciales.",
+                        "yasuhiro konishi": "Fundador del Shindo Jinen Ryu. Nació en 1893 y fue uno de los pioneros del karate moderno.",
+                        "origen": "El karate se originó en Okinawa como método de defensa desarmada contra samuráis invasores."
+                    }
+                };
             }
 
-            /**
-             * Valida y sanitiza la entrada del usuario
-             * @param {string} input - Entrada del usuario
-             * @returns {string} Entrada sanitizada
-             */
-            static sanitizeInput(input) {
-                if (!input || typeof input !== 'string') return '';
-                
-                // Eliminar caracteres potencialmente peligrosos
-                const sanitized = input
-                    .replace(/[<>]/g, '')
-                    .replace(/[\x00-\x1F\x7F]/g, '')
-                    .trim();
-                
-                // Limitar longitud
-                return sanitized.length > 500 ? sanitized.substring(0, 500) : sanitized;
+            normalizeText(text) {
+                return text.toLowerCase()
+                    .trim()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '');
             }
 
-            /**
-             * Calcula la similitud entre dos textos usando algoritmo de distancia de Levenshtein
-             * @param {string} str1 - Primera cadena
-             * @param {string} str2 - Segunda cadena
-             * @returns {number} Similitud (0-1)
-             */
-            static fuzzyMatch(str1, str2) {
+            fuzzyMatch(str1, str2) {
                 const normalized1 = this.normalizeText(str1);
                 const normalized2 = this.normalizeText(str2);
                 
+                if (normalized1 === normalized2) return 1.0;
+                if (normalized1.includes(normalized2) || normalized2.includes(normalized1)) return 0.8;
+                
+                // Simple Levenshtein distance
                 const distance = this.levenshteinDistance(normalized1, normalized2);
                 const maxLength = Math.max(normalized1.length, normalized2.length);
-                
                 return maxLength === 0 ? 1 : 1 - (distance / maxLength);
             }
 
-            /**
-             * Calcula la distancia de Levenshtein entre dos cadenas
-             * @param {string} str1 - Primera cadena
-             * @param {string} str2 - Segunda cadena
-             * @returns {number} Distancia de Levenshtein
-             */
-            static levenshteinDistance(str1, str2) {
+            levenshteinDistance(str1, str2) {
                 const matrix = Array(str2.length + 1).fill(null).map(() => 
                     Array(str1.length + 1).fill(null));
                 
@@ -1040,574 +394,122 @@ mi amor por ti, un camino verdadero.
                 return matrix[str2.length][str1.length];
             }
 
-            /**
-             * Extrae palabras clave de una consulta
-             * @param {string} query - Consulta del usuario
-             * @returns {string[]} Array de palabras clave
-             */
-            static extractKeywords(query) {
-                const normalized = this.normalizeText(query);
-                const stopWords = ['el', 'la', 'los', 'las', 'de', 'en', 'que', 'es', 'un', 'una', 'como', 'para', 'con', 'por', 'son', 'mi', 'tu', 'su', 'nuestro', 'nuestra'];
-                
-                return normalized
-                    .split(/\s+/)
-                    .filter(word => word.length > 2 && !stopWords.includes(word))
-                    .filter((word, index, self) => self.indexOf(word) === index);
-            }
-        }
-
-        /**
-         * Motor de Conocimiento con Sistema de Puntuación
-         * Implementa búsqueda avanzada con scoring y pesos
-         */
-        class KnowledgeEngine {
-            constructor(knowledgeBase) {
-                this.knowledgeBase = knowledgeBase;
-                this.weights = {
-                    exact_match: 1.0,
-                    keyword_match: 0.8,
-                    fuzzy_match: 0.6,
-                    partial_match: 0.4,
-                    category_boost: 0.3
-                };
-            }
-
-            /**
-             * Busca la mejor respuesta basada en scoring de relevancia
-             * @param {string} query - Consulta del usuario
-             * @returns {Object|null} Mejor resultado encontrado
-             */
             search(query) {
-                const normalizedQuery = NLPUtils.normalizeText(query);
-                const keywords = NLPUtils.extractKeywords(query);
-                const results = [];
-
-                // Búsqueda en técnicas detalladas (prioridad alta)
-                results.push(...this.searchTechniques(normalizedQuery, keywords));
+                const normalizedQuery = this.normalizeText(query);
                 
-                // Búsqueda en FAQs y vocabulario
-                results.push(...this.searchGeneral(normalizedQuery, keywords));
-                
-                // Búsqueda por rangos de cinturón
-                results.push(...this.searchByRank(normalizedQuery));
-                
-                // Búsqueda en partes del cuerpo
-                results.push(...this.searchBodyParts(normalizedQuery, keywords));
-
-                // Ordenar por score y devolver el mejor resultado
-                results.sort((a, b) => b.score - a.score);
-                
-                return results.length > 0 ? results[0] : null;
-            }
-
-            /**
-             * Busca en las secciones de técnicas detalladas
-             * @param {string} query - Consulta normalizada
-             * @param {string[]} keywords - Palabras clave extraídas
-             * @returns {Array} Resultados de búsqueda
-             */
-            searchTechniques(query, keywords) {
-                const sections = ['teWazaDetails', 'fuseguiWazaDetails', 'ashiWazaDetails', 'atemiWazaDetails'];
-                const results = [];
-
-                sections.forEach(section => {
-                    const details = this.knowledgeBase[section];
-                    if (!details) return;
-
-                    Object.entries(details).forEach(([key, item]) => {
-                        let score = 0;
-                        let matchType = '';
-
-                        // Búsqueda exacta en nombre español
-                        if (item.itemSpanishName) {
-                            const normalized = NLPUtils.normalizeText(item.itemSpanishName);
-                            if (normalized === query) {
-                                score = this.weights.exact_match;
-                                matchType = 'exact';
-                            } else if (normalized.includes(query) || query.includes(normalized)) {
-                                score = this.weights.partial_match;
-                                matchType = 'partial';
-                            } else {
-                                const fuzzyScore = NLPUtils.fuzzyMatch(query, normalized);
-                                if (fuzzyScore > 0.7) {
-                                    score = this.weights.fuzzy_match * fuzzyScore;
-                                    matchType = 'fuzzy';
-                                }
-                            }
+                // Buscar en técnicas
+                for (const [name, technique] of Object.entries(this.knowledgeBase.techniques)) {
+                    const similarity = this.fuzzyMatch(normalizedQuery, this.normalizeText(name));
+                    if (similarity > 0.7) {
+                        let response = `¡Osu! Te refieres a la técnica **${name}**.\n\n`;
+                        response += `**Descripción:** ${technique.descripcion}\n`;
+                        response += `**Uso:** ${technique.uso}\n`;
+                        response += `**Cinturón:** ${technique.cinturon}\n`;
+                        response += `**Categoría:** ${technique.category}`;
+                        
+                        // Sugerencia pedagógica si es técnica avanzada
+                        if (technique.cinturon.includes('Dan') || technique.cinturon.includes('5 kyu')) {
+                            response += `\n\n**Sugerencia del Sensei:** Esta es una técnica avanzada. Te recomiendo dominar primero las técnicas básicas de 10° Kyu como Oi Zuki y Mae Geri.`;
                         }
-
-                        // Búsqueda por palabras clave en descripción y uso
-                        keywords.forEach(keyword => {
-                            if (item.descripcion && NLPUtils.normalizeText(item.descripcion).includes(keyword)) {
-                                score += this.weights.keyword_match * 0.5;
-                            }
-                            if (item.uso && NLPUtils.normalizeText(item.uso).includes(keyword)) {
-                                score += this.weights.keyword_match * 0.3;
-                            }
-                        });
-
-                        if (score > 0) {
-                            results.push({
-                                type: 'technique',
-                                section,
-                                key,
-                                item,
-                                score: score + this.weights.category_boost,
-                                matchType
-                            });
-                        }
-                    });
-                });
-
-                return results;
-            }
-
-            /**
-             * Busca en secciones generales (FAQs, vocabulario, etc.)
-             * @param {string} query - Consulta normalizada
-             * @param {string[]} keywords - Palabras clave
-             * @returns {Array} Resultados de búsqueda
-             */
-            searchGeneral(query, keywords) {
-                const sections = ['faq', 'organization', 'history', 'vocabulary'];
-                const results = [];
-
-                sections.forEach(section => {
-                    const data = this.knowledgeBase[section];
-                    if (!data) return;
-
-                    Object.entries(data).forEach(([key, value]) => {
-                        let score = 0;
-
-                        // Búsqueda en clave
-                        const normalizedKey = NLPUtils.normalizeText(key);
-                        if (normalizedKey === query) {
-                            score = this.weights.exact_match;
-                        } else if (normalizedKey.includes(query) || query.includes(normalizedKey)) {
-                            score = this.weights.partial_match;
-                        } else {
-                            const fuzzyScore = NLPUtils.fuzzyMatch(query, normalizedKey);
-                            if (fuzzyScore > 0.7) {
-                                score = this.weights.fuzzy_match * fuzzyScore;
-                            }
-                        }
-
-                        // Búsqueda en valor
-                        const normalizedValue = NLPUtils.normalizeText(value);
-                        keywords.forEach(keyword => {
-                            if (normalizedValue.includes(keyword)) {
-                                score += this.weights.keyword_match * 0.5;
-                            }
-                        });
-
-                        if (score > 0) {
-                            results.push({
-                                type: 'general',
-                                section,
-                                key,
-                                value,
-                                score
-                            });
-                        }
-                    });
-                });
-
-                return results;
-            }
-
-            /**
-             * Busca por rangos de cinturón
-             * @param {string} query - Consulta normalizada
-             * @returns {Array} Resultados de búsqueda
-             */
-            searchByRank(query) {
-                const results = [];
-                const kyuMatch = query.match(/(\d+)\s*kyu/);
-                const danMatch = query.match(/(\d+)\s*dan/);
-
-                if (kyuMatch || danMatch) {
-                    const rank = kyuMatch ? `${kyuMatch[1]} kyu` : `${danMatch[1]} dan`;
-                    const techniques = this.knowledgeBase.techniquesByRank[rank];
-
-                    if (techniques) {
-                        results.push({
-                            type: 'rank',
-                            rank,
-                            techniques,
-                            score: this.weights.exact_match + this.weights.category_boost
-                        });
+                        
+                        return response;
                     }
                 }
-
-                return results;
-            }
-
-            /**
-             * Busca información sobre partes del cuerpo
-             * @param {string} query - Consulta normalizada
-             * @param {string[]} keywords - Palabras clave
-             * @returns {Array} Resultados de búsqueda
-             */
-            searchBodyParts(query, keywords) {
-                const results = [];
-                const bodyParts = this.knowledgeBase.bodyParts;
-
-                // Búsqueda por categorías
-                if (query.includes('partes del pie') || query.includes('pie')) {
-                    results.push({
-                        type: 'body_parts_category',
-                        category: 'foot',
-                        data: bodyParts.foot,
-                        score: this.weights.exact_match
-                    });
+                
+                // Buscar en vocabulario
+                for (const [term, definition] of Object.entries(this.knowledgeBase.vocabulary)) {
+                    const similarity = this.fuzzyMatch(normalizedQuery, this.normalizeText(term));
+                    if (similarity > 0.7) {
+                        return `¡Osu! **${term.toUpperCase()}**\n\n${definition}`;
+                    }
                 }
-
-                if (query.includes('partes de la mano') || query.includes('mano')) {
-                    results.push({
-                        type: 'body_parts_category',
-                        category: 'hand',
-                        data: bodyParts.hand,
-                        score: this.weights.exact_match
-                    });
+                
+                // Buscar en historia
+                for (const [topic, info] of Object.entries(this.knowledgeBase.history)) {
+                    const similarity = this.fuzzyMatch(normalizedQuery, this.normalizeText(topic));
+                    if (similarity > 0.7) {
+                        return `¡Osu! **${topic.toUpperCase()}**\n\n${info}`;
+                    }
                 }
-
-                if (query.includes('partes del cuerpo') || query.includes('cuerpo')) {
-                    results.push({
-                        type: 'body_parts_category',
-                        category: 'general',
-                        data: bodyParts.general,
-                        score: this.weights.exact_match
-                    });
-                }
-
-                // Búsqueda individual de partes del cuerpo
-                ['general', 'hand', 'foot'].forEach(category => {
-                    const categoryData = bodyParts[category];
-                    if (!categoryData) return;
-
-                    Object.entries(categoryData).forEach(([key, value]) => {
-                        keywords.forEach(keyword => {
-                            const normalizedKey = NLPUtils.normalizeText(key);
-                            const normalizedValue = NLPUtils.normalizeText(value);
-                            
-                            if (normalizedKey.includes(keyword) || normalizedValue.includes(keyword)) {
-                                results.push({
-                                    type: 'body_part',
-                                    category,
-                                    key,
-                                    value,
-                                    score: this.weights.keyword_match
-                                });
-                            }
-                        });
-                    });
-                });
-
-                return results;
+                
+                // Respuesta por defecto
+                return this.knowledgeBase.general.error + "\n\nIntenta preguntar sobre:\n• Técnicas (Oi Zuki, Mae Geri, Gedan Barai)\n• Vocabulario (dojo, sensei, oss)\n• Historia del karate";
             }
         }
 
-        /**
-         * Gestor de Interfaz de Usuario del Chat
-         * Maneja la presentación y animaciones
-         */
-        class ChatUI {
-            constructor() {
-                this.messagesContainer = document.getElementById('messages');
-                this.userInput = document.getElementById('userInput');
-                this.sendBtn = document.getElementById('sendBtn');
-                this.isProcessing = false;
-            }
+        // Inicializar el sistema
+        const sensei = new SenseiAI();
+        const messagesContainer = document.getElementById('messages');
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
 
-            /**
-             * Agrega un mensaje al chat
-             * @param {string} sender - Remitente ('user' o 'sensei')
-             * @param {string} message - Contenido del mensaje
-             */
-            appendMessage(sender, message) {
-                const messageBubble = document.createElement('div');
-                messageBubble.classList.add('message-bubble');
-                
-                if (sender === 'user') {
-                    messageBubble.classList.add('user-message');
-                } else {
-                    messageBubble.classList.add('sensei-message');
-                }
+        function addMessage(content, isUser = false) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message-bubble ${isUser ? 'user-message' : 'sensei-message'}`;
+            
+            // Procesar markdown simple
+            const formattedContent = content
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\n/g, '<br>');
+            
+            messageDiv.innerHTML = formattedContent;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
 
-                messageBubble.style.whiteSpace = 'pre-wrap';
-                messageBubble.textContent = message;
-                
-                this.messagesContainer.appendChild(messageBubble);
-                this.scrollToBottom();
-            }
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'typing-indicator';
+            typingDiv.id = 'typing-indicator';
+            typingDiv.innerHTML = '<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';
+            messagesContainer.appendChild(typingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
 
-            /**
-             * Muestra indicador de que el Sensei está escribiendo
-             * @returns {HTMLElement} Elemento del indicador
-             */
-            showTypingIndicator() {
-                const indicator = document.createElement('div');
-                indicator.className = 'typing-indicator';
-                indicator.innerHTML = `
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                `;
-                
-                this.messagesContainer.appendChild(indicator);
-                this.scrollToBottom();
-                
-                return indicator;
-            }
-
-            /**
-             * Oculta el indicador de escritura
-             * @param {HTMLElement} indicator - Elemento del indicador
-             */
-            hideTypingIndicator(indicator) {
-                if (indicator && indicator.parentNode) {
-                    indicator.parentNode.removeChild(indicator);
-                }
-            }
-
-            /**
-             * Desplaza el scroll hacia abajo
-             */
-            scrollToBottom() {
-                this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
-            }
-
-            /**
-             * Habilita/deshabilita la interfaz durante el procesamiento
-             * @param {boolean} processing - Estado de procesamiento
-             */
-            setProcessingState(processing) {
-                this.isProcessing = processing;
-                this.userInput.disabled = processing;
-                this.sendBtn.disabled = processing;
-                
-                if (processing) {
-                    this.userInput.placeholder = 'Sensei está pensando...';
-                } else {
-                    this.userInput.placeholder = 'Escribe tu pregunta al Sensei...';
-                    this.userInput.focus();
-                }
-            }
-
-            /**
-             * Obtiene y limpia la entrada del usuario
-             * @returns {string} Entrada sanitizada
-             */
-            getUserInput() {
-                const input = this.userInput.value.trim();
-                this.userInput.value = '';
-                return NLPUtils.sanitizeInput(input);
+        function hideTypingIndicator() {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) {
+                indicator.remove();
             }
         }
 
-        /**
-         * Sistema Principal del Sensei
-         * Orquesta todos los componentes
-         */
-        class SenseiSystem {
-            constructor() {
-                this.knowledgeEngine = new KnowledgeEngine(knowledgeBase);
-                this.chatUI = new ChatUI();
-                this.initializeEventListeners();
-                this.startConversation();
-            }
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (!message) return;
 
-            /**
-             * Inicializa los event listeners
-             */
-            initializeEventListeners() {
-                this.chatUI.sendBtn.addEventListener('click', () => this.handleUserInput());
-                this.chatUI.userInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter' && !this.chatUI.isProcessing) {
-                        this.handleUserInput();
-                    }
-                });
-            }
+            // Agregar mensaje del usuario
+            addMessage(message, true);
+            userInput.value = '';
+            sendBtn.disabled = true;
 
-            /**
-             * Inicia la conversación con el saludo inicial
-             */
-            startConversation() {
-                setTimeout(() => {
-                    this.chatUI.appendMessage('sensei', knowledgeBase.general.greeting);
-                }, 500);
-            }
+            // Mostrar indicador de escritura
+            showTypingIndicator();
 
-            /**
-             * Maneja la entrada del usuario
-             */
-            async handleUserInput() {
-                const userMessage = this.chatUI.getUserInput();
-                
-                if (!userMessage) return;
-
-                // Mostrar mensaje del usuario
-                this.chatUI.appendMessage('user', userMessage);
-
-                // Mostrar indicador de escritura
-                this.chatUI.setProcessingState(true);
-                const typingIndicator = this.chatUI.showTypingIndicator();
-
-                // Simular tiempo de procesamiento
-                await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 700));
-
-                // Generar respuesta
-                const response = this.generateResponse(userMessage);
-
-                // Ocultar indicador y mostrar respuesta
-                this.chatUI.hideTypingIndicator(typingIndicator);
-                this.chatUI.appendMessage('sensei', response);
-                this.chatUI.setProcessingState(false);
-            }
-
-            /**
-             * Genera la respuesta del Sensei
-             * @param {string} userMessage - Mensaje del usuario
-             * @returns {string} Respuesta generada
-             */
-            generateResponse(userMessage) {
-                const normalizedQuery = NLPUtils.normalizeText(userMessage);
-
-                // 1. Lógica conversacional básica
-                if (normalizedQuery.includes('hola') || normalizedQuery.includes('saludo') || normalizedQuery.includes('buenos dias')) {
-                    return knowledgeBase.general.greeting;
-                }
-                
-                if (normalizedQuery.includes('adios') || normalizedQuery.includes('despedida') || normalizedQuery.includes('hasta luego')) {
-                    return knowledgeBase.general.farewell;
-                }
-
-                // 2. Búsqueda en motor de conocimiento
-                const searchResult = this.knowledgeEngine.search(userMessage);
-                
-                if (searchResult) {
-                    return this.formatResponse(searchResult);
-                }
-
-                // 3. Lógica emocional y motivacional
-                if (normalizedQuery.includes('frustrado') || normalizedQuery.includes('no puedo') || normalizedQuery.includes('es dificil')) {
-                    return "Osu. El camino del Budo es largo y a veces rocoso. Pero recuerda, la verdadera fuerza no es la que se muestra en un golpe, sino la que te levanta después de una caída. Sigue practicando con dedicación, y el muro que ves hoy será el escalón de mañana.";
-                }
-
-                // 4. Lógica creativa
-                if (normalizedQuery.includes('poema') || normalizedQuery.includes('romance') || normalizedQuery.includes('metafora')) {
-                    if (normalizedQuery.includes('karate') && normalizedQuery.includes('romance')) {
-                        return knowledgeBase.logica_creativa.poema_karate_romance;
-                    }
-                    if (normalizedQuery.includes('progreso')) {
-                        return knowledgeBase.logica_creativa.metafora_progreso;
-                    }
-                }
-
-                // 5. Respuesta por defecto
-                return knowledgeBase.general.error;
-            }
-
-            /**
-             * Formatea la respuesta según el tipo de resultado
-             * @param {Object} result - Resultado de la búsqueda
-             * @returns {string} Respuesta formateada
-             */
-            formatResponse(result) {
-                switch (result.type) {
-                    case 'technique':
-                        return this.formatTechniqueResponse(result.item);
-                    
-                    case 'rank':
-                        return this.formatRankResponse(result.rank, result.techniques);
-                    
-                    case 'body_parts_category':
-                        return this.formatBodyPartsCategoryResponse(result.category, result.data);
-                    
-                    case 'general':
-                    case 'body_part':
-                        return `¡Osu! ¡Buena pregunta!\n\n${result.value || result.data}`;
-                    
-                    default:
-                        return knowledgeBase.general.error;
-                }
-            }
-
-            /**
-             * Formatea respuesta para técnicas
-             * @param {Object} technique - Datos de la técnica
-             * @returns {string} Respuesta formateada
-             */
-            formatTechniqueResponse(technique) {
-                let response = `¡Osu! Te refieres a la técnica **${technique.itemSpanishName}**.\n\n`;
-                
-                if (technique.descripcion) {
-                    response += `**Descripción:** ${technique.descripcion}\n`;
-                }
-                
-                if (technique.uso) {
-                    response += `**Uso:** ${technique.uso}\n`;
-                }
-                
-                if (technique.cinturon) {
-                    response += `**Cinturón de aprendizaje:** ${technique.cinturon}\n`;
-                }
-                
-                return response;
-            }
-
-            /**
-             * Formatea respuesta para rangos
-             * @param {string} rank - Rango de cinturón
-             * @param {Object} techniques - Técnicas del rango
-             * @returns {string} Respuesta formateada
-             */
-            formatRankResponse(rank, techniques) {
-                let response = `¡Osu! ¡Buena pregunta! Para el **${rank}**, las técnicas que se suelen estudiar son:\n\n`;
-                
-                if (techniques.teWaza && techniques.teWaza.length > 0) {
-                    response += "Técnicas de puño (Te Waza):\n- " + techniques.teWaza.join('\n- ') + '\n\n';
-                }
-                
-                if (techniques.fuseguiWaza && techniques.fuseguiWaza.length > 0) {
-                    response += "Técnicas de defensa (Fusegui Waza):\n- " + techniques.fuseguiWaza.join('\n- ') + '\n\n';
-                }
-                
-                if (techniques.ashiWaza && techniques.ashiWaza.length > 0) {
-                    response += "Técnicas de patada (Ashi Waza):\n- " + techniques.ashiWaza.join('\n- ') + '\n\n';
-                }
-                
-                return response + "Recuerda que cada técnica requiere práctica constante. Sigue así.";
-            }
-
-            /**
-             * Formatea respuesta para categorías de partes del cuerpo
-             * @param {string} category - Categoría
-             * @param {Object} data - Datos de la categoría
-             * @returns {string} Respuesta formateada
-             */
-            formatBodyPartsCategoryResponse(category, data) {
-                const categoryNames = {
-                    'foot': 'pie',
-                    'hand': 'mano',
-                    'general': 'cuerpo'
-                };
-                
-                let response = `¡Osu! ¡Buena pregunta! Las partes del ${categoryNames[category]} que usamos en Karate-do son:\n\n`;
-                
-                Object.entries(data).forEach(([key, value]) => {
-                    const [name, description] = value.split(':');
-                    response += `- **${name.trim()}**: ${description.trim()}\n`;
-                });
-                
-                return response;
-            }
+            // Simular procesamiento y responder
+            setTimeout(() => {
+                hideTypingIndicator();
+                const response = sensei.search(message);
+                addMessage(response);
+                sendBtn.disabled = false;
+                userInput.focus();
+            }, 1000 + Math.random() * 1000); // 1-2 segundos de delay
         }
 
-        // Inicializar el sistema cuando el DOM esté listo
-        document.addEventListener('DOMContentLoaded', () => {
-            new SenseiSystem();
+        function sendSuggestion(suggestion) {
+            userInput.value = suggestion;
+            sendMessage();
+        }
+
+        // Event listeners
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
         });
+
+        // Focus en el input al cargar
+        userInput.focus();
     </script>
 </body>
 </html>
