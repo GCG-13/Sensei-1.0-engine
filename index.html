@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensei de Karate-do (IA Local)</title>
+    <title>Sensei de Karate-do (IA Grandmaster)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -49,11 +50,12 @@
             background: #555;
         }
         .message-bubble {
-            max-width: 75%;
+            max-width: 80%;
             padding: 0.875rem 1.25rem;
             border-radius: 1.25rem;
-            line-height: 1.6;
-            animation: fadeInUp 0.3s ease-out;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 1.5;
         }
         @keyframes fadeInUp {
             from {
@@ -70,33 +72,30 @@
             color: white;
             align-self: flex-end;
             border-bottom-right-radius: 0.25rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         .sensei-message {
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
             color: white;
             align-self: flex-start;
             border-bottom-left-radius: 0.25rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         .input-area {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid #e5e7eb;
             display: flex;
-            padding: 1.25rem;
-            background: rgba(249, 250, 251, 0.9);
-            border-top: 1px solid rgba(229, 231, 235, 0.5);
-            backdrop-filter: blur(10px);
+            gap: 0.75rem;
         }
         .input-area input {
             flex-grow: 1;
-            border: 2px solid rgba(209, 213, 219, 0.5);
+            padding: 0.875rem 1.25rem;
+            border: 2px solid #e5e7eb;
             border-radius: 2rem;
-            padding: 0.875rem 1.5rem;
             font-size: 1rem;
             transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.9);
+            outline: none;
         }
         .input-area input:focus {
-            outline: none;
             border-color: #667eea;
             box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
         }
@@ -152,6 +151,112 @@
                 opacity: 1;
             }
         }
+        
+        /* 🎨 Estilos críticos para que el Markdown no se vea separado */
+        .sensei-message p {
+            margin: 0; /* CERO ABSOLUTO */
+            color: white; 
+            line-height: 1.3; /* Máxima densidad */
+        }
+
+        .sensei-message p:last-child {
+            margin-bottom: 0; /* Elimina el espacio al final del mensaje */
+        }
+
+        .sensei-message ul, .sensei-message ol {
+            margin: 0; /* CERO ABSOLUTO en listas */
+            padding-left: 1.25rem;
+            color: white; 
+        }
+
+        .sensei-message li {
+            margin: 0; /* CERO ABSOLUTO entre items */
+            color: white; 
+        }
+
+        /* Ajuste de títulos para que no ocupen media pantalla */
+        .sensei-message h1, .sensei-message h2, .sensei-message h3 {
+            margin: 0.2rem 0; /* Mínimo existente */
+            font-weight: bold;
+            display: block;
+            color: white; 
+        }
+        
+        .sensei-message h1 { 
+            font-size: 1.5rem; 
+        }
+        .sensei-message h2 { 
+            font-size: 1.25rem; 
+        }
+        .sensei-message h3 { 
+            font-size: 1.125rem; 
+        }
+        .sensei-message h4 { 
+            font-size: 1rem; 
+            margin: 0.2rem 0; /* Consistente con otros títulos */
+            color: white; 
+        }
+        .sensei-message strong { 
+            font-weight: 700; 
+            color: #fde047; 
+        }
+        .sensei-message em { 
+            font-style: italic; 
+            color: #bfdbfe; 
+        }
+        .sensei-message code { 
+            background-color: #1f2937; 
+            padding: 0.125rem 0.25rem; 
+            border-radius: 0.25rem; 
+            color: #86efac; 
+            font-size: 0.875rem; 
+        }
+        .sensei-message blockquote { 
+            border-left: 4px solid #facc15; 
+            padding-left: 1rem; 
+            font-style: italic; 
+            color: #e5e7eb; 
+            margin: 0.1rem 0; /* Cero casi absoluto */
+        }
+        .sensei-message hr { 
+            border-color: #9ca3af; 
+            margin: 0.1rem 0; /* Cero casi absoluto */
+        }
+        .sensei-message a { 
+            color: #93c5fd; 
+            text-decoration: underline; 
+        }
+        .sensei-message a:hover { 
+            color: #bfdbfe; 
+        }
+        
+        /* 🎨 Estilos específicos para emojis y karate terminology */
+        .sensei-message .emoji-highlight {
+            font-size: 1.5rem; 
+            margin-right: 0.25rem; 
+        }
+        .sensei-message .technique-name {
+            font-weight: 700; 
+            color: #fde047; 
+        }
+        .sensei-message .category-tag {
+            display: inline-block; 
+            background-color: #9333ea; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 0.25rem; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            margin-right: 0.25rem; 
+        }
+        .sensei-message .belt-level {
+            display: inline-block; 
+            background-color: #16a34a; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 0.25rem; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            margin-right: 0.25rem; 
+        }
     </style>
 </head>
 <body class="min-h-screen flex items-center justify-center p-4">
@@ -159,19 +264,1117 @@
         <header class="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-6 text-center font-bold text-xl rounded-t-2xl shadow-lg">
             <div class="flex items-center justify-center gap-3">
                 <span class="text-2xl">🥋</span>
-                <span>Sensei de Karate-do (IA Local)</span>
+                <span>Sensei AI Grandmaster (Nivel Expert)</span>
                 <span class="text-2xl">🥋</span>
             </div>
-            <p class="text-sm text-gray-300 mt-2">Shindo Jinen Ryu - Asistente de Conocimiento</p>
+            <p class="text-sm text-gray-300 mt-2">Shindo Jinen Ryu - Motor con Detección de Intención</p>
         </header>
         <div class="messages" id="messages">
             <!-- Los mensajes del chat aparecerán aquí -->
         </div>
         <div class="input-area">
-            <input type="text" id="userInput" placeholder="Escribe tu pregunta al Sensei..." maxlength="500">
+            <input type="text" id="userInput" placeholder="Escribe tu pregunta técnica al Sensei..." maxlength="500">
             <button id="sendBtn">Enviar</button>
         </div>
     </div>
-    <script type="module" src="/src/main.ts"></script>
+
+    <!-- MOTOR UNIFICADO SENSEI AI -->
+    <script>
+        // 🧠 MOTOR GRANDMASTER UNIFICADO
+        class SenseiAI {
+            constructor() {
+                this.knowledgeBase = null;
+                this.isInitialized = false;
+                this.initialize();
+            }
+
+            async initialize() {
+                try {
+                    const response = await fetch('./data/knowledge_base.json');
+                    this.knowledgeBase = await response.json();
+                    this.isInitialized = true;
+                    console.log('✅ Sensei AI Grandmaster inicializado');
+                    console.log('📚 Técnicas cargadas:', Object.keys(this.knowledgeBase.techniqueDetails || {}).length);
+                } catch (error) {
+                    console.error('❌ Error al cargar la base de conocimiento:', error);
+                    this.showError('No pude cargar la base de conocimiento. Recarga la página.');
+                }
+            }
+
+            // 🔍 DETECCIÓN DE INTENCIÓN CONCEPTUAL AVANZADA
+            detectIntent(query) {
+                const normalizedQuery = this.normalizeText(query);
+                
+                const intentPatterns = {
+                    biomechanics: ['biomecanica', 'control', 'puntos', 'movimiento', 'como se hace', 'tecnica perfecta', 'ejecucion', 'mecanica', 'postura', 'posicion', 'cuerpo', 'posicionamiento'],
+                    breathing: ['respirar', 'respiracion', 'kokyu', 'aire', 'exhalar', 'inhalar', 'respira', 'aliento', 'respiracion', 'respiratorio'],
+                    kime: ['kime', 'contraccion', 'tension', 'fuerza', 'potencia', 'explosion', 'enfoque', 'impacto', 'concentracion'],
+                    mistakes: ['errores', 'error', 'mal', 'incorrecto', 'falla', 'problema', 'equivocado', 'defecto', 'fallas', 'errores comunes'],
+                    katas: ['kata', 'katas', 'practicar', 'donde practico', 'secuencia', 'forma', 'rutina', 'secuencia', 'patrones'],
+                    followups: ['sigue', 'despues', 'combo', 'combinacion', 'encadenamiento', 'continuacion', 'siguiente', 'combinaciones'],
+                    bunkai: ['aplicacion', 'real', 'combate', 'cuando uso', 'sirve para', 'defensa', 'ataque', 'aplicaciones', 'defensa personal'],
+                    prerequisites: ['requiere', 'necesito', 'antes de', 'prerrequisito', 'previo', 'necesario', 'fundamentos', 'base'],
+                    targets: ['golpea', 'impacto', 'target', 'donde golpea', 'anatomia', 'kyusho', 'objetivo', 'blanco', 'puntos vitales'],
+                    striking: ['golpear', 'ataque', 'puño', 'pegar', 'golpe', 'impacto', 'atacar', 'golpear con']
+                };
+                
+                for (const [intent, keywords] of Object.entries(intentPatterns)) {
+                    if (keywords.some(keyword => normalizedQuery.includes(keyword))) {
+                        return intent;
+                    }
+                }
+                
+                return null;
+            }
+
+            // 🔍 BÚSQUEDA CONCEPTUAL AVANZADA CON FALLBACK INTELIGENTE
+            search(query) {
+                if (!query || !this.isInitialized) return null;
+                
+                const normalizedQuery = this.normalizeText(query);
+                const intent = this.detectIntent(query);
+                
+                // 🧹 LIMPIEZA DE STOP WORDS Y EXTRACCIÓN DE PALABRAS CLAVE
+                const stopWords = ['como', 'se', 'en', 'el', 'un', 'una', 'los', 'las', 'de', 'del', 'para', 'por', 'con', 'sin', 'sobre', 'entre', 'hacia', 'hasta', 'que', 'cual', 'cuales', 'cuando', 'donde', 'porque', 'para', 'a', 'o', 'y', 'pero', 'mas', 'ni', 'si', 'no', 'es', 'son', 'fue', 'fueron', 'ser', 'estar', 'han', 'ha', 'haber', 'habia', 'habian', 'mi', 'tu', 'su', 'nuestro', 'vuestro', 'este', 'esta', 'este', 'estos', 'estas', 'aquel', 'aquella', 'aquellos', 'aquellas', 'la', 'lo', 'le', 'les', 'me', 'te'];
+                
+                const queryWords = normalizedQuery.split(' ').filter(word => word && !stopWords.includes(word));
+                const cleanQuery = queryWords.join(' ');
+                
+                console.log('🔍 Búsqueda Conceptual:', { original: query, clean: cleanQuery, intent, keywords: queryWords });
+                
+                let bestMatch = null;
+                let bestScore = 0;
+
+                // 🎯 BÚSQUEDA POR PALABRAS CLAVE PRIORITARIA
+                for (const [name, technique] of Object.entries(this.knowledgeBase.techniqueDetails || {})) {
+                    const normalizedName = this.normalizeText(name);
+                    
+                    // 🔥 DETECCIÓN DIRECTA DE PALABRAS CLAVE
+                    let keywordScore = 0;
+                    let matchedKeywords = [];
+                    
+                    for (const word of queryWords) {
+                        if (normalizedName.includes(word)) {
+                            keywordScore += 2; // Prioridad alta para palabras clave
+                            matchedKeywords.push(word);
+                        }
+                    }
+                    
+                    // 📊 SIMILITUD COMPLETA COMO RESPALDO
+                    const fullSimilarity = this.fuzzyMatch(cleanQuery, normalizedName);
+                    
+                    // 🎯 COMBINACIÓN DE ESTRATEGIAS
+                    const combinedScore = keywordScore > 0 ? Math.max(keywordScore, fullSimilarity) : fullSimilarity;
+                    
+                    // 📉 UMBRAL REDUCIDO PARA PALABRAS CLAVE
+                    const threshold = keywordScore > 0 ? 0.5 : 0.7;
+                    
+                    if (combinedScore > bestScore && combinedScore > threshold) {
+                        bestScore = combinedScore;
+                        bestMatch = {
+                            type: intent ? 'technique_with_intent' : 'technique',
+                            name: name,
+                            technique: technique,
+                            matchType: combinedScore === 1.0 ? 'exact' : 'fuzzy',
+                            searchSource: 'techniqueDetails',
+                            intent: intent,
+                            matchedKeywords: matchedKeywords,
+                            confidence: combinedScore
+                        };
+                    }
+                }
+
+                // 🔍 BÚSQUEDA SECUNDARIA EN techniquesByRank
+                if (!bestMatch) {
+                    for (const [rank, categories] of Object.entries(this.knowledgeBase.techniquesByRank || {})) {
+                        for (const [category, techniques] of Object.entries(categories)) {
+                            for (const technique of techniques) {
+                                const normalizedName = this.normalizeText(technique);
+                                
+                                let keywordScore = 0;
+                                let matchedKeywords = [];
+                                
+                                for (const word of queryWords) {
+                                    if (normalizedName.includes(word)) {
+                                        keywordScore += 2;
+                                        matchedKeywords.push(word);
+                                    }
+                                }
+                                
+                                const fullSimilarity = this.fuzzyMatch(cleanQuery, normalizedName);
+                                const combinedScore = keywordScore > 0 ? Math.max(keywordScore, fullSimilarity) : fullSimilarity;
+                                const threshold = keywordScore > 0 ? 0.5 : 0.7;
+                                
+                                if (combinedScore > bestScore && combinedScore > threshold) {
+                                    bestScore = combinedScore;
+                                    bestMatch = {
+                                        type: 'technique',
+                                        name: technique,
+                                        technique: {
+                                            descripcion: `Técnica de ${category} del nivel ${rank}`,
+                                            uso: 'Consulta detallada no disponible',
+                                            cinturon: rank,
+                                            category: category,
+                                            keywords: [],
+                                            incomplete: true
+                                        },
+                                        matchType: combinedScore === 1.0 ? 'exact' : 'fuzzy',
+                                        searchSource: 'techniquesByRank',
+                                        intent: intent,
+                                        matchedKeywords: matchedKeywords,
+                                        confidence: combinedScore
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // 📚 BÚSQUEDA EN VOCABULARIO
+                if (!bestMatch) {
+                    for (const [term, definition] of Object.entries(this.knowledgeBase.vocabulary || {})) {
+                        const normalizedTerm = this.normalizeText(term);
+                        
+                        let keywordScore = 0;
+                        let matchedKeywords = [];
+                        
+                        for (const word of queryWords) {
+                            if (normalizedTerm.includes(word)) {
+                                keywordScore += 2;
+                                matchedKeywords.push(word);
+                            }
+                        }
+                        
+                        const fullSimilarity = this.fuzzyMatch(cleanQuery, normalizedTerm);
+                        const combinedScore = keywordScore > 0 ? Math.max(keywordScore, fullSimilarity) : fullSimilarity;
+                        const threshold = keywordScore > 0 ? 0.5 : 0.7;
+                        
+                        if (combinedScore > bestScore && combinedScore > threshold) {
+                            bestScore = combinedScore;
+                            bestMatch = {
+                                type: 'vocabulary',
+                                term: term,
+                                definition: definition,
+                                matchType: combinedScore === 1.0 ? 'exact' : 'fuzzy',
+                                searchSource: 'vocabulary',
+                                intent: intent,
+                                matchedKeywords: matchedKeywords,
+                                confidence: combinedScore
+                            };
+                        }
+                    }
+                }
+
+                // 🧠 FALLBACK INTELIGENTE PARA INTENCIONES CONCEPTUALES
+                if (!bestMatch && intent) {
+                    console.log('🧠 Activando fallback conceptual para intent:', intent);
+                    const conceptualResponse = this.createConceptualResponse(intent, queryWords);
+                    if (conceptualResponse) {
+                        return conceptualResponse;
+                    }
+                }
+
+                // 📊 LOGGING PARA DEBUGGING
+                if (bestMatch) {
+                    console.log('✅ Match encontrado:', {
+                        name: bestMatch.name,
+                        confidence: bestMatch.confidence,
+                        keywords: bestMatch.matchedKeywords,
+                        intent: bestMatch.intent
+                    });
+                } else {
+                    console.log('❌ No se encontró coincidencia para:', queryWords);
+                }
+
+                return bestMatch;
+            }
+
+            // 🧠 RESPUESTA CONCEPTUAL INTELIGENTE
+            createConceptualResponse(intent, queryWords) {
+                console.log('🧠 Creando respuesta conceptual para:', intent, queryWords);
+                
+                switch (intent) {
+                    case 'breathing':
+                        return this.createBreathingConceptualResponse();
+                    case 'striking':
+                        return this.createStrikingConceptualResponse();
+                    case 'biomechanics':
+                        return this.createBiomechanicsConceptualResponse();
+                    case 'kime':
+                        return this.createKimeConceptualResponse();
+                    case 'mistakes':
+                        return this.createMistakesConceptualResponse();
+                    case 'targets':
+                        return this.createTargetsConceptualResponse();
+                    case 'katas':
+                        return this.createKatasConceptualResponse();
+                    case 'bunkai':
+                        return this.createBunkaiConceptualResponse();
+                    case 'prerequisites':
+                        return this.createPrerequisitesConceptualResponse();
+                    case 'followups':
+                        return this.createFollowupsConceptualResponse();
+                    default:
+                        return null;
+                }
+            }
+
+            // 🌬️ RESPUESTA CONCEPTUAL DE RESPIRACIÓN
+            createBreathingConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const breathingExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.kokyu_and_kime && technique.kokyu_and_kime.breathing) {
+                        breathingExamples.push({
+                            name,
+                            breathing: technique.kokyu_and_kime.breathing,
+                            kime: technique.kokyu_and_kime.kime
+                        });
+                    }
+                }
+                
+                if (breathingExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_breathing',
+                    content: `🌬️ **Respiración en Karate-do (Kokyu)**
+
+La respiración es fundamental en el karate. En las técnicas principales:
+
+${breathingExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+💨 ${example.breathing}${example.kime ? `\n💥 ${example.kime}` : ''}`
+).join('\n\n')}
+
+🎯 **Principios Generales del Kokyu:**
+- Inhala durante la preparación o desplazamiento
+- Exhala bruscamente en el momento del impacto
+- El Kime (foco) ocurre simultáneamente con la exhalación
+- La respiración sincronizada genera máxima potencia
+
+¿Quieres conocer la respiración de alguna técnica específica?`,
+                    intent: 'breathing',
+                    examples: breathingExamples.slice(0, 3)
+                };
+                
+                return response;
+            }
+
+            // 👊 RESPUESTA CONCEPTUAL DE GOLPEO
+            createStrikingConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const strikingTechniques = techniques.filter(([name, technique]) => 
+                    technique.category === 'teWaza'
+                );
+                
+                if (strikingTechniques.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_striking',
+                    content: `👊 **Técnicas de Golpeo (Te Waza)**
+
+Las técnicas de puño son la base del karate. Las principales:
+
+${strikingTechniques.slice(0, 4).map(([name, technique], index) => 
+    `**${index + 1}. ${name}:**
+📝 ${technique.descripcion}
+🎯 ${technique.uso}
+🥋 ${technique.cinturon}`
+).join('\n\n')}
+
+🎯 **Principios del Golpeo Efectivo:**
+- Usa la rotación de cadera para generar potencia
+- Mantén el codo relajado hasta el impacto
+- El puño (Seiken) es el arma principal
+- El Hikite (mano de apoyo) aumenta la fuerza
+
+¿Quieres profundizar en alguna técnica específica?`,
+                    intent: 'striking',
+                    examples: strikingTechniques.slice(0, 4).map(([name]) => name)
+                };
+                
+                return response;
+            }
+
+            // 🎯 RESPUESTA CONCEPTUAL DE BIOMECÁNICA
+            createBiomechanicsConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const biomechanicsExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.biomechanics) {
+                        biomechanicsExamples.push({
+                            name,
+                            biomechanics: technique.biomechanics
+                        });
+                    }
+                }
+                
+                if (biomechanicsExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_biomechanics',
+                    content: `🎯 **Biomecánica en Karate-do**
+
+La biomecánica optimiza cada movimiento para máxima eficiencia:
+
+${biomechanicsExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+${example.biomechanics.controlPoints ? 
+    `📍 **Puntos Clave:**\n${example.biomechanics.controlPoints.slice(0, 2).map((point, i) => `   ${i + 1}. ${point}`).join('\n')}` : 
+    ''}
+${example.biomechanics.forceVector ? `\n⚡ **Vector:** ${example.biomechanics.forceVector}` : ''}
+${example.biomechanics.stance_dependency ? `\n🥋 **Postura:** ${example.biomechanics.stance_dependency}` : ''}`
+).join('\n\n')}
+
+🎯 **Principios Biomecánicos:**
+- El cuerpo funciona como unidad integrada
+- La cadera es el centro de generación de potencia
+- La estructura ósea proporciona soporte
+- Los músculos trabajan en cadenas cinéticas
+
+¿Quieres analizar la biomecánica de alguna técnica específica?`,
+                    intent: 'biomechanics',
+                    examples: biomechanicsExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // 💥 RESPUESTA CONCEPTUAL DE KIME
+            createKimeConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const kimeExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.kokyu_and_kime && technique.kokyu_and_kime.kime) {
+                        kimeExamples.push({
+                            name,
+                            kime: technique.kokyu_and_kime.kime
+                        });
+                    }
+                }
+                
+                if (kimeExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_kime',
+                    content: `💥 **Kime - El Foco y la Potencia**
+
+Kime es la concentración máxima en el punto de impacto:
+
+${kimeExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+💥 ${example.kime}`
+).join('\n\n')}
+
+🎯 **Principios del Kime:**
+- Contracción simultánea de músculos clave
+- Ocurre en el milisegundo exacto del impacto
+- Combina fuerza física y concentración mental
+- Se sincroniza con la exhalación completa
+
+¿Quieres conocer el Kime de alguna técnica específica?`,
+                    intent: 'kime',
+                    examples: kimeExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // ⚠️ RESPUESTA CONCEPTUAL DE ERRORES
+            createMistakesConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const mistakesExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.commonMistakes && technique.commonMistakes.length > 0) {
+                        mistakesExamples.push({
+                            name,
+                            mistakes: technique.commonMistakes
+                        });
+                    }
+                }
+                
+                if (mistakesExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_mistakes',
+                    content: `⚠️ **Errores Comunes en Karate-do**
+
+Conocer los errores ayuda a evitarlos:
+
+${mistakesExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+${example.mistakes.slice(0, 2).map((mistake, i) => `   ${i + 1}. ${mistake}`).join('\n')}`
+).join('\n\n')}
+
+🎯 **Consejos Generales:**
+- Practica lentamente primero
+- Grábate para detectar errores
+- Pide feedback a tu sensei
+- La repetición correcta crea hábito
+
+¿Quieres conocer los errores de alguna técnica específica?`,
+                    intent: 'mistakes',
+                    examples: mistakesExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // 🎯 RESPUESTA CONCEPTUAL DE TARGETS
+            createTargetsConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const targetsExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.kyusho_targets && technique.kyusho_targets.length > 0) {
+                        targetsExamples.push({
+                            name,
+                            targets: technique.kyusho_targets
+                        });
+                    }
+                }
+                
+                if (targetsExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_targets',
+                    content: `🎯 **Puntos de Impacto (Kyusho) en Karate-do**
+
+Los puntos vitales son objetivos estratégicos:
+
+${targetsExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+${example.targets.slice(0, 2).map((target, i) => `   ${i + 1}. ${target}`).join('\n')}`
+).join('\n\n')}
+
+🎯 **Principios de Kyusho:**
+- Conoce la anatomía básica
+- Cada técnica tiene sus objetivos ideales
+- La precisión supera a la fuerza bruta
+- El entrenamiento desarrolla el "ojo de águila"
+
+¿Quieres conocer los objetivos de alguna técnica específica?`,
+                    intent: 'targets',
+                    examples: targetsExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // 📜 RESPUESTA CONCEPTUAL DE KATAS
+            createKatasConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const katasExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.kata_presence && technique.kata_presence.length > 0) {
+                        katasExamples.push({
+                            name,
+                            katas: technique.kata_presence
+                        });
+                    }
+                }
+                
+                if (katasExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_katas',
+                    content: `📜 **Presencia de Técnicas en Katas**
+
+Las katas son bibliotecas vivas de conocimiento:
+
+${katasExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+📜 ${example.katas.slice(0, 3).join(', ')}`
+).join('\n\n')}
+
+🎯 **Propósito de las Katas:**
+- Preservan técnicas antiguas
+- Desarrollan memoria muscular
+- Enseñan flujo y ritmo
+- Contienen aplicaciones reales (Bunkai)
+
+¿Quieres saber en qué katas aparece alguna técnica específica?`,
+                    intent: 'katas',
+                    examples: katasExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // 🎭 RESPUESTA CONCEPTUAL DE BUNKAI
+            createBunkaiConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const bunkaiExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.bunkai) {
+                        bunkaiExamples.push({
+                            name,
+                            bunkai: technique.bunkai
+                        });
+                    }
+                }
+                
+                if (bunkaiExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_bunkai',
+                    content: `🎭 **Bunkai - Aplicación Real de Técnicas**
+
+El Bunkai revela el propósito combativo:
+
+${bunkaiExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+🎭 ${example.bunkai}`
+).join('\n\n')}
+
+🎯 **Principios del Bunkai:**
+- Cada movimiento tiene un propósito
+- Las katas contienen escenarios reales
+- La aplicación varía según la situación
+- Combina ataque y defensa
+
+¿Quieres conocer la aplicación de alguna técnica específica?`,
+                    intent: 'bunkai',
+                    examples: bunkaiExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // 📖 RESPUESTA CONCEPTUAL DE PRERREQUISITOS
+            createPrerequisitesConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const prerequisitesExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.prerequisites && technique.prerequisites.length > 0) {
+                        prerequisitesExamples.push({
+                            name,
+                            prerequisites: technique.prerequisites
+                        });
+                    }
+                }
+                
+                if (prerequisitesExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_prerequisites',
+                    content: `📖 **Prerrequisitos para Técnicas Avanzadas**
+
+Cada técnica se construye sobre fundamentos sólidos:
+
+${prerequisitesExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+📖 ${example.prerequisites.slice(0, 2).join(', ')}`
+).join('\n\n')}
+
+🎯 **Principios del Progreso:**
+- Domina lo básico antes de avanzar
+- La paciencia es virtud del Budo
+- Cada nivel tiene sus desafíos
+- Los fundamentos son la base de todo
+
+¿Quieres conocer los prerrequisitos de alguna técnica específica?`,
+                    intent: 'prerequisites',
+                    examples: prerequisitesExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // ⛓️ RESPUESTA CONCEPTUAL DE ENCADENAMIENTOS
+            createFollowupsConceptualResponse() {
+                const techniques = Object.entries(this.knowledgeBase.techniqueDetails || {});
+                const followupsExamples = [];
+                
+                for (const [name, technique] of techniques) {
+                    if (technique.follow_ups && technique.follow_ups.length > 0) {
+                        followupsExamples.push({
+                            name,
+                            followups: technique.follow_ups
+                        });
+                    }
+                }
+                
+                if (followupsExamples.length === 0) return null;
+                
+                const response = {
+                    type: 'conceptual_followups',
+                    content: `⛓️ **Encadenamientos Tácticos**
+
+Las técnicas conectadas crean fluidez combativa:
+
+${followupsExamples.slice(0, 3).map((example, index) => 
+    `**${index + 1}. ${example.name}:**
+⛓️ ${example.followups.slice(0, 2).join(', ')}`
+).join('\n\n')}
+
+🎯 **Principios de Encadenamiento:**
+- La transición debe ser fluida
+- Cada técnica prepara la siguiente
+- Anticipa la reacción del oponente
+- El ritmo es clave en combate
+
+¿Quieres conocer los encadenamientos de alguna técnica específica?`,
+                    intent: 'followups',
+                    examples: followupsExamples.slice(0, 3).map(ex => ex.name)
+                };
+                
+                return response;
+            }
+
+            // 🎯 FORMATEO AVANZADO DE RESPUESTAS CON SOPORTE MARKDOWN
+            formatResponse(result) {
+                if (!result) {
+                    return `❌ No encontré información sobre tu consulta.
+
+🤔 **Análisis de la Búsqueda:**
+- Tu consulta fue procesada pero no encontré coincidencias suficientes
+- Umbral de similitud actual: 50% para palabras clave, 70% general
+- Búsquedas realizadas: techniqueDetails, techniquesByRank, vocabulary
+
+💡 **Sugerencias:**
+- Intenta con términos más específicos: "Oi Zuki", "Mae Geri", "Gedan Barai"
+- Revisa la ortografía: "Uchi Uke" (no "Uchiuke")
+- Prueba con palabras clave: "bloqueo", "patada", "puño"
+
+📚 **Técnicas Disponibles:**
+- **Te Waza** (técnicas de puño): Oi Zuki, Gyaku Zuki, Sanbon Zuki
+- **Ashi Waza** (patadas): Mae Geri, Yoko Geri, Mawashi Geri
+- **Fusegui Waza** (bloqueos): Uchi Uke, Soto Uke, Gedan Barai`;
+                }
+
+                // 🧠 MANEJO DE RESPUESTAS CONCEPTUALES
+                if (result.type && result.type.startsWith('conceptual_')) {
+                    return result.content;
+                }
+
+                // 📊 INFORMACIÓN DE DEBUGGING XAI MEJORADA CON MARKDOWN
+                const technique = result.technique;
+                let response = `## 🥋 **${result.name}** (${result.matchType} match)
+
+**📝 Descripción:** ${technique.descripcion}
+
+**🎯 Uso:** ${technique.uso}
+
+**🥋 Cinturón:** <span class="belt-level">${technique.cinturon}</span>
+
+**📂 Categoría:** <span class="category-tag">${technique.category}</span>
+
+**🔍 Fuente:** ${result.searchSource}`;
+
+                // 🎯 INFORMACIÓN DE CONFIANZA Y PALABRAS CLAVE
+                if (result.confidence) {
+                    response += `\n\n**🎯 Confianza:** ${(result.confidence * 100).toFixed(1)}%`;
+                }
+                
+                if (result.matchedKeywords && result.matchedKeywords.length > 0) {
+                    response += `\n\n**🔑 Palabras clave detectadas:** ${result.matchedKeywords.join(', ')}`;
+                }
+                
+                if (result.intent) {
+                    response += `\n\n**🎯 Intención detectada:** ${result.intent}`;
+                }
+
+                // 🎯 RESPUESTA CONTEXTUALIZADA (SI HAY INTENCIÓN)
+                if (result.type === 'technique_with_intent' && result.intent) {
+                    response += this.formatIntentSpecificResponse(technique, result.intent);
+                } else {
+                    // 📚 RESPUESTA COMPLETA (SIN INTENCIÓN ESPECÍFICA)
+                    response += this.formatCompleteAdvancedResponse(technique);
+                }
+                
+                return response;
+            }
+
+            // 🎯 FORMATEO ESPECÍFICO POR INTENCIÓN CON MARKDOWN
+            formatIntentSpecificResponse(technique, intent) {
+                let response = '';
+                
+                switch (intent) {
+                    case 'biomechanics':
+                        response = this.formatBiomechanics(technique.biomechanics);
+                        break;
+                    case 'breathing':
+                        response = this.formatBreathing(technique.kokyu_and_kime);
+                        break;
+                    case 'kime':
+                        response = this.formatKime(technique.kokyu_and_kime);
+                        break;
+                    case 'mistakes':
+                        response = this.formatMistakes(technique.commonMistakes);
+                        break;
+                    case 'katas':
+                        response = this.formatKatas(technique.kata_presence);
+                        break;
+                    case 'followups':
+                        response = this.formatFollowUps(technique.follow_ups);
+                        break;
+                    case 'bunkai':
+                        response = this.formatBunkai(technique.bunkai);
+                        break;
+                    case 'prerequisites':
+                        response = this.formatPrerequisites(technique.prerequisites);
+                        break;
+                    case 'targets':
+                        response = this.formatTargets(technique.kyusho_targets);
+                        break;
+                }
+                
+                return response;
+            }
+
+            // 📚 FORMATEO COMPLETO AVANZADO
+            formatCompleteAdvancedResponse(technique) {
+                let response = '';
+                
+                // 🎯 BIOMECÁNICA AVANZADA
+                response += this.formatBiomechanics(technique.biomechanics);
+                
+                // 🌬️ RESPIRACIÓN Y KIME
+                response += this.formatBreathingAndKime(technique.kokyu_and_kime);
+                
+                // 🎯 PUNTOS DE IMPACTO ANATÓMICO
+                response += this.formatTargets(technique.kyusho_targets);
+                
+                // 🚨 ERRORES COMUNES
+                response += this.formatMistakes(technique.commonMistakes);
+                
+                // 📚 APARICIÓN EN KATAS
+                response += this.formatKatas(technique.kata_presence);
+                
+                // ⛓️ ENCADENAMIENTO TÁCTICO
+                response += this.formatFollowUps(technique.follow_ups);
+                
+                // 🎭 APLICACIÓN REAL
+                response += this.formatBunkai(technique.bunkai);
+                
+                // 📚 PRERREQUISITOS
+                response += this.formatPrerequisites(technique.prerequisites);
+                
+                // 💡 COACHING TIPS
+                response += this.formatCoachingTips(technique.coachingTips);
+                
+                return response;
+            }
+
+            // 🔧 FORMATEADORES ESPECÍFICOS CON MARKDOWN
+            formatBiomechanics(biomechanics) {
+                if (!biomechanics) return '';
+                
+                let response = `\n\n### 🎯 **Biomecánica:**`;
+                
+                if (biomechanics.controlPoints && biomechanics.controlPoints.length > 0) {
+                    response += `\n\n**📍 Puntos de Control:**`;
+                    biomechanics.controlPoints.forEach((point, index) => {
+                        response += `\n${index + 1}. ${point}`;
+                    });
+                }
+                
+                if (biomechanics.forceVector) {
+                    response += `\n\n**⚡ Vector de Fuerza:** ${biomechanics.forceVector}`;
+                }
+                
+                if (biomechanics.stance_dependency) {
+                    response += `\n\n**🥋 Postura Requerida:** ${biomechanics.stance_dependency}`;
+                }
+                
+                if (biomechanics.angle) {
+                    response += `\n\n**📐 Ángulo Óptimo:** ${biomechanics.angle}`;
+                }
+                
+                return response;
+            }
+
+            formatBreathingAndKime(kokyu_and_kime) {
+                if (!kokyu_and_kime) return '';
+                
+                let response = '';
+                
+                if (kokyu_and_kime.breathing) {
+                    response += `\n\n### 🌬️ **Respiración:**`;
+                    response += `\n**💨 Patrón:** ${kokyu_and_kime.breathing}`;
+                }
+                
+                if (kokyu_and_kime.kime) {
+                    response += `\n\n**💥 Kime:** ${kokyu_and_kime.kime}`;
+                }
+                
+                return response;
+            }
+
+            formatBreathing(kokyu_and_kime) {
+                if (!kokyu_and_kime) return '';
+                
+                let response = `\n\n### 🌬️ **Respiración en esta técnica:**`;
+                
+                if (kokyu_and_kime.breathing) {
+                    response += `\n**💨 Patrón Respiratorio:** ${kokyu_and_kime.breathing}`;
+                }
+                
+                if (kokyu_and_kime.kime) {
+                    response += `\n\n**💥 Kime:** ${kokyu_and_kime.kime}`;
+                }
+                
+                return response;
+            }
+
+            formatKime(kokyu_and_kime) {
+                if (!kokyu_and_kime || !kokyu_and_kime.kime) return '';
+                return `\n\n### 💥 **Kime (Foco y Potencia):**\n**💥 Contracción Muscular:** ${kokyu_and_kime.kime}`;
+            }
+
+            formatTargets(kyusho_targets) {
+                if (!kyusho_targets || kyusho_targets.length === 0) return '';
+                
+                let response = `\n\n### 🎯 **Puntos de Impacto (Kyusho):**`;
+                kyusho_targets.forEach((target, index) => {
+                    response += `\n${index + 1}. ${target}`;
+                });
+                
+                return response;
+            }
+
+            formatMistakes(commonMistakes) {
+                if (!commonMistakes || commonMistakes.length === 0) return '';
+                
+                let response = `\n\n### ⚠️ **Errores Comunes a Evitar:**`;
+                commonMistakes.forEach((mistake, index) => {
+                    response += `\n${index + 1}. ${mistake}`;
+                });
+                
+                return response;
+            }
+
+            formatKatas(kata_presence) {
+                if (!kata_presence || kata_presence.length === 0) return '';
+                
+                let response = `\n\n### 📜 **Presente en Katas:**`;
+                kata_presence.forEach((kata, index) => {
+                    response += `\n${index + 1}. ${kata}`;
+                });
+                
+                return response;
+            }
+
+            formatFollowUps(follow_ups) {
+                if (!follow_ups || follow_ups.length === 0) return '';
+                
+                let response = `\n\n### ⛓️ **Encadenamientos Tácticos:**`;
+                follow_ups.forEach((follow_up, index) => {
+                    response += `\n${index + 1}. ${follow_up}`;
+                });
+                
+                return response;
+            }
+
+            formatBunkai(bunkai) {
+                if (!bunkai) return '';
+                return `\n\n### 🎭 **Aplicación Real (Bunkai):** ${bunkai}`;
+            }
+
+            formatPrerequisites(prerequisites) {
+                if (!prerequisites || prerequisites.length === 0) return '';
+                
+                let response = `\n\n### 📖 **Requisitos Previos:**`;
+                prerequisites.forEach((req, index) => {
+                    response += `\n${index + 1}. ${req}`;
+                });
+                
+                return response;
+            }
+
+            formatCoachingTips(coachingTips) {
+                if (!coachingTips || coachingTips.length === 0) return '';
+                
+                let response = `\n\n### 💡 **Consejos del Sensei:**`;
+                coachingTips.forEach((tip, index) => {
+                    response += `\n${index + 1}. ${tip}`;
+                });
+                
+                return response;
+            }
+
+            // 🔧 UTILIDADES
+            normalizeText(text) {
+                return text.toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '')
+                    .replace(/[^\w\s]/g, ' ')
+                    .replace(/\s+/g, ' ')
+                    .trim();
+            }
+
+            fuzzyMatch(str1, str2) {
+                const longer = str1.length > str2.length ? str1 : str2;
+                const shorter = str1.length > str2.length ? str2 : str1;
+                
+                if (longer.length === 0) return 1.0;
+                
+                const editDistance = this.levenshteinDistance(longer, shorter);
+                return (longer.length - editDistance) / longer.length;
+            }
+
+            levenshteinDistance(str1, str2) {
+                const matrix = [];
+                
+                for (let i = 0; i <= str2.length; i++) {
+                    matrix[i] = [i];
+                }
+                
+                for (let j = 0; j <= str1.length; j++) {
+                    matrix[0][j] = j;
+                }
+                
+                for (let i = 1; i <= str2.length; i++) {
+                    for (let j = 1; j <= str1.length; j++) {
+                        if (str2.charAt(i - 1) === str1.charAt(j - 1)) {
+                            matrix[i][j] = matrix[i - 1][j - 1];
+                        } else {
+                            matrix[i][j] = Math.min(
+                                matrix[i - 1][j - 1] + 1,
+                                matrix[i][j - 1] + 1,
+                                matrix[i - 1][j] + 1
+                            );
+                        }
+                    }
+                }
+                
+                return matrix[str2.length][str1.length];
+            }
+
+            // UI Methods
+            appendMessage(content, isUser = false) {
+                const messagesContainer = document.getElementById('messages');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message-bubble ${isUser ? 'user-message' : 'sensei-message'}`;
+                
+                // 🎨 Usar marked.js para renderizar Markdown en mensajes del Sensei
+                if (!isUser && typeof marked !== 'undefined') {
+                    messageDiv.innerHTML = marked.parse(content);
+                    messageDiv.classList.add('markdown-content'); // 🎯 Toque de Maestro
+                } else {
+                    messageDiv.textContent = content;
+                }
+                
+                messagesContainer.appendChild(messageDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            showTypingIndicator() {
+                const messagesContainer = document.getElementById('messages');
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'typing-indicator';
+                typingDiv.id = 'typing-indicator';
+                typingDiv.innerHTML = `
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                    <span class="typing-dot"></span>
+                `;
+                messagesContainer.appendChild(typingDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            hideTypingIndicator() {
+                const typingIndicator = document.getElementById('typing-indicator');
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            }
+
+            showError(message) {
+                const messagesContainer = document.getElementById('messages');
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'message-bubble sensei-message';
+                errorDiv.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+                
+                // 🎨 Usar marked.js también para mensajes de error
+                if (typeof marked !== 'undefined') {
+                    errorDiv.innerHTML = marked.parse(`❌ ${message}`);
+                    errorDiv.classList.add('markdown-content'); // 🎯 Toque de Maestro
+                } else {
+                    errorDiv.textContent = `❌ ${message}`;
+                }
+                
+                messagesContainer.appendChild(errorDiv);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+
+            async processMessage(message) {
+                if (!message.trim()) return;
+                
+                this.appendMessage(message, true);
+                this.showTypingIndicator();
+                
+                // Simular tiempo de procesamiento
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                
+                const result = this.search(message);
+                const response = this.formatResponse(result);
+                
+                this.hideTypingIndicator();
+                this.appendMessage(response);
+            }
+        }
+
+        // 🚀 INICIALIZACIÓN DEL SISTEMA CON MENSAJE DE BIENVENIDA EN MARKDOWN
+        document.addEventListener('DOMContentLoaded', () => {
+            const sensei = new SenseiAI();
+            
+            // 🎨 Mostrar mensaje de bienvenida con Markdown
+            const welcomeMessage = `🥋 **¡Osu! Bienvenido al Sensei AI Grandmaster!** 🥋
+
+Soy tu asistente especializado con capacidades de análisis biomecánico, detección de intención y conocimiento profundo del karate.
+
+🎯 **Puedes preguntarme sobre:**
+- 📍 **Biomecánica**: "¿Cuáles son los puntos de control del Oi Zuki?"
+- 🌬️ **Respiración**: "¿Cómo se respira en el Mae Geri?"
+- ⚠️ **Errores comunes**: "¿Qué errores comunes tiene el Gyaku Zuki?"
+- 📜 **Katas**: "¿En qué katas practico Oi Zuki?"
+- 🎭 **Aplicación real**: "¿Cuándo uso el Gedan Barai en combate?"
+- ⛓️ **Encadenamientos**: "¿Qué sigue después de un Oi Zuki?"
+
+🔥 **El motor detecta tu intención y responde específicamente a lo que necesites.**
+
+¡Comienza tu entrenamiento de conocimiento ahora!`;
+            
+            sensei.appendMessage(welcomeMessage, false);
+            
+            const userInput = document.getElementById('userInput');
+            const sendBtn = document.getElementById('sendBtn');
+            
+            const sendMessage = async () => {
+                const message = userInput.value.trim();
+                if (message) {
+                    userInput.value = '';
+                    sendBtn.disabled = true;
+                    await sensei.processMessage(message);
+                    sendBtn.disabled = false;
+                    userInput.focus();
+                }
+            };
+            
+            sendBtn.addEventListener('click', sendMessage);
+            
+            userInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+            
+            userInput.focus();
+            
+            console.log('🥋 Sensei AI Grandmaster Ready');
+            console.log('🔍 Motor con detección de intención activado');
+            console.log('🎨 Markdown rendering enabled');
+        });
+    </script>
 </body>
 </html>

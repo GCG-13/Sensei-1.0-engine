@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensei de Karate-do (IA Grandmaster)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .chat-container {
+            max-width: 700px;
+            height: 85vh;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+        .messages {
+            flex-grow: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: transparent;
+        }
+        .messages::-webkit-scrollbar {
+            width: 6px;
+        }
+        .messages::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .messages::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .messages::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .message-bubble {
+            max-width: 80%;
+            padding: 0.875rem 1.25rem;
+            border-radius: 1.25rem;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .user-message {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 0.25rem;
+        }
+        .sensei-message {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            align-self: flex-start;
+            border-bottom-left-radius: 0.25rem;
+        }
+        .input-area {
+            padding: 1.5rem;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            gap: 0.75rem;
+        }
+        .input-area input {
+            flex-grow: 1;
+            padding: 0.875rem 1.25rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 2rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        .input-area input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        .input-area button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.875rem 1.5rem;
+            border-radius: 2rem;
+            margin-left: 0.75rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .input-area button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .input-area button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .typing-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.875rem 1.25rem;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 1.25rem;
+            border-bottom-left-radius: 0.25rem;
+            color: white;
+        }
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            animation: typing 1.4s infinite;
+        }
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        @keyframes typing {
+            0%, 60%, 100% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+            30% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+        }
+        
+        /* 🎨 Estilos críticos para que el Markdown no se vea separado */
+        .sensei-message p {
+            margin: 0; /* CERO ABSOLUTO */
+            color: white; 
+            line-height: 1.3; /* Máxima densidad */
+        }
+
+        .sensei-message p:last-child {
+            margin-bottom: 0; /* Elimina el espacio al final del mensaje */
+        }
+
+        .sensei-message ul, .sensei-message ol {
+            margin: 0; /* CERO ABSOLUTO en listas */
+            padding-left: 1.25rem;
+            color: white; 
+        }
+
+        .sensei-message li {
+            margin: 0; /* CERO ABSOLUTO entre items */
+            color: white; 
+        }
+
+        /* Ajuste de títulos para que no ocupen media pantalla */
+        .sensei-message h1, .sensei-message h2, .sensei-message h3 {
+            margin: 0.2rem 0; /* Mínimo existente */
+            font-weight: bold;
+            display: block;
+            color: white; 
+        }
+        
+        .sensei-message h1 { 
+            font-size: 1.5rem; 
+        }
+        .sensei-message h2 { 
+            font-size: 1.25rem; 
+        }
+        .sensei-message h3 { 
+            font-size: 1.125rem; 
+        }
+        .sensei-message h4 { 
+            font-size: 1rem; 
+            margin: 0.2rem 0; /* Consistente con otros títulos */
+            color: white; 
+        }
+        .sensei-message strong { 
+            font-weight: 700; 
+            color: #fde047; 
+        }
+        .sensei-message em { 
+            font-style: italic; 
+            color: #bfdbfe; 
+        }
+        .sensei-message code { 
+            background-color: #1f2937; 
+            padding: 0.125rem 0.25rem; 
+            border-radius: 0.25rem; 
+            color: #86efac; 
+            font-size: 0.875rem; 
+        }
+        .sensei-message blockquote { 
+            border-left: 4px solid #facc15; 
+            padding-left: 1rem; 
+            font-style: italic; 
+            color: #e5e7eb; 
+            margin: 0.1rem 0; /* Cero casi absoluto */
+        }
+        .sensei-message hr { 
+            border-color: #9ca3af; 
+            margin: 0.1rem 0; /* Cero casi absoluto */
+        }
+        .sensei-message a { 
+            color: #93c5fd; 
+            text-decoration: underline; 
+        }
+        .sensei-message a:hover { 
+            color: #bfdbfe; 
+        }
+        
+        /* 🎨 Estilos específicos para emojis y karate terminology */
+        .sensei-message .emoji-highlight {
+            font-size: 1.5rem; 
+            margin-right: 0.25rem; 
+        }
+        .sensei-message .technique-name {
+            font-weight: 700; 
+            color: #fde047; 
+        }
+        .sensei-message .category-tag {
+            display: inline-block; 
+            background-color: #9333ea; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 0.25rem; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            margin-right: 0.25rem; 
+        }
+        .sensei-message .belt-level {
+            display: inline-block; 
+            background-color: #16a34a; 
+            padding: 0.25rem 0.5rem; 
+            border-radius: 0.25rem; 
+            font-size: 0.75rem; 
+            font-weight: 700; 
+            margin-right: 0.25rem; 
+        }
+
+        /* 🚀 ESTILOS DE PERFORMANCE OPTIMIZADOS */
+        
+        /* Loading Spinner */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            backdrop-filter: blur(5px);
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #f3f4f6;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loading-text {
+            color: white;
+            margin-top: 2rem;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Virtual Scrolling */
+        .virtual-list {
+            height: 400px;
+            overflow-y: auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            background: white;
+        }
+        
+        .virtual-item {
+            padding: 1rem;
+            border-bottom: 1px solid #f3f4f6;
+            transition: background-color 0.2s;
+        }
+        
+        .virtual-item:hover {
+            background-color: #f9fafb;
+        }
+        
+        .virtual-item:last-child {
+            border-bottom: none;
+        }
+        
+        /* Lazy Loading Indicator */
+        .lazy-loading {
+            text-align: center;
+            padding: 1rem;
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        /* Performance Metrics */
+        .performance-stats {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-family: monospace;
+            z-index: 1000;
+        }
+        
+        /* Optimized Markdown */
+        .markdown-content {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .markdown-content pre {
+            background: #1f2937;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        
+        .markdown-content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+        
+        .markdown-content th,
+        .markdown-content td {
+            border: 1px solid #374151;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        
+        .markdown-content th {
+            background: #374151;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <!-- 🚀 LOADING OVERLAY -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="text-center">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">
+                <div>Cargando Sensei AI Grandmaster...</div>
+                <div id="loadingProgress" style="font-size: 0.9rem; margin-top: 0.5rem;">Preparando conocimiento marcial</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-container">
+        <header class="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-6 text-center font-bold text-xl rounded-t-2xl shadow-lg">
+            <div class="flex items-center justify-center gap-3">
+                <span class="text-2xl">🥋</span>
+                <span>Sensei AI Grandmaster (Nivel Expert)</span>
+                <span class="text-2xl">🥋</span>
+            </div>
+            <p class="text-sm text-gray-300 mt-2">Shindo Jinen Ryu - Motor con Detección de Intención</p>
+        </header>
+        <div class="messages" id="messages">
+            <!-- Los mensajes del chat aparecerán aquí -->
+        </div>
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Escribe tu pregunta técnica al Sensei..." maxlength="500">
+            <button id="sendBtn">Enviar</button>
+        </div>
+    </div>
+
+    <!-- 📊 PERFORMANCE METRICS -->
+    <div id="performanceStats" class="performance-stats" style="display: none;">
+        <div>Cache: <span id="cacheStatus">Checking...</span></div>
+        <div>Load: <span id="loadTime">0ms</span></div>
+        <div>Size: <span id="dataSize">0KB</span></div>
+    </div>
+
+    <!-- 🚀 MOTOR UNIFICADO SENSEI AI CON PERFORMANCE -->
+    <script>
+        // 🧠 MOTOR GRANDMASTER UNIFICADO CON PERFORMANCE OPTIMIZATIONS
+        class SenseiAI {
+            constructor() {
+                this.knowledgeBase = null;
+                this.isInitialized = false;
+                this.cacheKey = 'sensei_ai_cache';
+                this.cacheVersion = 'v4.0';
+                this.performanceMetrics = {
+                    startTime: Date.now(),
+                    loadTime: 0,
+                    cacheHit: false,
+                    dataSize: 0
+                };
+                
+                // 🚀 Inicialización automática
+                this.initialize();
+            }
+
+            async initialize() {
+                try {
+                    // 🗄️ Intentar cargar desde cache primero
+                    const cachedData = this.loadFromCache();
+                    if (cachedData) {
+                        this.knowledgeBase = cachedData;
+                        this.isInitialized = true;
+                        this.performanceMetrics.cacheHit = true;
+                        this.performanceMetrics.loadTime = Date.now() - this.performanceMetrics.startTime;
+                        
+                        console.log('✅ Sensei AI cargado desde cache');
+                        this.hideLoading();
+                        this.updatePerformanceStats();
+                        return;
+                    }
+
+                    // 🌐 Si no hay cache, cargar desde red
+                    this.updateLoadingText('Descargando conocimiento marcial...');
+                    
+                    const response = await fetch('./data/universal_knowledge_base.json');
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    this.updateLoadingText('Procesando 4500+ líneas de conocimiento...');
+                    
+                    const data = await response.json();
+                    this.knowledgeBase = data;
+                    this.isInitialized = true;
+                    this.performanceMetrics.dataSize = JSON.stringify(data).length;
+                    this.performanceMetrics.loadTime = Date.now() - this.performanceMetrics.startTime;
+                    
+                    // 💾 Guardar en cache para futuras visitas
+                    this.saveToCache(data);
+                    
+                    console.log('✅ Sensei AI Grandmaster inicializado desde red');
+                    console.log('📚 Técnicas cargadas:', this.getTechniquesCount());
+                    console.log('📊 Tamaño:', (this.performanceMetrics.dataSize / 1024).toFixed(2), 'KB');
+                    
+                    this.hideLoading();
+                    this.updatePerformanceStats();
+                    
+                } catch (error) {
+                    console.error('❌ Error al cargar la base de conocimiento:', error);
+                    this.updateLoadingText('Error al cargar. Intenta recargar la página.');
+                    setTimeout(() => this.hideLoading(), 3000);
+                }
+            }
+
+            // 🗄️ CACHE MANAGEMENT
+            loadFromCache() {
+                try {
+                    const cached = localStorage.getItem(this.cacheKey);
+                    if (!cached) return null;
+                    
+                    const data = JSON.parse(cached);
+                    
+                    // Verificar versión del cache
+                    if (data.version !== this.cacheVersion) {
+                        console.log('🔄 Versión de cache desactualizada, limpiando...');
+                        localStorage.removeItem(this.cacheKey);
+                        return null;
+                    }
+                    
+                    // Verificar edad del cache (24 horas)
+                    const cacheAge = Date.now() - data.timestamp;
+                    const maxAge = 24 * 60 * 60 * 1000; // 24 horas
+                    
+                    if (cacheAge > maxAge) {
+                        console.log('🔄 Cache expirado, limpiando...');
+                        localStorage.removeItem(this.cacheKey);
+                        return null;
+                    }
+                    
+                    console.log('📦 Cache válido encontrado');
+                    return data.knowledgeBase;
+                    
+                } catch (error) {
+                    console.error('❌ Error al cargar desde cache:', error);
+                    localStorage.removeItem(this.cacheKey);
+                    return null;
+                }
+            }
+
+            saveToCache(data) {
+                try {
+                    const cacheData = {
+                        version: this.cacheVersion,
+                        timestamp: Date.now(),
+                        knowledgeBase: data
+                    };
+                    
+                    localStorage.setItem(this.cacheKey, JSON.stringify(cacheData));
+                    console.log('💾 Datos guardados en cache');
+                    
+                } catch (error) {
+                    console.error('❌ Error al guardar en cache:', error);
+                    // Si el cache está lleno, limpiar y reintentar
+                    if (error.name === 'QuotaExceededError') {
+                        console.log('🗑️ Cache lleno, limpiando...');
+                        localStorage.clear();
+                        this.saveToCache(data);
+                    }
+                }
+            }
+
+            // 🎨 UI MANAGEMENT
+            updateLoadingText(text) {
+                const loadingProgress = document.getElementById('loadingProgress');
+                if (loadingProgress) {
+                    loadingProgress.textContent = text;
+                }
+            }
+
+            hideLoading() {
+                const loadingOverlay = document.getElementById('loadingOverlay');
+                if (loadingOverlay) {
+                    loadingOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingOverlay.style.display = 'none';
+                    }, 300);
+                }
+            }
+
+            updatePerformanceStats() {
+                const stats = document.getElementById('performanceStats');
+                const cacheStatus = document.getElementById('cacheStatus');
+                const loadTime = document.getElementById('loadTime');
+                const dataSize = document.getElementById('dataSize');
+                
+                if (stats) {
+                    stats.style.display = 'block';
+                    cacheStatus.textContent = this.performanceMetrics.cacheHit ? 'HIT' : 'MISS';
+                    loadTime.textContent = `${this.performanceMetrics.loadTime}ms`;
+                    dataSize.textContent = `${(this.performanceMetrics.dataSize / 1024).toFixed(2)}KB`;
+                }
+            }
+
+            // 📊 DATA STATISTICS
+            getTechniquesCount() {
+                if (!this.knowledgeBase) return 0;
+                
+                let count = 0;
+                const sections = ['teWaza', 'ashiWaza', 'ukeWaza'];
+                
+                for (const section of sections) {
+                    if (this.knowledgeBase[section]) {
+                        count += Object.keys(this.knowledgeBase[section]).length;
+                    }
+                }
+                
+                return count;
+            }
+
+            // 🔍 BÚSQUEDA OPTIMIZADA
+            async searchTechniques(query) {
+                if (!this.isInitialized) {
+                    await this.initialize();
+                }
+                
+                const results = [];
+                const normalizedQuery = query.toLowerCase();
+                
+                // Búsqueda en todas las secciones de técnicas
+                const sections = ['teWaza', 'ashiWaza', 'ukeWaza'];
+                
+                for (const section of sections) {
+                    if (this.knowledgeBase[section]) {
+                        for (const [name, technique] of Object.entries(this.knowledgeBase[section])) {
+                            const normalizedName = name.toLowerCase();
+                            
+                            // Búsqueda exacta o parcial
+                            if (normalizedName.includes(normalizedQuery) || 
+                                normalizedQuery.includes(normalizedName)) {
+                                results.push({
+                                    name,
+                                    section,
+                                    technique,
+                                    matchType: 'exact'
+                                });
+                            }
+                            // Búsqueda en descripción
+                            else if (technique.descripcion && 
+                                     technique.descripcion.toLowerCase().includes(normalizedQuery)) {
+                                results.push({
+                                    name,
+                                    section,
+                                    technique,
+                                    matchType: 'description'
+                                });
+                            }
+                        }
+                    }
+                }
+                
+                return results;
+            }
+
+            // 🚀 VIRTUAL SCROLLING PARA GRANDES VOLÚMENES
+            async listAllTechniques() {
+                if (!this.isInitialized) {
+                    await this.initialize();
+                }
+                
+                const allTechniques = [];
+                const sections = ['teWaza', 'ashiWaza', 'ukeWaza'];
+                
+                for (const section of sections) {
+                    if (this.knowledgeBase[section]) {
+                        for (const [name, technique] of Object.entries(this.knowledgeBase[section])) {
+                            allTechniques.push({
+                                name,
+                                section,
+                                technique,
+                                category: technique.category || 'Sin categoría'
+                            });
+                        }
+                    }
+                }
+                
+                return allTechniques;
+            }
+
+            // 📝 FORMATEO DE RESPUESTA
+            formatTechniqueResponse(technique, name, section) {
+                let response = `🥋 **${name}**\n\n`;
+                
+                response += `📝 **Descripción:** ${technique.descripcion || 'No disponible'}\n`;
+                response += `🎯 **Categoría:** ${technique.category || 'No especificada'}\n`;
+                response += `🥋 **Sección:** ${section}\n`;
+                
+                if (technique.nivel) {
+                    response += `⭐ **Nivel:** ${technique.nivel}\n`;
+                }
+                
+                if (technique.puntos_control) {
+                    response += `\n🎯 **Puntos de Control:**\n`;
+                    technique.puntos_control.forEach((punto, index) => {
+                        response += `${index + 1}. ${punto}\n`;
+                    });
+                }
+                
+                if (technique.errores_comunes) {
+                    response += `\n⚠️ **Errores Comunes:**\n`;
+                    technique.errores_comunes.forEach((error, index) => {
+                        response += `${index + 1}. ${error}\n`;
+                    });
+                }
+                
+                if (technique.aplicaciones) {
+                    response += `\n🎭 **Aplicaciones:** ${technique.aplicaciones.join(', ')}\n`;
+                }
+                
+                return response;
+            }
+
+            // 🧠 PROCESAMIENTO PRINCIPAL DE CONSULTAS
+            async processQuery(query) {
+                if (!this.isInitialized) {
+                    await this.initialize();
+                }
+                
+                const normalizedQuery = query.toLowerCase().trim();
+                
+                // Detectar intenciones específicas
+                if (normalizedQuery.includes('listar') && normalizedQuery.includes('técnicas')) {
+                    return this.listTechniquesWithVirtualScroll();
+                }
+                
+                // Búsqueda de técnicas
+                const techniqueResults = await this.searchTechniques(query);
+                
+                if (techniqueResults.length > 0) {
+                    const bestMatch = techniqueResults[0];
+                    return this.formatTechniqueResponse(bestMatch.technique, bestMatch.name, bestMatch.section);
+                }
+                
+                // Búsqueda en otras secciones
+                const otherResults = this.searchInOtherSections(query);
+                if (otherResults.length > 0) {
+                    return otherResults[0].response;
+                }
+                
+                // Respuesta por defecto
+                return this.getDefaultResponse(query);
+            }
+
+            // 📋 LISTADO VIRTUAL DE TÉCNICAS
+            listTechniquesWithVirtualScroll() {
+                return `🥋 **Lista Completa de Técnicas**\n\n📊 **Total:** ${this.getTechniquesCount()} técnicas disponibles\n\n🎯 **Secciones:**\n• **Te Waza** (Técnicas de mano)\n• **Ashi Waza** (Técnicas de pierna)\n• **Uke Waza** (Técnicas de bloqueo)\n\n💡 **Para ver detalles de una técnica específica, pregunta por su nombre:**\n• "Explícame Oi Zuki"\n• "¿Cómo se hace Mae Geri?"\n• "Muéstrame Gedan Barai"\n\n🔍 **Ejemplos populares:**\n• Oi Zuki, Gyaku Zuki, Sanbon Zuki\n• Mae Geri, Yoko Geri, Mawashi Geri\n• Gedan Barai, Age Uke, Uchi Uke`;
+            }
+
+            // 🔍 BÚSQUEDA EN OTRAS SECCIONES
+            searchInOtherSections(query) {
+                const results = [];
+                const normalizedQuery = query.toLowerCase();
+                
+                // Buscar en filosofía
+                if (this.knowledgeBase.filosofia_y_conceptos) {
+                    for (const [concept, data] of Object.entries(this.knowledgeBase.filosofia_y_conceptos)) {
+                        if (concept.toLowerCase().includes(normalizedQuery) || 
+                            (data.descripcion && data.descripcion.toLowerCase().includes(normalizedQuery))) {
+                            results.push({
+                                type: 'philosophy',
+                                response: this.formatPhilosophyResponse(concept, data)
+                            });
+                        }
+                    }
+                }
+                
+                // Buscar en katas
+                if (this.knowledgeBase.katas_basicas) {
+                    for (const [kataName, kataData] of Object.entries(this.knowledgeBase.katas_basicas)) {
+                        if (kataName.toLowerCase().includes(normalizedQuery) || 
+                            (kataData.significado && kataData.significado.toLowerCase().includes(normalizedQuery))) {
+                            results.push({
+                                type: 'kata',
+                                response: this.formatKataResponse(kataName, kataData)
+                            });
+                        }
+                    }
+                }
+                
+                // Buscar en sistema de grados
+                if (this.knowledgeBase.sistema_grados_kyu) {
+                    if (normalizedQuery.includes('grado') || normalizedQuery.includes('cinturón') || normalizedQuery.includes('kyu')) {
+                        results.push({
+                            type: 'grades',
+                            response: this.formatGradesResponse(this.knowledgeBase.sistema_grados_kyu)
+                        });
+                    }
+                }
+                
+                // Buscar en glosario
+                if (this.knowledgeBase.glosario_maestro) {
+                    for (const [category, terms] of Object.entries(this.knowledgeBase.glosario_maestro)) {
+                        for (const [term, termData] of Object.entries(terms)) {
+                            if (term.toLowerCase().includes(normalizedQuery) || 
+                                (termData.traduccion && termData.traduccion.toLowerCase().includes(normalizedQuery))) {
+                                results.push({
+                                    type: 'glossary',
+                                    response: this.formatGlossaryResponse(term, termData, category)
+                                });
+                            }
+                        }
+                    }
+                }
+                
+                return results;
+            }
+
+            // 📝 FORMATEO DE RESPUESTAS ESPECÍFICAS
+            formatPhilosophyResponse(concept, data) {
+                let response = `🧠 **${concept}**\n\n`;
+                
+                if (data.descripcion) {
+                    response += `📖 **Descripción:** ${data.descripcion}\n`;
+                }
+                
+                if (data.caracteristicas_esenciales) {
+                    response += `\n🎯 **Características Esenciales:**\n`;
+                    data.caracteristicas_esenciales.forEach((caracteristica, index) => {
+                        response += `${index + 1}. ${caracteristica}\n`;
+                    });
+                }
+                
+                if (data.aplicacion_practica) {
+                    response += `\n💡 **Aplicación Práctica:**\n`;
+                    for (const [context, description] of Object.entries(data.aplicacion_practica)) {
+                        response += `• **${context}:** ${description}\n`;
+                    }
+                }
+                
+                return response;
+            }
+
+            formatKataResponse(kataName, kataData) {
+                let response = `🥋 **${kataName}**\n\n`;
+                
+                response += `📝 **Significado:** ${kataData.significado || 'No disponible'}\n`;
+                response += `🔢 **Movimientos:** ${kataData.numero_movimientos || 'No especificado'}\n`;
+                response += `🎯 **Dificultad:** ${kataData.dificultad || 'No especificada'}\n`;
+                
+                if (kataData.enbusen_linea_direccion) {
+                    response += `\n📐 **Enbusen:** ${kataData.enbusen_linea_direccion.descripcion}\n`;
+                }
+                
+                if (kataData.kiai_points) {
+                    response += `\n⚡ **Puntos Kiai:**\n`;
+                    kataData.kiai_points.forEach((kiai, index) => {
+                        response += `${index + 1}. Movimiento ${kiai.movimiento}: ${kiai.tecnica}\n`;
+                    });
+                }
+                
+                return response;
+            }
+
+            formatGradesResponse(gradesData) {
+                let response = `🏆 **Sistema de Grados Kyu**\n\n`;
+                
+                if (gradesData.descripcion_general) {
+                    response += `📖 **Descripción:** ${gradesData.descripcion_general}\n`;
+                }
+                
+                response += `\n🎯 **Grados Disponibles:**\n`;
+                response += `• **10° Kyu** (Blanco) - Pureza, comienzo\n`;
+                response += `• **9° Kyu** (Naranja) - Energía, entusiasmo\n`;
+                response += `• **8° Kyu** (Azul) - Calma, profundidad\n`;
+                response += `• **7° Kyu** (Verde) - Crecimiento, vitalidad\n`;
+                response += `• **6° Kyu** (Morado) - Sabiduría, transformación\n`;
+                response += `• **5° Kyu** (Amarillo) - Sol, energía\n`;
+                response += `• **4° Kyu** (Verde oscuro) - Profundidad, estabilidad\n`;
+                response += `• **3° Kyu** (Marrón claro) - Tierra, fundación\n`;
+                response += `• **2° Kyu** (Marrón medio) - Experiencia, madurez\n`;
+                response += `• **1° Kyu** (Marrón oscuro) - Noche, preparación\n`;
+                response += `• **Shodan** (1° Dan) - Principio verdadero\n`;
+                
+                return response;
+            }
+
+            formatGlossaryResponse(term, termData, category) {
+                let response = `📚 **${term}**\n\n`;
+                
+                response += `🇯🇵 **Japonés:** ${termData.japones || 'No disponible'}\n`;
+                response += `🔤 **Romaji:** ${termData.romaji || 'No disponible'}\n`;
+                response += `📖 **Traducción:** ${termData.traduccion || 'No disponible'}\n`;
+                response += `💡 **Uso:** ${termData.uso || 'No disponible'}\n`;
+                response += `🎯 **Contexto:** ${termData.contexto || 'No disponible'}\n`;
+                response += `📂 **Categoría:** ${category}\n`;
+                
+                return response;
+            }
+
+            // 🔄 RESPUESTA POR DEFECTO
+            getDefaultResponse(query) {
+                return `🤔 No encontré información específica para "${query}"\n\n💡 **Sugerencias:**\n• Intenta con nombres de técnicas: "Oi Zuki", "Mae Geri", "Gedan Barai"\n• Pregunta por conceptos: "¿Qué es el Mushin?", "Expícame el Dojo Kun"\n• Solicita listados: "Listar todas las técnicas"\n• Busca en katas: "Heian Shodan", "Kanku Dai"\n• Consulta grados: "Requisitos cinturón marrón"\n\n🥋 **Puedo ayudarte con:**\n🎯 **Técnicas** (${this.getTechniquesCount()} disponibles)\n🧠 **Filosofía** (Zanshin, Mushin, Kime, etc.)\n🥋 **Katas** (Heian, avanzadas)\n🏆 **Sistema de grados** (Kyu hasta Dan)\n📚 **Glosario** (200+ términos japoneses)`;
+            }
+        }
+
+        // 🎨 CHAT UI MANAGEMENT
+        class ChatUI {
+            constructor() {
+                this.sensei = new SenseiAI();
+                this.messages = [];
+                this.isProcessing = false;
+                this.initElements();
+                this.bindEvents();
+                this.addWelcomeMessage();
+            }
+
+            initElements() {
+                this.messagesContainer = document.getElementById('messages');
+                this.userInput = document.getElementById('userInput');
+                this.sendBtn = document.getElementById('sendBtn');
+            }
+
+            bindEvents() {
+                this.sendBtn.addEventListener('click', () => this.sendMessage());
+                this.userInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                });
+            }
+
+            addWelcomeMessage() {
+                const welcomeMessage = `🥋 **¡Hola! Soy Sensei AI Grandmaster** 🥋\n\nSoy un experto en Karate Shindo Jinen Ryu con acceso a **4500+ líneas** de conocimiento marcial.\n\n🎯 **Puedo ayudarte con:**\n• **Técnicas** (${this.sensei.getTechniquesCount()} disponibles)\n• **Filosofía** (Zanshin, Mushin, Kime, Ma Ai)\n• **Katas** (Heian, avanzadas con bunkai)\n• **Sistema de grados** (Requisitos, preparación)\n• **Glosario** (200+ términos japoneses)\n• **Historia** (Linaje, maestros, evolución)\n\n💡 **Ejemplos:**\n• "¿Cómo se hace un Oi Zuki?"\n• "Explícame el concepto Mushin"\n• "Listar todas las técnicas"\n• "Requisitos para cinturón marrón"\n\n🎯 **¿Qué te gustaría aprender hoy?**`;
+                
+                this.addMessage('sensei', welcomeMessage);
+            }
+
+            async sendMessage() {
+                const query = this.userInput.value.trim();
+                if (!query || this.isProcessing) return;
+
+                // Agregar mensaje del usuario
+                this.addMessage('user', query);
+                this.userInput.value = '';
+                this.setProcessingState(true);
+
+                try {
+                    // Mostrar indicador de escritura
+                    this.showTypingIndicator();
+
+                    // Procesar consulta
+                    const response = await this.sensei.processQuery(query);
+                    
+                    // Ocultar indicador y mostrar respuesta
+                    this.hideTypingIndicator();
+                    this.addMessage('sensei', response);
+                    
+                } catch (error) {
+                    console.error('Error al procesar consulta:', error);
+                    this.hideTypingIndicator();
+                    this.addMessage('sensei', '❌ Ocurrió un error al procesar tu consulta. Por favor, intenta nuevamente.');
+                } finally {
+                    this.setProcessingState(false);
+                }
+            }
+
+            addMessage(sender, content) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `message-bubble ${sender}-message`;
+                messageDiv.style.animation = 'fadeInUp 0.3s ease-out';
+                
+                // Procesar Markdown si es mensaje del sensei
+                if (sender === 'sensei') {
+                    messageDiv.innerHTML = marked.parse(content);
+                    messageDiv.classList.add('markdown-content');
+                } else {
+                    messageDiv.textContent = content;
+                }
+                
+                this.messagesContainer.appendChild(messageDiv);
+                this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+                
+                this.messages.push({ sender, content, timestamp: Date.now() });
+            }
+
+            showTypingIndicator() {
+                const typingDiv = document.createElement('div');
+                typingDiv.className = 'typing-indicator';
+                typingDiv.id = 'typingIndicator';
+                typingDiv.innerHTML = `
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                `;
+                
+                this.messagesContainer.appendChild(typingDiv);
+                this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
+            }
+
+            hideTypingIndicator() {
+                const typingIndicator = document.getElementById('typingIndicator');
+                if (typingIndicator) {
+                    typingIndicator.remove();
+                }
+            }
+
+            setProcessingState(isProcessing) {
+                this.isProcessing = isProcessing;
+                this.sendBtn.disabled = isProcessing;
+                this.userInput.disabled = isProcessing;
+                
+                if (isProcessing) {
+                    this.sendBtn.textContent = 'Procesando...';
+                } else {
+                    this.sendBtn.textContent = 'Enviar';
+                    this.userInput.focus();
+                }
+            }
+        }
+
+        // 🚀 INICIALIZACIÓN DE LA APLICACIÓN
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('🚀 Iniciando Sensei AI Grandmaster...');
+            new ChatUI();
+        });
+
+        // 📊 PERFORMANCE MONITORING
+        window.addEventListener('load', () => {
+            // Monitor de rendimiento
+            if ('performance' in window) {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                console.log('📊 Métricas de carga:');
+                console.log(`   - Tiempo total: ${perfData.loadEventEnd - perfData.fetchStart}ms`);
+                console.log(`   - DOM completo: ${perfData.domContentLoadedEventEnd - perfData.fetchStart}ms`);
+            }
+        });
+
+        // 🗑️ LIMPIEZA DE CACHE (Opcional)
+        window.clearSenseiCache = function() {
+            localStorage.removeItem('sensei_ai_cache');
+            console.log('🗑️ Cache limpiado. Recarga la página para descargar datos frescos.');
+        };
+    </script>
+</body>
+</html>

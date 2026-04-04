@@ -1,0 +1,3581 @@
+{
+  "metadata": {
+    "version": "3.0",
+    "description": "Universal Sensei AI Knowledge Base - Sistema Completo de Artes Marciales",
+    "last_updated": "2026-04-03",
+    "total_entries": 1000,
+    "categories": [
+      "techniques",
+      "philosophy", 
+      "history",
+      "pedagogy",
+      "competition",
+      "preparation",
+      "nutrition",
+      "terminology"
+    ]
+  },
+  
+  "techniques": {
+    "teWaza": {
+      "Oi Zuki": {
+        "name_japanese": "追い突き",
+        "name_translation": "Golpe Persecutor",
+        "category": "teWaza",
+        "level": "10° Kyu",
+        "description": "El Oi Zuki es el golpe de puño más fundamental del karate. Se caracteriza por ser un golpe directo (Choku Zuki) ejecutado mientras el cuerpo avanza hacia adelante. La palabra 'Oi' significa 'perseguir' o 'seguir', indicando que este golpe se ejecuta en sincronía con el desplazamiento del cuerpo hacia el objetivo. Es la base de todos los golpes de puño y representa la esencia del karate: el movimiento unificado de cuerpo y espíritu.",
+        "uso_tactico": "Ataque frontal de larga distancia, combate a distancia media, iniciación de combinaciones, romper la guardia del oponente, crear apertura para técnicas siguientes, ataque decisivo en kumite, técnica fundamental en katas para enseñar sincronización de cuerpo y puño.",
+        "biomecanica": {
+          "puntos_control": [
+            "El pie adelantado debe plantarse firmemente a 45 grados para máxima estabilidad",
+            "La cadera debe rotar completamente hacia adelante (Kime) en el momento del impacto",
+            "El hombro debe relajarse y luego contraerse explosivamente al golpear",
+            "El puño debe girar 180 grados durante el trayecto (de palma arriba a palma abajo)",
+            "El codo debe mantenerse cerca del cuerpo en todo momento para máxima eficiencia"
+          ],
+          "vector_fuerza": "Lineal horizontal desde el centro del cuerpo hacia el objetivo, con componente rotacional de cadera",
+          "angulo_optimo": "0 grados respecto al suelo para objetivos a nivel del torso, -15 grados para objetivos bajos, +15 grados para objetivos altos",
+          "secuencia_muscular": [
+            "Activación del cuádriceps y glúteos para el desplazamiento",
+            "Contracción de los oblicuos para la rotación de cadera",
+            "Activación del dorsal y pectoral para el golpe",
+            "Contracción del tríceps para la extensión final del brazo",
+            "Contracción de los flexores de antebrazo para el giro del puño"
+          ],
+          "postura_requerida": "Zenkutsu Dachi (postura de adelantada) con peso distribuido 60% pierna adelantada, 40% pierna trasera",
+          "tiempo_ejecucion": "0.3-0.5 segundos desde la posición inicial hasta el impacto"
+        },
+        "errores_comunes": [
+          "Levantar el talón del pie trasero durante el golpe, perdiendo estabilidad y fuerza",
+          "No girar el puño completamente, resultando en impacto con muñeca débil",
+          "Extender el codo prematuramente antes de que la cadera complete su rotación",
+          "Tensar los hombros antes del golpe, reduciendo velocidad y generando fatiga",
+          "No mantener el codo cerca del cuerpo, creando un arco ineficiente y telegrafiando el movimiento"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación silenciosa durante el desplazamiento inicial, explosión de aire (Kiai) en el momento del impacto",
+          "timing": "El aire debe expulsarse completamente en el instante exacto del contacto con el objetivo",
+          "volumen": "Kiai corto y potente desde el diafragma, no desde la garganta",
+          "sincronizacion": "La respiración debe coordinarse perfectamente con la rotación de cadera y extensión del brazo",
+          "recuperacion": "Inhalación controlada inmediatamente después del impacto para preparar siguiente movimiento"
+        },
+        "kyusho_targets": [
+          "Jinchu (punto entre los ojos) - objetivo primario para desorientación",
+          "Suigetsu (plexo solar) - objetivo para knockout o pérdida de aire",
+          "Kasumi (sien) - objetivo para golpeo lateral efectivo",
+          "Mikazuki (mandíbula) - objetivo para impacto rotacional",
+          "Uto (mentón) - objetivo para impacto ascendente"
+        ],
+        "katas_donde_aparece": [
+          "Heian Shodan - primer movimiento de golpe en la secuencia",
+          "Heian Nidan - combinación con bloqueo y avance",
+          "Heian Sandan - ejecución desde posición lateral",
+          "Heian Yondan - técnica de contraataque",
+          "Heian Godan - movimiento final de la secuencia",
+          "Bassai Dai - técnica de poder y penetración",
+          "Kanku Dai - movimiento de exploración y ataque",
+          "Empi - técnica de 'vuelo del golondrina'"
+        ],
+        "variantes": [
+          "Oi Zuki Jodan - versión a nivel de cabeza",
+          "Oi Zuki Chudan - versión a nivel de torso",
+          "Oi Zuki Gedan - versión a nivel bajo",
+          "Oi Zuki Morote - versión con ambas manos",
+          "Oi Zuki Renraku - versión en combinación rápida"
+        ],
+        "aplicaciones": [
+          "Combate de distancia larga para cerrar brecha",
+          "Ataque sorpresa cuando el oponente está distraído",
+          "Técnica de rompimiento (Tameshiwari) para demostrar poder",
+          "Defensa personal contra ataques frontales",
+          "Ejercicio de sincronización cuerpo-mente en entrenamiento"
+        ],
+        "keywords": ["oi zuki", "golpe persecutor", "choku zuki", "puño directo", "avance", "kime", "zenkutsu"],
+        "dificultad": "principiante",
+        "riesgo_lesion": "bajo",
+        "equipo_requerido": ["makiwara", "guantes de entrenamiento", "protector de muñeca opcional"]
+      },
+
+      "Gyaku Zuki": {
+        "name_japanese": "逆突き",
+        "name_translation": "Golpe Inverso",
+        "category": "teWaza",
+        "level": "9° Kyu",
+        "description": "El Gyaku Zuki es el golpe de puño inverso, ejecutado con el brazo trasero mientras el cuerpo permanece en una postura estable. A diferencia del Oi Zuki, no implica desplazamiento del centro de gravedad, lo que lo convierte en una técnica de contraataque extremadamente rápida y eficiente. La palabra 'Gyaku' significa 'inverso' o 'opuesto', refiriéndose a que se ejecuta con el lado opuesto al que está avanzando. Esta técnica es fundamental para entender el concepto de 'Shita Harai' (barrer desde abajo) y el control del centro de gravedad.",
+        "uso_tactico": "Contraataque inmediato después de bloquear, ataque desde posición defensiva, técnica de distancia corta, respuesta a ataques frontales, combinación con bloqueos, técnica sorpresa por su velocidad, defensa personal en espacios reducidos, ataque decisivo cuando el oponente se acerca demasiado.",
+        "biomecanica": {
+          "puntos_control": [
+            "Los pies deben mantenerse firmemente plantados sin levantar talones",
+            "La cadera debe rotar explosivamente hacia el lado del golpe (hiki-te)",
+            "El hombro debe lanzarse hacia adelante mientras el brazo se extiende",
+            "El codo debe mantenerse en ángulo de 90 grados hasta el último momento",
+            "La mano opuesta debe retraerse a la cadera (hiki-te) para generar fuerza adicional"
+          ],
+          "vector_fuerza": "Diagonal desde la cadera hacia adelante, con componente rotacional máximo del torso",
+          "angulo_optimo": "-5 grados para objetivos a nivel del torso, +10 grados para objetivos altos, -20 grados para objetivos bajos",
+          "secuencia_muscular": [
+            "Contracción de los oblicuos internos para rotación de cadera",
+            "Activación del dorsal y gran dorsal para potencia rotacional",
+            "Contracción del pectoral mayor para empuje frontal",
+            "Explosión del tríceps braquial para extensión final",
+            "Contracción de los flexores de antebrazo para estabilización del puño"
+          ],
+          "postura_requerida": "Kiba Dachi (postura de jinete) o Zenkutsu Dachi estática, con peso equilibrado 50/50",
+          "tiempo_ejecucion": "0.2-0.3 segundos desde la posición de guardia hasta el impacto"
+        },
+        "errores_comunes": [
+          "Levantar el talón del pie del lado que golpea, perdiendo estabilidad y fuerza",
+          "No retraer la mano opuesta a la cadera (hiki-te), reduciendo potencia en 30-40%",
+          "Iniciar el movimiento con el hombro en lugar de la cadera, telegrafiando la técnica",
+          "Extender el codo prematuramente antes de la rotación completa del torso",
+          "Tensar el cuerpo antes del golpe, eliminando la explosividad necesaria"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta y controlada durante la preparación, explosión de aire (Kiai) en el impacto",
+          "timing": "El aire debe expulsarse en sincronía perfecta con la rotación de cadera",
+          "volumen": "Kiai potente desde el diafragma, más corto que en Oi Zuki por la rapidez",
+          "sincronizacion": "La respiración debe iniciar desde la contracción abdominal y completarse con el impacto",
+          "recuperacion": "Inhalación inmediata después del impacto para mantener ritmo de combate"
+        },
+        "kyusho_targets": [
+          "Suigetsu (plexo solar) - objetivo principal para máximo impacto",
+          "Uto (mentón) - objetivo para golpeo ascendente efectivo",
+          "Kasumi (sien) - objetivo para impacto lateral rápido",
+          "Jinchu (entre ojos) - objetivo para desorientación inmediata",
+          "Mikazuki (ángulo de mandíbula) - objetivo para impacto rotacional"
+        ],
+        "katas_donde_aparece": [
+          "Heian Shodan - segundo movimiento de la secuencia",
+          "Heian Nidan - combinación con Gedan Barai",
+          "Heian Sandan - ejecución desde postura lateral",
+          "Heian Yondan - técnica de contraataque circular",
+          "Heian Godan - movimiento de poder y control",
+          "Bassai Sho - técnica de penetración rápida",
+          "Jion - movimiento de contraataque directo",
+          "Gankaku - técnica de equilibrio y precisión"
+        ],
+        "variantes": [
+          "Gyaku Zuki Jodan - versión a nivel de cabeza",
+          "Gyaku Zuki Chudan - versión estándar a nivel de torso",
+          "Gyaku Zuki Gedan - versión a nivel bajo",
+          "Gyaku Zuki Kake - versión con gancho final",
+          "Gyaku Zuki Age - versión ascendente"
+        ],
+        "aplicaciones": [
+          "Contraataque inmediato después de bloquear un ataque frontal",
+          "Defensa personal en espacios cerrados donde no hay espacio para desplazarse",
+          "Técnica sorpresa por su velocidad y falta de telegrafía",
+          "Combinación con técnicas de pierna para ataques dobles",
+          "Ejercicio de control corporal y generación de potencia desde estático"
+        ],
+        "keywords": ["gyaku zuki", "golpe inverso", "contraataque", "hiki te", "kiba dachi", "rotacion", "potencia"],
+        "dificultad": "principiante-intermedio",
+        "riesgo_lesion": "bajo",
+        "equipo_requerido": ["makiwara", "guantes de entrenamiento", "saco de boxeo"]
+      },
+
+      "Kizami Zuki": {
+        "name_japanese": "刻み突き",
+        "name_translation": "Golpe de Tajo o Punta",
+        "category": "teWaza",
+        "level": "8° Kyu",
+        "description": "El Kizami Zuki es un golpe de puño rápido y corto, similar a un jab en el boxeo. La palabra 'Kizami' significa 'cortar finamente' o 'tajear', refiriéndose a la naturaleza penetrante y rápida de este golpe. Se caracteriza por ser un ataque de distancia media con mínima preparación, diseñado para perturbar al oponente, crear apertura, o como primer movimiento de una combinación. A diferencia del Oi Zuki, no requiere desplazamiento completo del cuerpo, lo que lo hace extremadamente rápido y difícil de anticipar.",
+        "uso_tactico": "Ataque de distancia media para perturbar, primer movimiento de combinaciones, prueba de reacción del oponente, técnica de 'feint' (engaño), ataque sorpresa, mantener al oponente a distancia, crear apertura para técnicas más potentes, defensa personal contra ataques rápidos.",
+        "biomecanica": {
+          "puntos_control": [
+            "El pie adelantado permanece plantado con peso 60-70% en esa pierna",
+            "La cadera realiza una rotación parcial (45 grados) no completa",
+            "El hombro se lanza hacia adelante con mínima tensión",
+            "El codo se extiende rápidamente pero no completamente al inicio",
+            "La mano opuesta se mantiene alta en guardia, no retraída completamente"
+          ],
+          "vector_fuerza": "Lineal corto desde la guardia hasta el objetivo, con componente explosivo del hombro",
+          "angulo_optimo": "0 grados para objetivos frontales, +5 grados para objetivos ligeramente altos",
+          "secuencia_muscular": [
+            "Activación rápida del deltoides anterior para lanzamiento del brazo",
+            "Contracción parcial de los oblicuos para rotación de cadera",
+            "Explosión del tríceps para extensión rápida",
+            "Contracción de los flexores de antebrazo para estabilización",
+            "Activación del serrato anterior para estabilización del hombro"
+          ],
+          "postura_requerida": "Postura de combate natural con peso ligeramente adelantado, pies a distancia de hombros",
+          "tiempo_ejecucion": "0.15-0.25 segundos desde la guardia hasta el impacto"
+        },
+        "errores_comunes": [
+          "Extender completamente el brazo, perdiendo la capacidad de recuperación rápida",
+          "Levantar el talón del pie adelantado, comprometiendo el equilibrio",
+          "Tensar excesivamente el hombro antes del golpe, reduciendo velocidad",
+          "No mantener la guardia con la mano opuesta, dejando el cuerpo vulnerable",
+          "Usar demasiada fuerza corporal, convirtiéndolo en un Oi Zuki lento"
+        ],
+        "respiracion_especifica": {
+          "patron": "Exhalación corta y controlada durante el golpe, sin kiai completo",
+          "timing": "El aire se expulsa en el momento del impacto de forma controlada",
+          "volumen": "Exhalación silenciosa o kiai muy corto, manteniendo aire para siguientes movimientos",
+          "sincronizacion": "La respiración debe coordinarse con la extensión del brazo",
+          "recuperacion": "Inhalación inmediata después del impacto para preparar siguiente ataque"
+        },
+        "kyusho_targets": [
+          "Jinchu (entre ojos) - objetivo primario para perturbación",
+          "Uto (mentón) - objetivo para levantar la guardia del oponente",
+          "Kasumi (sien) - objetivo para impacto lateral rápido",
+          "Suigetsu (plexo solar) - objetivo para afectar respiración",
+          "Mikazuki (mandíbula) - objetivo para impacto rotacional"
+        ],
+        "katas_donde_aparece": [
+          "Heian Nidan - movimiento de perturbación inicial",
+          "Heian Sandan - técnica de distancia media",
+          "Heian Yondan - combinación con bloqueos",
+          "Bassai Dai - movimiento de ataque rápido",
+          "Kanku Sho - técnica de velocidad y precisión",
+          "Unsu - movimiento de 'mano de nube'",
+          "Gojushiho Sho - técnica de serpiente"
+        ],
+        "variantes": [
+          "Kizami Zuki Jodan - versión a nivel de cabeza",
+          "Kizami Zuki Chudan - versión estándar a nivel de torso",
+          "Kizami Zuki Renraku - versión en combinación ultra-rápida",
+          "Kizami Zuki Kake - versión con gancho final",
+          "Kizami Zuki Age - versión ascendente"
+        ],
+        "aplicaciones": [
+          "Primer movimiento de combinaciones de tres golpes",
+          "Técnica de 'feint' para abrir la guardia del oponente",
+          "Mantener distancia controlada en kumite",
+          "Defensa personal contra ataques rápidos y cercanos",
+          "Ejercicio de velocidad de reacción y tiempo"
+        ],
+        "keywords": ["kizami zuki", "jab", "golpe rapido", "perturbacion", "distancia media", "feint"],
+        "dificultad": "principiante",
+        "riesgo_lesion": "muy bajo",
+        "equipo_requerido": ["guantes de entrenamiento", "saco de velocidad"]
+      },
+
+      "Sanbon Zuki": {
+        "name_japanese": "三本突き",
+        "name_translation": "Tres Golpes Consecutivos",
+        "category": "teWaza",
+        "level": "7° Kyu",
+        "description": "El Sanbon Zuki es una secuencia de tres golpes de puño consecutivos, típicamente ejecutados como Chudan-Jodan-Chudan (torso-cabeza-torso). La palabra 'Sanbon' significa 'tres veces' o 'tres golpes', refiriéndose a la naturaleza triple de esta técnica. Es fundamental para entender el concepto de 'Renraku Waza' (técnicas enlazadas) y el control del ritmo en el karate. Esta técnica enseña la coordinación entre cadera, hombros y respiración en movimientos rápidos consecutivos, además de desarrollar la capacidad de mantener el equilibrio durante múltiples ataques.",
+        "uso_tactico": "Ataque combinado para romper defensas, técnica de presión continua, desarrollo de ritmo en combate, ataque sorpresa por su naturaleza triple, prueba de resistencia y coordinación, técnica fundamental en katas para enseñar secuencias, defensa personal contra múltiples oponentes o ataques rápidos.",
+        "biomecanica": {
+          "puntos_control": [
+            "El primer golpe (Chudan) se ejecuta con rotación parcial de cadera",
+            "El segundo golpe (Jodan) requiere rotación completa de cadera y extensión de hombro",
+            "El tercer golpe (Chudan) vuelve a rotación parcial con recuperación de energía",
+            "Los pies permanecen plantados con ligero ajuste de peso entre golpes",
+            "La respiración debe coordinarse perfectamente con cada golpe individual"
+          ],
+          "vector_fuerza": "Tres vectores lineales consecutivos con variación angular: 0°, +15°, 0°",
+          "angulo_optimo": "0 grados para primer y tercer golpe, +15 grados para segundo golpe",
+          "secuencia_muscular": [
+            "Primer golpe: Activación de oblicuos y tríceps con rotación parcial",
+            "Segundo golpe: Rotación completa de cadera con explosión de dorsal y pectoral",
+            "Tercer golpe: Recuperación con activación de oblicuos opuestos",
+            "Mantenimiento de core estable durante toda la secuencia",
+            "Coordinación de respiración con cada contracción muscular"
+          ],
+          "postura_requerida": "Kiba Dachi o Zenkutsu Dachi estática, con peso ajustándose dinámicamente entre 40-60%",
+          "tiempo_ejecucion": "0.8-1.2 segundos para la secuencia completa de tres golpes"
+        },
+        "errores_comunes": [
+          "Levantar los talones durante la secuencia, perdiendo estabilidad progresivamente",
+          "No recuperar completamente entre golpes, acumulando tensión muscular",
+          "Variar excesivamente la altura de los golpes, perdiendo precisión",
+          "No coordinar la respiración con cada golpe individual",
+          "Perder la guardia con la mano opuesta durante los cambios de golpe"
+        ],
+        "respiracion_especifica": {
+          "patron": "Tres exhalaciones cortas y controladas, una por cada golpe, con posible kiai en el segundo",
+          "timing": "Exhalación sincronizada con cada impacto, manteniendo ritmo constante",
+          "volumen": "Exhalaciones cortas, con kiai opcional en el segundo golpe (Jodan)",
+          "sincronizacion": "Cada exhalación debe coordinarse con la rotación de cadera respectiva",
+          "recuperacion": "Inhalación corta entre golpes para mantener energía y ritmo"
+        },
+        "kyusho_targets": [
+          "Suigetsu (plexo solar) - primer y tercer golpe",
+          "Jinchu (entre ojos) - segundo golpe a nivel Jodan",
+          "Uto (mentón) - alternativa para segundo golpe",
+          "Kasumi (sien) - objetivo lateral para segundo golpe",
+          "Mikazuki (mandíbula) - objetivo angular para primer golpe"
+        ],
+        "katas_donde_aparece": [
+          "Heian Sandan - secuencia central de tres golpes",
+          "Heian Yondan - variación con bloqueos intermedios",
+          "Bassai Dai - técnica de penetración triple",
+          "Kanku Dai - movimiento de 'mirar al cielo'",
+          "Jion - secuencia de poder y control",
+          "Empi - técnica de 'vuelo de golondrina'",
+          "Gojushiho Dai - secuencia de 54 movimientos"
+        ],
+        "variantes": [
+          "Sanbon Zuki Chudan-Chudan-Chudan - tres golpes al torso",
+          "Sanbon Zuki Jodan-Jodan-Jodan - tres golpes a la cabeza",
+          "Sanbon Zuki Gedan-Chudan-Jodan - secuencia ascendente",
+          "Sanbon Zuki Renraku - versión ultra-rápida",
+          "Sanbon Zuki Kake - con gancho final"
+        ],
+        "aplicaciones": [
+          "Romper la guardia del oponente con ataques consecutivos",
+          "Desarrollar ritmo y coordinación en entrenamiento",
+          "Técnica de presión en kumite competitivo",
+          "Defensa personal contra oponentes con buena guardia",
+          "Ejercicio de resistencia cardiovascular y muscular"
+        ],
+        "keywords": ["sanbon zuki", "tres golpes", "secuencia", "renraku waza", "ritmo", "presion"],
+        "dificultad": "intermedio",
+        "riesgo_lesion": "bajo",
+        "equipo_requerido": ["guantes de entrenamiento", "saco de boxeo", "cronómetro para ritmo"]
+      },
+
+      "Uraken Uchi": {
+        "name_japanese": "裏拳打ち",
+        "name_translation": "Golpe con el Dorso del Puño",
+        "category": "teWaza",
+        "level": "6° Kyu",
+        "description": "El Uraken Uchi es un golpe ejecutado con el dorso del puño, específicamente con los nudillos de los dedos índice y medio. La palabra 'Uraken' significa 'puño invertido' o 'dorso del puño', mientras que 'Uchi' significa 'golpear'. Esta técnica es particularmente efectiva para objetivos a nivel de cabeza y cara, y se caracteriza por su naturaleza circular y su capacidad para ser ejecutada desde distancias cortas con gran velocidad. A diferencia de los golpes lineales, el Uraken utiliza un movimiento de muñeca que genera un impacto penetrante y sorpresivo.",
+        "uso_tactico": "Ataque a la cabeza desde distancia corta, técnica de contraataque circular, ataque sorpresa por su trayectoria inusual, técnica de 'finishing' en combinaciones, defensa personal contra agarres, ataque a objetivos laterales de la cabeza, técnica efectiva cuando el oponente está cerca, romper la guardia alta del oponente.",
+        "biomecanica": {
+          "puntos_control": [
+            "La muñeca debe mantenerse firme pero no rígida durante el impacto",
+            "El codo debe flexionarse a 90 grados antes de la extensión final",
+            "El hombro debe rotar ligeramente hacia adelante para generar momento",
+            "Los nudillos de índice y medio deben ser el punto principal de impacto",
+            "La mano debe girar 90 grados durante el trayecto (de palma abajo a lateral)"
+          ],
+          "vector_fuerza": "Circular-horizontal desde la guardia hasta el objetivo, con componente angular de 45 grados",
+          "angulo_optimo": "+30 grados para objetivos a nivel de cara, +45 grados para objetivos laterales",
+          "secuencia_muscular": [
+            "Activación del braquial y bíceps para la flexión inicial del codo",
+            "Rotación del antebrazo con el supinador y pronador",
+            "Explosión del extensor radial largo para la extensión final",
+            "Contracción de los flexores de muñeca para estabilización",
+            "Activación del deltoides lateral para elevación del brazo"
+          ],
+          "postura_requerida": "Postura de combate natural con peso equilibrado, pies a distancia de hombros",
+          "tiempo_ejecucion": "0.2-0.3 segundos desde la iniciación hasta el impacto"
+        },
+        "errores_comunes": [
+          "Flexionar excesivamente la muñeca, perdiendo potencia y arriesgando lesión",
+          "Golpear con los nudillos incorrectos (meñique o anular), causando dolor",
+          "No rotar el brazo completamente, reduciendo el momento angular",
+          "Levantar el codo demasiado alto, telegrafiando el movimiento",
+          "Tensar el hombro antes del golpe, reduciendo velocidad y precisión"
+        ],
+        "respiracion_especifica": {
+          "patron": "Exhalación corta y explosiva en el momento del impacto",
+          "timing": "El aire se expulsa sincronizado con la extensión final del brazo",
+          "volumen": "Kiai corto y agudo desde el diafragma, diferente al kiai de golpes lineales",
+          "sincronizacion": "La respiración debe coordinarse con la rotación de muñeca y extensión",
+          "recuperacion": "Inhalación inmediata después del impacto para mantener guardia"
+        },
+        "kyusho_targets": [
+          "Kasumi (sien) - objetivo primario para máximo efecto",
+          "Mikazuki (ángulo de mandíbula) - objetivo para impacto rotacional",
+          "Jinchu (entre ojos) - objetivo para impacto frontal",
+          "Uto (mentón) - objetivo para impacto ascendente",
+          "Hichu (parte posterior del cuello) - objetivo para impacto circular"
+        ],
+        "katas_donde_aparece": [
+          "Heian Yondan - movimiento circular de contraataque",
+          "Heian Godan - técnica de poder y precisión",
+          "Bassai Dai - movimiento de penetración circular",
+          "Kanku Sho - técnica de 'mano de nube'",
+          "Jion - secuencia de ataques variados",
+          "Unsu - movimiento de 'mano de nube'",
+          "Gojushiho Sho - técnica de serpiente"
+        ],
+        "variantes": [
+          "Uraken Uchi Jodan - versión estándar a nivel de cabeza",
+          "Uraken Uchi Yoko - versión lateral a la sien",
+          "Uraken Uchi Age - versión ascendente",
+          "Uraken Uchi Kake - con gancho final",
+          "Uraken Uchi Mawashi - versión circular completa"
+        ],
+        "aplicaciones": [
+          "Contraataque cuando el oponente está a distancia corta",
+          "Ataque sorpresa por su trayectoria circular inusual",
+          "Técnica efectiva contra oponentes con guardia alta",
+          "Defensa personal contra agarres y ataques cercanos",
+          "Ejercicio de coordinación de muñeca y velocidad de reacción"
+        ],
+        "keywords": ["uraken uchi", "dorso del puño", "golpe circular", "contraataque", "distancia corta", "sorpresa"],
+        "dificultad": "intermedio",
+        "riesgo_lesion": "medio",
+        "equipo_requerido": ["guantes de entrenamiento", "protector de muñeca", "saco de boxeo"]
+      }
+    },
+
+    "ashiWaza": {
+      "Mae Geri Keage": {
+        "name_japanese": "前蹴上げ",
+        "name_translation": "Patada Frontal Ascendente",
+        "category": "ashiWaza",
+        "level": "9° Kyu",
+        "description": "El Mae Geri Keage es la patada frontal más fundamental del karate, caracterizada por su naturaleza ascendente y explosiva. La palabra 'Mae' significa 'frente' o 'adelante', 'Geri' es 'patada', y 'Keage' se refiere a 'ascendente' o 'levantamiento'. A diferencia del Mae Geri Kekomi (patada frontal penetrante), el Keage es un movimiento rápido y snapping diseñado para impactar objetivos a nivel medio-alto con máxima velocidad y recuperación instantánea. Esta técnica es esencial para entender el concepto de 'Kime' en las patadas y el control del centro de gravedad durante movimientos de una sola pierna.",
+        "uso_tactico": "Ataque frontal a distancia media, defensa contra avances, técnica de perturbación, primer movimiento de combinaciones, ataque a objetivos de torso y abdomen, defensa personal contra ataques frontales, técnica de 'feint' para abrir guardias, ejercicio de equilibrio y coordinación.",
+        "biomecanica": {
+          "puntos_control": [
+            "La rodilla de la pierna de patada se levanta primero apuntando al objetivo",
+            "La cadera se inclina ligeramente hacia adelante para generar momento",
+            "El pie se extiende completamente con el empeine apuntando hacia arriba",
+            "La pierna de apoyo se mantiene flexionada para estabilidad",
+            "El Hara (centro de gravedad) se mantiene bajo y centrado"
+          ],
+          "vector_fuerza": "Diagonal ascendente desde el suelo hacia el objetivo, con componente explosiva del cuádriceps",
+          "angulo_optimo": "45 grados para objetivos a nivel del torso, 60 grados para objetivos altos",
+          "secuencia_muscular": [
+            "Activación del psoas y pectíneo para levantar la rodilla",
+            "Explosión del cuádriceps femoral para extensión de la pierna",
+            "Contracción del glúteo mayor para estabilización de cadera",
+            "Activación del tibial anterior para dorsiflexión del pie",
+            "Contracción del core para mantener equilibrio"
+          ],
+          "postura_requerida": "Postura de combate con peso 70% en pierna de apoyo, 30% en pierna de patada",
+          "tiempo_ejecucion": "0.3-0.4 segundos desde levantar rodilla hasta el impacto"
+        },
+        "estabilidad_y_base": {
+          "pierna_apoyo": "La pierna de apoyo debe mantenerse ligeramente flexionada en la rodilla (ángulo de 15-20 grados) para permitir ajustes rápidos del centro de gravedad. El pie debe plantarse firmemente con los dedos ligeramente separados para máxima base de apoyo.",
+          "hara_centro_gravedad": "El Hara debe mantenerse bajo y centrado, aproximadamente dos dedos debajo del ombligo. Durante la patada, el peso se desplaza momentáneamente hacia la pierna de apoyo, pero el Hara nunca se eleva, manteniendo la conexión con el suelo y permitiendo recuperación instantánea.",
+          "equilibrio_dinamico": "El equilibrio se logra manteniendo los brazos en guardia alta, con el brazo del lado de la patada ligeramente atrás para contrabalanceo. La espalda permanece recta y los hombros relajados para permitir movimientos fluidos.",
+          "recuperacion": "La recuperación debe ser tan rápida como la extensión, retrayendo la pierna por el mismo camino y aterrizando suavemente para preparar siguiente técnica sin perder el flujo de combate."
+        },
+        "errores_comunes": [
+          "Levantar la rodilla demasiado baja, resultando en una patada débil y sin potencia",
+          "Extender la pierna completamente antes de levantar la rodilla, perdiendo explosividad",
+          "Inclinar el torso hacia atrás, comprometiendo el equilibrio y telegrafiando el movimiento",
+          "No mantener la guardia con los brazos, dejando el torso vulnerable",
+          "Aterrizar bruscamente después de la patada, perdiendo ritmo y preparación"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta al levantar la rodilla, exhalación explosiva (Kiai) en el impacto",
+          "timing": "El aire se expulsa sincronizado con la extensión completa de la pierna",
+          "volumen": "Kiai corto y agudo desde el diafragma, diferente al kiai de golpes de puño",
+          "sincronizacion": "La respiración debe coordinarse con la elevación de cadera y extensión de pierna",
+          "recuperacion": "Inhalación inmediata después del impacto para mantener energía y ritmo"
+        },
+        "kyusho_targets": [
+          "Suigetsu (plexo solar) - objetivo primario para máximo impacto",
+          "Jinchu (entre ojos) - objetivo alto para desorientación",
+          "Uto (mentón) - objetivo para impacto ascendente",
+          "Kasumi (sien) - objetivo lateral con ajuste angular",
+          "Mikazuki (mandíbula) - objetivo angular para impacto rotacional"
+        ],
+        "katas_donde_aparece": [
+          "Heian Shodan - primera patada frontal",
+          "Heian Nidan - combinación con bloqueo",
+          "Heian Sandan - secuencia de patadas",
+          "Heian Yondan - técnica de contraataque",
+          "Heian Godan - movimiento de poder y control",
+          "Bassai Dai - técnica de penetración",
+          "Kanku Dai - movimiento de 'mirar al cielo'",
+          "Empi - técnica de 'vuelo de golondrina'"
+        ],
+        "variantes": [
+          "Mae Geri Jodan - versión a nivel de cabeza",
+          "Mae Geri Chudan - versión estándar a nivel de torso",
+          "Mae Geri Gedan - versión baja a nivel de piernas",
+          "Mae Geri Renraku - versión en combinación rápida",
+          "Mae Geri Kake - con gancho final"
+        ],
+        "aplicaciones": [
+          "Ataque frontal cuando el oponente está a distancia media",
+          "Defensa contra avances directos del oponente",
+          "Técnica de perturbación para crear apertura",
+          "Primer movimiento de combinaciones de patadas",
+          "Ejercicio de equilibrio y coordinación"
+        ],
+        "keywords": ["mae geri keage", "patada frontal", "ascendente", "distancia media", "equilibrio", "snapping"],
+        "dificultad": "principiante",
+        "riesgo_lesion": "bajo",
+        "equipo_requerido": ["protector de shin", "guantes de entrenamiento", "saco de patadas"]
+      },
+
+      "Mae Geri Kekomi": {
+        "name_japanese": "前蹴込み",
+        "name_translation": "Patada Frontal Penetrante",
+        "category": "ashiWaza",
+        "level": "8° Kyu",
+        "description": "El Mae Geri Kekomi es una patada frontal penetrante diseñada para atravesar la defensa del oponente con fuerza y profundidad. A diferencia del Keage (ascendente), el Kekomi se caracteriza por su naturaleza empujante y penetrante, buscando impactar profundo y desequilibrar al adversario. La palabra 'Kekomi' significa 'penetrar' o 'empujar hacia adentro', refiriéndose a la intención de atravesar la guardia y afectar el centro del oponente. Esta técnica requiere mayor compromiso corporal y genera más poder, pero es más lenta que el Keage.",
+        "uso_tactico": "Ataque penetrante para romper guardias, técnica de poder a distancia corta, ataque para desequilibrar oponente, defensa contra bloqueos bajos, técnica de 'finishing' en combinaciones, ataque a objetivos profundos del torso, defensa personal contra oponentes con buena guardia alta.",
+        "biomecanica": {
+          "puntos_control": [
+            "La cadera se proyecta completamente hacia adelante durante el impacto",
+            "La rodilla se mantiene alta durante toda la ejecución para generar poder",
+            "El pie se flexiona dorsalmente con el talón apuntando al objetivo",
+            "El torso se inclina ligeramente hacia adelante para añadir masa corporal",
+            "La pierna de apoyo se mantiene firme pero con ligera flexión"
+          ],
+          "vector_fuerza": "Horizontal penetrante desde el cuerpo hacia adelante, con componente de empuje",
+          "angulo_optimo": "0 grados para máxima penetración, -5 grados para objetivos bajos",
+          "secuencia_muscular": [
+            "Activación del glúteo mayor y cuádriceps para proyección de cadera",
+            "Explosión del psoas para elevación y proyección de la pierna",
+            "Contracción de los isquiotibiales para control del movimiento",
+            "Activación del gastrocnemio y sóleo para estabilización del pie",
+            "Contracción del core para transferencia de fuerza"
+          ],
+          "postura_requerida": "Postura de combate con peso 60% en pierna de apoyo, inclinación frontal del torso",
+          "tiempo_ejecucion": "0.4-0.5 segundos desde iniciación hasta impacto profundo"
+        },
+        "estabilidad_y_base": {
+          "pierna_apoyo": "La pierna de apoyo debe estar firmemente plantada con rodilla flexionada a 20-25 grados. El pie debe apuntar ligeramente hacia adelante para permitir la proyección de cadera sin perder equilibrio. Los dedos del pie deben agarrarse al suelo para máxima estabilidad.",
+          "hara_centro_gravedad": "El Hara se proyecta hacia adelante junto con la cadera, manteniendo una línea de fuerza desde el suelo hasta el objetivo. Aunque el centro de gravedad se desplaza hacia adelante, nunca se eleva, manteniendo la conexión con el poder del suelo.",
+          "equilibrio_dinamico": "Se mantiene mediante la inclinación controlada del torso y el uso de los brazos como contrapeso. El brazo del lado de la patada se extiende hacia adelante mientras el otro se mantiene en guardia, creando un equilibrio dinámico que permite máxima penetración.",
+          "recuperacion": "La recuperación es más lenta que en Keage, requiriendo retracción controlada y aterrizaje suave. Se debe recuperar la posición de guardia inmediatamente para preparar siguiente movimiento o defensa."
+        },
+        "errores_comunes": [
+          "No proyectar la cadera completamente, perdiendo 40-50% del poder",
+          "Levantar el talón de la pierna de apoyo, comprometiendo la base de poder",
+          "Inclinar excesivamente el torso, perdiendo equilibrio y defensa",
+          "No mantener la rodilla alta durante la ejecución, reduciendo efectividad",
+          "Recuperar demasiado lentamente, dejándose vulnerable a contraataques"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación profunda durante preparación, exhalación potente y prolongada durante penetración",
+          "timing": "El aire se expulsa gradualmente durante toda la ejecución, con explosión final en el impacto",
+          "volumen": "Kiai profundo y resonante desde el diafragma, indicando compromiso total",
+          "sincronizacion": "La respiración debe coordinarse con la proyección de cadera y penetración",
+          "recuperacion": "Inhalación controlada después del impacto para estabilizar y preparar siguiente movimiento"
+        },
+        "kyusho_targets": [
+          "Suigetsu (plexo solar) - objetivo primario para penetración profunda",
+          "Denko (costado flotante) - objetivo para impacto lateral profundo",
+          "Kage (hígado) - objetivo del lado derecho del torso",
+          "Gekka (bazo/pancreas) - objetivo del lado izquierdo del torso",
+          "Uto (mentón) - objetivo para impacto ascendente penetrante"
+        ],
+        "katas_donde_aparece": [
+          "Heian Sandan - técnica de poder penetrante",
+          "Heian Yondan - combinación con bloqueos",
+          "Heian Godan - movimiento de fuerza y control",
+          "Bassai Dai - técnica de rompimiento",
+          "Kanku Sho - movimiento de penetración rápida",
+          "Jion - secuencia de ataques potentes",
+          "Gojushiho Dai - técnica de 54 movimientos"
+        ],
+        "variantes": [
+          "Mae Geri Kekomi Jodan - versión alta a nivel de cabeza",
+          "Mae Geri Kekomi Chudan - versión estándar a nivel de torso",
+          "Mae Geri Kekomi Gedan - versión baja a nivel de piernas",
+          "Mae Geri Kekomi Renraku - versión en combinación",
+          "Mae Geri Kekomi Yoko - versión con componente lateral"
+        ],
+        "aplicaciones": [
+          "Romper guardias cerradas o defensas fuertes",
+          "Desequilibrar oponentes con impacto profundo",
+          "Ataque decisivo cuando hay apertura clara",
+          "Técnica de 'finishing' en combinaciones",
+          "Defensa contra oponentes más grandes o fuertes"
+        ],
+        "keywords": ["mae geri kekomi", "patada frontal", "penetrante", "poder", "proyeccion", "rompimiento"],
+        "dificultad": "intermedio",
+        "riesgo_lesion": "medio",
+        "equipo_requerido": ["protector de shin", "protector de pie", "guantes de entrenamiento"]
+      },
+
+      "Mawashi Geri": {
+        "name_japanese": "回し蹴り",
+        "name_translation": "Patada Circular",
+        "category": "ashiWaza",
+        "level": "7° Kyu",
+        "description": "El Mawashi Geri es la patada circular más versátil y efectiva del karate. La palabra 'Mawashi' significa 'circular' o 'giratorio', refiriéndose al movimiento de la pierna que describe un arco desde el exterior hacia el interior. Esta técnica puede ejecutarse a diferentes alturas (Jodan, Chudan, Gedan) y es particularmente efectiva para atacar objetivos laterales de la cabeza y torso. El Mawashi Geri requiere excelente coordinación de cadera, equilibrio dinámico, y comprensión del momento angular para generar máxima potencia.",
+        "uso_tactico": "Ataque circular a la cabeza, contraataque desde posición lateral, técnica sorpresa por su trayectoria, ataque a objetivos laterales, defensa contra guardias laterales, técnica de 'finishing' en combate, defensa personal contra múltiples oponentes, ataque efectivo contra oponentes más altos.",
+        "biomecanica": {
+          "puntos_control": [
+            "La cadera inicia el movimiento con rotación hacia afuera",
+            "La rodilla se levanta alta y apunta hacia el objetivo antes de girar",
+            "La pierna describe un arco circular desde afuera hacia adentro",
+            "El pie impacta con el empeine o el dorso dependiendo del objetivo",
+            "El torso rota sincronizadamente con la cadera para generar momento"
+          ],
+          "vector_fuerza": "Circular-horizontal con componente angular de 45-90 grados dependiendo del objetivo",
+          "angulo_optimo": "90 grados para objetivos laterales de cabeza, 45 grados para torso",
+          "secuencia_muscular": [
+            "Activación del glúteo mediano para rotación de cadera",
+            "Explosión del cuádriceps para extensión circular de la pierna",
+            "Contracción de los oblicuos para rotación del torso",
+            "Activación del tensor de la fascia lata para estabilización",
+            "Contracción del core para mantener equilibrio dinámico"
+          ],
+          "postura_requerida": "Postura de combate con peso 70% en pierna de apoyo, torso ligeramente girado",
+          "tiempo_ejecucion": "0.4-0.5 segundos desde iniciación hasta el impacto circular"
+        },
+        "estabilidad_y_base": {
+          "pierna_apoyo": "La pierna de apoyo debe mantenerse firmemente plantada con rodilla flexionada a 15-20 grados. El pie debe apuntar ligeramente hacia afuera para permitir la rotación de cadera sin torcer la rodilla. La base debe ser ancha y estable para soportar el movimiento circular.",
+          "hara_centro_gravedad": "El Hara permanece centrado mientras la cadera rota a su alrededor. A diferencia de otras patadas, el centro de gravedad no se desplaza significativamente, sino que sirve como eje de rotación para el movimiento circular. Esto permite máxima potencia con mínimo desequilibrio.",
+          "equilibrio_dinamico": "Se mantiene mediante la rotación coordinada de hombros y cadera. Los brazos se usan activamente para contrabalanceo: el brazo del lado de la patada se extiende hacia adelante mientras el otro se retrae hacia atrás, creando un equilibrio dinámico que potencia el movimiento circular.",
+          "recuperacion": "La recuperación sigue el mismo arco circular pero en reversa, permitiendo transiciones fluidas hacia siguientes técnicas. Se debe mantener la guardia alta durante toda la recuperación para no dejar openings."
+        },
+        "errores_comunes": [
+          "No levantar la rodilla suficientemente alta, reduciendo el arco y potencia",
+          "Girar el pie incorrectamente, impactando con los dedos en lugar del empeine",
+          "No rotar la cadera completamente, perdiendo 60-70% del potencial de poder",
+          "Inclinar el torso hacia adelante, comprometiendo el equilibrio circular",
+          "Telegrafiar el movimiento moviendo los hombros antes que la cadera"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación durante la preparación y elevación, exhalación explosiva en el impacto circular",
+          "timing": "El aire se expulsa sincronizado con el punto máximo de rotación de cadera",
+          "volumen": "Kiai circular y potente, diferente al kiai lineal de otras patadas",
+          "sincronizacion": "La respiración debe coordinarse con la rotación completa del torso",
+          "recuperacion": "Inhalación controlada durante el arco de recuperación para mantener fluidez"
+        },
+        "kyusho_targets": [
+          "Kasumi (sien) - objetivo primario para máximo efecto",
+          "Mikazuki (ángulo de mandíbula) - objetivo para impacto rotacional",
+          "Jinchu (entre ojos) - objetivo para impacto frontal circular",
+          "Denko (costado flotante) - objetivo lateral del torso",
+          "Kage (hígado) - objetivo del lado derecho del abdomen"
+        ],
+        "katas_donde_aparece": [
+          "Heian Yondan - técnica circular de contraataque",
+          "Heian Godan - movimiento de poder y precisión",
+          "Bassai Dai - técnica de penetración circular",
+          "Kanku Dai - movimiento de 'mirar al cielo'",
+          "Jion - secuencia de ataques variados",
+          "Unsu - movimiento de 'mano de nube'",
+          "Gojushiho Sho - técnica de serpiente"
+        ],
+        "variantes": [
+          "Mawashi Geri Jodan - versión alta a nivel de cabeza",
+          "Mawashi Geri Chudan - versión estándar a nivel de torso",
+          "Mawashi Geri Gedan - versión baja a nivel de piernas",
+          "Mawashi Geri Renraku - versión en combinación rápida",
+          "Mawashi Geri Ushiro - versión circular hacia atrás"
+        ],
+        "aplicaciones": [
+          "Ataque a la cabeza cuando el oponente tiene guardia frontal",
+          "Contraataque desde posición lateral",
+          "Técnica sorpresa por su trayectoria inusual",
+          "Ataque efectivo contra oponentes más altos",
+          "Defensa personal contra múltiples atacantes"
+        ],
+        "keywords": ["mawashi geri", "patada circular", "rotacion", "cadera", "equilibrio", "lateral"],
+        "dificultad": "intermedio",
+        "riesgo_lesion": "medio",
+        "equipo_requerido": ["protector de shin", "protector de pie", "casco de entrenamiento"]
+      },
+
+      "Yoko Geri": {
+        "name_japanese": "横蹴り",
+        "name_translation": "Patada Lateral",
+        "category": "ashiWaza",
+        "level": "6° Kyu",
+        "description": "El Yoko Geri es la patada lateral más poderosa del karate, caracterizada por su naturaleza lineal y penetrante desde una posición de perfil. La palabra 'Yoko' significa 'lado' o 'lateral', refiriéndose tanto a la posición del cuerpo como a la dirección del ataque. Esta técnica se ejecuta desde una postura de perfil (Kiba Dachi) y utiliza el borde externo del pie para impactar con máxima fuerza penetrante. El Yoko Geri requiere excelente equilibrio, fuerza de cadera, y comprensión del alineamiento corporal para generar poder efectivo.",
+        "uso_tactico": "Ataque lateral poderoso, defensa contra ataques frontales, técnica de 'finishing' a distancia corta, ataque a objetivos laterales del torso, defensa personal en espacios estrechos, técnica de poder contra oponentes grandes, ataque efectivo cuando se está posicionado lateralmente.",
+        "biomecanica": {
+          "puntos_control": [
+            "El cuerpo se mantiene en perfil con hombros alineados",
+            "La rodilla se levanta alta hacia el pecho antes de extender",
+            "La cadera se proyecta lateralmente en línea recta",
+            "El pie impacta con el borde externo (sokuto) apuntando hacia adelante",
+            "El torso permanece erguido para mantener estructura y poder"
+          ],
+          "vector_fuerza": "Horizontal pura desde el perfil hacia el objetivo, con componente penetrante máxima",
+          "angulo_optimo": "0 grados para máxima penetración lateral",
+          "secuencia_muscular": [
+            "Activación del glúteo mediano y menor para abducción de cadera",
+            "Explosión del cuádriceps para extensión lateral de la pierna",
+            "Contracción de los oblicuos para estabilización del torso",
+            "Activación del peroneo largo para eversión del pie",
+            "Contracción del core para mantener alineación corporal"
+          ],
+          "postura_requerida": "Kiba Dachi (postura de jinete) o postura de perfil con peso equilibrado 50/50",
+          "tiempo_ejecucion": "0.4-0.5 segundos desde la elevación hasta el impacto lateral"
+        },
+        "estabilidad_y_base": {
+          "pierna_apoyo": "La pierna de apoyo debe mantenerse completamente recta pero sin bloqueo, con el pie firmemente plantado paralelo a la línea de ataque. La rodilla debe estar extendida pero no hiperextendida para permitir ajustes rápidos y evitar lesiones.",
+          "hara_centro_gravedad": "El Hara se mantiene bajo y centrado, sirviendo como base estable para la proyección lateral. A diferencia de otras patadas, el centro de gravedad no se eleva ni se desplaza significativamente, permitiendo máxima transferencia de potencia desde el suelo hasta el objetivo.",
+          "equilibrio_dinamico": "Se mantiene mediante el control del torso y el uso de los brazos como estabilizadores. Los brazos se extienden lateralmente para crear equilibrio, con el brazo del lado de la patada ligeramente más bajo para contrabalancear el movimiento de la pierna.",
+          "recuperacion": "La recuperación debe ser controlada y precisa, retrayendo la pierna por el mismo camino lateral. Se debe mantener la postura de perfil durante toda la recuperación para preparar siguientes técnicas sin perder posición estratégica."
+        },
+        "errores_comunes": [
+          "No mantener el torso en perfil, perdiendo alineación y potencia",
+          "Levantar el talón de la pierna de apoyo, comprometiendo la base de poder",
+          "Impactar con la planta del pie en lugar del borde externo",
+          "No levantar la rodilla suficientemente alta antes de extender",
+          "Perder el equilibrio al no controlar el torso durante el movimiento"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación profunda durante la preparación, exhalación potente y controlada durante la extensión",
+          "timing": "El aire se expulsa sincronizado con la proyección lateral de la cadera",
+          "volumen": "Kiai lateral y potente, reflejando la naturaleza del movimiento",
+          "sincronizacion": "La respiración debe coordinarse con la abducción y extensión de cadera",
+          "recuperacion": "Inhalación controlada durante la retracción lateral para mantener estabilidad"
+        },
+        "kyusho_targets": [
+          "Denko (costado flotante) - objetivo primario para máximo impacto",
+          "Kage (hígado) - objetivo del lado derecho del abdomen",
+          "Gekka (bazo/pancreas) - objetivo del lado izquierdo del abdomen",
+          "Ushiro Denko (costado posterior) - objetivo para impacto profundo",
+          "Yaku (riñón) - objetivo bajo y lateral"
+        ],
+        "katas_donde_aparece": [
+          "Heian Sandan - técnica lateral de poder",
+          "Heian Yondan - movimiento de perfil y ataque",
+          "Heian Godan - secuencia de ataques laterales",
+          "Bassai Dai - técnica de penetración lateral",
+          "Kanku Sho - movimiento de 'mano de nube'",
+          "Jion - técnica de equilibrio y poder",
+          "Gankaku - movimiento de grulla en equilibrio"
+        ],
+        "variantes": [
+          "Yoko Geri Keage - versión ascendente lateral",
+          "Yoko Geri Kekomi - versión penetrante lateral",
+          "Yoko Geri Jodan - versión alta a nivel de cabeza",
+          "Yoko Geri Gedan - versión baja a nivel de piernas",
+          "Yoko Geri Renraku - versión en combinación"
+        ],
+        "aplicaciones": [
+          "Ataque lateral cuando el oponente está de frente",
+          "Defensa contra ataques frontales usando movimiento lateral",
+          "Técnica de poder en espacios estrechos o pasillos",
+          "Contraataque desde posición de perfil",
+          "Ataque efectivo contra oponentes más grandes"
+        ],
+        "keywords": ["yoko geri", "patada lateral", "perfil", "sokuto", "poder", "penetracion"],
+        "dificultad": "intermedio-avanzado",
+        "riesgo_lesion": "medio-alto",
+        "equipo_requerido": ["protector de shin", "protector de costado", "guantes de entrenamiento"]
+      },
+
+      "Ushiro Geri": {
+        "name_japanese": "後ろ蹴り",
+        "name_translation": "Patada Hacia Atrás",
+        "category": "ashiWaza",
+        "level": "5° Kyu",
+        "description": "El Ushiro Geri es una patada hacia atrás ejecutada sin mirar el objetivo, requiriendo un desarrollo avanzado de equilibrio, conciencia corporal, y confianza. La palabra 'Ushiro' significa 'atrás' o 'posterior', refiriéndose a la dirección del ataque. Esta técnica es particularmente efectiva para contraatacar oponentes que se acercan por detrás, o como técnica sorpresa en combate. El Ushiro Geri desarrolla la 'conciencia de espalda' (ushiro no shisei) y la capacidad de generar poder en direcciones no visuales.",
+        "uso_tactico": "Contraataque a oponentes por detrás, técnica sorpresa en combate, defensa contra ataques sorpresa, ataque cuando se está siendo perseguido, técnica de 'finishing' en combinaciones circulares, defensa personal contra agresiones por retaguardia, desarrollo de conciencia espacial.",
+        "biomecanica": {
+          "puntos_control": [
+            "La mirada se mantiene hacia adelante mientras se patea hacia atrás",
+            "La rodilla se levanta hacia el pecho antes de extender hacia atrás",
+            "La cadera se proyecta hacia atrás en línea recta",
+            "El pie impacta con el talón (kakato) para máxima penetración",
+            "El torso se mantiene erguido para mantener equilibrio y estructura"
+          ],
+          "vector_fuerza": "Horizontal pura desde el cuerpo hacia atrás, con componente de empuje",
+          "angulo_optimo": "0 grados para máxima penetración posterior",
+          "secuencia_muscular": [
+            "Activación del glúteo mayor para extensión de cadera",
+            "Explosión del isquiotibial para extensión posterior de la pierna",
+            "Contracción de los erectores espinales para estabilización del torso",
+            "Activación del gastrocnemio para potencia del talón",
+            "Contracción del core para mantener equilibrio sin visión"
+          ],
+          "postura_requerida": "Postura de combate con peso equilibrado, torso ergudo y mirada frontal",
+          "tiempo_ejecucion": "0.4-0.5 segundos desde elevación hasta el impacto posterior"
+        },
+        "estabilidad_y_base": {
+          "pierna_apoyo": "La pierna de apoyo debe mantenerse completamente estable con rodilla ligeramente flexionada (10-15 grados). El pie debe plantarse firmemente con los dedos agarrándose al suelo para crear una base sólida que permita la proyección hacia atrás sin perder el equilibrio.",
+          "hara_centro_gravedad": "El Hara permanece bajo y centrado, sirviendo como ancla durante la proyección posterior. A diferencia de otras patadas, el centro de gravedad debe mantenerse absolutamente estable ya que no hay corrección visual posible durante la ejecución.",
+          "equilibrio_dinamico": "Se mantiene puramente a través de la conciencia corporal y el control del core. Los brazos se usan activamente para estabilización: se extienden lateralmente o hacia adelante para crear equilibrio y servir como sensores de posición corporal.",
+          "recuperacion": "La recuperación debe ser controlada y precisa, retrayendo la pierna hacia adelante y aterrizando suavemente. Se debe mantener la conciencia del entorno durante toda la recuperación para preparar siguientes movimientos o defensas."
+        },
+        "errores_comunes": [
+          "Girar la cabeza para mirar hacia atrás, perdiendo equilibrio y telegrafiando",
+          "No levantar la rodilla suficientemente alta, reduciendo el arco y potencia",
+          "Impactar con la planta del pie en lugar del talón",
+          "Perder el equilibrio al no mantener el torso erguido",
+          "No generar suficiente potencia por falta de confianza en el movimiento"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación profunda durante la preparación, exhalación controlada y poderosa hacia atrás",
+          "timing": "El aire se expulsa sincronizado con la extensión posterior de la cadera",
+          "volumen": "Kiai profundo y controlado, reflejando la confianza en el movimiento",
+          "sincronizacion": "La respiración debe coordinarse con la proyección posterior sin dependencia visual",
+          "recuperacion": "Inhalación consciente durante la retracción para mantener conciencia corporal"
+        },
+        "kyusho_targets": [
+          "Suigetsu (plexo solar) - objetivo primario para impacto posterior",
+          "Denko (costado flotante) - objetivo lateral desde atrás",
+          "Kage (hígado) - objetivo del lado derecho desde atrás",
+          "Gekka (bazo/pancreas) - objetivo del lado izquierdo desde atrás",
+          "Yaku (riñón) - objetivo bajo posterior"
+        ],
+        "katas_donde_aparece": [
+          "Heian Godan - técnica de contraataque posterior",
+          "Bassai Dai - movimiento de 'romper la fortaleza'",
+          "Kanku Dai - técnica de 'mirar al cielo'",
+          "Jion - secuencia de ataques variados",
+          "Unsu - movimiento de 'mano de nube'",
+          "Gojushiho Dai - técnica de 54 movimientos",
+          "Sochin - técnica de 'fortaleza inmutable'"
+        ],
+        "variantes": [
+          "Ushiro Geri Keage - versión ascendente posterior",
+          "Ushiro Geri Kekomi - versión penetrante posterior",
+          "Ushiro Geri Jodan - versión alta a nivel de cabeza",
+          "Ushiro Geri Gedan - versión baja a nivel de piernas",
+          "Ushiro Geri Mawashi - versión circular posterior"
+        ],
+        "aplicaciones": [
+          "Contraataque a oponentes que se acercan por detrás",
+          "Técnica sorpresa cuando el oponente espera ataque frontal",
+          "Defensa personal contra agresiones por retaguardia",
+          "Desarrollo de conciencia espacial y equilibrio",
+          "Ataque efectivo en combate cercano"
+        ],
+        "keywords": ["ushiro geri", "patada atras", "contraataque", "sin vision", "equilibrio", "sorpresa"],
+        "dificultad": "avanzado",
+        "riesgo_lesion": "alto",
+        "equipo_requerido": ["protector de shin", "protector de espalda", "casco de entrenamiento"]
+      },
+
+      "Fumikomi": {
+        "name_japanese": "踏み込み",
+        "name_translation": "Pisotón o Estampida",
+        "category": "ashiWaza",
+        "level": "4° Kyu",
+        "description": "El Fumikomi es una técnica de estampida que combina un desplazamiento explosivo hacia adelante con un golpe de pie penetrante. La palabra 'Fumikomi' viene de 'fumu' (pisar) y 'komu' (entrar profundamente), refiriéndose a la acción de pisar fuertemente mientras se avanza. A diferencia de las patadas tradicionales, el Fumikomi utiliza el talón o el borde del pie para impactar y simultáneamente avanzar, cerrando la distancia con el oponente de manera agresiva y decisiva. Esta técnica es fundamental para entender el concepto de 'Sen no Sen' (ataque preventivo) y el control del espacio en combate.",
+        "uso_tactico": "Ataque explosivo para cerrar distancia, técnica de 'finishing' en combate, rompimiento de guardias con avance, ataque sorpresa por su naturaleza agresiva, defensa contra oponentes en retirada, técnica de presión continua, defensa personal contra ataques a distancia, desarrollo de potencia explosiva.",
+        "biomecanica": {
+          "puntos_control": [
+            "El cuerpo se lanza hacia adelante con todo el peso corporal",
+            "La pierna de ataque se extiende completamente al impactar",
+            "El talón o el borde del pie impacta con fuerza penetrante",
+            "La pierna de apoyo se mantiene flexionada para explosión",
+            "El torso se inclina ligeramente hacia adelante para añadir masa"
+          ],
+          "vector_fuerza": "Diagonal descendente desde atrás hacia adelante, con componente de estampida",
+          "angulo_optimo": "-15 grados para máxima penetración y estabilidad",
+          "secuencia_muscular": [
+            "Explosión del cuádriceps y glúteo para propulsión frontal",
+            "Activación del gastrocnemio y sóleo para impacto de talón",
+            "Contracción de los isquiotibiales para control del movimiento",
+            "Activación del core para transferencia de peso corporal",
+            "Contracción de los deltoides para proyección del torso"
+          ],
+          "postura_requerida": "Postura de combate con peso 60% en pierna trasera, preparación para explosión",
+          "tiempo_ejecucion": "0.3-0.4 segundos desde la iniciación hasta el impacto de estampida"
+        },
+        "estabilidad_y_base": {
+          "pierna_apoyo": "La pierna de apoyo es la que genera la explosión inicial, manteniéndose flexionada para máxima potencia. Después del impacto, se convierte en la pierna de soporte, manteniendo el equilibrio mientras el peso se transfiere completamente hacia adelante.",
+          "hara_centro_gravedad": "El Hara se proyecta agresivamente hacia adelante junto con todo el cuerpo, rompiendo la barrera de distancia personal. El centro de gravedad se eleva momentáneamente durante la explosión pero se estabiliza inmediatamente en el impacto.",
+          "equilibrio_dinamico": "Se mantiene mediante la proyección controlada del peso y el uso de los brazos para estabilización. Los brazos se extienden hacia adelante para contrabalancear el movimiento de las piernas y mantener la guardia alta durante el avance.",
+          "recuperacion": "La recuperación implica mantener la posición avanzada con el peso transferido al frente, lista para siguientes técnicas. Se debe mantener la guardia y la conciencia del entorno para preparar siguiente movimiento o defensa."
+        },
+        "errores_comunes": [
+          "No proyectar suficiente peso corporal hacia adelante, reduciendo efectividad",
+          "Impactar con la parte incorrecta del pie, causando dolor o lesión",
+          "Perder el equilibrio al no controlar el torso durante el avance",
+          "No mantener la guardia alta durante la estampida",
+          "Recuperar demasiado lentamente, perdiendo la ventaja de distancia ganada"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta durante la preparación, exhalación explosiva y poderosa durante la estampida",
+          "timing": "El aire se expulsa sincronizado con el impacto y transferencia de peso",
+          "volumen": "Kiai poderoso y resonante, reflejando la agresividad del movimiento",
+          "sincronizacion": "La respiración debe coordinarse con la proyección total del cuerpo",
+          "recuperacion": "Inhalación controlada en la posición avanzada para mantener energía"
+        },
+        "kyusho_targets": [
+          "Suigetsu (plexo solar) - objetivo primario para estampida penetrante",
+          "Denko (costado flotante) - objetivo lateral durante avance",
+          "Kage (hígado) - objetivo del lado derecho del abdomen",
+          "Gekka (bazo/pancreas) - objetivo del lado izquierdo del abdomen",
+          "Uto (mentón) - objetivo alto durante avance"
+        ],
+        "katas_donde_aparece": [
+          "Heian Godan - técnica de avance y poder",
+          "Bassai Dai - movimiento de 'romper la fortaleza'",
+          "Kanku Dai - técnica de 'mirar al cielo'",
+          "Jion - secuencia de ataques agresivos",
+          "Unsu - movimiento de 'mano de nube'",
+          "Sochin - técnica de 'fortaleza inmutable'",
+          "Gojushiho Sho - técnica de serpiente"
+        ],
+        "variantes": [
+          "Fumikomi Geri - versión con patada de estampida",
+          "Fumikomi Ashi - versión solo con estampida del pie",
+          "Fumikomi Jodan - versión alta a nivel de cabeza",
+          "Fumikomi Gedan - versión baja a nivel de piernas",
+          "Fumikomi Renraku - versión en combinación rápida"
+        ],
+        "aplicaciones": [
+          "Cerrar distancia rápidamente contra oponentes retrasados",
+          "Romper guardias con avance agresivo",
+          "Ataque sorpresa por su naturaleza explosiva",
+          "Técnica de 'finishing' cuando hay apertura clara",
+          "Defensa personal contra oponentes más grandes"
+        ],
+        "keywords": ["fumikomi", "estampida", "avance", "explosion", "distancia", "agresivo"],
+        "dificultad": "intermedio-avanzado",
+        "riesgo_lesion": "alto",
+        "equipo_requerido": ["protector de shin", "protector de pie", "casco de entrenamiento", "coquilla"]
+      }
+    },
+    "fuseguiWaza": {},
+    "ukeWaza": {
+      "Gedan Barai": {
+        "name_japanese": "下段払い",
+        "name_translation": "Barrido Bajo",
+        "category": "ukeWaza",
+        "level": "10° Kyu",
+        "description": "El Gedan Barai es el bloqueo bajo más fundamental del karate, diseñado para desviar ataques dirigidos a la parte inferior del cuerpo. La palabra 'Gedan' significa 'nivel bajo' y 'Barai' significa 'barrer' o 'desviar'. Este bloqueo no busca detener el ataque con fuerza bruta, sino redirigir su energía fuera de la línea de ataque usando un movimiento circular descendente. El Gedan Barai es esencial para entender el concepto de 'Ju' (suavidad) en la defensa y la economía de movimiento en el karate.",
+        "uso_tactico": "Defensa contra patadas bajas, bloqueo de ataques a piernas, preparación para contraataque, defensa personal en combate cercano, técnica fundamental en katas para enseñar movimientos circulares, defensa contra ataques sorpresa a nivel bajo, base para combinaciones defensivas.",
+        "biomecanica": {
+          "puntos_control": [
+            "El codo se mantiene flexionado a 90 grados durante el movimiento",
+            "El antebrazo describe un arco circular desde afuera hacia adentro",
+            "La muñeca se mantiene recta pero sin rigidez durante el contacto",
+            "El hombro se relaja para permitir el movimiento fluido del brazo",
+            "La cadera se liga ligeramente hacia adelante para añadir potencia"
+          ],
+          "vector_fuerza": "Circular descendente desde afuera hacia adentro, con componente de desvío lateral",
+          "angulo_optimo": "45 grados de desvío respecto al ataque original",
+          "secuencia_muscular": [
+            "Activación del deltoides anterior para iniciar el movimiento",
+            "Contracción del braquial para mantener el ángulo del codo",
+            "Rotación del pronador cuadrado para posición correcta del antebrazo",
+            "Activación del pectoral mayor para estabilización del torso",
+            "Contracción del oblicuo mayor para ligero giro de cadera"
+          ],
+          "postura_requerida": "Zenkutsu Dachi o Kiba Dachi con peso equilibrado, torso erguido",
+          "tiempo_ejecucion": "0.2-0.3 segundos desde la guardia hasta el bloqueo completo"
+        },
+        "angulos_de_desvio": {
+          "angulo_optimo": "45 grados hacia afuera desde la línea de ataque original",
+          "rango_efectivo": "30-60 grados dependiendo de la fuerza del ataque",
+          "direccion": "Desde afuera-hacia-adentro y de arriba-hacia-abajo",
+          "ajuste_dinamico": "El ángulo puede ajustarse según la trayectoria del ataque",
+          "recuperacion": "El brazo regresa por el mismo arco pero en sentido inverso"
+        },
+        "puntos_de_contacto": {
+          "area_principal": "Borde externo del antebrazo (radio y cúbito)",
+          "zona_secundaria": "Parte inferior del antebrazo cercana a la muñeca",
+          "superficie_contacto": "Área de 8-12 cm de longitud del antebrazo",
+          "alineacion": "Antebrazo paralelo al suelo en el momento del contacto",
+          "sensibilidad": "El contacto debe ser firme pero sin tensión excesiva"
+        },
+        "hikite_sincronizado": {
+          "descripcion": "La mano opuesta (Hiki-te) se retrae a la cadera en sincronización perfecta con el bloqueo",
+          "mecanica": "Mientras el brazo de bloqueo desciende, la mano opuesta se retrae siguiendo una trayectoria opuesta",
+          "funcion": "Genera equilibrio dinámico, potencia adicional, y prepara siguiente ataque",
+          "timing": "La retracción debe completarse exactamente en el momento del contacto del bloqueo",
+          "posicion_final": "Mano cerrada en puño con nudillos hacia arriba, apoyada en la cadera"
+        },
+        "errores_comunes": [
+          "Extender completamente el brazo, perdiendo flexibilidad y control",
+          "No mantener el codo flexionado, reduciendo la efectividad del barrido",
+          "Usar fuerza excesiva en lugar de técnica de desvío suave",
+          "No coordinar el Hiki-te, perdiendo equilibrio y potencia",
+          "Levantar los hombros, creando tensión innecesaria"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta durante la preparación, exhalación suave durante el bloqueo",
+          "timing": "El aire se expulsa suavemente en el momento del contacto, no con kiai",
+          "volumen": "Exhalación controlada y silenciosa, manteniendo calma",
+          "sincronizacion": "La respiración debe coordinarse con el movimiento circular del brazo",
+          "recuperacion": "Inhalación inmediata después del bloqueo para preparación de contraataque"
+        },
+        "kyusho_targets": {
+          "defensa_contra": ["Mae Geri Gedan", "Yoko Geri Gedan", "Ushiro Geri Gedan"],
+          "areas_protegidas": ["Piernas", "Rodillas", "Parte inferior del torso", "Zona pélvica"],
+          "contrataque_posible": ["Gedan Geri", "Mae Geri", "Osi Zuki"]
+        },
+        "katas_donde_aparece": [
+          "Heian Shodan - primer movimiento de bloqueo",
+          "Heian Nidan - combinación con ataque",
+          "Heian Sandan - secuencia de bloqueos bajos",
+          "Heian Yondan - defensa circular",
+          "Heian Godan - movimiento de poder y control",
+          "Bassai Dai - técnica de 'romper la fortaleza'",
+          "Kanku Dai - movimiento de 'mirar al cielo'"
+        ],
+        "variantes": [
+          "Gedan Barai Kake - con gancho final",
+          "Gedan Barai Renraku - en combinación",
+          "Gedan Barai Morote - con ambas manos",
+          "Gedan Barai Tsukami - versión de agarre"
+        ],
+        "aplicaciones": [
+          "Defensa contra patadas bajas en kumite",
+          "Protección de piernas en defensa personal",
+          "Preparación para contraataque desde abajo",
+          "Ejercicio de coordinación de brazos y cadera",
+          "Base para técnicas avanzadas de bloqueo"
+        ],
+        "keywords": ["gedan barai", "bloqueo bajo", "barrido", "defensa", "circular", "hiki te"],
+        "dificultad": "principiante",
+        "riesgo_lesion": "muy bajo",
+        "equipo_requerido": ["protector de antebrazo opcional", "guantes de entrenamiento"]
+      },
+
+      "Age Uke": {
+        "name_japanese": "上段受け",
+        "name_translation": "Bloqueo Alto",
+        "category": "ukeWaza",
+        "level": "9° Kyu",
+        "description": "El Age Uke es el bloqueo alto principal del karate, diseñado para defender la cabeza y la parte superior del torso. La palabra 'Age' significa 'arriba' o 'elevado', y 'Uke' significa 'recibir' o 'bloquear'. Este bloqueo se caracteriza por su movimiento ascendente y su capacidad para desviar ataques dirigidos a áreas vitales como la cabeza y el cuello. El Age Uke requiere excelente coordinación temporal y comprensión de los ángulos de ataque para ser efectivo sin dejar openings peligrosos.",
+        "uso_tactico": "Defensa contra golpes a la cabeza, protección contra ataques altos, preparación para contraataque, defensa personal contra agresiones frontales, técnica fundamental en katas para enseñar defensa superior, defensa contra patadas altas, base para combinaciones defensivas-ataques.",
+        "biomecanica": {
+          "puntos_control": [
+            "El codo se mantiene flexionado a 90-110 grados durante el movimiento",
+            "El antebrazo describe un arco ascendente desde adentro hacia afuera",
+            "La muñeca se mantiene neutral, ni flexionada ni extendida en exceso",
+            "El hombro se eleva ligeramente para proteger el lado del cuerpo",
+            "La cadera se liga hacia adelante para generar potencia ascendente"
+          ],
+          "vector_fuerza": "Circular ascendente desde adentro hacia afuera, con componente de elevación",
+          "angulo_optimo": "45-60 grados de elevación respecto a la horizontal",
+          "secuencia_muscular": [
+            "Activación del deltoides medio para elevación lateral del brazo",
+            "Contracción del supraespinoso para rotación externa del hombro",
+            "Activación del bíceps braquial para mantener el ángulo del codo",
+            "Contracción del trapecio para estabilización del cuello",
+            "Activación del oblicuo menor para ligero giro de torso"
+          ],
+          "postura_requerida": "Zenkutsu Dachi o postura de combate con peso adelantado",
+          "tiempo_ejecucion": "0.2-0.35 segundos desde la guardia hasta el bloqueo completo"
+        },
+        "angulos_de_desvio": {
+          "angulo_optimo": "45 grados hacia afuera y arriba desde la línea de ataque",
+          "rango_efectivo": "30-75 grados dependiendo de la altura del ataque",
+          "direccion": "Desde adentro-hacia-afuera y de abajo-hacia-arriba",
+          "ajuste_dinamico": "El ángulo se ajusta según la trayectoria y fuerza del ataque",
+          "recuperacion": "El brazo regresa por el mismo arco ascendente pero en reversa"
+        },
+        "puntos_de_contacto": {
+          "area_principal": "Borde externo del antebrazo (radio y cúbito)",
+          "zona_secundaria": "Parte superior del antebrazo cercana al codo",
+          "superficie_contacto": "Área de 10-15 cm de longitud del antebrazo",
+          "alineacion": "Antebrazo en ángulo de 45 grados respecto al suelo",
+          "sensibilidad": "El contacto debe ser firme pero adaptable a la fuerza del ataque"
+        },
+        "hikite_sincronizado": {
+          "descripcion": "La mano opuesta se retrae a la cadera mientras el brazo de bloqueo se eleva",
+          "mecanica": "Movimiento opuesto coordinado que crea equilibrio y potencia adicional",
+          "funcion": "Genera estabilidad, potencia rotacional, y prepara siguiente técnica",
+          "timing": "La retracción completa simultáneamente con el contacto del bloqueo",
+          "posicion_final": "Puño en cadera con nudillos hacia arriba, codo hacia atrás"
+        },
+        "errores_comunes": [
+          "No mantener el codo flexionado, perdiendo estructura y control",
+          "Levantar el brazo demasiado alto, dejando el torso expuesto",
+          "No coordinar el movimiento con la cadera, perdiendo potencia",
+          "Tensar excesivamente el hombro, reduciendo velocidad y flexibilidad",
+          "No mantener el Hiki-te, comprometiendo el equilibrio"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta durante la preparación, exhalación controlada en el bloqueo",
+          "timing": "El aire se expulsa suavemente durante el contacto, manteniendo calma",
+          "volumen": "Exhalación silenciosa, sin kiai para mantener defensa",
+          "sincronizacion": "La respiración coordina con el movimiento ascendente del brazo",
+          "recuperacion": "Inhalación inmediata después del bloqueo para preparación"
+        },
+        "kyusho_targets": {
+          "defensa_contra": ["Oi Zuki Jodan", "Gyaku Zuki Jodan", "Mae Geri Jodan", "Mawashi Geri Jodan"],
+          "areas_protegidas": ["Cabeza", "Cuello", "Parte superior del torso", "Hombros"],
+          "contrataque_posible": ["Gyaku Zuki", "Uraken Uchi", "Mae Geri"]
+        },
+        "katas_donde_aparece": [
+          "Heian Shodan - segundo movimiento de bloqueo",
+          "Heian Nidan - defensa alta y contraataque",
+          "Heian Sandan - secuencia de bloqueos altos",
+          "Heian Yondan - combinación circular",
+          "Heian Godan - técnica de poder y control",
+          "Bassai Dai - defensa y penetración",
+          "Kanku Sho - técnica de 'mano de nube'"
+        ],
+        "variantes": [
+          "Age Uke Kake - con gancho final",
+          "Age Uke Renraku - en combinación rápida",
+          "Age Uke Morote - con ambas manos",
+          "Age Uke Tsuki - versión con ataque simultáneo"
+        ],
+        "aplicaciones": [
+          "Defensa contra golpes a la cabeza en kumite",
+          "Protección contra ataques sorpresa altos",
+          "Preparación para contraataque desde arriba",
+          "Ejercicio de coordinación ojo-brazo",
+          "Base para técnicas avanzadas de defensa"
+        ],
+        "keywords": ["age uke", "bloqueo alto", "defensa superior", "cabeza", "elevacion", "proteccion"],
+        "dificultad": "principiante",
+        "riesgo_lesion": "bajo",
+        "equipo_requerido": ["protector de antebrazo", "casco de entrenamiento"]
+      },
+
+      "Uchi Uke": {
+        "name_japanese": "内受け",
+        "name_translation": "Bloqueo Interno",
+        "category": "ukeWaza",
+        "level": "8° Kyu",
+        "description": "El Uchi Uke es un bloqueo interno diseñado para desviar ataques dirigidos al torso medio desde adentro hacia afuera. La palabra 'Uchi' significa 'interno' o 'dentro', refiriéndose a que el bloqueo se origina desde el centro del cuerpo hacia afuera. Este bloqueo es particularmente efectivo contra ataques frontales y permite transiciones fluidas hacia contraataques. El Uchi Uke requiere excelente control del codo y comprensión de los ángulos de desvío para ser efectivo sin comprometer la defensa.",
+        "uso_tactico": "Defensa contra golpes frontales al torso, preparación para contraataque lateral, defensa personal contra ataques directos, técnica fundamental en katas para enseñar defensa interna, defensa contra ataques sorpresa frontales, base para combinaciones defensivas-ataques laterales.",
+        "biomecanica": {
+          "puntos_control": [
+            "El codo se mantiene cerca del cuerpo, a unos 15-20 cm del torso",
+            "El antebrazo describe un arco corto desde adentro hacia afuera",
+            "La muñeca se mantiene neutral con ligera flexión dorsal",
+            "El hombro permanece relajado para permitir movimiento rápido",
+            "El torso rota ligeramente para acompañar el movimiento del brazo"
+          ],
+          "vector_fuerza": "Circular corto desde el centro hacia afuera, con componente lateral",
+          "angulo_optimo": "30-45 grados de desvío lateral desde el centro",
+          "secuencia_muscular": [
+            "Activación del pectoral mayor para movimiento del brazo",
+            "Contracción del tríceps para estabilización del codo",
+            "Rotación del pronador redondo para posición del antebrazo",
+            "Activación del serrato anterior para estabilización del torso",
+            "Contracción del oblicuo interno para ligera rotación"
+          ],
+          "postura_requerida": "Postura de combate con peso equilibrado, torso erguido",
+          "tiempo_ejecucion": "0.15-0.25 segundos desde la iniciación hasta el bloqueo"
+        },
+        "angulos_de_desvio": {
+          "angulo_optimo": "35 grados hacia afuera desde la línea central del cuerpo",
+          "rango_efectivo": "25-50 grados dependiendo de la fuerza del ataque",
+          "direccion": "Desde adentro-hacia-afuera, principalmente lateral",
+          "ajuste_dinamico": "El ángulo se ajusta según la trayectoria del ataque frontal",
+          "recuperacion": "El brazo regresa rápidamente al centro del cuerpo"
+        },
+        "puntos_de_contacto": {
+          "area_principal": "Borde interno del antebrazo (cúbito)",
+          "zona_secundaria": "Parte media del antebrazo",
+          "superficie_contacto": "Área de 6-10 cm de longitud del antebrazo",
+          "alineacion": "Antebrazo en ángulo de 45 grados respecto al torso",
+          "sensibilidad": "Contacto firme y directo, sin deslizamiento"
+        },
+        "hikite_sincronizado": {
+          "descripcion": "La mano opuesta se retrae hacia la cadera mientras el bloqueo se ejecuta",
+          "mecanica": "Movimiento coordinado que crea equilibrio y prepara siguiente ataque",
+          "funcion": "Genera estabilidad central, potencia de contrarrotación, y preparación",
+          "timing": "La retracción completa simultáneamente con el contacto del bloqueo",
+          "posicion_final": "Puño en cadera con codo apuntando hacia atrás"
+        },
+        "errores_comunes": [
+          "Separar demasiado el codo del cuerpo, perdiendo estructura",
+          "Extender completamente el brazo, reduciendo control y velocidad",
+          "No coordinar el movimiento con el torso, perdiendo potencia",
+          "Tensar los hombros, comprometiendo la fluidez del movimiento",
+          "No mantener el Hiki-te, afectando el equilibrio"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta en preparación, exhalación suave durante el bloqueo",
+          "timing": "El aire se expulsa controladamente en el momento del contacto",
+          "volumen": "Exhalación silenciosa, manteniendo calma y concentración",
+          "sincronizacion": "La respiración coordina con el movimiento interno-externo",
+          "recuperacion": "Inhalación inmediata para preparación de siguiente técnica"
+        },
+        "kyusho_targets": {
+          "defensa_contra": ["Oi Zuki Chudan", "Gyaku Zuki Chudan", "Sanbon Zuki Chudan"],
+          "areas_protegidas": ["Torso medio", "Costados", "Plexo solar", "Hígado/bazo"],
+          "contrataque_posible": ["Gyaku Zuki", "Mawashi Geri", "Yoko Geri"]
+        },
+        "katas_donde_aparece": [
+          "Heian Nidan - defensa interna y contraataque",
+          "Heian Sandan - secuencia de bloqueos internos",
+          "Heian Yondan - técnica circular interna",
+          "Heian Godan - defensa y poder",
+          "Bassai Dai - técnica de penetración",
+          "Jion - defensa y ataque coordinado"
+        ],
+        "variantes": [
+          "Uchi Uke Kake - con gancho final",
+          "Uchi Uke Renraku - en combinación",
+          "Uchi Uke Morote - con ambas manos",
+          "Uchi Uke Tsuki - con ataque simultáneo"
+        ],
+        "aplicaciones": [
+          "Defensa contra golpes frontales en kumite",
+          "Protección del torso en defensa personal",
+          "Preparación para contraataque lateral",
+          "Ejercicio de coordinación centro-extremidad",
+          "Base para técnicas de contraataque rápido"
+        ],
+        "keywords": ["uchi uke", "bloqueo interno", "defensa frontal", "torso", "lateral", "contrarrotacion"],
+        "dificultad": "principiante-intermedio",
+        "riesgo_lesion": "bajo",
+        "equipo_requerido": ["protector de antebrazo", "guantes de entrenamiento"]
+      },
+
+      "Soto Uke": {
+        "name_japanese": "外受け",
+        "name_translation": "Bloqueo Externo",
+        "category": "ukeWaza",
+        "level": "7° Kyu",
+        "description": "El Soto Uke es un bloqueo externo diseñado para desviar ataques desde afuera hacia adentro. La palabra 'Soto' significa 'externo' o 'fuera', indicando que el bloqueo se origina desde el exterior del cuerpo hacia adentro. Este bloqueo es particularmente efectivo contra ataques laterales y permite una excelente transición hacia contraataques frontales. El Soto Uke requiere buen control del codo y comprensión de los ángulos de desvío para ser efectivo sin comprometer la estabilidad.",
+        "uso_tactico": "Defensa contra ataques laterales al torso, preparación para contraataque frontal, defensa personal contra agresiones laterales, técnica fundamental en katas para enseñar defensa externa, defensa contra ataques circulares, base para combinaciones defensivas-ataques frontales.",
+        "biomecanica": {
+          "puntos_control": [
+            "El codo se mantiene flexionado a 90-100 grados durante el movimiento",
+            "El antebrazo describe un arco desde afuera hacia adentro",
+            "La muñeca se mantiene neutral con ligera flexión dorsal",
+            "El hombro se relaja permitiendo movimiento amplio del brazo",
+            "El torso rota ligeramente hacia el lado del bloqueo"
+          ],
+          "vector_fuerza": "Circular desde afuera hacia adentro, con componente de desvío lateral",
+          "angulo_optimo": "45 grados de desvío desde la posición externa",
+          "secuencia_muscular": [
+            "Activación del deltoides posterior para movimiento del brazo",
+            "Contracción del tríceps para estabilización del codo",
+            "Rotación del supinador para posición del antebrazo",
+            "Activación del dorsal ancho para potencia del movimiento",
+            "Contracción del oblicuo externo para rotación del torso"
+          ],
+          "postura_requerida": "Postura de combate con peso equilibrado, torso erguido",
+          "tiempo_ejecucion": "0.2-0.3 segundos desde la iniciación hasta el bloqueo completo"
+        },
+        "angulos_de_desvio": {
+          "angulo_optimo": "45 grados hacia adentro desde la posición externa",
+          "rango_efectivo": "30-60 grados dependiendo de la fuerza del ataque",
+          "direccion": "Desde afuera-hacia-adentro, principalmente frontal",
+          "ajuste_dinamico": "El ángulo se ajusta según la trayectoria del ataque lateral",
+          "recuperacion": "El brazo regresa por el mismo arco pero en sentido inverso"
+        },
+        "puntos_de_contacto": {
+          "area_principal": "Borde externo del antebrazo (radio)",
+          "zona_secundaria": "Parte externa del antebrazo cercana a la muñeca",
+          "superficie_contacto": "Área de 8-12 cm de longitud del antebrazo",
+          "alineacion": "Antebrazo en ángulo de 45 grados respecto al torso",
+          "sensibilidad": "Contacto firme con capacidad de adaptación"
+        },
+        "hikite_sincronizado": {
+          "descripcion": "La mano opuesta se retrae a la cadera mientras el bloqueo externo se ejecuta",
+          "mecanica": "Movimiento coordinado que crea equilibrio y potencia adicional",
+          "funcion": "Genera estabilidad lateral, potencia rotacional, y prepara ataque",
+          "timing": "La retracción completa simultáneamente con el contacto del bloqueo",
+          "posicion_final": "Puño en cadera con nudillos hacia arriba"
+        },
+        "errores_comunes": [
+          "No mantener el codo flexionado, perdiendo estructura de bloqueo",
+          "Extender demasiado el brazo, comprometiendo la defensa",
+          "No coordinar el movimiento con el torso, perdiendo potencia",
+          "Levantar el hombro, creando tensión y telegrafiando",
+          "No mantener el Hiki-te, afectando el equilibrio"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta en preparación, exhalación suave durante el bloqueo",
+          "timing": "El aire se expulsa controladamente en el momento del contacto",
+          "volumen": "Exhalación silenciosa, manteniendo calma y concentración",
+          "sincronizacion": "La respiración coordina con el movimiento externo-interno",
+          "recuperacion": "Inhalación inmediata para preparación de siguiente técnica"
+        },
+        "kyusho_targets": {
+          "defensa_contra": ["Mawashi Geri Chudan", "Yoko Geri Chudan", "Uraken Uchi Chudan"],
+          "areas_protegidas": ["Costados", "Torso lateral", "Hombros", "Parte superior de brazos"],
+          "contrataque_posible": ["Oi Zuki", "Mae Geri", "Gyaku Zuki"]
+        },
+        "katas_donde_aparece": [
+          "Heian Sandan - defensa externa y contraataque",
+          "Heian Yondan - técnica circular externa",
+          "Heian Godan - defensa y poder",
+          "Bassai Dai - técnica de penetración",
+          "Kanku Dai - movimiento de 'mirar al cielo'",
+          "Jion - defensa coordinada"
+        ],
+        "variantes": [
+          "Soto Uke Kake - con gancho final",
+          "Soto Uke Renraku - en combinación",
+          "Soto Uke Morote - con ambas manos",
+          "Soto Uke Tsuki - con ataque simultáneo"
+        ],
+        "aplicaciones": [
+          "Defensa contra ataques laterales en kumite",
+          "Protección del torso en defensa personal",
+          "Preparación para contraataque frontal",
+          "Ejercicio de coordinación bilateral",
+          "Base para técnicas de defensa circular"
+        ],
+        "keywords": ["soto uke", "bloqueo externo", "defensa lateral", "circular", "desvio", "contraataque"],
+        "dificultad": "intermedio",
+        "riesgo_lesion": "bajo",
+        "equipo_requerido": ["protector de antebrazo", "guantes de entrenamiento"]
+      },
+
+      "Shuto Uke": {
+        "name_japanese": "手刀受け",
+        "name_translation": "Bloqueo con Mano Abierta",
+        "category": "ukeWaza",
+        "level": "6° Kyu",
+        "description": "El Shuto Uke es un bloqueo avanzado ejecutado con la mano abierta en forma de 'cuchilla' (shuto). Esta técnica combina elementos de bloqueo y ataque, permitiendo tanto desviar como cortar el ataque del oponente. La palabra 'Shuto' significa 'mano de cuchilla' o 'mano espada', refiriéndose a la forma del borde de la mano que se utiliza para el contacto. El Shuto Uke requiere excelente control de la muñeca y comprensión de los ángulos de corte para ser efectivo sin lesionarse.",
+        "uso_tactico": "Defensa contra ataques medios y altos, preparación para ataque con mano abierta, defensa personal contra agresiones variadas, técnica avanzada en katas para enseñar control fino, defensa contra ataques circulares, base para técnicas de luxación y control.",
+        "biomecanica": {
+          "puntos_control": [
+            "La mano se mantiene abierta con dedos juntos y pulgar flexionado",
+            "El borde de la mano (base del meñique) hace el contacto principal",
+            "La muñeca se mantiene neutra con ligera flexión dorsal",
+            "El codo se mantiene flexionado a 90-110 grados",
+            "El hombro se relaja permitiendo movimiento fluido del brazo"
+          ],
+          "vector_fuerza": "Diagonal descendente o ascendente según la aplicación, con componente de corte",
+          "angulo_optimo": "45 grados de corte respecto a la línea de ataque",
+          "secuencia_muscular": [
+            "Activación del extensor de los dedos para mantener mano abierta",
+            "Contracción del flexor del carpo para posición de muñeca",
+            "Activación del braquial para control del codo",
+            "Contracción del pectoral para estabilización del torso",
+            "Activación del deltoides para movimiento del brazo"
+          ],
+          "postura_requerida": "Postura de combate con peso equilibrado, torso erguido",
+          "tiempo_ejecucion": "0.2-0.35 segundos desde la iniciación hasta el bloqueo"
+        },
+        "angulos_de_desvio": {
+          "angulo_optimo": "45 grados de corte desde la línea de ataque",
+          "rango_efectivo": "30-60 grados dependiendo de la dirección del ataque",
+          "direccion": "Puede ser descendente (Otate) o ascendente (Age)",
+          "ajuste_dinamico": "El ángulo se ajusta según la trayectoria y tipo de ataque",
+          "recuperacion": "La mano regresa a posición de guardia o prepara siguiente técnica"
+        },
+        "puntos_de_contacto": {
+          "area_principal": "Borde de la mano (base del meñique y palma)",
+          "zona_secundaria": "Parte lateral de la mano cercana a la muñeca",
+          "superficie_contacto": "Área de 8-12 cm de longitud del borde de la mano",
+          "alineacion": "Mano en ángulo de 45 grados respecto al antebrazo",
+          "sensibilidad": "Contacto preciso y controlado, sin tensión excesiva"
+        },
+        "hikite_sincronizado": {
+          "descripcion": "La mano opuesta se retrae a la cadera mientras el Shuto se ejecuta",
+          "mecanica": "Movimiento coordinado que crea equilibrio y prepara siguiente ataque",
+          "funcion": "Genera estabilidad, potencia adicional, y prepara técnica siguiente",
+          "timing": "La retracción completa simultáneamente con el contacto del bloqueo",
+          "posicion_final": "Puño en cadera con codo apuntando hacia atrás"
+        },
+        "errores_comunes": [
+          "No mantener los dedos juntos, perdiendo estructura de 'cuchilla'",
+          "Tensar excesivamente la muñeca, reduciendo flexibilidad",
+          "Usar fuerza excesiva en lugar de técnica de corte preciso",
+          "No coordinar el movimiento con el torso, perdiendo potencia",
+          "No mantener el Hiki-te, comprometiendo el equilibrio"
+        ],
+        "respiracion_especifica": {
+          "patron": "Inhalación corta en preparación, exhalación suave durante el bloqueo",
+          "timing": "El aire se expulsa controladamente en el momento del contacto",
+          "volumen": "Exhalación silenciosa, manteniendo precisión y concentración",
+          "sincronizacion": "La respiración coordina con el movimiento de corte",
+          "recuperacion": "Inhalación inmediata para preparación de siguiente técnica"
+        },
+        "kyusho_targets": {
+          "defensa_contra": ["Oi Zuki", "Gyaku Zuki", "Mae Geri", "Mawashi Geri"],
+          "areas_protegidas": ["Cabeza", "Cuello", "Torso", "Brazos"],
+          "contrataque_posible": ["Shuto Uchi", "Nukite", "Kansetsu Waza"]
+        },
+        "katas_donde_aparece": [
+          "Heian Yondan - técnica con mano abierta",
+          "Heian Godan - defensa avanzada",
+          "Bassai Dai - técnica de penetración",
+          "Kanku Dai - movimiento de 'mirar al cielo'",
+          "Jion - defensa y ataque coordinado",
+          "Unsu - movimiento de 'mano de nube'",
+          "Gojushiho Sho - técnica de serpiente"
+        ],
+        "variantes": [
+          "Shuto Uke Otoshi - versión descendente",
+          "Shuto Uke Age - versión ascendente",
+          "Shuto Uke Renraku - en combinación",
+          "Shuto Uke Morote - con ambas manos",
+          "Shuto Uke Tsuki - con ataque simultáneo"
+        ],
+        "aplicaciones": [
+          "Defensa contra ataques variados en kumite",
+          "Protección avanzada en defensa personal",
+          "Preparación para técnicas de mano abierta",
+          "Ejercicio de control fino y precisión",
+          "Base para técnicas de luxación y control"
+        ],
+        "keywords": ["shuto uke", "mano abierta", "cuchilla", "bloqueo avanzado", "precision", "control"],
+        "dificultad": "intermedio-avanzado",
+        "riesgo_lesion": "medio",
+        "equipo_requerido": ["protector de antebrazo", "guantes de entrenamiento"]
+      }
+    },
+    "kimeWaza": {},
+    "nageWaza": {},
+    "kansetsuWaza": {},
+    "shimeWaza": {}
+  },
+
+  "katas_basicas": {
+    "heian_shodan": {
+      "nombre_japones": "平安初段",
+      "nombre_traduccion": "Paz y Tranquilidad - Primer Nivel",
+      "significado": "Heian significa 'paz y tranquilidad mental', Shodan significa 'primer nivel'. Esta kata representa la base fundamental del karate, enseñando los movimientos más esenciales y la estructura básica del kata.",
+      "numero_movimientos": 21,
+      "enbusen_linea_direccion": {
+        "descripcion": "Forma de 'I' (línea recta con movimientos laterales)",
+        "puntos_cardinales": [
+          "Inicio: Sur",
+          "Movimiento 1-3: Norte",
+          "Movimiento 4-5: Este",
+          "Movimiento 6-7: Oeste",
+          "Movimiento 8-10: Norte",
+          "Movimiento 11-12: Este",
+          "Movimiento 13-14: Oeste",
+          "Movimiento 15-17: Norte",
+          "Movimiento 18-19: Este",
+          "Movimiento 20-21: Norte (retorno)"
+        ],
+        "total_puntos": "5 puntos clave en el enbusen"
+      },
+      "kiai_points": [
+        {
+          "movimiento": 9,
+          "tecnica": "Oi Zuki Chudan",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Primer kiai en golpe directo al torso"
+        },
+        {
+          "movimiento": 17,
+          "tecnica": "Oi Zuki Chudan",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Segundo kiai en golpe directo al torso"
+        }
+      ],
+      "bunkai_aplicaciones_reales": {
+        "movimientos_clave": [
+          {
+            "movimiento": "1-3 Gedan Barai + Oi Zuki",
+            "aplicacion": "Defensa contra patada baja seguida de contraataque directo al torso",
+            "detalles": "Bloqueo bajo para desviar patada, inmediatamente seguido por golpe recto mientras el oponente está desequilibrado"
+          },
+          {
+            "movimiento": "4-5 Age Uke + Gyaku Zuki",
+            "aplicacion": "Defensa alta contra ataque a la cabeza con contraataque desde la mano opuesta",
+            "detalles": "Bloqueo ascendente para detener golpe alto, simultáneamente se ejecuta contraataque con la mano retraída"
+          },
+          {
+            "movimiento": "8-10 Shuto Uke + Nukite",
+            "aplicacion": "Defensa con mano abierta seguida de ataque con punta de dedos a puntos vitales",
+            "detalles": "Bloqueo circular con mano abierta para controlar brazo del oponente, seguido por ataque preciso a garganta o ojos"
+          },
+          {
+            "movimiento": "15-17 Mae Geri + Oi Zuki",
+            "aplicacion": "Patada frontal para crear apertura seguida de golpe decisivo",
+            "detalles": "Patada frontal para forzar al oponente a defender, inmediatamente seguida por golpe recto mientras baja la guardia"
+          }
+        ],
+        "conceptos_estrategicos": [
+          "Alternancia de defensa y ataque",
+          "Uso de Hiki-te para generar potencia",
+          "Control de distancia con diferentes técnicas",
+          "Transición fluida entre posturas"
+        ]
+      },
+      "elementos_tecnicos": [
+        "Gedan Barai (bloqueo bajo)",
+        "Age Uke (bloqueo alto)",
+        "Oi Zuki (golpe directo)",
+        "Gyaku Zuki (golpe reverso)",
+        "Shuto Uke (bloqueo mano abierta)",
+        "Nukite (ataque punta dedos)",
+        "Mae Geri (patada frontal)",
+        "Zenkutsu Dachi (postura frontal)"
+      ],
+      "dificultad": "principiante",
+      "tiempo_ejecucion": "45-60 segundos",
+      "enfoque_principal": "Posturas básicas, transiciones simples, coordinación brazo-pierna"
+    },
+
+    "heian_nidan": {
+      "nombre_japones": "平安二段",
+      "nombre_traduccion": "Paz y Tranquilidad - Segundo Nivel",
+      "significado": "Nidan significa 'segundo nivel'. Esta kata introduce conceptos más complejos como giros, combinaciones rápidas, y técnicas de mano abierta.",
+      "numero_movimientos": 26,
+      "enbusen_linea_direccion": {
+        "descripcion": "Forma de 'T' modificada con giros de 180 grados",
+        "puntos_cardinales": [
+          "Inicio: Sur",
+          "Movimiento 1-2: Norte",
+          "Movimiento 3-4: Este (giro 180°)",
+          "Movimiento 5-6: Sur",
+          "Movimiento 7-8: Norte (giro 180°)",
+          "Movimiento 9-11: Este",
+          "Movimiento 12-13: Oeste (giro 180°)",
+          "Movimiento 14-16: Este",
+          "Movimiento 17-18: Oeste (giro 180°)",
+          "Movimiento 19-21: Este",
+          "Movimiento 22-23: Oeste (giro 180°)",
+          "Movimiento 24-26: Este (retorno)"
+        ],
+        "total_puntos": "7 puntos clave con múltiples giros"
+      },
+      "kiai_points": [
+        {
+          "movimiento": 11,
+          "tecnica": "Yoko Geri Kekomi",
+          "posicion": "Kiba Dachi",
+          "descripcion": "Primer kiai en patada lateral penetrante"
+        },
+        {
+          "movimiento": 26,
+          "tecnica": "Oi Zuki Chudan",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Segundo kiai en golpe directo final"
+        }
+      ],
+      "bunkai_aplicaciones_reales": {
+        "movimientos_clave": [
+          {
+            "movimiento": "1-2 Uchi Uke + Gyaku Zuki",
+            "aplicacion": "Defensa interna contra ataque frontal con contraataque simultáneo",
+            "detalles": "Bloqueo desde adentro hacia afuera para desviar golpe, simultáneamente se ataca con la mano opuesta al torso"
+          },
+          {
+            "movimiento": "3-4 Shuto Uke + Shuto Uchi",
+            "aplicacion": "Defensa circular con mano abierta seguida de ataque cortante",
+            "detalles": "Bloqueo con 'mano espada' para controlar brazo, seguido por ataque cortante al cuello o costillas"
+          },
+          {
+            "movimiento": "9-11 Mae Geri + Yoko Geri",
+            "aplicacion": "Combinación de patadas para crear múltiples ángulos de ataque",
+            "detalles": "Patada frontal para forzar defensa, inmediatamente seguida por patada lateral mientras el oponente está comprometido"
+          },
+          {
+            "movimiento": "19-21 Uraken Uchi + Oi Zuki",
+            "aplicacion": "Ataque con dorso de puño seguido de golpe directo",
+            "detalles": "Golpe con dorso de puño a la cabeza para desorientar, seguido inmediatamente por golpe directo al torso"
+          }
+        ],
+        "conceptos_estrategicos": [
+          "Giros de 180 grados para enfrentar múltiples oponentes",
+          "Combinaciones rápidas mano-pierna",
+          "Uso de técnicas de mano abierta",
+          "Control del espacio con patadas laterales"
+        ]
+      },
+      "elementos_tecnicos": [
+        "Uchi Uke (bloqueo interno)",
+        "Shuto Uke/Uchi (mano abierta)",
+        "Yoko Geri Kekomi (patada lateral)",
+        "Uraken Uchi (golpe dorso puño)",
+        "Mae Geri (patada frontal)",
+        "Kiba Dachi (postura jinete)",
+        "Giros de 180 grados"
+      ],
+      "dificultad": "principiante-intermedio",
+      "tiempo_ejecucion": "50-65 segundos",
+      "enfoque_principal": "Giros, combinaciones rápidas, técnicas mano abierta"
+    },
+
+    "heian_sandan": {
+      "nombre_japones": "平安三段",
+      "nombre_traduccion": "Paz y Tranquilidad - Tercer Nivel",
+      "significado": "Sandan significa 'tercer nivel'. Esta kata introduce movimientos más complejos, cambios de dirección, y técnicas de defensa circular.",
+      "numero_movimientos": 20,
+      "enbusen_linea_direccion": {
+        "descripcion": "Forma de cruz con movimientos diagonales y giros complejos",
+        "puntos_cardinales": [
+          "Inicio: Sur",
+          "Movimiento 1-3: Noroeste",
+          "Movimiento 4-5: Sureste (giro 270°)",
+          "Movimiento 6-8: Noreste",
+          "Movimiento 9-10: Suroeste (giro 270°)",
+          "Movimiento 11-13: Norte",
+          "Movimiento 14-15: Este",
+          "Movimiento 16-17: Oeste (giro 180°)",
+          "Movimiento 18-20: Este (retorno)"
+        ],
+        "total_puntos": "6 puntos con giros de 270 grados"
+      },
+      "kiai_points": [
+        {
+          "movimiento": 10,
+          "tecnica": "Mawashi Geri Chudan",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Primer kiai en patada circular al torso"
+        },
+        {
+          "movimiento": 20,
+          "tecnica": "Oi Zuki Chudan",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Segundo kiai en golpe directo final"
+        }
+      ],
+      "bunkai_aplicaciones_reales": {
+        "movimientos_clave": [
+          {
+            "movimiento": "1-3 Soto Uke + Gyaku Zuki",
+            "aplicacion": "Defensa externa contra ataque lateral con contraataque",
+            "detalles": "Bloqueo desde afuera hacia adentro para controlar ataque lateral, simultáneamente se ataca al torso"
+          },
+          {
+            "movimiento": "6-8 Kake Uke + Nukite",
+            "aplicacion": "Bloqueo con gancho seguido de ataque con punta de dedos",
+            "detalles": "Bloqueo con gancho para atrapar brazo del oponente, seguido por ataque preciso a puntos vitales"
+          },
+          {
+            "movimiento": "11-13 Mae Geri Jodan + Shuto Uchi",
+            "aplicacion": "Patada frontal alta seguida de ataque cortante con mano abierta",
+            "detalles": "Patada alta a la cabeza para forzar defensa alta, seguida por ataque cortante al torso mientras baja la guardia"
+          },
+          {
+            "movimiento": "18-20 Fumikomi + Oi Zuki",
+            "aplicacion": "Estampida para cerrar distancia seguida de golpe decisivo",
+            "detalles": "Pisotón para romper equilibrio y cerrar distancia, inmediatamente seguido por golpe directo al torso"
+          }
+        ],
+        "conceptos_estrategicos": [
+          "Giros de 270 grados para cobertura completa",
+          "Defensas circulares y con gancho",
+          "Combinaciones de patadas altas",
+          "Uso de Fumikomi para control de distancia"
+        ]
+      },
+      "elementos_tecnicos": [
+        "Soto Uke (bloqueo externo)",
+        "Kake Uke (bloqueo con gancho)",
+        "Mawashi Geri (patada circular)",
+        "Fumikomi (estampida)",
+        "Kake Uke (gancho)",
+        "Giros de 270 grados",
+        "Kokutsu Dachi (postura hacia atrás)"
+      ],
+      "dificultad": "intermedio",
+      "tiempo_ejecucion": "55-70 segundos",
+      "enfoque_principal": "Giros complejos, defensas circulares, patadas altas"
+    },
+
+    "heian_yondan": {
+      "nombre_japones": "平安四段",
+      "nombre_traduccion": "Paz y Tranquilidad - Cuarto Nivel",
+      "significado": "Yondan significa 'cuarto nivel'. Esta kata introduce técnicas avanzadas de mano abierta, saltos, y combinaciones complejas.",
+      "numero_movimientos": 27,
+      "enbusen_linea_direccion": {
+        "descripcion": "Forma de 'H' con movimientos diagonales y un salto",
+        "puntos_cardinales": [
+          "Inicio: Sur",
+          "Movimiento 1-3: Este",
+          "Movimiento 4-6: Oeste (giro 180°)",
+          "Movimiento 7-9: Este",
+          "Movimiento 10-12: Oeste (giro 180°)",
+          "Movimiento 13-15: Noreste",
+          "Movimiento 16-18: Suroeste (giro 180°)",
+          "Movimiento 19-21: Noreste (con salto)",
+          "Movimiento 22-24: Suroeste",
+          "Movimiento 25-27: Este (retorno)"
+        ],
+        "total_puntos": "8 puntos incluyendo un salto"
+      },
+      "kiai_points": [
+        {
+          "movimiento": 13,
+          "tecnica": "Kakato Geri",
+          "posicion": "En el aire",
+          "descripcion": "Primer kiai en patada con talón en el aire"
+        },
+        {
+          "movimiento": 27,
+          "tecnica": "Oi Zuki Chudan",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Segundo kiai en golpe directo final"
+        }
+      ],
+      "bunkai_aplicaciones_reales": {
+        "movimientos_clave": [
+          {
+            "movimiento": "1-3 Kosa Dachi + Shuto Uke",
+            "aplicacion": "Postura cruzada con bloqueo mano abierta para defensa cercana",
+            "detalles": "Postura cruzada para esquivar ataque, bloqueo con mano abierta para controlar brazo del oponente"
+          },
+          {
+            "movimiento": "7-9 Empi Uchi + Gyaku Zuki",
+            "aplicacion": "Ataque con codo seguido de golpe reverso",
+            "detalles": "Ataque con codo a corto alcance para crear apertura, seguido inmediatamente por golpe reverso al torso"
+          },
+          {
+            "movimiento": "13-15 Kakato Geri + Shuto Uchi",
+            "aplicacion": "Patada con talón en salto seguida de ataque cortante",
+            "detalles": "Salto con patada con talón a la cabeza, aterrizaje inmediato con ataque cortante al torso"
+          },
+          {
+            "movimiento": "19-21 Niju Ashi Geri + Oi Zuki",
+            "aplicacion": "Doble patada seguida de golpe directo",
+            "detalles": "Doble patada para desequilibrar completamente, seguida por golpe decisivo al torso"
+          }
+        ],
+        "conceptos_estrategicos": [
+          "Técnicas de mano abierta avanzadas",
+          "Saltos y técnicas aéreas",
+          "Ataques de corto alcance (codo)",
+          "Combinaciones complejas pierna-mano"
+        ]
+      },
+      "elementos_tecnicos": [
+        "Kosa Dachi (postura cruzada)",
+        "Kakato Geri (patada talón)",
+        "Empi Uchi (golpe codo)",
+        "Niju Ashi Geri (doble patada)",
+        "Shuto Uchi (ataque mano abierta)",
+        "Kokutsu Dachi (postura hacia atrás)",
+        "Salto y técnicas aéreas"
+      ],
+      "dificultad": "intermedio-avanzado",
+      "tiempo_ejecucion": "60-75 segundos",
+      "enfoque_principal": "Técnicas mano abierta, saltos, ataques cortos"
+    },
+
+    "heian_godan": {
+      "nombre_japones": "平安五段",
+      "nombre_traduccion": "Paz y Tranquilidad - Quinto Nivel",
+      "significado": "Godan significa 'quinto nivel'. Esta kata es la más compleja de la serie, incorporando todas las técnicas anteriores y añadiendo movimientos avanzados.",
+      "numero_movimientos": 23,
+      "enbusen_linea_direccion": {
+        "descripcion": "Forma de estrella con múltiples cambios de dirección y técnicas complejas",
+        "puntos_cardinales": [
+          "Inicio: Sur",
+          "Movimiento 1-3: Noreste",
+          "Movimiento 4-6: Suroeste (giro 180°)",
+          "Movimiento 7-9: Noreste",
+          "Movimiento 10-12: Suroeste (giro 180°)",
+          "Movimiento 13-15: Oeste",
+          "Movimiento 16-17: Este (giro 270°)",
+          "Movimiento 18-20: Norte",
+          "Movimiento 21-23: Este (retorno)"
+        ],
+        "total_puntos": "7 puntos con giros complejos"
+      },
+      "kiai_points": [
+        {
+          "movimiento": 12,
+          "tecnica": "Mikazuki Geri",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Primer kiai en patada con media luna"
+        },
+        {
+          "movimiento": 23,
+          "tecnica": "Oi Zuki Chudan",
+          "posicion": "Zenkutsu Dachi",
+          "descripcion": "Segundo kiai en golpe directo final"
+        }
+      ],
+      "bunkai_aplicaciones_reales": {
+        "movimientos_clave": [
+          {
+            "movimiento": "1-3 Morote Uke + Gyaku Zuki",
+            "aplicacion": "Bloqueo doble con ambas manos seguido de contraataque",
+            "detalles": "Bloqueo simultáneo con ambas manos para defensa completa, seguido por golpe reverso al torso"
+          },
+          {
+            "movimiento": "7-9 Jiin Uke + Nukite",
+            "aplicacion": "Bloqueo especial seguido de ataque con punta de dedos",
+            "detalles": "Bloqueo especial para controlar ataque múltiple, seguido por ataque preciso a puntos vitales"
+          },
+          {
+            "movimiento": "13-15 Ushiro Geri + Shuto Uchi",
+            "aplicacion": "Patada hacia atrás seguida de ataque cortante",
+            "detalles": "Patada posterior para sorprender oponente detrás, seguida por ataque cortante al frente"
+          },
+          {
+            "movimiento": "18-20 Haishu Uchi + Oi Zuki",
+            "aplicacion": "Ataque con dorso de mano seguido de golpe directo",
+            "detalles": "Ataque sorpresa con dorso de mano a la cara, seguido inmediatamente por golpe directo al torso"
+          }
+        ],
+        "conceptos_estrategicos": [
+          "Bloqueos dobles y simultáneos",
+          "Técnicas de defensa especializadas",
+          "Ataques sorpresa (Ushiro Geri)",
+          "Uso de partes no convencionales de la mano"
+        ]
+      },
+      "elementos_tecnicos": [
+        "Morote Uke (bloqueo doble)",
+        "Jiin Uke (bloqueo especial)",
+        "Mikazuki Geri (patada media luna)",
+        "Ushiro Geri (patada posterior)",
+        "Haishu Uchi (ataque dorso mano)",
+        "Soto Uke Otoshi (bloqueo descendente externo)",
+        "Giros de 270 grados complejos"
+      ],
+      "dificultad": "avanzado",
+      "tiempo_ejecucion": "65-80 segundos",
+      "enfoque_principal": "Técnicas avanzadas, bloqueos dobles, ataques sorpresa"
+    }
+  },
+
+  "filosofia_y_conceptos": {
+    "zanshin": {
+      "concepto": "Zanshin (残心)",
+      "traduccion": "Conciencia Persistente",
+      "descripcion_profunda": "Zanshin es el estado de conciencia vigilante que persiste incluso después de completar una técnica. No es simplemente estar alerta, sino mantener una conexión continua con el entorno y uno mismo. En el karate, Zanshin representa la capacidad de permanecer completamente presente y consciente después de ejecutar una técnica, listo para la siguiente acción sin pausa mental. Este concepto va más allá del combate; es una forma de vivir donde cada acción se completa con plena conciencia y preparación para lo que sigue.",
+      "caracteristicas_esenciales": [
+        "Conciencia continua del entorno sin tensión ni ansiedad",
+        "Preparación mental constante para cualquier eventualidad",
+        "Conexión ininterrumpida con el momento presente",
+        "Capacidad de responder instantáneamente sin preparación previa",
+        "Calmia alerta como estado operativo natural",
+        "Integración de la conciencia en cada movimiento y pausa",
+        "Vigilancia que persiste más allá de la técnica ejecutada"
+      ],
+      "aplicacion_practica": {
+        "combate": "Permite mantener la guardia y conciencia después de cada ataque o defensa",
+        "kata": "Asegura que cada movimiento se complete con plena conciencia del siguiente",
+        "kumite": "Mantiene la alerta constante contra posibles contraataques",
+        "vida_diaria": "Se manifiesta como atención plena en todas las actividades diarias"
+      },
+      "desarrollo": {
+        "metodos": [
+          "Práctica de kata enfocándose en la pausa entre movimientos",
+          "Kumite con conciencia constante del entorno",
+          "Meditación para desarrollar atención sostenida",
+          "Ejercicios de reacción espontánea"
+        ],
+        "indicadores": [
+          "Capacidad de mantener la calma bajo presión",
+          "Respuesta rápida a situaciones inesperadas",
+          "Conciencia del entorno sin esfuerzo consciente",
+          "Flujo natural entre técnicas sin pausas mentales"
+        ]
+      },
+      "relacion_conceptos": ["Mushin", "Fudoshin", "Shoshin", "Marobashi", "Kime"],
+      "palabras_clave": ["zanshin", "conciencia persistente", "vigilancia", "atencion plena", "preparacion", "alerta calmada"]
+    },
+
+    "mushin": {
+      "concepto": "Mushin (無心)",
+      "traduccion": "Mente Sin Mente",
+      "descripcion_profunda": "Mushin es el estado de conciencia pura, libre de pensamientos discursivos, emociones o prejuicios. No es un estado de vacío mental, sino de plenitud consciente donde la mente refleja la realidad como un espejo claro sin distorsiones del ego. En Mushin, el practicante actúa de manera espontánea y perfectamente apropiada a cada situación, sin la interferencia del pensamiento analítico o el juicio. Este estado permite que las técnicas surjan naturalmente sin esfuerzo consciente, logrando una unión perfecta entre intención y acción.",
+      "caracteristicas_esenciales": [
+        "Acción sin pensamiento deliberado ni análisis consciente",
+        "Respuesta espontánea y perfecta a cada situación",
+        "Ausencia completa de miedo, duda o expectativa",
+        "Unión total con el momento presente",
+        "Disolución del ego y sus limitaciones mentales",
+        "Fluidez natural como expresión del dominio",
+        "Claridad mental que refleja la realidad sin distorsión"
+      ],
+      "aplicacion_practica": {
+        "combate": "Permite respuestas instantáneas y perfectas sin vacilación",
+        "kata": "Ejecución fluida y natural como si las técnicas surgieran solas",
+        "kumite": "Adaptación espontánea a cualquier movimiento del oponente",
+        "vida_diaria": "Capacidad de estar completamente presente en cada actividad"
+      },
+      "desarrollo": {
+        "metodos": [
+          "Repetición exhaustiva hasta que las técnicas se vuelvan automáticas",
+          "Meditación Zen para calmar la mente discursiva",
+          "Práctica de kihon sin pensamiento analítico",
+          "Entrenamiento bajo presión para superar el miedo y duda"
+        ],
+        "indicadores": [
+          "Ejecución técnica perfecta sin esfuerzo consciente",
+          "Respuesta instantánea a estímulos inesperados",
+          "Ausencia de tensión mental durante el combate",
+          "Flujo natural entre diferentes técnicas"
+        ]
+      },
+      "relacion_conceptos": ["Zanshin", "Fudoshin", "Shoshin", "Samurai", "Zen"],
+      "palabras_clave": ["mushin", "mente vacia", "flujo natural", "espontaneidad", "presencia", "claridad mental"]
+    },
+
+    "kime": {
+      "concepto": "Kime (決め)",
+      "traduccion": "Decisión o Foco",
+      "descripcion_profunda": "Kime es la explosión de energía concentrada en el punto exacto de impacto. No es simplemente fuerza bruta, sino la concentración perfecta de mente, cuerpo y espíritu en un instante preciso. Kime involucra contracción muscular total, respiración sincronizada, y enfoque mental absoluto. Este concepto representa la culminación de toda la energía generada durante el movimiento, concentrada y liberada en el momento exacto del contacto. Kime es la manifestación física del poder interno (Ki) dirigido por la intención (Zanshin) y ejecutado sin pensamiento (Mushin).",
+      "caracteristicas_esenciales": [
+        "Explosión de energía concentrada en punto exacto",
+        "Contracción muscular total y coordinada",
+        "Respiración sincronizada con el impacto",
+        "Enfoque mental absoluto en el momento de contacto",
+        "Integración de mente, cuerpo y espíritu",
+        "Liberación instantánea de poder acumulado",
+        "Precisión temporal y espacial perfecta"
+      ],
+      "aplicacion_practica": {
+        "golpes": "Concentración de poder en el punto de impacto del puño o pie",
+        "bloqueos": "Foco energético en el momento del contacto defensivo",
+        "kata": "Explosión controlada en cada movimiento clave",
+        "kumite": "Impactos decisivos con máxima efectividad"
+      },
+      "desarrollo": {
+        "metodos": [
+          "Trabajo con makiwara para desarrollar impacto explosivo",
+          "Práctica de kihon con enfoque en contracción-relajación",
+          "Ejercicios de respiración sincronizada con movimiento",
+          "Entrenamiento de precisión temporal y espacial"
+        ],
+        "indicadores": [
+          "Impactos poderosos y precisos",
+          "Control total sobre la liberación de energía",
+          "Sincronización perfecta de respiración y movimiento",
+          "Capacidad de generar poder explosivo a voluntad"
+        ]
+      },
+      "relacion_conceptos": ["Ki", "Kokyu", "Hiki Te", "Zanshin", "Mushin"],
+      "palabras_clave": ["kime", "foco", "explosion", "potencia", "concentracion", "impacto decisivo"]
+    },
+
+    "ma_ai": {
+      "concepto": "Ma Ai (間合)",
+      "traduccion": "Distancia y Timing",
+      "descripcion_profunda": "Ma Ai es un concepto complejo que incluye tanto la distancia física como el timing perfecto para ejecutar técnicas. No es simplemente 'estar cerca o lejos', sino entender la distancia óptima para cada técnica y el momento preciso para ejecutarla. Ma Ai involucra la percepción de la distancia de ataque, la distancia de defensa, y la distancia crítica donde ambas técnicas pueden ser efectivas. Este concepto requiere una comprensión profunda del espacio-tiempo en el combate, permitiendo al karateka controlar completamente el campo de batalla a través del posicionamiento y el timing.",
+      "caracteristicas_esenciales": [
+        "Percepción precisa de distancias óptimas para cada técnica",
+        "Entendimiento del timing perfecto para ejecución",
+        "Control del espacio de combate",
+        "Capacidad de ajustar distancia dinámicamente",
+        "Sincronización de movimiento con oportunidad",
+        "Dominio del campo de batalla espacial",
+        "Integración de distancia y oportunidad temporal"
+      ],
+      "tipos_distancia": {
+        "to_ma": "Distancia larga, fuera de alcance directo",
+        "chika_ma": "Distancia corta, dentro del alcance",
+        "issoku_no_ma": "Distancia de un paso, óptima para ataque",
+        "ni_ma": "Distancia crítica, donde ambas partes pueden atacar",
+        "ma_saki": "Distancia futura, anticipando el movimiento del oponente"
+      },
+      "aplicacion_practica": {
+        "kumite": "Control de distancia para ataque y defensa efectivos",
+        "kata": "Precisión espacial en cada movimiento",
+        "defensa_personal": "Mantener distancia segura o cerrarla según necesidad",
+        "combate": "Dominio completo del espacio de confrontación"
+      },
+      "desarrollo": {
+        "metodos": [
+          "Kumite controlado para desarrollar percepción de distancia",
+          "Ejercicios de footwork y posicionamiento",
+          "Práctica con diferentes oponentes y estilos",
+          "Análisis de combates para entender timing"
+        ],
+        "indicadores": [
+          "Capacidad de mantener distancia óptima constantemente",
+          "Ajuste instantáneo de distancia según el oponente",
+          "Control del espacio sin pensamiento consciente",
+          "Timing perfecto para cada técnica"
+        ]
+      },
+      "relacion_conceptos": ["Tai Sabaki", "Kokyu", "Zanshin", "Mushin"],
+      "palabras_clave": ["ma ai", "distancia", "timing", "espacio", "oportunidad", "control espacial"]
+    },
+
+    "hara": {
+      "concepto": "Hara (腹)",
+      "traduccion": "Centro del Abdomen",
+      "descripcion_profunda": "Hara es el centro físico y energético del cuerpo, ubicado aproximadamente dos dedos debajo del ombligo. Es considerado el centro de gravedad, el origen del movimiento, y el asiento del Ki (energía vital). En el karate, Hara representa la base de todo poder y movimiento, el punto desde donde se genera la fuerza y hacia donde se dirige la energía. Un Hara desarrollado permite movimientos estables, poderosos y coordinados, además de ser el centro de la calma mental y la determinación espiritual.",
+      "caracteristicas_esenciales": [
+        "Centro físico de gravedad y equilibrio",
+        "Origen del poder corporal y movimiento",
+        "Asiento del Ki (energía vital)",
+        "Centro de calma mental y determinación",
+        "Base de estabilidad en todas las técnicas",
+        "Punto de conexión entre mente y cuerpo",
+        "Fuente de resistencia y endurance"
+      ],
+      "ubicacion_anatomica": {
+        "descripcion": "Área aproximadamente dos dedos debajo del ombligo",
+        "dimensiones": "Región que abarca desde el ombligo hasta el pubis",
+        "musculos_involucrados": ["Abdominales", "oblicuos", "transverso abdominal", "dorsales bajos"],
+        "centro_energetico": "Considerado el segundo chakra en algunas tradiciones"
+      },
+      "aplicacion_practica": {
+        "tecnicas": "Todos los movimientos se originan desde el Hara",
+        "estabilidad": "Base para todas las posturas y desplazamientos",
+        "poder": "Generación de fuerza desde el centro corporal",
+        "respiracion": "Centro del control respiratorio diafragmático"
+      },
+      "desarrollo": {
+        "metodos": [
+          "Ejercicios de respiración diafragmática profunda",
+          "Trabajo de posturas con enfoque en centro de gravedad",
+          "Meditación enfocada en el área abdominal",
+          "Ejercicios de core fortaleciendo la región del Hara"
+        ],
+        "indicadores": [
+          "Estabilidad mejorada en todas las técnicas",
+          "Movimientos más potentes y coordinados",
+          "Calma mental y determinación constante",
+          "Resistencia física y mental superior"
+        ]
+      },
+      "relacion_conceptos": ["Ki", "Kokyu", "Zanshin", "Kime"],
+      "palabras_clave": ["hara", "centro", "gravedad", "poder", "estabilidad", "energia vital"]
+    },
+
+    "ki": {
+      "concepto": "Ki (気)",
+      "traduccion": "Energía Vital",
+      "descripcion_profunda": "Ki es la energía vital que fluye a través de todos los seres vivos. En el karate, Ki no es un concepto místico abstracto, sino la manifestación tangible de la energía física, mental y espiritual que se genera y dirige a través de las técnicas. Ki representa la fuerza interna que complementa la fuerza muscular externa, la energía mental que enfoca la intención, y la energía espiritual que da propósito y determinación. El desarrollo del Ki permite al karateka superar limitaciones físicas aparentes y ejecutar técnicas con poder que parece trascender la capacidad muscular normal.",
+      "caracteristicas_esenciales": [
+        "Energía vital que fluye a través del cuerpo",
+        "Manifestación de fuerza interna complementaria",
+        "Conexión entre mente, cuerpo y espíritu",
+        "Fuente de poder que trasciende la fuerza muscular",
+        "Energía que puede ser cultivada y dirigida",
+        "Base de la resistencia y endurance",
+        "Conexión con la intención y determinación"
+      ],
+      "tipos_ki": {
+        "ki_fisico": "Energía biomecánica y muscular coordinada",
+        "ki_mental": "Energía de concentración y enfoque",
+        "ki_espiritual": "Energía de determinación y propósito",
+        "ki_vital": "Energía de vida y salud general"
+      },
+      "aplicacion_practica": {
+        "tecnicas": "Ki potencia el poder físico en cada movimiento",
+        "resistencia": "Permite continuar más allá de los límites musculares",
+        "recuperacion": "Acelera la recuperación física y mental",
+        "enfoco": "Dirige la intención y concentra la energía"
+      },
+      "desarrollo": {
+        "metodos": [
+          "Ejercicios de respiración profunda (Kokyu-ho)",
+          "Meditación para cultivar energía mental",
+          "Práctica constante para desarrollar Ki físico",
+          "Disciplina espiritual para fortalecer Ki espiritual"
+        ],
+        "indicadores": [
+          "Poder en técnicas que parece trascender la fuerza muscular",
+          "Resistencia superior a la esperada físicamente",
+          "Recuperación rápida del esfuerzo",
+          "Claridad mental y determinación constante"
+        ]
+      },
+      "relacion_conceptos": ["Hara", "Kokyu", "Kime", "Zanshin"],
+      "palabras_clave": ["ki", "energia vital", "poder interno", "fuerza vital", "determinacion", "resistencia"]
+    },
+
+    "dojo_kun": {
+      "concepto": "Dojo Kun (道場訓)",
+      "traduccion": "Principios del Dojo",
+      "descripcion_profunda": "El Dojo Kun es el código de conducta y los principios éticos que rigen la práctica en el dojo de karate. Tradicionalmente recitado al final de cada clase, estos cinco preceptos sirven como guía moral y recordatorio constante de que el karate va más allá de la técnica física. Cada principio representa un aspecto fundamental del desarrollo del carácter del karateka, desde el respeto hasta la búsqueda de la verdad. El Dojo Kun no es simplemente un conjunto de reglas, sino una filosofía de vida que debe aplicarse dentro y fuera del dojo.",
+      "preceptos_completos": {
+        "uno": {
+          "japones": "一つ！人格完成に努むること",
+          "romaji": "Hitotsu! Jinkaku Kansei ni Tsutomuru Koto",
+          "traduccion": "¡Primero! Esforzarse por la perfección del carácter",
+          "explicacion": "Este principio establece que el objetivo final del karate no es solo dominar técnicas físicas, sino desarrollar un carácter perfecto. La perfección del carácter incluye humildad, integridad, compasión, y sabiduría. Cada técnica, cada entrenamiento, cada desafío es una oportunidad para pulir el carácter y convertirse en una mejor persona.",
+          "aplicacion_vida": "Aplicar este principio significa buscar constantemente la superación personal, aprender de los errores, cultivar la virtud, y entender que el verdadero éxito en karate se mide por el desarrollo del carácter, no solo por la habilidad técnica."
+        },
+        "dos": {
+          "japones": "一つ！誠の道を守ること",
+          "romaji": "Hitotsu! Makoto no Michi o Mamoru Koto",
+          "traduccion": "¡Primero! Ser fiel al camino de la sinceridad",
+          "explicacion": "La sinceridad (Makoto) es la honestidad absoluta con uno mismo y con los demás. Este principio exige autenticidad en todas las acciones, palabras e intenciones. En el dojo, significa entrenar con honestidad sobre las propias limitaciones, no fingir habilidades que no se poseen, y ser genuino en el esfuerzo por mejorar.",
+          "aplicacion_vida": "Ser fiel al camino de la sinceridad significa vivir auténticamente, ser honesto en las relaciones personales, admitir errores sin excusas, y mantener la integridad incluso cuando es difícil. La sinceridad construye confianza y respeto, fundamentales en cualquier relación."
+        },
+        "tres": {
+          "japones": "一つ！努力の精神を養うこと",
+          "romaji": "Hitotsu! Doryoku Seishin o Yashinau Koto",
+          "traduccion": "¡Primero! Cultivar el espíritu del esfuerzo",
+          "explicacion": "El esfuerzo (Doryoku) es la dedicación constante y perseverante hacia la mejora. Este principio reconoce que la maestría no se logra rápidamente, sino a través de práctica consistente, superación de obstáculos, y persistencia ante las dificultades. El espíritu del esfuerzo incluye disciplina, paciencia, y la comprensión de que cada día de entrenamiento construye sobre el anterior.",
+          "aplicacion_vida": "Cultivar el espíritu del esfuerzo significa aplicar la misma dedicación al trabajo, estudio, y relaciones personales. Significa no rendirse ante los desafíos, buscar constantemente la mejora, y entender que el éxito es el resultado del esfuerzo continuo y sostenido."
+        },
+        "cuatro": {
+          "japones": "一つ！礼儀を重んずること",
+          "romaji": "Hitotsu! Reigi o Omonzuru Koto",
+          "traduccion": "¡Primero! Respetar las reglas de etiqueta",
+          "explicacion": "La etiqueta (Reigi) en el karate va más allá de las reglas de cortesía; es el respeto profundo por la tradición, los maestros, los compañeros de entrenamiento, y el dojo mismo. Este principio incluye el respeto por uno mismo, por los demás, y por el arte marcial. La etiqueta crea un ambiente seguro, ordenado, y propicio para el aprendizaje y desarrollo.",
+          "aplicacion_vida": "Respetar las reglas de etiqueta significa aplicar el respeto en todas las interacciones sociales, valorar las tradiciones y la sabiduría de quienes nos precedieron, tratar a los demás con cortesía y consideración, y mantener el respeto por uno mismo a través de acciones y palabras apropiadas."
+        },
+        "cinco": {
+          "japones": "一つ！血気の勇を禁ずること",
+          "romaji": "Hitotsu! Kekki no Yu o Imashimuru Koto",
+          "traduccion": "¡Primero! Refrenar el espíritu violento",
+          "explicacion": "Este principio advierte contra el uso indebido de las habilidades marciales. El 'espíritu violento' (Kekki no Yu) se refiere al temperamento agresivo, al deseo de dominar a otros, y al uso de la fuerza para resolver conflictos. El karate enseña que el verdadero poder está en el control, no en la agresión, y que las habilidades marciales deben usarse para defensa, no para ataque.",
+          "aplicacion_vida": "Refrenar el espíritu violento significa controlar los impulsos agresivos, buscar soluciones pacíficas a los conflictos, usar la fuerza solo cuando es absolutamente necesario y en defensa propia, y cultivar la paciencia y el autocontrol en todas las situaciones."
+        }
+      },
+      "significado_global": "Los cinco principios del Dojo Kun juntos forman un sistema ético completo que guía el desarrollo del karateka como ser humano integral. No son reglas aisladas, sino aspectos interconectados del mismo camino: el desarrollo del carácter a través de la sinceridad, el esfuerzo, el respeto, y el control, con el objetivo final de convertirse en una persona mejor a través del karate.",
+      "practica_tradicional": {
+        "recitado": "Tradicionalmente recitado al final de cada clase en seiza (posición de arrodillado)",
+        "liderazgo": "Generalmente liderado por el sensei o el estudiante de mayor rango",
+        "participacion": "Todos los estudiantes responden 'Osu!' después de cada principio",
+        "significado_osu": "Expresa entendimiento, respeto, y compromiso de aplicar el principio"
+      },
+      "relacion_conceptos": ["Rei", "Budo", "Shugyo", "Karate-do Ni Sente Nashi"],
+      "palabras_clave": ["dojo kun", "principios", "etica", "caracter", "respeto", "sinceridad", "esfuerzo", "no violencia"]
+    }
+  },
+
+  "historia_y_linaje": {
+    "origenes_okinawa": {
+      "periodo": "1400-1879",
+      "ubicacion": "Reino de Ryukyu (Okinawa)",
+      "contexto_historico": "Durante el período de prohibición de armas impuesto por los clanes Shimazu de Satsuma, la población okinawense desarrolló artes marciales desarmadas para defensa personal. El karate surgió como respuesta directa a esta necesidad de autodefensa efectiva sin armas.",
+      "artes_originales": {
+        "tegumi": "Lucha libre okinawense, precursora del grappling y control corporal",
+        "ti_gwa": "Técnicas de golpeo con las manos, base del Te Waza moderno",
+        "kobudo": "Uso de herramientas agrícolas como armas (bo, nunchaku, sai)",
+        "okinawa_te": "Sistema general de combate mano a mano"
+      },
+      "maestros_pioneros": [
+        {
+          "nombre": "Sakugawa Kanga (1733-1815)",
+          "apodo": "Tode Sakugawa",
+          "contribucion": "Estudió Kenpo chino, sistematizó las primeras formas de karate",
+          "legado": "Considerado el primer maestro formal de karate"
+        },
+        {
+          "nombre": "Matsumura Sokon (1809-1899)",
+          "apodo": "Bushi Matsumura",
+          "contribucion": "Desarrolló Shuri-te, integró técnicas chinas con okinawenses",
+          "legado": "Fundador del linaje Shuri-te que influenciaría el Shotokan"
+        },
+        {
+          "nombre": "Higaonna Kanryo (1853-1915)",
+          "apodo": "Maestro del Naha-te",
+          "contribucion": "Trajo el estilo Sanchin desde China, desarrolló Naha-te",
+          "legado": "Fundador del linaje que daría origen al Goju-ryu"
+        }
+      ],
+      "caracteristicas_principales": [
+        "Énfasis en la eficiencia máxima con mínimo movimiento",
+        "Técnicas diseñadas para combate real sin reglas",
+        "Integración de poder lineal y circular",
+        "Desarrollo del carácter como parte del entrenamiento",
+        "Secreto y transmisión oral del conocimiento"
+      ],
+      "significado": "Estableció las fundamentaciones filosóficas y técnicas del karate moderno, incluyendo el concepto de que las artes marciales son un camino de desarrollo personal, no solo combate."
+    },
+
+    "influencia_china": {
+      "periodo": "1600-1900",
+      "ubicacion": "Fujian, China y Okinawa",
+      "rutas_comerciales": "La Ruta del Mar del Sur conectaba el Reino de Ryukyu con la provincia china de Fujian",
+      "estilos_chinos_influyentes": {
+        "white_crane_kungfu": "Estilo de la Grulla Blanca, enfocado en elegancia y precisión",
+        "tiger_style": "Estilo del Tigre, caracterizado por poder y ferocidad",
+        "shaolin_quan": "Estilos del Monasterio Shaolin con énfasis en poder explosivo",
+        "five_ancestors_fist": "Estilo de los Cinco Ancestros, combinación de múltiples técnicas"
+      },
+      "conceptos_importados": {
+        "ki_energia_vital": "Concepto de energía interna y su cultivo",
+        "dim_mak_puntos_vitales": "Conocimiento anatómico de puntos débiles",
+        "qigong_respiracion": "Técnicas de respiración para desarrollo interno",
+        "yin_yang_balance": "Principio de equilibrio de opuestos complementarios",
+        "wu_wei_no_accion": "Concepto de acción sin esfuerzo excesivo"
+      },
+      "transformacion_tecnica": {
+        "de": "Combate brutal y directo",
+        "a": "Sistema refinado con principios filosóficos",
+        "cambio": "Se añadieron katas formales, principios de respiración y entendimiento biomecánico profundo"
+      },
+      "legado": "Los principios de Kime (foco), Kokyu (respiración) y entendimiento de Kyusho (puntos vitales) provienen directamente de esta influencia china."
+    },
+
+    "itosu_y_higaonna": {
+      "periodo": "1870-1915",
+      "contexto": "Dos maestros revolucionaron el karate okinawense, sistematizándolo y preparándolo para su expansión global",
+      
+      "anko_itosu": {
+        "nombre_completo": "Itosu Yasutsune (1831-1915)",
+        "apodo": "Anko Itosu",
+        "rol": "Reformador del karate",
+        "contribuciones_principales": [
+          "Creó los katas Pinan (Heian) para facilitar el aprendizaje",
+          "Introdujo el karate en el sistema educativo okinawense",
+          "Estandarizó las técnicas y terminología",
+          "Desarrolló el concepto de karate como educación física",
+          "Sistematizó el entrenamiento por niveles"
+        ],
+        "katas_creados": [
+          "Pinan Shodan (Heian Shodan)",
+          "Pinan Nidan (Heian Nidan)", 
+          "Pinan Sandan (Heian Sandan)",
+          "Pinan Yondan (Heian Yondan)",
+          "Pinan Godan (Heian Godan)",
+          "Kusanku Sho y Dai",
+          "Chinto",
+          "Bassai Dai"
+        ],
+        "filosofia": "El karate debe ser accesible a todos como herramienta de desarrollo personal y educación física",
+        "impacto": "Transformó el karate de arte secreto a disciplina educativa accesible"
+      },
+      
+      "kanryo_higaonna": {
+        "nombre_completo": "Higaonna Kanryo (1853-1915)",
+        "rol": "Preservador de tradiciones",
+        "contribuciones_principales": [
+          "Trajo el estilo Sanchin desde China",
+          "Desarrolló el Naha-te enfocado en poder interno",
+          "Enfatizó la respiración y fortalecimiento corporal",
+          "Preservó las técnicas originales del Kenpo chino",
+          "Desarrolló el concepto de 'duro y suave' (go-ju)"
+        ],
+        "katas_preservados": [
+          "Sanchin (kata fundamental)",
+          "Seisan",
+          "Seipai",
+          "Kururunfa",
+          "Suparinpei"
+        ],
+        "filosofia": "El desarrollo interno y la disciplina son tan importantes como la técnica externa",
+        "impacto": "Estableció el linaje que daría origen al Goju-ryu y enfatizó el aspecto espiritual del karate"
+      },
+      
+      "sinergia": "Itosu sistematizó y popularizó, Higaonna preservó y profundizó. Juntos crearon las dos corrientes principales del karate moderno: Shuri-te (lineal, explosivo) y Naha-te (circular, interno)."
+    },
+
+    "konishi_yasuhiro_biografia": {
+      "datos_personales": {
+        "nombre": "Konishi Yasuhiro",
+        "nacimiento": "1893, Okayama, Japón",
+        "fallecimiento": "1983",
+        "nombre_estilo": "Shindo Jinen Ryu",
+        "significado_nombre": "Escuela del Camino Natural de la Verdad Divina"
+      },
+      
+      "primeros_anos": {
+        "infancia": "Criado en familia de practicantes de artes marciales",
+        "primer_estilo": "Estudió Judo y Kendo desde joven",
+        "motivacion": "Buscaba un arte marcial que combinara poder con desarrollo espiritual",
+        "formacion_academica": "Graduado en derecho, pero dedicó su vida a las artes marciales"
+      },
+      
+      "viaje_a_tokio": {
+        "ano": "1923",
+        "proposito": "Buscar maestros de karate en la capital",
+        "encuentro_funakoshi": "Conoció a Gichin Funakoshi, fundador del Shotokan",
+        "primeras_lecciones": "Aprendió directamente del fundador del karate moderno",
+        "vision": "Comprendió que el karate era más que técnica física"
+      },
+      
+      "estudios_multiples": {
+        "shotokan": "Estudió con Gichin Funakoshi (1930-1935)",
+        "shito_ryu": "Aprendió con Kenwa Mabuni, fundador del Shito-ryu",
+        "goju_ryu": "Recibió enseñanzas de Chojun Miyagi, fundador del Goju-ryu",
+        "otros_estilos": "Estudió con maestros de Kobudo y artes tradicionales japonesas",
+        "sintesis": "Integró lo mejor de cada estilo en un sistema único"
+      },
+      
+      "fundacion_shindo_jinen_ryu": {
+        "ano": "1933",
+        "lugar": "Osaka, Japón",
+        "nombre_dojo": "Ryobu-Kan",
+        "filosofia": "El karate debe fluir naturalmente como el agua, adaptándose a cada situación",
+        "innovaciones": [
+          "Combinación de potencia lineal con fluidez circular",
+          "Integración de respiración dinámica con movimiento",
+          "Énfasis en el desarrollo espiritual junto con técnico",
+          "Adaptación del karate a las necesidades del individuo"
+        ]
+      },
+      
+      "contribuciones_principales": {
+        "tecnica": "Desarrolló un sistema equilibrado que combina diferentes enfoques",
+        "filosofica": "Promovió el karate como camino de desarrollo personal",
+        "educativa": "Enseñó a miles de estudiantes a lo largo de su vida",
+        "organizacional": "Fundó la Japan Karate-Do Ryobu-Kai",
+        "literaria": "Escribió numerosos libros sobre karate y filosofía marcial"
+      },
+      
+      "legado": {
+        "estilo_actual": "Shindo Jinen Ryu practicado mundialmente",
+        "influencia": "Inspiró el desarrollo de muchos estilos híbridos modernos",
+        "alumnos_famosos": "Formó a generaciones de maestros y practicantes",
+        "reconocimiento": "Reconocido como uno de los pioneros del karate japonés"
+      }
+    },
+
+    "relacion_ju_jitsu_aikido": {
+      "periodo": "1880-1940",
+      "contexto": "El karate se desarrolló paralelamente a otras artes marciales japonesas, con influencias mutuas",
+      
+      "ju_jitsu_influencia": {
+        "origen": "Arte samurai tradicional de combate cuerpo a cuerpo",
+        "tecnicas_compartidas": [
+          "Proyecciones y lanzamientos (nage waza)",
+          "Luxaciones articulares (kansetsu waza)",
+          "Estrangulaciones (shime waza)",
+          "Control de suelo (ne waza)"
+        ],
+        "adaptacion_karate": "El karate incorporó técnicas de control y proyección para combate completo",
+        "maestros_puente": "Muchos maestros de karate tenían背景 en Ju-Jitsu",
+        "integracion": "El karate moderno incluye elementos de Ju-Jitsu para defensa integral"
+      },
+      
+      "aikido_influencia": {
+        "fundador": "Morihei Ueshiba (1883-1969)",
+        "filosofia_compartida": "Armonía y flujo natural",
+        "conceptos_similares": [
+          "Movimiento circular y fluido",
+          "Uso de la energía del oponente",
+          "Énfasis en la no-resistencia",
+          "Desarrollo espiritual junto con técnico"
+        ],
+        "diferencias": "Aikido enfocado en defensa sin daño, karate incluye ataque decisivo",
+        "sintesis": "Algunos estilos de karate incorporaron principios del Aikido"
+      },
+      
+      "convergencia_moderna": {
+        "artes_marciales_mixtas": "Influencia en el desarrollo del MMA",
+        "defensa_personal_integral": "Combinación de golpes, proyecciones y control",
+        "cross-training": "Practicantes modernos estudian múltiples artes",
+        "evolucion": "Las barreras entre estilos se han difuminado"
+      }
+    },
+
+    "hitos_historicos_por_decadas": {
+      "decada_1880": {
+        "evento_principal": "Formalización del karate okinawense",
+        "hitos": [
+          "1885: Anko Itosu comienza a enseñar karate en escuelas",
+          "1889: Kanryo Higaonna regresa de China con Sanchin",
+          "1880s: Primeros registros escritos de técnicas de karate"
+        ]
+      },
+      
+      "decada_1890": {
+        "evento_principal": "Expansión educativa del karate",
+        "hitos": [
+          "1891: Itosu introduce karate en escuela primaria",
+          "1895: Primera demostración pública de karate en Okinawa",
+          "1899: Muerte de Anko Itosu, legado de katas Pinan"
+        ]
+      },
+      
+      "decada_1900": {
+        "evento_principal": "Transición a Japón continental",
+        "hitos": [
+          "1901: Gichin Funakoshi llega a Okinawa",
+          "1902: Karate incluido en currículo escolar okinawense",
+          "1908: Primera publicación sobre karate por Itosu"
+        ]
+      },
+      
+      "decada_1910": {
+        "evento_principal": "Expansión a Japón continental",
+        "hitos": [
+          "1916: Funakoshi demuestra karate en Butokuden, Kyoto",
+          "1917: Primera demostración de karate en Tokio",
+          "1919: Yasuhiro Konishi comienza estudios marciales"
+        ]
+      },
+      
+      "decada_1920": {
+        "evento_principal": "Establecimiento en Japón",
+        "hitos": [
+          "1922: Funakoshi establece dojo en Tokio",
+          "1924: Konishi estudia con Funakoshi",
+          "1926: Primera organización de karate en Japón",
+          "1929: Karate reconocido como arte marcial japonés"
+        ]
+      },
+      
+      "decada_1930": {
+        "evento_principal": "Fundación de estilos modernos",
+        "hitos": [
+          "1933: Konishi funda Shindo Jinen Ryu",
+          "1934: Mabuni funda Shito-ryu",
+          "1935: Miyagi funda Goju-ryu",
+          "1936: Funakoshi establece Shotokan oficialmente"
+        ]
+      },
+      
+      "decada_1940": {
+        "evento_principal": "Período de guerra y supervivencia",
+        "hitos": [
+          "1941-1945: Segunda Guerra Mundial, muchos dojos cerrados",
+          "1945: Karate sobrevive y se prepara para expansión post-guerra",
+          "1948: Formación de organizaciones de karate"
+        ]
+      },
+      
+      "decada_1950": {
+        "evento_principal": "Expansión global",
+        "hitos": [
+          "1957: Fundación de JKA (Japan Karate Association)",
+          "1958: Primer campeonato nacional de karate",
+          "1959: Karate comienza a expandirse internacionalmente"
+        ]
+      },
+      
+      "decada_1960": {
+        "evento_principal": "Globalización",
+        "hitos": [
+          "1960: Karate llega a Europa y América",
+          "1964: Primera organización mundial de karate",
+          "1966: Konishi recibe reconocimiento imperial",
+          "1969: Muerte de Yasuhiro Konishi"
+        ]
+      },
+      
+      "decada_1970": {
+        "evento_principal": "Explosión de popularidad",
+        "hitos": [
+          "1970: Películas de Bruce Lee popularizan artes marciales",
+          "1972: Karate incluido en competiciones internacionales",
+          "1975: Establecimiento de estándares mundiales",
+          "1979: Millones de practicantes en todo el mundo"
+        ]
+      },
+      
+      "decada_1980": {
+        "evento_principal": "Profesionalización",
+        "hitos": [
+          "1980: Establecimiento de sistemas de certificación",
+          "1985: Karate reconocido como deporte competitivo",
+          "1987: Desarrollo de métodos científicos de entrenamiento",
+          "1989: Investigación académica sobre karate"
+        ]
+      },
+      
+      "decada_1990": {
+        "evento_principal": "Unificación y estandarización",
+        "hitos": [
+          "1990: Fundación de WKF (World Karate Federation)",
+          "1992: Karate considerado para inclusión olímpica",
+          "1995: Estándares internacionales de competencia",
+          "1999: Karate practicado en más de 190 países"
+        ]
+      },
+      
+      "decada_2000": {
+        "evento_principal": "Reconocimiento olímpico",
+        "hitos": [
+          "2000: Karate incluido en Juegos Asiáticos",
+          "2005: Campaña para inclusión en Juegos Olímpicos",
+          "2008: Karate demostración en Juegos Olímpicos de Beijing",
+          "2009: Reconocimiento del COI como deporte olímpico"
+        ]
+      },
+      
+      "decada_2010": {
+        "evento_principal": "Era digital y científica",
+        "hitos": [
+          "2010: Investigación científica sobre biomecánica del karate",
+          "2015: Desarrollo de tecnología para entrenamiento",
+          "2016: Karate incluido oficialmente en Juegos Olímpicos de Tokio 2020",
+          "2019: Preparación mundial para debut olímpico"
+        ]
+      },
+      
+      "decada_2020": {
+        "evento_principal": "Era olímpica y post-pandemia",
+        "hitos": [
+          "2020: Debut olímpico del karate en Tokio",
+          "2021: Adaptación del entrenamiento durante pandemia",
+          "2022: Expansión del karate online y digital",
+          "2023: Integración de tecnología en entrenamiento tradicional"
+        ]
+      }
+    },
+    
+    "fundadores_estilo": {
+      "shindo_jinen_ryu": {
+        "fundador": "Yasuhiro Konishi",
+        "ano_fundacion": "1933",
+        "significado_nombre": "Camino Natural de la Verdad Divina",
+        "filosofia_principal": "Flujo natural y adaptación",
+        "caracteristicas_distintivas": [
+          "Combinación de potencia lineal y circular",
+          "Énfasis en respiración dinámica",
+          "Desarrollo espiritual integral",
+          "Adaptación personalizada del estilo"
+        ],
+        "influencias": ["Shotokan", "Shito-ryu", "Goju-ryu", "Kobudo"],
+        "contribucion_unicas": "Síntesis ecléctica de diferentes estilos",
+        "legado_actual": "Practicado en más de 30 países"
+      },
+      
+      "otros_estilos_fundadores": {
+        "shotokan": {
+          "fundador": "Gichin Funakoshi",
+          "ano": "1936",
+          "caracteristica": "Potencia lineal y katas Heian"
+        },
+        "shito_ryu": {
+          "fundador": "Kenwa Mabuni",
+          "ano": "1934",
+          "caracteristica": "Combinación de Shuri-te y Naha-te"
+        },
+        "goju_ryu": {
+          "fundador": "Chojun Miyagi",
+          "ano": "1935",
+          "caracteristica": "Duro y suave, respiración Sanchin"
+        },
+        "wado_ryu": {
+          "fundador": "Hironori Otsuka",
+          "ano": "1939",
+          "caracteristica": "Influencia del Jujitsu y fluidez"
+      },
+      "dia_examen": [
+        "Llegar temprano: Dar tiempo para aclimatar al entorno",
+        "Calentamiento completo: Realizar calentamiento familiar para sentirse cómodo",
+        "Evitar comparaciones: No observar excesivamente a otros examinados",
+        "Mantener hidratación: Beber agua moderadamente para mantener claridad mental",
+        "Respirar profundamente: Antes de cada técnica, tomar una respiración profunda"
+      ],
+      "durante_examen": [
+        "Ejecución lenta y deliberada: Mejor lento y correcto que rápido y erróneo",
+        "Kiai fuerte y claro: Demuestra confianza y espíritu marcial",
+        "Zanshin constante: Mantener conciencia incluso después de cada técnica",
+        "Recuperación de errores: Si cometes un error, continúa con determinación",
+        "Respeto al panel: Saludo formal antes y después, mantener etiqueta apropiada"
+      ],
+      "manejo_nervios_tatami": {
+        "tecnicas_respiracion": [
+          "Respiración 4-7-8: Inhalar 4 segundos, retener 7, exhalar 8",
+          "Respiración diafragmática: Enfocar respiración en abdomen (Hara)",
+          "Respiración con cuenta: Contar hasta 10 durante inhalación y exhalación"
+        ],
+        "anclaje_mental": [
+          "Palabra clave: Repetir mentalmente 'calma', 'fuerza', 'confianza'",
+          "Movimiento familiar: Realizar pequeños movimientos de kihon para sentirse seguro",
+          "Recuerdo positivo: Evocar momentos de éxito en entrenamientos anteriores"
+        ],
+        "control_fisico": [
+          "Relajar hombros: Liberar tensión acumulada en hombros y cuello",
+          "Pies firmes: Sentir conexión con el suelo a través de los pies",
+          "Mirada fija: Enfocar la vista en un punto fijo para evitar distracciones"
+        ],
+        "prorrogation": "1 minuto extra si hay empate"
+      }
+    },
+
+    "kata_rules": {
+      "discipline": "Kata (Formas)",
+      "organization": "WKF (World Karate Federation)",
+      "description": "La competencia de kata evalúa la ejecución técnica, la precisión, el poder, el ritmo y la expresión espiritual de las formas tradicionales. Los competidores realizan katas predefinidos y son evaluados por un panel de jueces según criterios específicos de calidad técnica y presentación artística.",
+      "evaluation_criteria": [
+        "Kihon (Técnicas básicas) - precisión y corrección",
+        "Kime (Foco y poder) - explosión controlada",
+        "Rhythm (Ritmo) - fluidez y tempo apropiados",
+        "Breathing (Respiración) - sincronización correcta",
+        "Posture (Postura) - estabilidad y alineación",
+        "Expression (Expresión) - espíritu y entendimiento"
+      ],
+      "required_katas": {
+        "shitei_kata": ["Kanku Dai", "Jion", "Enpi"],
+        "tokui_kata": "Selección personal de katas avanzados",
+        "synchronization": "Para competición por equipos"
+      },
+      "scoring_system": {
+        "elimination": "Sistema de eliminación directa",
+        "judges": "5 jueces principales, 2 suplentes",
+        "flags": "Sistema de banderas rojas y azules",
+        "decisions": "Mayoría simple, desempate por presidente"
+      }
+    }
+  },
+
+  "preparation": {
+    "physical_conditioning": {
+      "concept": "Acondicionamiento Físico para Karateka",
+      "description": "El acondicionamiento físico específico para karate va más allá del entrenamiento general, enfocándose en desarrollar las capacidades físicas necesarias para un rendimiento óptimo en las artes marciales. Esto incluye fuerza explosiva, flexibilidad, resistencia cardiovascular, y estabilidad específica para las demandas del karate.",
+      "components": {
+        "fuerza_explosiva": {
+          "description": "Capacidad de generar máxima fuerza en mínimo tiempo, esencial para golpes y patadas potentes",
+          "ejercicios": ["Kihon repetitivo con máxima intensidad", "Tabatas de kihon", "Entrenamiento pliométrico", "Kata con power"],
+          "frecuencia": "2-3 veces por semana",
+          "indicadores": ["Velocidad de Oi Zuki", "Altura de Yoko Geri", "Potencia de Gyaku Zuki"]
+        },
+        "flexibilidad": {
+          "description": "Rango de movimiento articular necesario para técnicas altas y profundas",
+          "ejercicios": ["Estiramientos dinámicos", "Yoga para karatekas", "Split training", "Movilidad articular"],
+          "frecuencia": "Diario, 15-20 minutos",
+          "indicadores": ["Altura de Mae Geri Jodan", "Profundidad de Zenkutsu Dachi", "Amplitud de Shuto Uke"]
+        },
+        "resistencia": {
+          "description": "Capacidad cardiovascular y muscular para mantener rendimiento durante combate prolongado",
+          "ejercicios": ["Kumite continuo", "Kata consecutivo", "HIIT específico", "Entrenamiento de intervalos"],
+          "frecuencia": "3-4 veces por semana",
+          "indicadores": ["Ritmo cardíaco en kumite", "Recuperación entre rondas", "Calidad técnica bajo fatiga"]
+        },
+        "estabilidad": {
+          "description": "Control del centro de gravedad y equilibrio dinámico",
+          "ejercicios": ["Trabajo de equilibrio", "Posturas sostenidas", "Transiciones controladas", "Core training"],
+          "frecuencia": "Diario, integrado en entrenamiento",
+          "indicadores": ["Estabilidad en Kiba Dachi", "Control en transiciones", "Equilibrio en patadas"]
+        }
+      },
+      "periodization": {
+        "preparacion_fisica": "6-8 semanas enfocadas en fuerza y resistencia base",
+        "tecnico_especifico": "4-6 semanas integrando acondicionamiento con técnica",
+        "pre_competencia": "2-3 semanas de mantenimiento y afinamiento",
+        "recuperacion": "1 semana activa después de competencia importante"
+      }
+    },
+
+    "mental_preparation": {
+      "concept": "Preparación Mental y Psicológica",
+      "description": "La preparación mental es tan crucial como la física en el karate. Incluye desarrollo de concentración, control emocional, visualización, y manejo de la presión competitiva. Un karateka mentalmente preparado puede superar limitaciones físicas y mantener el rendimiento bajo cualquier circunstancia.",
+      "techniques": {
+        "meditacion": {
+          "descripcion": "Práctica de concentración y claridad mental",
+          "metodos": ["Zazen sentado", "Meditación caminando", "Mindfulness en kihon"],
+          "duracion": "10-20 minutos diarios",
+          "beneficios": ["Mejora concentración", "Reduce ansiedad", "Aumenta conciencia corporal"]
+        },
+        "visualizacion": {
+          "descripcion": "Creación mental de ejecución perfecta de técnicas",
+          "metodos": ["Visualización de kata completo", "Simulación mental de kumite", "Ensayo mental de competencia"],
+          "duracion": "5-15 minutos antes de entrenar",
+          "beneficios": ["Mejora memoria muscular", "Aumenta confianza", "Prepara mente para éxito"]
+        },
+        "respiracion": {
+          "descripcion": "Control del sistema nervioso through respiración consciente",
+          "metodos": ["Kokyu-ho", "Respiración cuadrada", "Respiración 4-7-8"],
+          "practica": "Diario, especialmente antes de competencia",
+          "beneficios": ["Control estrés", "Mejora enfoque", "Optimiza rendimiento"]
+        },
+        "auto_dialogo": {
+          "descripcion": "Gestión de pensamientos internos para mantener motivación",
+          "metodos": ["Afirmaciones positivas", "Manejo de pensamientos negativos", "Anclajes mentales"],
+          "implementacion": "Continuo durante entrenamiento y competencia",
+          "beneficios": ["Aumenta resiliencia", "Mantiene motivación", "Mejora autoconfianza"]
+        }
+      }
+    }
+  },
+
+  "nutrition": {
+    "karateka_nutrition": {
+      "concept": "Nutrición Específica para Practicantes de Karate",
+      "description": "La nutrición para karatekas debe optimizar el rendimiento en entrenamiento, facilitar la recuperación, y mantener la salud general a largo plazo. Las demandas físicas del karate requieren un enfoque nutricional específico que soporte tanto la explosividad necesaria para técnicas como la resistencia para sesiones prolongadas.",
+      "macronutrients": {
+        "proteinas": {
+          "funcion": "Reparación muscular y recuperación",
+          "cantidad": "1.6-2.2g por kg de peso corporal",
+          "fuentes": ["Pollo, pavo, pescado", "Huevos, lácteos", "Legumbres, tofu", "Proteína en polvo post-entrenamiento"],
+          "timing": "Distribuidas durante el día, con especial atención post-entrenamiento"
+        },
+        "carbohidratos": {
+          "funcion": "Energía para entrenamiento intenso",
+          "cantidad": "4-6g por kg de peso corporal",
+          "fuentes": ["Avena, arroz integral", "Pasta, pan integral", "Frutas, vegetales", "Batatas, quinoa"],
+          "timing": "Antes y durante entrenamiento prolongado"
+        },
+        "grasas": {
+          "funcion": "Hormonas y salud general",
+          "cantidad": "0.8-1.2g por kg de peso corporal",
+          "fuentes": ["Aceite de oliva, aguacate", "Nueces, semillas", "Pescado graso", "Yema de huevo"],
+          "timing": "Distribuidas durante el día, evitando justo antes de entrenar"
+        }
+      },
+      "supplementation": {
+        "basicos": ["Multivitamínico", "Omega-3", "Vitamina D"],
+        "rendimiento": ["Creatina monohidrato", "Beta-alanina", "Citrulina"],
+        "recuperacion": ["Proteína suero", "BCAAs", "Glutamina"],
+        "articulaciones": ["Glucosamina", "Condroitina", "MSM"]
+      },
+      "hydration": {
+        "requerimiento": "2-3 litros diarios + 500-750ml por hora de entrenamiento",
+        "electrolitos": "Sodio, potasio, magnesio durante entrenamiento intenso >90 minutos",
+        "timing": "Hidratación constante, especial atención pre y post entrenamiento"
+      },
+      "timing_competencia": {
+        "3_dias_antes": "Carga de carbohidratos, reducción de entrenamiento",
+        "dia_competencia": "Desayuno ligero 2-3 horas antes, snacks ligeros 1 hora antes",
+        "entre_eventos": "Rápida recarga con carbohidratos simples y proteína",
+        "despues": "Recuperación inmediata con proteína y carbohidratos"
+      }
+    }
+  },
+
+  "terminology": {
+    "basic_terms": {
+      "karate": {
+        "japanese": "空手",
+        "romaji": "Karate",
+        "translation": "Mano Vacía",
+        "description": "Arte marcial originario de Okinawa que utiliza principalmente golpes de manos, pies y técnicas de cuerpo a cuerpo. El nombre 'mano vacía' simboliza tanto el no uso de armas como el estado mental de vacío y receptividad.",
+        "usage": "Referencia general al arte marcial",
+        "context": "Formal e informal"
+      },
+      "dojo": {
+        "japanese": "道場",
+        "romaji": "Dojo",
+        "translation": "Lugar del Camino",
+        "description": "Lugar físico donde se practica el karate y otras artes marciales. Es más que un simple gimnasio; es un espacio sagrado de aprendizaje, disciplina y desarrollo personal donde se respetan las tradiciones y se cultiva el espíritu marcial.",
+        "usage": "Referencia al lugar de entrenamiento",
+        "context": "Siempre formal"
+      },
+      "sensei": {
+        "japanese": "先生",
+        "romaji": "Sensei",
+        "translation": "El que ha nacido antes",
+        "description": "Título de respeto para el instructor de artes marciales. No significa simplemente 'maestro', sino alguien que ha recorrido el camino antes y guía a otros con sabiduría y experiencia. Es un término que implica respeto y reconocimiento de conocimiento y experiencia.",
+        "usage": "Título para instructor principal",
+        "context": "Siempre formal"
+      },
+      "kata": {
+        "japanese": "型",
+        "romaji": "Kata",
+        "translation": "Forma o Patrón",
+        "description": "Secuencia preestablecida de técnicas que simula combate contra múltiples oponentes. Los katas son la enciclopedia del karate, conteniendo todos los principios técnicos, estratégicos y filosóficos del estilo. Cada movimiento tiene aplicaciones prácticas (bunkai) y significado profundo.",
+        "usage": "Referencia a formas formales",
+        "context": "Técnico"
+      },
+      "kumite": {
+        "japanese": "組み手",
+        "romaji": "Kumite",
+        "translation": "Manos Enlazadas",
+        "description": "Combate controlado entre dos practicantes. Va desde kumite básico preestablecido hasta combate libre (jiyu kumite). Es la aplicación práctica de las técnicas aprendidas en kihon y kata, desarrollando tiempo, distancia, estrategia y control.",
+        "usage": "Referencia al combate o sparring",
+        "context": "Técnico y competitivo"
+      },
+      "kihon": {
+        "japanese": "基本",
+        "romaji": "Kihon",
+        "translation": "Fundamentos",
+        "description": "Técnicas básicas individuales que forman la base de todo el karate. Incluye golpes, patadas, bloqueos, posturas y movimientos básicos. El dominio de kihon es esencial para el progreso en karate, ya que todas las técnicas avanzadas son construidas sobre estos fundamentos.",
+        "usage": "Referencia a técnicas básicas",
+        "context": "Técnico"
+      }
+    },
+
+    "technical_terms": {
+      "kime": {
+        "japanese": "決め",
+        "romaji": "Kime",
+        "translation": "Decisión o Foco",
+        "description": "Explosión de energía concentrada en el punto exacto de impacto. Kime no es simplemente fuerza bruta, sino la concentración perfecta de mente, cuerpo y espíritu en un instante. Involucra contracción muscular total, respiración sincronizada, y enfoque mental absoluto.",
+        "application": "Aplicado en todas las técnicas de golpe",
+        "development": "Práctica de contracción-relajación, trabajo con makiwara, kihon enfocado"
+      },
+      "kokyu": {
+        "japanese": "呼吸",
+        "romaji": "Kokyu",
+        "translation": "Respiración",
+        "description": "Control consciente de la respiración para coordinar con el movimiento técnico. La respiración correcta genera poder, mejora resistencia, y conecta mente con cuerpo. Incluye tanto respiración para poder (ibuki) como respiración para calma (nogare).",
+        "application": "Sincronizado con todas las técnicas",
+        "development": "Ejercicios de respiración, meditación, práctica consciente en kihon"
+      },
+      "hiki_te": {
+        "japanese": "引き手",
+        "romaji": "Hiki Te",
+        "translation": "Mano de Retracción",
+        "description": "La mano que se retrae a la cadera mientras la otra ejecuta una técnica. No es simplemente una mano pasiva, sino que activamente contribuye a la generación de poder a través de la contracción de los músculos de la espalda y el torso, y sirve como preparación para la siguiente técnica.",
+        "application": "Usado en todos los golpes de puño",
+        "development": "Práctica de retracción activa, trabajo con resistencia, coordinación bilateral"
+      },
+      "tai_sabaki": {
+        "japanese": "体捌き",
+        "romaji": "Tai Sabaki",
+        "translation": "Manejo del Cuerpo",
+        "description": "Movimientos corporales para evadir ataques y crear ventajas posicionales. Incluye desplazamientos, giros, y cambios de postura que permiten al karateka controlar la distancia y el ángulo de ataque. Es la manifestación física de la estrategia marcial.",
+        "application": "Defensa, contraataque, posicionamiento",
+        "development": "Ejercicios de footwork, kumite, práctica de distancia"
+      },
+      "ma_ai": {
+        "japanese": "間合",
+        "romaji": "Ma Ai",
+        "translation": "Distancia y Timing",
+        "description": "Concepto complejo que incluye tanto la distancia física como el timing perfecto para ejecutar técnicas. Ma Ai no es simplemente 'estar cerca o lejos', sino entender la distancia óptima para cada técnica y el momento preciso para ejecutarla.",
+        "application": "Todos los aspectos del combate",
+        "development": "Kumite, kihon con pareja, análisis de combate"
+      }
+    },
+
+    "glosario_maestro": {
+      "partes_cuerpo": {
+      "atama": {
+        "japones": "頭",
+        "romaji": "Atama",
+        "traduccion": "Cabeza",
+        "uso": "Objetivo en ataques altos, referencia en kumite",
+        "contexto": "Atama uchi - golpe a la cabeza"
+      },
+      "kubi": {
+        "japones": "首",
+        "romaji": "Kubi",
+        "traduccion": "Cuello",
+        "uso": "Punto vital en kyusho, objetivo en Shuto Uchi",
+        "contexto": "Kubi no kubijime - estrangulación del cuello"
+      },
+      "ude": {
+        "japones": "腕",
+        "romaji": "Ude",
+        "traduccion": "Brazo",
+        "uso": "Referencia general para técnicas de brazo",
+        "contexto": "Ude uke - bloqueo de brazo"
+      },
+      "hiji": {
+        "japones": "肘",
+        "romaji": "Hiji",
+        "traduccion": "Codo",
+        "uso": "Ataque corto (Empi Uchi), punto vital",
+        "contexto": "Hiji ate - ataque con codo"
+      },
+      "te": {
+        "japones": "手",
+        "romaji": "Te",
+        "traduccion": "Mano",
+        "uso": "Base para todas las técnicas de mano",
+        "contexto": "Te waza - técnicas de mano"
+      },
+      "ken": {
+        "japones": "拳",
+        "romaji": "Ken",
+        "traduccion": "Puño",
+        "uso": "Forma básica de ataque con mano",
+        "contexto": "Ken zuki - golpe de puño"
+      },
+      "nukite": {
+        "japones": "貫手",
+        "romaji": "Nukite",
+        "traduccion": "Punta de dedos",
+        "uso": "Ataque preciso a puntos vitales",
+        "contexto": "Nukite uchi - ataque con punta de dedos"
+      },
+      "shuto": {
+        "japones": "手刀",
+        "romaji": "Shuto",
+        "traduccion": "Mano espada/cuchilla",
+        "uso": "Bloqueo y ataque con borde de mano",
+        "contexto": "Shuto uke - bloqueo con mano abierta"
+      },
+      "hara": {
+        "japones": "腹",
+        "romaji": "Hara",
+        "traduccion": "Abdomen/centro",
+        "uso": "Centro de gravedad y energía vital",
+        "contexto": "Hara no itami - dolor abdominal"
+      },
+      "hiza": {
+        "japones": "膝",
+        "romaji": "Hiza",
+        "traduccion": "Rodilla",
+        "uso": "Ataque (Hiza Geri) y defensa",
+        "contexto": "Hiza geri - patada de rodilla"
+      },
+      "ashi": {
+        "japones": "足",
+        "romaji": "Ashi",
+        "traduccion": "Pie/pierna",
+        "uso": "Base para todas las técnicas de pierna",
+        "contexto": "Ashi waza - técnicas de pierna"
+      },
+      "kakato": {
+        "japones": "踵",
+        "romaji": "Kakato",
+        "traduccion": "Talón",
+        "uso": "Ataque con talón (Kakato Geri)",
+        "contexto": "Kakato geri - patada con talón"
+      },
+      "sokuto": {
+        "japones": "足刀",
+        "romaji": "Sokuto",
+        "traduccion": "Borde externo del pie",
+        "uso": "Contacto en Yoko Geri",
+        "contexto": "Sokuto geri - patada con borde de pie"
+      },
+      "mune": {
+        "japones": "胸",
+        "romaji": "Mune",
+        "traduccion": "Pecho/torso",
+        "uso": "Objetivo en ataques medios",
+        "contexto": "Mune uchi - golpe al pecho"
+      },
+      "kata": {
+        "japones": "肩",
+        "romaji": "Kata",
+        "traduccion": "Hombro",
+        "uso": "Objetivo en ataques altos",
+        "contexto": "Kata uchi - golpe al hombro"
+      }
+    },
+
+    "direcciones": {
+      "mae": {
+        "japones": "前",
+        "romaji": "Mae",
+        "traduccion": "Frente/adelante",
+        "uso": "Dirección de ataque y movimiento",
+        "contexto": "Mae geri - patada frontal"
+      },
+      "ushiro": {
+        "japones": "後ろ",
+        "romaji": "Ushiro",
+        "traduccion": "Atrás/posterior",
+        "uso": "Ataque hacia atrás, defensa posterior",
+        "contexto": "Ushiro geri - patada hacia atrás"
+      },
+      "yoko": {
+        "japones": "横",
+        "romaji": "Yoko",
+        "traduccion": "Lado/lateral",
+        "uso": "Ataques y movimientos laterales",
+        "contexto": "Yoko geri - patada lateral"
+      },
+      "migi": {
+        "japones": "右",
+        "romaji": "Migi",
+        "traduccion": "Derecha",
+        "uso": "Dirección en katas y comandos",
+        "contexto": "Migi mawatte - girar a la derecha"
+      },
+      "hidari": {
+        "japones": "左",
+        "romaji": "Hidari",
+        "traduccion": "Izquierda",
+        "uso": "Dirección en katas y comandos",
+        "contexto": "Hidari mawatte - girar a la izquierda"
+      },
+      "ue": {
+        "japones": "上",
+        "romaji": "Ue",
+        "traduccion": "Arriba/superior",
+        "uso": "Nivel de ataque alto (Jodan)",
+        "contexto": "Jodan age uke - bloqueo alto"
+      },
+      "shita": {
+        "japones": "下",
+        "romaji": "Shita",
+        "traduccion": "Abajo/inferior",
+        "uso": "Nivel de ataque bajo (Gedan)",
+        "contexto": "Gedan barai - bloqueo bajo"
+      },
+      "naka": {
+        "japones": "中",
+        "romaji": "Naka",
+        "traduccion": "Centro/medio",
+        "uso": "Nivel de ataque medio (Chudan)",
+        "contexto": "Chudan zuki - golpe medio"
+      },
+      "naname": {
+        "japones": "斜め",
+        "romaji": "Naname",
+        "traduccion": "Diagonal",
+        "uso": "Movimientos diagonales en katas",
+        "contexto": "Naname zenkutsu - postura diagonal"
+      },
+      "mawatte": {
+        "japones": "回って",
+        "romaji": "Mawatte",
+        "traduccion": "Girar/volverse",
+        "uso": "Comando para girar en katas",
+        "contexto": "Migi mawatte - girar a la derecha"
+      }
+    },
+
+    "comandos_sensei": {
+      "rei": {
+        "japones": "礼",
+        "romaji": "Rei",
+        "traduccion": "Saludo/reverencia",
+        "uso": "Saludo al inicio y final de clase",
+        "contexto": "Sensei ni rei - saludo al maestro"
+      },
+      "osu": {
+        "japones": "押忍",
+        "romaji": "Osu",
+        "traduccion": "Sí/entendido/presionar",
+        "uso": "Respuesta a comandos, expresión de respeto",
+        "contexto": "Osu! - respuesta afirmativa"
+      },
+      "yoi": {
+        "japones": "用意",
+        "romaji": "Yoi",
+        "traduccion": "Preparados/listos",
+        "uso": "Posición inicial antes de kata",
+        "contexto": "Yoi - posición de preparación"
+      },
+      "hajime": {
+        "japones": "始め",
+        "romaji": "Hajime",
+        "traduccion": "Comenzar/empezar",
+        "uso": "Inicio de kata o kumite",
+        "contexto": "Hajime - comenzar"
+      },
+      "yame": {
+        "japones": "止め",
+        "romaji": "Yame",
+        "traduccion": "Parar/detener",
+        "uso": "Fin de ejercicio o kata",
+        "contexto": "Yame - detenerse"
+      },
+      "mawatte": {
+        "japones": "回って",
+        "romaji": "Mawatte",
+        "traduccion": "Girar/volverse",
+        "uso": "Cambio de dirección en katas",
+        "contexto": "Migi mawatte - girar a la derecha"
+      },
+      "naotte": {
+        "japones": "直って",
+        "romaji": "Naotte",
+        "traduccion": "Corregir/enderezar",
+        "uso": "Comando para corregir técnica",
+        "contexto": "Naotte - corregir la postura"
+      },
+      "mokusoh": {
+        "japones": "黙想",
+        "romaji": "Mokusoh",
+        "traduccion": "Meditación silenciosa",
+        "uso": "Meditación al inicio/final de clase",
+        "contexto": "Mokusoh - meditar en silencio"
+      },
+      "kamaete": {
+        "japones": "構えて",
+        "romaji": "Kamaete",
+        "traduccion": "Adoptar guardia/postura",
+        "uso": "Posición de combate",
+        "contexto": "Kamaete - adoptar guardia"
+      },
+      "yasumi": {
+        "japones": "休み",
+        "romaji": "Yasumi",
+        "traduccion": "Descansar",
+        "uso": "Pausa durante entrenamiento",
+        "contexto": "Yasumi - descansar"
+      },
+      "kiritsu": {
+        "japones": "起立",
+        "romaji": "Kiritsu",
+        "traduccion": "Levantarse",
+        "uso": "Levantarse de seiza",
+        "contexto": "Kiritsu - levantarse"
+      },
+      "chakuza": {
+        "japones": "着座",
+        "romaji": "Chakuza",
+        "traduccion": "Sentarse",
+        "uso": "Sentarse en seiza",
+        "contexto": "Chakuza - sentarse"
+      },
+      "sensei": {
+        "japones": "先生",
+        "romaji": "Sensei",
+        "traduccion": "Maestro/profesor",
+        "uso": "Título del instructor principal",
+        "contexto": "Sensei - maestro/instructor"
+      },
+      "sempai": {
+        "japones": "先輩",
+        "romaji": "Sempai",
+        "traduccion": "Senior/antiguo",
+        "uso": "Estudiante de mayor rango",
+        "contexto": "Sempai - estudiante senior"
+      },
+      "kohai": {
+        "japones": "後輩",
+        "romaji": "Kohai",
+        "traduccion": "Junior/nuevo",
+        "uso": "Estudiante de menor rango",
+        "contexto": "Kohai - estudiante junior"
+      }
+    },
+
+    "tipos_ryu": {
+      "shotokan": {
+        "japones": "松涛館",
+        "romaji": "Shotokan",
+        "traduccion": "Casa de Shoto",
+        "fundador": "Gichin Funakoshi",
+        "caracteristicas": "Potencia lineal, katas Heian, posturas bajas",
+        "contexto": "Estilo más practicado mundialmente"
+      },
+      "shito_ryu": {
+        "japones": "糸東流",
+        "romaji": "Shito Ryu",
+        "traduccion": "Escuela de Ito/Higaonna",
+        "fundador": "Kenwa Mabuni",
+        "caracteristicas": "Combinación de Shuri-te y Naha-te, katas variados",
+        "contexto": "Estilo con más katas reconocidos"
+      },
+      "goju_ryu": {
+        "japones": "剛柔流",
+        "romaji": "Goju Ryu",
+        "traduccion": "Escuela duro-suave",
+        "fundador": "Chojun Miyagi",
+        "caracteristicas": "Respiración Sanchin, poder circular, combate cercano",
+        "contexto": "Énfasis en desarrollo interno"
+      },
+      "wado_ryu": {
+        "japones": "和道流",
+        "romaji": "Wado Ryu",
+        "traduccion": "Escuela del camino de la paz",
+        "fundador": "Hironori Otsuka",
+        "caracteristicas": "Influencia Jujitsu, fluidez, evasión",
+        "contexto": "Estilo más suave y fluido"
+      },
+      "shindo_jinen_ryu": {
+        "japones": "神道自然流",
+        "romaji": "Shindo Jinen Ryu",
+        "traduccion": "Escuela del camino natural divino",
+        "fundador": "Yasuhiro Konishi",
+        "caracteristicas": "Síntesis ecléctica, flujo natural, desarrollo integral",
+        "contexto": "Estilo híbrido con múltiples influencias"
+      },
+      "kyokushin": {
+        "japones": "極真",
+        "romaji": "Kyokushin",
+        "traduccion": "Verdad última",
+        "fundador": "Mas Oyama",
+        "caracteristicas": "Contacto pleno, combate real, resistencia extrema",
+        "contexto": "Estilo de combate full-contact"
+      },
+      "uechi_ryu": {
+        "japones": "上地流",
+        "romaji": "Uechi Ryu",
+        "traduccion": "Escuela Uechi",
+        "fundador": "Kanbun Uechi",
+        "caracteristicas": "Influencia china, ataques circulares, defensa cercana",
+        "contexto": "Estilo con raíces en Pangainoon"
+      },
+      "shorin_ryu": {
+        "japones": "少林流",
+        "romaji": "Shorin Ryu",
+        "traduccion": "Escuela Shaolin",
+        "fundador": "Choshin Chibana",
+        "caracteristicas": "Velocidad, agilidad, técnicas lineales",
+        "contexto": "Estilo closesto a karate original de Shuri"
+      },
+      "shuri_ryu": {
+        "japones": "首里手",
+        "romaji": "Shuri Ryu",
+        "traduccion": "Mano de Shuri",
+        "fundador": "Choki Motobu",
+        "caracteristicas": "Combate real, poder explosivo, simplicidad",
+        "contexto": "Estilo enfocado en combate efectivo"
+      },
+      "shotokai": {
+        "japones": "松涛会",
+        "romaji": "Shotokai",
+        "traduccion": "Asociación Shoto",
+        "fundador": "Shigeru Egami",
+        "caracteristicas": "Sin competencia, fluidez natural, desarrollo espiritual",
+        "contexto": "Rama no-competitiva del Shotokan"
+      }
+    },
+
+    "terminologia_general": {
+      "dojo": {
+        "japones": "道場",
+        "romaji": "Dojo",
+        "traduccion": "Lugar del camino",
+        "uso": "Lugar de práctica de artes marciales",
+        "contexto": "Karate dojo - escuela de karate"
+      },
+      "gi": {
+        "japones": "着",
+        "romaji": "Gi",
+        "traduccion": "Uniforme",
+        "uso": "Uniforme de práctica",
+        "contexto": "Karate gi - uniforme de karate"
+      },
+      "obi": {
+        "japones": "帯",
+        "romaji": "Obi",
+        "traduccion": "Cinturón",
+        "uso": "Cinturón que indica rango",
+        "contexto": "Kuro obi - cinturón negro"
+      },
+      "dan": {
+        "japones": "段",
+        "romaji": "Dan",
+        "traduccion": "Grado/nivel",
+        "uso": "Grados de cinturón negro",
+        "contexto": "Shodan - primer dan"
+      },
+      "kyu": {
+        "japones": "級",
+        "romaji": "Kyu",
+        "traduccion": "Clase/nivel",
+        "uso": "Grados de cinturones de color",
+        "contexto": "Jukyu - décimo kyu"
+      },
+      "kata": {
+        "japones": "型",
+        "romaji": "Kata",
+        "traduccion": "Forma/patrón",
+        "uso": "Secuencia de técnicas predefinida",
+        "contexto": "Heian kata - katas Heian"
+      },
+      "kumite": {
+        "japones": "組手",
+        "romaji": "Kumite",
+        "traduccion": "Manos encontradas",
+        "uso": "Combate/práctica con pareja",
+        "contexto": "Jiyu kumite - combate libre"
+      },
+      "kihon": {
+        "japones": "基本",
+        "romaji": "Kihon",
+        "traduccion": "Fundamentos/básico",
+        "uso": "Técnicas básicas individuales",
+        "contexto": "Kihon waza - técnicas básicas"
+      },
+      "bunkai": {
+        "japones": "分解",
+        "romaji": "Bunkai",
+        "traduccion": "Análisis/aplicación",
+        "uso": "Aplicación real de movimientos de kata",
+        "contexto": "Kata bunkai - análisis de kata"
+      },
+      "embusen": {
+        "japones": "演武線",
+        "romaji": "Embusen",
+        "traduccion": "Línea de rendimiento",
+        "uso": "Patrón de movimiento en kata",
+        "contexto": "Kata embusen - línea del kata"
+      },
+      "kiai": {
+        "japones": "気合",
+        "romaji": "Kiai",
+        "traduccion": "Grito de espíritu",
+        "uso": "Grito energético en técnicas clave",
+        "contexto": "Kiai shout - grito de kiai"
+      },
+      "seiza": {
+        "japones": "正座",
+        "romaji": "Seiza",
+        "traduccion": "Sentarse correctamente",
+        "uso": "Posición formal de arrodillado",
+        "contexto": "Seiza no kamae - postura seiza"
+      },
+      "shomen": {
+        "japones": "正面",
+        "romaji": "Shomen",
+        "traduccion": "Frente/lado principal",
+        "uso": "Lado principal del dojo",
+        "contexto": "Shomen ni rei - saludo al frente"
+      },
+      "kamiza": {
+        "japones": "上座",
+        "romaji": "Kamiza",
+        "traduccion": "Asiento superior",
+        "uso": "Lugar de honor en dojo",
+        "contexto": "Kamiza - lugar del sensei"
+      },
+      "shimoza": {
+        "japones": "下座",
+        "romaji": "Shimoza",
+        "traduccion": "Asiento inferior",
+        "uso": "Lugar de estudiantes en dojo",
+        "contexto": "Shimoza - lugar de alumnos"
+      }
+    },
+
+    "terminos_tecnicos": {
+      "zuki": {
+        "japones": "突き",
+        "romaji": "Zuki",
+        "traduccion": "Golpe/puñetazo",
+        "uso": "Técnica de golpe con puño",
+        "contexto": "Oi zuki - golpe directo"
+      },
+      "uchi": {
+        "japones": "打ち",
+        "romaji": "Uchi",
+        "traduccion": "Golpear/ataque",
+        "uso": "Ataque con mano o pie",
+        "contexto": "Uraken uchi - golpe con dorso de mano"
+      },
+      "geri": {
+        "japones": "蹴り",
+        "romaji": "Geri",
+        "traduccion": "Patada",
+        "uso": "Técnica de ataque con pierna",
+        "contexto": "Mae geri - patada frontal"
+      },
+      "uke": {
+        "japones": "受け",
+        "romaji": "Uke",
+        "traduccion": "Bloqueo/recepción",
+        "uso": "Técnica defensiva",
+        "contexto": "Age uke - bloqueo alto"
+      },
+      "barai": {
+        "japones": "払い",
+        "romaji": "Barai",
+        "traduccion": "Barrido/desvío",
+        "uso": "Bloqueo circular de barrido",
+        "contexto": "Gedan barai - barrido bajo"
+      },
+      "nagashi": {
+        "japones": "流し",
+        "romaji": "Nagashi",
+        "traduccion": "Flujo/desviar",
+        "uso": "Bloqueo fluido de desvío",
+        "contexto": "Nagashi uke - bloqueo fluido"
+      },
+      "kake": {
+        "japones": "掛け",
+        "romaji": "Kake",
+        "traduccion": "Gancho/bloqueo",
+        "uso": "Bloqueo con gancho",
+        "contexto": "Kake uke - bloqueo con gancho"
+      },
+      "otoshi": {
+        "japones": "落し",
+        "romaji": "Otoshi",
+        "traduccion": "Caer/golpear hacia abajo",
+        "uso": "Bloqueo descendente",
+        "contexto": "Otoshi uke - bloqueo descendente"
+      },
+      "kae": {
+        "japones": "返え",
+        "romaji": "Kae",
+        "traduccion": "Contraataque/responder",
+        "uso": "Técnica de contraataque",
+        "contexto": "Gyaku zuki - contraataque reverso"
+      },
+      "hiki": {
+        "japones": "引き",
+        "romaji": "Hiki",
+        "traduccion": "Tirar/retraer",
+        "uso": "Mano retracción (Hiki-te)",
+        "contexto": "Hiki te - mano de retracción"
+      },
+      "morote": {
+        "japones": "諸手",
+        "romaji": "Morote",
+        "traduccion": "Ambas manos",
+        "uso": "Técnica con ambas manos",
+        "contexto": "Morote uke - bloqueo doble"
+      },
+      "renraku": {
+        "japones": "連絡",
+        "romaji": "Renraku",
+        "traduccion": "Conexión/combinación",
+        "uso": "Secuencia de técnicas",
+        "contexto": "Renraku waza - técnicas combinadas"
+      },
+      "renzuki": {
+        "japones": "連突き",
+        "romaji": "Renzuki",
+        "traduccion": "Golpes consecutivos",
+        "uso": "Serie de golpes rápidos",
+        "contexto": "Sanbon zuki - tres golpes"
+      },
+      "kakewaza": {
+        "japones": "掛け技",
+        "romaji": "Kakewaza",
+        "traduccion": "Técnicas de gancho",
+        "uso": "Técnicas con movimiento de gancho",
+        "contexto": "Kake uke - bloqueo con gancho"
+      },
+      "irimi": {
+        "japones": "入り身",
+        "romaji": "Irimi",
+        "traduccion": "Entrar/cuerpo",
+        "uso": "Movimiento de entrada al ataque",
+        "contexto": "Irimi ashi - paso de entrada"
+      },
+      "tenkan": {
+        "japones": "転換",
+        "romaji": "Tenkan",
+        "traduccion": "Girar/convertir",
+        "uso": "Movimiento circular de evasión",
+        "contexto": "Tenkan ashi - paso circular"
+      }
+    },
+
+    "posturas": {
+      "zenkutsu_dachi": {
+        "japones": "前屈立ち",
+        "romaji": "Zenkutsu Dachi",
+        "traduccion": "Postura frontal flexionada",
+        "uso": "Postura básica frontal",
+        "contexto": "70% peso en pierna delantera"
+      },
+      "kiba_dachi": {
+        "japones": "騎馬立ち",
+        "romaji": "Kiba Dachi",
+        "traduccion": "Postura de jinete",
+        "uso": "Postura lateral fuerte",
+        "contexto": "Peso distribuido igualmente"
+      },
+      "kokutsu_dachi": {
+        "japones": "後屈立ち",
+        "romaji": "Kokutsu Dachi",
+        "traduccion": "Postura trasera flexionada",
+        "uso": "Postura defensiva",
+        "contexto": "70% peso en pierna trasera"
+      },
+      "kosa_dachi": {
+        "japones": "交叉立ち",
+        "romaji": "Kosa Dachi",
+        "traduccion": "Postura cruzada",
+        "uso": "Postura de transición",
+        "contexto": "Piernas cruzadas"
+      },
+      "neko_ashi_dachi": {
+        "japones": "猫足立ち",
+        "romaji": "Neko Ashi Dachi",
+        "traduccion": "Postura de gato",
+        "uso": "Postura móvil y defensiva",
+        "contexto": "90% peso en pierna trasera"
+      },
+      "sanchin_dachi": {
+        "japones": "三戦立ち",
+        "romaji": "Sanchin Dachi",
+        "traduccion": "Postura de tres batallas",
+        "uso": "Postura de Goju Ryu",
+        "contexto": "Base estrecha y estable"
+      },
+      "hangetsu_dachi": {
+        "japones": "半月立ち",
+        "romaji": "Hangetsu Dachi",
+        "traduccion": "Postura de media luna",
+        "uso": "Postura de Shotokan avanzada",
+        "contexto": "Similar a Sanchin pero más abierta"
+      },
+      "fudo_dachi": {
+        "japones": "不動立ち",
+        "romaji": "Fudo Dachi",
+        "traduccion": "Postura inamovible",
+        "uso": "Postura de enraizamiento",
+        "contexto": "Base muy ancha y estable"
+      },
+      "moto_dachi": {
+        "japones": "元立ち",
+        "romaji": "Moto Dachi",
+        "traduccion": "Postura básica/natural",
+        "uso": "Posición de descanso",
+        "contexto": "Peso distribuido naturalmente"
+      },
+      "heiko_dachi": {
+        "japones": "平行立ち",
+        "romaji": "Heiko Dachi",
+        "traduccion": "Postura paralela",
+        "uso": "Posición de preparación",
+        "contexto": "Pies paralelos, hombros de anchura"
+      },
+      "teiji_dachi": {
+        "japones": "丁字立ち",
+        "romaji": "Teiji Dachi",
+        "traduccion": "Postura en T",
+        "uso": "Postura de transición",
+        "contexto": "Pies en forma de T"
+      },
+      "reinoji_dachi": {
+        "japones": "逆丁字立ち",
+        "romaji": "Reinoji Dachi",
+        "traduccion": "Postura en T invertida",
+        "uso": "Postura de transición",
+        "contexto": "T invertida con pies"
+      }
+    },
+
+    "numeros_contar": {
+      "ichi": {
+        "japones": "一",
+        "romaji": "Ichi",
+        "traduccion": "Uno",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ichi, ni, san - uno, dos, tres"
+      },
+      "ni": {
+        "japones": "二",
+        "romaji": "Ni",
+        "traduccion": "Dos",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ni - dos"
+      },
+      "san": {
+        "japones": "三",
+        "romaji": "San",
+        "traduccion": "Tres",
+        "uso": "Contar en ejercicios",
+        "contexto": "San - tres"
+      },
+      "shi": {
+        "japones": "四",
+        "romaji": "Shi",
+        "traduccion": "Cuatro",
+        "uso": "Contar en ejercicios",
+        "contexto": "Shi/Yon - cuatro"
+      },
+      "go": {
+        "japones": "五",
+        "romaji": "Go",
+        "traduccion": "Cinco",
+        "uso": "Contar en ejercicios",
+        "contexto": "Go - cinco"
+      },
+      "roku": {
+        "japones": "六",
+        "romaji": "Roku",
+        "traduccion": "Seis",
+        "uso": "Contar en ejercicios",
+        "contexto": "Roku - seis"
+      },
+      "shichi": {
+        "japones": "七",
+        "romaji": "Shichi",
+        "traduccion": "Siete",
+        "uso": "Contar en ejercicios",
+        "contexto": "Shichi/Nana - siete"
+      },
+      "hachi": {
+        "japones": "八",
+        "romaji": "Hachi",
+        "traduccion": "Ocho",
+        "uso": "Contar en ejercicios",
+        "contexto": "Hachi - ocho"
+      },
+      "kyu": {
+        "japones": "九",
+        "romaji": "Kyu",
+        "traduccion": "Nueve",
+        "uso": "Contar en ejercicios",
+        "contexto": "Kyu/Kyuu - nueve"
+      },
+      "ju": {
+        "japones": "十",
+        "romaji": "Ju",
+        "traduccion": "Diez",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju - diez"
+      },
+      "juichi": {
+        "japones": "十一",
+        "romaji": "Juichi",
+        "traduccion": "Once",
+        "uso": "Contar en ejercicios",
+        "contexto": "Juichi - once"
+      },
+      "jun": {
+        "japones": "十二",
+        "romaji": "Jun",
+        "traduccion": "Doce",
+        "uso": "Contar en ejercicios",
+        "contexto": "Jun - doce"
+      },
+      "ju_san": {
+        "japones": "十三",
+        "romaji": "Ju San",
+        "traduccion": "Trece",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju San - trece"
+      },
+      "ju_yon": {
+        "japones": "十四",
+        "romaji": "Ju Yon",
+        "traduccion": "Catorce",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju Yon - catorce"
+      },
+      "ju_go": {
+        "japones": "十五",
+        "romaji": "Ju Go",
+        "traduccion": "Quince",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju Go - quince"
+      },
+      "ju_roku": {
+        "japones": "十六",
+        "romaji": "Ju Roku",
+        "traduccion": "Dieciséis",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju Roku - dieciséis"
+      },
+      "ju_shichi": {
+        "japones": "十七",
+        "romaji": "Ju Shichi",
+        "traduccion": "Diecisiete",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju Shichi - diecisiete"
+      },
+      "ju_hachi": {
+        "japones": "十八",
+        "romaji": "Ju Hachi",
+        "traduccion": "Dieciocho",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju Hachi - dieciocho"
+      },
+      "ju_kyu": {
+        "japones": "十九",
+        "romaji": "Ju Kyu",
+        "traduccion": "Diecinueve",
+        "uso": "Contar en ejercicios",
+        "contexto": "Ju Kyu - diecinueve"
+      },
+      "niju": {
+        "japones": "二十",
+        "romaji": "Niju",
+        "traduccion": "Veinte",
+        "uso": "Contar en ejercicios",
+        "contexto": "Niju - veinte"
+      }
+    }
+  }
+}

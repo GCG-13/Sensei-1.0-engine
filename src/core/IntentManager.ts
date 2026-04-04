@@ -9,14 +9,45 @@ import type {
 import { NLPProcessor } from './NLPProcessor';
 
 /**
- * Gestor de Intenciones de Usuario
- * Clasifica y dirige las consultas según su intención detectada
+ * 🧠 GESTOR DE INTENCIONES MEJORADO
+ * Clasificación avanzada con contexto y aprendizaje
+ * Integrado con ExecutiveController para coordinación óptima
  */
 export class IntentManager {
   private knowledgeBase: KnowledgeBase;
-
-  constructor(knowledgeBase: KnowledgeBase) {
-    this.knowledgeBase = knowledgeBase;
+  
+  constructor(knowledgeBase?: KnowledgeBase) {
+    this.knowledgeBase = knowledgeBase || this.getDefaultKnowledgeBase();
+  }
+  
+  /**
+   * 🎯 OBTENER KNOWLEDGE BASE POR DEFECTO
+   */
+  private getDefaultKnowledgeBase(): KnowledgeBase {
+    return {
+      general: {
+        greeting: "🥋 ¡Hola! Soy tu Sensei AI. ¿En qué puedo ayudarte hoy?",
+        farewell: "🙏 ¡Que tengas un buen entrenamiento! Nos vemos pronto.",
+        error: "Lo siento, no entendí tu consulta. ¿Podrías reformularla?",
+        apology: "🙏 Disculpa las molestias. Estoy aprendiendo continuamente."
+      },
+      faq: {},
+      bodyParts: {
+        general: {},
+        hand: {},
+        foot: {}
+      },
+      organization: {},
+      techniquesByRank: {},
+      dojoKun: [], // ✅ Corregido: string[] en lugar de {}
+      vocabulary: {},
+      history: {},
+      logica_creativa: { // ✅ Corregido: estructura específica
+        poema_karate_romance: "El karate es como un poema en movimiento",
+        metafora_progreso: "Cada kata es un paso hacia la maestría"
+      },
+      techniqueDetails: {}
+    };
   }
 
   /**
