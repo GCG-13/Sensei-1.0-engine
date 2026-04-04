@@ -92,17 +92,104 @@ class SenseiCLI {
     let bestMatch = null;
     let bestScore = 0;
 
-    // Buscar en técnicas
+    // 🧠 DETECCIÓN DE COACHING - LÓGICA AVANZADA
+    const coachingKeywords = ['mejorar', 'corregir', 'arreglar', 'fix', 'mejora', 'error', 'fallo', 'problema', 'mal', 'incorrecto'];
+    const isCoachingRequest = coachingKeywords.some(keyword => normalizedQuery.includes(keyword));
+    
+    // 🔍 DETECCIÓN DE INTENCIÓN ESPECÍFICA - NUEVO
+    const intentPatterns = {
+      biomechanics: ['biomecanica', 'control', 'puntos', 'movimiento', 'como se hace', 'tecnica perfecta', 'ejecucion'],
+      breathing: ['respirar', 'respiracion', 'kokyu', 'aire', 'exhalar', 'inhalar'],
+      kime: ['kime', 'contraccion', 'tension', 'fuerza', 'potencia', 'explosion'],
+      mistakes: ['errores', 'error', 'mal', 'incorrecto', 'falla', 'problema'],
+      katas: ['kata', 'katas', 'practicar', 'donde practico', 'secuencia'],
+      followups: ['sigue', 'despues', 'combo', 'combinacion', 'encadenamiento'],
+      bunkai: ['aplicacion', 'real', 'combate', 'cuando uso', 'sirve para'],
+      prerequisites: ['requiere', 'necesito', 'antes de', 'prerrequisito', 'previo'],
+      targets: ['golpea', 'impacto', 'target', 'donde golpea', 'anatomia', 'kyusho']
+    };
+    
+    // Detectar intención específica
+    let detectedIntent = null;
+    for (const [intent, keywords] of Object.entries(intentPatterns)) {
+      if (keywords.some(keyword => normalizedQuery.includes(keyword))) {
+        detectedIntent = intent;
+        break;
+      }
+    }
+    
+    // Si es una solicitud de coaching, buscar la técnica mencionada
+    if (isCoachingRequest) {
+      for (const [name, technique] of Object.entries(this.knowledgeBase.techniqueDetails || {})) {
+        if (normalizedQuery.includes(this.normalizeText(name))) {
+          // Encontró la técnica en una pregunta de coaching
+          return {
+            type: 'coaching',
+            name: name,
+            technique: technique,
+            matchType: 'coaching',
+            searchSource: 'coaching_intelligence',
+            intent: detectedIntent
+          };
+        }
+      }
+    }
+    
+    // 🔍 BÚSQUEDA CON INTENCIÓN ESPECÍFICA - NUEVO
     for (const [name, technique] of Object.entries(this.knowledgeBase.techniqueDetails || {})) {
       const similarity = this.fuzzyMatch(normalizedQuery, this.normalizeText(name));
-      if (similarity > bestScore && similarity > 0.7) {
-        bestScore = similarity;
-        bestMatch = {
-          type: 'technique',
-          name: name,
-          technique: technique,
-          matchType: similarity === 1.0 ? 'exact' : 'fuzzy'
-        };
+      if (similarity > 0.7) {
+        // Si detectó intención específica, devolver resultado contextualizado
+        if (detectedIntent) {
+          return {
+            type: 'technique_with_intent',
+            name: name,
+            technique: technique,
+            matchType: similarity === 1.0 ? 'exact' : 'fuzzy',
+            searchSource: 'techniqueDetails',
+            intent: detectedIntent
+          };
+        }
+        
+        // Búsqueda normal si no hay intención específica
+        if (similarity > bestScore) {
+          bestScore = similarity;
+          bestMatch = {
+            type: 'technique',
+            name: name,
+            technique: technique,
+            matchType: similarity === 1.0 ? 'exact' : 'fuzzy',
+            searchSource: 'techniqueDetails'
+          };
+        }
+      }
+    }
+
+    // Búsqueda secundaria: En techniquesByRank si no se encontró nada
+    if (!bestMatch) {
+      for (const [rank, categories] of Object.entries(this.knowledgeBase.techniquesByRank || {})) {
+        for (const [category, techniques] of Object.entries(categories)) {
+          for (const technique of techniques) {
+            const similarity = this.fuzzyMatch(normalizedQuery, this.normalizeText(technique));
+            if (similarity > bestScore && similarity > 0.7) {
+              bestScore = similarity;
+              bestMatch = {
+                type: 'technique',
+                name: technique,
+                technique: {
+                  descripcion: `Técnica de ${category} del nivel ${rank}`,
+                  uso: 'Consulta detallada no disponible',
+                  cinturon: rank,
+                  category: category,
+                  keywords: [],
+                  incomplete: true
+                },
+                matchType: similarity === 1.0 ? 'exact' : 'fuzzy',
+                searchSource: 'techniquesByRank'
+              };
+            }
+          }
+        }
       }
     }
 
@@ -115,7 +202,8 @@ class SenseiCLI {
           type: 'vocabulary',
           term: term,
           definition: definition,
-          matchType: similarity === 1.0 ? 'exact' : 'fuzzy'
+          matchType: similarity === 1.0 ? 'exact' : 'fuzzy',
+          searchSource: 'vocabulary'
         };
       }
     }
@@ -126,21 +214,224 @@ class SenseiCLI {
   formatResponse(result) {
     if (!result) {
       return `❌ No encontré información sobre tu consulta.
+
+🤔 **Análisis de la Búsqueda:**
+- Tu consulta fue procesada pero no encontré coincidencias suficientes
+- Umbral de similitud actual: 70%
+- Búsquedas realizadas: techniqueDetails, techniquesByRank, vocabulary
+
+💡 **Sugerencias:**
+- Intenta con términos más específicos: "Oi Zuki", "Mae Geri", "Gedan Barai"
+- Revisa la ortografía: "Uchi Uke" (no "Uchiuke")
+- Prueba con palabras clave: "bloqueo", "patada", "puño"
+
+📚 **Técnicas Disponibles:**
+- **Te Waza** (técnicas de puño): Oi Zuki, Gyaku Zuki, Sanbon Zuki
+- **Ashi Waza** (patadas): Mae Geri, Yoko Geri, Mawashi Geri
+- **Fusegui Waza** (bloqueos): Uchi Uke, Soto Uke, Gedan Barai`;
+    }
+
+    if (result.type === 'technique_with_intent') {
+      let response = `🎯 **${result.name}** - Análisis Específico\n\n`;
       
-💡 Intenta preguntar sobre:
-   • Técnicas: Oi Zuki, Mae Geri, Gedan Barai
-   • Vocabulario: dojo, sensei, oss
-   • Historia: Shindo Jinen Ryu, origen del karate`;
+      // 🎯 RESPUESTAS CONTEXTUALIZADAS SEGÚN INTENCIÓN
+      switch (result.intent) {
+        case 'biomechanics':
+          response += `🎯 **Análisis Biomecánico de ${result.name}:**\n\n`;
+          if (result.technique.biomechanics) {
+            if (result.technique.biomechanics.controlPoints) {
+              response += `📍 **Puntos de Control Críticos:**\n`;
+              result.technique.biomechanics.controlPoints.forEach((point, index) => {
+                response += `   ${index + 1}. ${point}\n`;
+              });
+            }
+            if (result.technique.biomechanics.forceVector) {
+              response += `\n⚡ **Vector de Fuerza:** ${result.technique.biomechanics.forceVector}\n`;
+            }
+            if (result.technique.biomechanics.stance_dependency) {
+              response += `🥋 **Postura Requerida:** ${result.technique.biomechanics.stance_dependency}\n`;
+            }
+          } else {
+            response += `📚 Biomecánica detallada no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'breathing':
+          response += `🌬️ **Respiración en ${result.name}:**\n\n`;
+          if (result.technique.kokyu_and_kime && result.technique.kokyu_and_kime.breathing) {
+            response += `💨 **Patrón Respiratorio:** ${result.technique.kokyu_and_kime.breathing}\n`;
+          } else {
+            response += `📚 Información de respiración no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'kime':
+          response += `💥 **Kime (Foco y Potencia) en ${result.name}:**\n\n`;
+          if (result.technique.kokyu_and_kime && result.technique.kokyu_and_kime.kime) {
+            response += `💥 **Contracción Muscular:** ${result.technique.kokyu_and_kime.kime}\n`;
+          } else {
+            response += `📚 Información de Kime no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'mistakes':
+          response += `⚠️ **Errores Comunes en ${result.name}:**\n\n`;
+          if (result.technique.commonMistakes && result.technique.commonMistakes.length > 0) {
+            result.technique.commonMistakes.forEach((mistake, index) => {
+              response += `   ${index + 1}. ${mistake}\n`;
+            });
+            response += `\n💡 **Consejo Rápido:** Concéntrate en los primeros 2 errores, corrigen el 80% de los problemas.\n`;
+          } else {
+            response += `📚 Información de errores comunes no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'katas':
+          response += `📜 **${result.name} en Katas:**\n\n`;
+          if (result.technique.kata_presence && result.technique.kata_presence.length > 0) {
+            response += `📚 **Presente en los siguientes Katas:**\n`;
+            result.technique.kata_presence.forEach((kata, index) => {
+              response += `   ${index + 1}. ${kata}\n`;
+            });
+            response += `\n💡 **Recomendación:** Practica primero en Heian Shodan, luego avanza a los demás.\n`;
+          } else {
+            response += `📚 Información de katas no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'followups':
+          response += `⛓️ **Encadenamientos Tácticos después de ${result.name}:**\n\n`;
+          if (result.technique.follow_ups && result.technique.follow_ups.length > 0) {
+            response += `🔄 **Técnicas que siguen naturalmente:**\n`;
+            result.technique.follow_ups.forEach((follow_up, index) => {
+              response += `   ${index + 1}. ${follow_up}\n`;
+            });
+            response += `\n💡 **Estrategia:** Elige el follow-up según la reacción del oponente.\n`;
+          } else {
+            response += `📚 Información de encadenamientos no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'bunkai':
+          response += `🎭 **Aplicación Real (Bunkai) de ${result.name}:**\n\n`;
+          if (result.technique.bunkai) {
+            response += `🎯 **Uso en Combate:** ${result.technique.bunkai}\n`;
+          } else {
+            response += `📚 Información de bunkai no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'prerequisites':
+          response += `📖 **Requisitos Previos para ${result.name}:**\n\n`;
+          if (result.technique.prerequisites && result.technique.prerequisites.length > 0) {
+            response += `🎓 **Debes dominar primero:**\n`;
+            result.technique.prerequisites.forEach((req, index) => {
+              response += `   ${index + 1}. ${req}\n`;
+            });
+            response += `\n🔥 **Plan de Acción:** Dedica 2-3 semanas a estos prerrequisitos antes de perfeccionar ${result.name}.\n`;
+          } else {
+            response += `📚 Información de prerrequisitos no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        case 'targets':
+          response += `🎯 **Puntos de Impacto (Kyusho) de ${result.name}:**\n\n`;
+          if (result.technique.kyusho_targets && result.technique.kyusho_targets.length > 0) {
+            response += `📍 **Targets Anatómicos:**\n`;
+            result.technique.kyusho_targets.forEach((target, index) => {
+              response += `   ${index + 1}. ${target}\n`;
+            });
+            response += `\n⚠️ **Advertencia:** Estos puntos son vulnerables, úsalos con responsabilidad.\n`;
+          } else {
+            response += `📚 Información de targets no disponible para ${result.name}.\n`;
+          }
+          break;
+          
+        default:
+          response += `📚 Información general de ${result.name}:\n\n`;
+          response += `📝 ${result.technique.descripcion}\n`;
+          response += `🎯 ${result.technique.uso}\n`;
+      }
+      
+      return response;
+    }
+
+    if (result.type === 'coaching') {
+      let response = `🎓 **COACHING PERSONALIZADO - ${result.name}**\n\n`;
+      response += `🥋 **Técnica:** ${result.name}\n`;
+      response += `📝 **Descripción:** ${result.technique.descripcion}\n`;
+      response += `🎯 **Uso:** ${result.technique.uso}\n`;
+      
+      // 🚨 ERRORES COMUNES - PRIORIDAD EN COACHING
+      if (result.technique.commonMistakes && result.technique.commonMistakes.length > 0) {
+        response += `\n\n⚠️ **ERRORES COMUNES - CONCENTRACIÓN ESPECÍFICA:**`;
+        result.technique.commonMistakes.forEach((mistake, index) => {
+          response += `\n   ${index + 1}. ${mistake}`;
+        });
+        response += `\n\n💡 **FOCO PRINCIPAL:** Asegúrate de no sobrepasar la línea de tu hombro y mantén el Hikite fuerte. Estos dos puntos corrigen el 80% de los errores en ${result.name}.`;
+      }
+      
+      // 🎯 BIOMECÁNICA PARA CORRECCIÓN
+      if (result.technique.biomechanics && result.technique.biomechanics.controlPoints) {
+        response += `\n\n🎯 **PUNTOS DE CONTROL BIOMECÁNICO:**`;
+        result.technique.biomechanics.controlPoints.forEach((point, index) => {
+          response += `\n   ${index + 1}. ${point}`;
+        });
+      }
+      
+      // 💡 COACHING TIPS - INTELIGENCIA EXPLICABLE
+      if (result.technique.coachingTips && result.technique.coachingTips.length > 0) {
+        response += `\n\n💡 **CONSEJOS DE MEJORA INMEDIATA:**`;
+        result.technique.coachingTips.forEach((tip, index) => {
+          response += `\n   ${index + 1}. ${tip}`;
+        });
+      }
+      
+      // 📚 PRERREQUISITOS - SI FALTAN
+      if (result.technique.prerequisites && result.technique.prerequisites.length > 0) {
+        response += `\n\n📚 **REQUISITOS A DOMINAR PRIMERO:**`;
+        result.technique.prerequisites.forEach((req, index) => {
+          response += `\n   ${index + 1}. ${req}`;
+        });
+        response += `\n\n🎯 **PLAN DE ACCIÓN:** Dedica 2 semanas a dominar estos requisitos antes de perfeccionar ${result.name}.`;
+      }
+      
+      response += `\n\n🔥 **MÉTODO DE PRÁCTICA:**\n`;
+      response += `1. Realiza 50 repeticiones lentas enfocándote en los errores comunes\n`;
+      response += `2. Grábate en video y compárate con los puntos de control\n`;
+      response += `3. Pide feedback a tu Sensei sobre los 3 errores principales\n`;
+      response += `4. Practica con pareja aplicando el bunkai real`;
+      
+      return response;
     }
 
     if (result.type === 'technique') {
       let response = `🥋 **${result.name}** (${result.matchType} match)\n\n`;
+      
+      // 📊 INFORMACIÓN BÁSICA (SIEMPRE)
       response += `📝 Descripción: ${result.technique.descripcion}\n`;
       response += `🎯 Uso: ${result.technique.uso}\n`;
       response += `🥋 Cinturón: ${result.technique.cinturon}\n`;
       response += `📂 Categoría: ${result.technique.category}`;
       
-      // Sugerencia pedagógica
+      // 🔍 INFORMACIÓN DE DEBUGGING XAI
+      if (result.searchSource) {
+        response += `\n🔍 Fuente: ${result.searchSource}`;
+      }
+      
+      if (result.technique.incomplete) {
+        response += `\n⚠️ Información limitada - Técnica encontrada en estructura jerárquica`;
+      }
+      
+      // � RESPUESTA CONTEXTUALIZADA (SI HAY INTENCIÓN)
+      if (result.type === 'technique_with_intent' && result.intent) {
+        response += this.formatIntentSpecificResponse(result.technique, result.intent);
+      } else {
+        // 📚 RESPUESTA COMPLETA (SIN INTENCIÓN ESPECÍFICA)
+        response += this.formatCompleteAdvancedResponse(result.technique);
+      }
+      
+      // 🎓 SUGERENCIA PEDAGÓGICA TRADICIONAL
       if (result.technique.cinturon && 
           (result.technique.cinturon.includes('Dan') || result.technique.cinturon.includes('5 kyu'))) {
         response += `\n\n🎓 **Sugerencia del Sensei:** Esta es una técnica avanzada. Te recomiendo dominar primero Oi Zuki y Mae Geri (técnicas básicas de 10° Kyu).`;

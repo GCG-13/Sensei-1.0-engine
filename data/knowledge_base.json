@@ -185,34 +185,209 @@
   },
   "techniqueDetails": {
     "Oi Zuki": {
-      "descripcion": "Golpe de puño directo con la mano adelantada. Es el ataque más fundamental en karate.",
-      "uso": "Ataque frontal directo al pecho o abdomen del oponente.",
+      "descripcion": "Golpe de puño directo con la mano del mismo lado del pie adelantado. Es el ataque con mayor penetración frontal.",
+      "uso": "Ataque frontal de larga distancia para atravesar la guardia del oponente.",
       "cinturon": "10° Kyu",
       "category": "teWaza",
-      "keywords": ["puño", "directo", "adelantado", "frontal", "básico"],
-      "itemSpanishName": "Oi Zuki"
+      "keywords": ["puño", "directo", "adelantado", "frontal", "básico", "penetración"],
+      "itemSpanishName": "Oi Zuki",
+      "biomechanics": {
+        "controlPoints": [
+          "El puño viaja en línea recta rozando el costado del cuerpo",
+          "Rotación del puño (seiken) ocurre en los últimos 5 centímetros",
+          "Los hombros deben permanecer paralelos al objetivo al impactar (Shomen)",
+          "El pie trasero empuja el piso para generar traslación de masa"
+        ],
+        "forceVector": "Lineal hacia adelante, utilizando la masa total del cuerpo en movimiento",
+        "stance_dependency": "Zenkutsu Dachi (Peso 60% adelante, 40% atrás)"
+      },
+      "kokyu_and_kime": {
+        "breathing": "Inhalar durante el desplazamiento, exhalar bruscamente en el impacto.",
+        "kime": "Contracción simultánea del abdomen (Hara), dorsal ancho (por el Hikite) y glúteos en el milisegundo del impacto."
+      },
+      "kyusho_targets": [
+        "Suigetsu (Plexo Solar) - Chudan",
+        "Jinchu (Base de la nariz) - Jodan",
+        "Uto (Entrecejo) - Jodan"
+      ],
+      "commonMistakes": [
+        "Levantar el talón trasero al golpear (pérdida de conexión a tierra)",
+        "Hombro del brazo que golpea adelantado (falta de cuadratura)",
+        "Rotar el puño demasiado pronto (codo se separa del cuerpo)",
+        "Dejar la mano de apoyo (Hikite) suelta"
+      ],
+      "kata_presence": [
+        "Heian Shodan",
+        "Heian Nidan", 
+        "Heian Sandan",
+        "Tekki Shodan",
+        "Bassai Dai"
+      ],
+      "follow_ups": [
+        "Gyaku Zuki (si el oponente retrocede)",
+        "Gedan Barai (si el oponente contraataca bajo)"
+      ],
+      "prerequisites": [
+        "Zenkutsu Dachi sólido",
+        "Comprensión de Seiken (nudillos correctos)",
+        "Sincronización pie-mano"
+      ]
     },
     "Gyaku Zuki": {
-      "descripcion": "Golpe de puño con la mano trasera. Genera gran potencia mediante la rotación de cadera.",
-      "uso": "Contraataque potente aprovechando la rotación del cuerpo.",
+      "descripcion": "Golpe de puño con la mano trasera. Genera gran potencia mediante la rotación de cadera y transferencia de peso.",
+      "uso": "Contraataque potente aprovechando la rotación del cuerpo y el desplazamiento de masa.",
       "cinturon": "10° Kyu",
       "category": "teWaza",
-      "keywords": ["puño", "trasero", "contraataque", "potencia", "rotación"],
-      "itemSpanishName": "Gyaku Zuki"
+      "keywords": ["puño", "trasero", "contraataque", "potencia", "rotación", "cadera"],
+      "itemSpanishName": "Gyaku Zuki",
+      "biomechanics": {
+        "controlPoints": [
+          "La cadera lidera el movimiento, no el brazo",
+          "El talón del pie trasero se levanta ligeramente para facilitar rotación",
+          "El puño sigue una trayectoria ligeramente ascendente (diagonal)",
+          "El hombro trasero rota hacia adelante completamente al impactar"
+        ],
+        "forceVector": "Diagonal ascendente desde atrás hacia adelante, utilizando rotación de cadera como palanca",
+        "stance_dependency": "Zenkutsu Dachi o Sanchin Dachi (depende de la distancia)"
+      },
+      "kokyu_and_kime": {
+        "breathing": "Inhalar durante la rotación de cadera, exhalar explosivamente en el impacto.",
+        "kime": "Contracción del abdomen (Hara), glúteos y dorsal ancho al finalizar la rotación. La tensión se genera en el pico de rotación."
+      },
+      "kyusho_targets": [
+        "Suigetsu (Plexo Solar) - Chudan",
+        "Kage (Costado flotante) - Chudan", 
+        "Mikazuki (Sien) - Jodan"
+      ],
+      "commonMistakes": [
+        "Mover el brazo antes que la cadera (pérdida de potencia)",
+        "No completar la rotación de cadera (solo 50% del poder)",
+        "Levantar el talón demasiado pronto (inestabilidad)",
+        "Puño abierto o nudillos incorrectos (lesión)"
+      ],
+      "kata_presence": [
+        "Heian Shodan",
+        "Heian Nidan",
+        "Heian Sandan", 
+        "Heian Yondan",
+        "Heian Godan",
+        "Bassai Dai",
+        "Kanku Dai"
+      ],
+      "follow_ups": [
+        "Oi Zuki (si el oponente se mueve lateralmente)",
+        "Mawashi Geri (si el oponente baja la guardia)",
+        "Age Uke (si el oponente contraataca alto)"
+      ],
+      "prerequisites": [
+        "Rotación de cadera (Kaiten)",
+        "Zenkutsu Dachi estable",
+        "Comprensión de transferencia de peso",
+        "Hikite fuerte"
+      ]
     },
     "Mae Geri": {
-      "descripcion": "Patada frontal directa con la bola del pie. Es la patada más básica y versátil.",
-      "uso": "Ataque frontal al abdomen, pecho o cara del oponente.",
+      "descripcion": "Patada frontal directa con la bola del pie. Es la patada más básica y versátil del karate.",
+      "uso": "Ataque frontal al abdomen, pecho o cara del oponente. Ideal para controlar distancia y romper guardia.",
       "cinturon": "10° Kyu",
       "category": "ashiWaza",
-      "keywords": ["patada", "frontal", "bola del pie", "básica", "versátil"]
+      "keywords": ["patada", "frontal", "bola del pie", "básica", "versátil", "control"],
+      "biomechanics": {
+        "controlPoints": [
+          "La rodilla se eleva primero hacia el pecho (máxima potencia)",
+          "El pie se flexiona completamente hacia atrás (Koshi)",
+          "La cadera se inclina ligeramente adelante para extender alcance",
+          "El retorno es rápido y controlado (Hikiashi - pie de retorno)"
+        ],
+        "forceVector": "Lineal frontal hacia adelante, con ligera componente ascendente al final",
+        "stance_dependency": "Zenkutsu Dachi con apoyo en una pierna (equilibrio crítico)"
+      },
+      "kokyu_and_kime": {
+        "breathing": "Inhalar al levantar la rodilla, exhalar bruscamente al extender la patada.",
+        "kime": "Contracción del abdomen (Hara) y glúteos en el momento del impacto. La pierna de apoyo se mantiene firme como ancla."
+      },
+      "kyusho_targets": [
+        "Suigetsu (Plexo Solar) - Chudan",
+        "Jinchu (Base de la nariz) - Jodan",
+        "Uto (Entrecejo) - Jodan",
+        "Kage (Costado flotante) - Chudan"
+      ],
+      "commonMistakes": [
+        "No levantar la rodilla lo suficiente (pérdida de potencia)",
+        "Extender la pierna demasiado pronto (sin control)",
+        "Dejar caer la patada (sin retorno controlado)",
+        "Inclinar el torso hacia atrás (desequilibrio)"
+      ],
+      "kata_presence": [
+        "Heian Shodan",
+        "Heian Nidan",
+        "Heian Sandan",
+        "Heian Yondan",
+        "Tekki Shodan",
+        "Bassai Dai"
+      ],
+      "follow_ups": [
+        "Oi Zuki (avance inmediato después de la patada)",
+        "Gyaku Zuki (si el oponente retrocede)",
+        "Yoko Geri (ataque lateral sorpresivo)"
+      ],
+      "prerequisites": [
+        "Equilibrio en una pierna",
+        "Flexibilidad de cadera",
+        "Zenkutsu Dachi estable",
+        "Control del centro de gravedad"
+      ]
     },
     "Gedan Barai": {
-      "descripcion": "Bloqueo descendente con el antebrazo. Defiende la parte baja del cuerpo.",
-      "uso": "Defender patadas bajas o ataques a la ingle.",
+      "descripcion": "Bloqueo descendente con el antebrazo. Defiende la parte baja del cuerpo con un amplio arco de movimiento.",
+      "uso": "Defensa contra patadas bajas y ataques al abdomen. El recorrido desde la oreja genera gran potencia.",
       "cinturon": "10° Kyu",
       "category": "fuseguiWaza",
-      "keywords": ["bloqueo", "descendente", "antebrazo", "defensa", "bajo"]
+      "keywords": ["bloqueo", "descendente", "antebrazo", "defensa", "bajo", "arco"],
+      "itemSpanishName": "Gedan Barai",
+      "biomechanics": {
+        "controlPoints": [
+          "El movimiento inicia desde la oreja opuesta (máxima amplitud)",
+          "El codo se mantiene cerca del cuerpo durante todo el recorrido",
+          "La mano termina al nivel del muslo opuesto, no cruzando la línea central",
+          "El brazo forma un ángulo de 45 grados al finalizar el bloqueo"
+        ],
+        "forceVector": "Diagonal descendente desde arriba-hacia-abajo-fuera, usando el peso del brazo como martillo",
+        "stance_dependency": "Zenkutsu Dachi o Kiba Dachi (depende de la situación)"
+      },
+      "kokyu_and_kime": {
+        "breathing": "Inhalar durante el ascenso del brazo, exhalar durante el descenso del bloqueo.",
+        "kime": "Contracción del dorsal ancho y tríceps en el momento del impacto. El abdomen se mantiene firme para sostener la postura."
+      },
+      "kyusho_targets": [
+        "Mizu Kashira (Tobillo) - Gedan",
+        "Fukuto (Parte externa del muslo) - Gedan",
+        "Kakato (Talón) - Gedan"
+      ],
+      "commonMistakes": [
+        "Brazo demasiado recto (falta de flexibilidad y potencia)",
+        "No levantar el brazo lo suficiente (recorrido incompleto)",
+        "Codo separado del cuerpo (pérdida de estructura)",
+        "Terminar cruzado demasiado (desbalance)"
+      ],
+      "kata_presence": [
+        "Heian Shodan",
+        "Heian Nidan",
+        "Heian Sandan",
+        "Tekki Shodan",
+        "Bassai Dai"
+      ],
+      "follow_ups": [
+        "Oi Zuki (después de bloquear una patada)",
+        "Mae Geri (contraataque inmediato)",
+        "Soto Uke (si el oponente ataca alto)"
+      ],
+      "prerequisites": [
+        "Zenkutsu Dachi estable",
+        "Flexibilidad de hombros",
+        "Comprensión de arcos de movimiento grandes",
+        "Control del centro de gravedad"
+      ]
     },
     "Sanbon Zuki": {
       "descripcion": "Combinación de tres puñetazos consecutivos: Oi Zuki (Jodan), Gyaku Zuki (Chudan), Gyaku Zuki (Chudan).",
@@ -236,18 +411,55 @@
       "keywords": ["mano abierta", "borde", "cuello", "clavícula", "costillas"]
     },
     "Jodan Uke": {
-      "descripcion": "Bloqueo ascendente para defender la parte superior del cuerpo.",
-      "uso": "Proteger la cabeza y cara de golpes superiores.",
+      "descripcion": "Bloqueo ascendente para defender la parte superior del cuerpo. Cruza los brazos y eleva el antebrazo.",
+      "uso": "Proteger la cabeza y cara de golpes superiores. Ideal contra ataques Jodan directos.",
       "cinturon": "10° Kyu",
       "category": "fuseguiWaza",
-      "keywords": ["bloqueo", "ascendente", "cabeza", "cara", "protección"]
-    },
-    "Uraken Uchi": {
-      "descripcion": "Golpe rápido con el dorso del puño en movimiento circular.",
-      "uso": "Ataque sorpresivo a la cara o sienes del oponente.",
-      "cinturon": "9° Kyu",
-      "category": "teWaza",
-      "keywords": ["dorso del puño", "circular", "rápido", "sorpresivo", "cara"]
+      "keywords": ["bloqueo", "ascendente", "cabeza", "cara", "protección", "cruce"],
+      "biomechanics": {
+        "controlPoints": [
+          "El brazo opuesto cruza el cuerpo para generar potencia",
+          "El codo del brazo que bloquea se mantiene a 90 grados",
+          "El antebrazo se eleva hasta la altura de la ceja",
+          "El puño se detiene un puño más allá de la sien"
+        ],
+        "forceVector": "Diagonal ascendente desde abajo-hacia-arriba-fuera, usando el cruce de brazos como resorte",
+        "stance_dependency": "Zenkutsu Dachi o Sanchin Dachi (postura defensiva)"
+      },
+      "kokyu_and_kime": {
+        "breathing": "Inhalar durante el cruce de brazos, exhalar al elevar el bloqueo.",
+        "kime": "Contracción del dorsal ancho, deltoides y abdomen en el momento del impacto. La tensión se concentra en el antebrazo."
+      },
+      "kyusho_targets": [
+        "Koken (Muñeca) - Jodan",
+        "Empi (Codo) - Jodan",
+        "Uto (Entrecejo) - Jodan"
+      ],
+      "commonMistakes": [
+        "No cruzar los brazos (pérdida del 70% de potencia)",
+        "Codo demasiado abierto (estructura débil)",
+        "Detener el bloqueo demasiado bajo (no protege la cara)",
+        "Hombros tensos (falta de movilidad)"
+      ],
+      "kata_presence": [
+        "Heian Shodan",
+        "Heian Nidan",
+        "Heian Sandan",
+        "Heian Yondan",
+        "Bassai Dai",
+        "Kanku Dai"
+      ],
+      "follow_ups": [
+        "Oi Zuki (contraataque inmediato)",
+        "Mae Geri (si el oponente baja la guardia)",
+        "Soto Uke (defensa circular)"
+      ],
+      "prerequisites": [
+        "Flexibilidad de hombros",
+        "Comprensión de cruce de brazos",
+        "Zenkutsu Dachi estable",
+        "Control de distancia de combate"
+      ]
     },
     "Yoko Geri Keage": {
       "descripcion": "Patada lateral ascendente de chasquido con el borde del pie.",
@@ -276,6 +488,53 @@
       "cinturon": "2° Kyu",
       "category": "fuseguiWaza",
       "keywords": ["bloqueo", "doble", "cruzado", "niveles", "avanzada"]
+    },
+    "Uchi Uke": {
+      "descripcion": "Bloqueo interior hacia afuera con el antebrazo. Defiende el torso medio.",
+      "uso": "Desviar golpes directos al centro del cuerpo (chudan).",
+      "cinturon": "9° Kyu",
+      "category": "fuseguiWaza",
+      "keywords": ["bloqueo", "interior", "antebrazo", "torso", "desviar"],
+      "itemSpanishName": "Uchi Uke",
+      "biomechanics": {
+        "controlPoints": [
+          "Rotación del antebrazo en el último 10% del recorrido",
+          "Codo a un puño de distancia del cuerpo",
+          "Hombro relajado pero estable",
+          "Hikite (mano opuesta) firmemente en la cadera"
+        ],
+        "forceVector": "Trayectoria semicircular ascendente desde la cadera opuesta",
+        "angle": "90 grados entre el brazo y el antebrazo al impacto"
+      },
+      "commonMistakes": [
+        "Hombro levantado (tensión innecesaria)",
+        "Muñeca doblada (pierde fuerza estructural)",
+        "Codo demasiado abierto (falta de enfoque)",
+        "Sobrepasar la línea del hombro (sobre-extensión)",
+        "No usar la cadera (falta de potencia)",
+        "Hikite flojo (desequilibrio)"
+      ],
+      "bunkai": "Contra un Oi-Zuki chudan, buscando desviar y romper el equilibrio del oponente. También útil contra Mae Geri al torso.",
+      "prerequisites": [
+        "Control de Shizentai (postura natural)",
+        "Rotación de cadera (Jun Kaiten)",
+        "Comprensión de Hikite (mano de apoyo)",
+        "Timing básico de bloqueo"
+      ],
+      "coachingTips": [
+        "Imagina que empujas una puerta pesada con tu antebrazo",
+        "El codo es el eje, la mano solo sigue",
+        "La fuerza viene de la cadera, no del brazo",
+        "Mantén el hombro bajo para evitar tensión"
+      ]
+    },
+    "Soto Uke": {
+      "descripcion": "Bloqueo exterior hacia adentro con el antebrazo. Defiende ataques laterales.",
+      "uso": "Proteger contra golpes desde los costados hacia el centro.",
+      "cinturon": "9° Kyu",
+      "category": "fuseguiWaza",
+      "keywords": ["bloqueo", "exterior", "antebrazo", "lateral", "proteger"],
+      "itemSpanishName": "Soto Uke"
     }
   }
 }
